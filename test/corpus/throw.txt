@@ -1,0 +1,32 @@
+================================================================================
+throw
+================================================================================
+
+_throw :error
+$
+
+_throw @error
+$
+
+_throw "error"
+$
+
+_throw :error _with a
+$
+
+--------------------------------------------------------------------------------
+
+(source_file
+ (fragment
+   (throw
+     (symbol)))
+  (fragment
+    (throw
+      (global_reference)))
+  (fragment
+    (throw
+      (string_literal)))
+  (fragment
+   (throw
+     (symbol)
+     (variable))))

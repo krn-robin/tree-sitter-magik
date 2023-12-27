@@ -1,0 +1,40 @@
+{
+	"name": "tree-sitter-magik",
+	"version": "0.0.0",
+	"description": "Magik grammar for tree-sitter",
+	"main": "bindings/node",
+	"keywords": [
+		"parser",
+		"magik"
+	],
+	"author": "Robin Putters",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/krn-robin/tree-sitter-magik/issues"
+	},
+	"homepage": "https://github.com/krn-robin/tree-sitter-magik#readme",
+	"dependencies": {
+		"nan": "^2.17.0"
+	},
+	"devDependencies": {
+		"tree-sitter-cli": "^0.20.8"
+	},
+	"scripts": {
+		"build": "tree-sitter generate",
+		"test": "tree-sitter test",
+		"test-windows": "tree-sitter test",
+		"build-test": "tree-sitter generate && tree-sitter test"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/krn-robin/tree-sitter-magik.git"
+	},
+	"tree-sitter": [
+		{
+			"scope": "source.magik",
+			"file-types": [
+				"magik"
+			]
+		}
+	]
+}

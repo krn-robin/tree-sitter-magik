@@ -1,0 +1,31 @@
+================================================================================
+block statements
+================================================================================
+
+_block
+  _return
+_endblock
+
+_block
+  >> _unset
+_endblock
+
+_block@label
+  _return
+_endblock
+$
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (fragment
+    (block
+      (return)))
+  (fragment
+    (block
+      (return
+        (unset))))
+  (fragment
+    (block
+      (label)
+      (return))))

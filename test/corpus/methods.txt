@@ -1,0 +1,214 @@
+================================================================================
+simple methods
+================================================================================
+
+_method my_object.method
+_endmethod
+$
+
+_method my_object.method()
+_endmethod
+$
+
+_method my_object.method(a)
+_endmethod
+$
+
+_method my_object.method(a, b)
+_endmethod
+$
+
+_method my_object.method<< a
+_endmethod
+$
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (fragment
+    (method
+      (identifier)
+      (identifier)))
+  (fragment
+    (method
+      (identifier)
+      (identifier)
+      (parameter_list)))
+  (fragment
+    (method
+      (identifier)
+      (identifier)
+      (parameter_list
+        (parameter))))
+  (fragment
+    (method
+      (identifier)
+      (identifier)
+      (parameter_list
+        (parameter)
+        (parameter))))
+  (fragment
+    (method
+      (identifier)
+      (identifier)
+      (parameter_list
+        (parameter)))))
+
+================================================================================
+method documentation
+================================================================================
+
+_method my_object.method_with_doc()
+	## multi
+	## line
+	## documentation
+	
+	# comment
+	## comment
+_endmethod
+$
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (fragment
+    (method
+      (identifier)
+      (identifier)
+      (parameter_list)
+      (documentation
+        (comment)))))
+
+================================================================================
+iterator method
+================================================================================
+
+_abstract _private _iter _method object.abstract_private_iter()
+  _loopbody(_unset)
+_endmethod
+$
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (fragment
+    (method
+      (identifier)
+      (identifier)
+      (parameter_list)
+      (loopbody
+        (unset)))))
+
+================================================================================
+method parameters
+================================================================================
+
+_method object.method(_gather args)
+_endmethod
+$
+
+_method object.method(first_arg _gather args)
+_endmethod
+$
+
+_method object.method(_optional arg)
+_endmethod
+$
+
+_method object.method(first_arg, _optional second_arg, third_arg)
+_endmethod
+$
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (fragment
+    (method
+      (identifier)
+      (identifier)
+      (parameter_list
+        (parameter))))
+  (fragment
+    (method
+      (identifier)
+      (identifier)
+      (parameter_list
+        (parameter)
+        (parameter))))
+  (fragment
+    (method
+      (identifier)
+      (identifier)
+      (parameter_list
+        (parameter))))
+  (fragment
+    (method
+      (identifier)
+      (identifier)
+      (parameter_list
+        (parameter)
+        (parameter)
+        (parameter)))))
+
+================================================================================
+methods with pragma
+================================================================================
+
+_pragma(classify_level=basic)
+_method my_object.method_with_pragma()
+_endmethod
+$
+
+_pragma(classify_level=basic, topic=treesitter)
+_method my_object.other_method_with_pragma()
+_endmethod
+$
+
+_pragma(classify_level=basic, topic={treesitter, magik})
+_method my_object.yet_other_method_with_pragma()
+_endmethod
+$
+
+_pragma(classify_level=basic, topic={treesitter}, usage=subclassable)
+_method my_object.almost_last_method_with_pragma()
+_endmethod
+$
+
+_pragma(classify_level=basic, topic=treesitter, usage={redefinable, subclassable})
+_method my_object.last_method_with_pragma()
+_endmethod
+$
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (fragment
+    (pragma)
+    (method
+      (identifier)
+      (identifier)
+      (parameter_list)))
+  (fragment
+    (pragma)
+    (method
+      (identifier)
+      (identifier)
+      (parameter_list)))
+  (fragment
+    (pragma)
+    (method
+      (identifier)
+      (identifier)
+      (parameter_list)))
+  (fragment
+    (pragma)
+    (method
+      (identifier)
+      (identifier)
+      (parameter_list)))
+  (fragment
+    (pragma)
+    (method
+      (identifier)
+      (identifier)
+      (parameter_list))))

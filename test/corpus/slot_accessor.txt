@@ -1,0 +1,35 @@
+================================================================================
+slot accessor
+================================================================================
+
+.slot
+$
+
+.slot<< _unset
+$
+
+old_slot_value << .slot ^<< _unset
+$
+
+.slot.invoke()
+$
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (fragment
+    (slot_accessor))
+  (fragment
+    (assignment
+      (slot_accessor)
+      (unset)))
+  (fragment
+    (assignment
+      (assignment
+        (variable)
+        (slot_accessor))
+      (unset)))
+  (fragment
+    (call
+      (slot_accessor)
+      (identifier))))

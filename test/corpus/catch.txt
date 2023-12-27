@@ -1,0 +1,28 @@
+================================================================================
+catch
+================================================================================
+
+_catch :error
+_endcatch
+$
+
+_catch @error
+_endcatch
+$
+
+_catch "error"
+_endcatch
+$
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (fragment
+    (catch
+      (symbol)))
+  (fragment
+    (catch
+      (global_reference)))
+  (fragment
+    (catch
+      (string_literal))))
