@@ -5,6 +5,7 @@ strings
 "string"
 'string'
 "%"
+"\"
 "'"
 '"'
 "multi
@@ -14,6 +15,8 @@ line"
 --------------------------------------------------------------------------------
 
 (source_file
+  (fragment
+    (string_literal))
   (fragment
     (string_literal))
   (fragment

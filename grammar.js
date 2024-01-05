@@ -276,8 +276,8 @@ module.exports = grammar({
 
 	string_literal: $ =>
 	    choice(
-		seq('"', repeat(choice(/[^"\n]/, /\\(.|\n)/)), '"'),
-		seq("'", repeat(choice(/[^'\n]/, /\\(.|\n)/)), "'")
+		seq('"', repeat(choice(/[^"\n]/, /(.|\n)/)), '"'),
+		seq("'", repeat(choice(/[^'\n]/, /(.|\n)/)), "'")
 	    ),
 
 	call: $ =>
