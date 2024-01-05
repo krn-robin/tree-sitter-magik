@@ -52,6 +52,7 @@ jobs:
         with:
           path: libtree-sitter-magik
           pattern: libtree-sitter-magik*
+          merge-multiple: true
       - uses: softprops/action-gh-release@v1
         with:
           files: |
