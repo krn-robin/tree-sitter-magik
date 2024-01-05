@@ -36,10 +36,10 @@ jobs:
              ${{ matrix.cc }} -fPIC -c -Isrc/ src/parser.c -o parser.o
              ${{ matrix.cc }} -fPIC -shared parser.o -o libtree-sitter-magik.${{ matrix.ext }}
              tar zcfv libtree-sitter-magik-${{ matrix.postfix }}.tar.gz libtree-sitter-magik.${{ matrix.ext }}
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         with:
-          name: libtree-sitter-magik
-          path: libtree-sitter-magik*.tar.gz
+          name: libtree-sitter-magik-${{ matrix.postfix }}
+          path: libtree-sitter-magik-${{ matrix.postfix }}.tar.gz
           if-no-files-found: error
 
   publish:
@@ -48,10 +48,11 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4
         with:
-          name: libtree-sitter-magik
+          path: libtree-sitter-magik
+          pattern: libtree-sitter-magik*
       - uses: softprops/action-gh-release@v1
         with:
           files: |
-            libtree-sitter-magik*.tar.gz
+            libtree-sitter-magik/*
