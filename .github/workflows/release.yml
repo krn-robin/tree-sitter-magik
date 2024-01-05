@@ -36,7 +36,7 @@ jobs:
              ${{ matrix.cc }} -fPIC -c -Isrc/ src/parser.c -o parser.o
              ${{ matrix.cc }} -fPIC -shared parser.o -o libtree-sitter-magik.${{ matrix.ext }}
              tar zcfv libtree-sitter-magik-${{ matrix.postfix }}.tar.gz libtree-sitter-magik.${{ matrix.ext }}
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         with:
           name: libtree-sitter-magik
           path: libtree-sitter-magik*.tar.gz
