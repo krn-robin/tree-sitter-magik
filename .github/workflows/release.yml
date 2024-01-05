@@ -48,7 +48,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4
         with:
           name: libtree-sitter-magik
       - uses: softprops/action-gh-release@v1
