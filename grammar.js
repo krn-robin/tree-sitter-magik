@@ -356,14 +356,17 @@ module.exports = grammar({
 
 	global: $ => seq("_global", $._identifier_list),
 
-	local: $ => prec.left(seq("_local", $._identifier_list, optional(seq("<<", $._expression)))),
+	local: $ => prec.left(seq("_local", optional('('), $._identifier_list, optional(')'), optional(seq("<<", $._expression)))),
 
-	_global_assignment: $ => seq($.global, "<<", $._expression),
+	_global_assignment: $ =>
+	    prec(1, seq(
+	        optional($.pragma),
+	        "_global", optional("_constant"), $.identifier, "<<", $._expression)),
 
 	constant: $ => seq("_constant",
 	    choice(
 		$.local,
-		$._identifier_list), seq("<<", $._expression)),
+		optional('('), $._identifier_list, optional(')')), seq("<<", $._expression)),
 
 	dynamic: $ => seq("_dynamic", $.dynamic_variable, repeat(seq(",", $.identifier)), optional(seq("<<", $._expression))),
 
@@ -497,7 +500,7 @@ module.exports = grammar({
 		seq('|', repeat(choice(/[^\\"\n]/, /\\(.|\n)/)), '|'),
 		$._identifier)),
 
-	character_literal: $ => seq('%', choice($._identifier, /./)),
+	character_literal: $ => seq('%', choice($._identifier, /./, ' ')),
 
 	documentation: $ => prec.right(repeat1(/##.*/)),
 	comment: $ => token(prec(PREC.COMMENT, /#.*/))
