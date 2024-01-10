@@ -329,7 +329,8 @@ module.exports = grammar({
 	_top_level_statement: $ => choice(
 	    $._definition,
 	    $._method_declaration,
-	    $._statement
+	    $._statement,
+	    $._global_assignment
 	),
 
 	_statement: $ => choice(
@@ -357,12 +358,14 @@ module.exports = grammar({
 
 	local: $ => prec.left(seq("_local", $._identifier_list, optional(seq("<<", $._expression)))),
 
+	_global_assignment: $ => seq($.global, "<<", $._expression),
+
 	constant: $ => seq("_constant",
 	    choice(
 		$.local,
 		$._identifier_list), seq("<<", $._expression)),
 
-	dynamic: $ => seq("_dynamic", $.dynamic_variable, repeat(seq(",", $.identifier))),
+	dynamic: $ => seq("_dynamic", $.dynamic_variable, repeat(seq(",", $.identifier)), optional(seq("<<", $._expression))),
 
 	import: $ => seq("_import", $._identifier_list),
 
