@@ -359,7 +359,7 @@ module.exports = grammar({
 	local: $ => prec.left(
 	    seq("_local",
 	    choice(
-	        optional(seq("(", $._identifier_list, ")")),
+	        seq("(", $._identifier_list, ")"),
 	        $._identifier_list),
 	    optional(seq("<<", $._expression)))),
 
@@ -372,7 +372,7 @@ module.exports = grammar({
 	    seq("_constant",
 	    choice(
 	        $.local,
-	        optional(seq("(", $._identifier_list, ")")),
+	        seq("(", $._identifier_list, ")"),
 	        $._identifier_list),
 	    seq("<<", $._expression)),
 

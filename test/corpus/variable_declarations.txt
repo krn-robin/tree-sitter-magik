@@ -119,11 +119,10 @@ _endblock
 (source_file
   (fragment
     (block
-      (local)
-      (variable)
-      (local)
-      (assignment
-        (variable)
+      (local
+        (identifier))
+      (local
+        (identifier)
         (number)))))
 
 ================================================================================
