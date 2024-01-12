@@ -9,6 +9,13 @@ on:
       - "**"
 
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: lint
+        run: npm install && npm run lint
+
   test:
     runs-on: ${{ matrix.os }}
     strategy:
