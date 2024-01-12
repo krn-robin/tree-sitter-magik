@@ -36,6 +36,7 @@ jobs:
           ${{ matrix.cc }} -fPIC -shared parser.o -o libtree-sitter-magik.${{ matrix.ext }}
       - if: matrix.os == 'macos-latest'
         name: check unchanged parser.c
+        shell: bash
         run: |
             git status
-            exit $(git diff --exit-code src/parser.c)
+            exit $(git status --porcelain=v1 2>/dev/null | grep -c src/parser.c)
