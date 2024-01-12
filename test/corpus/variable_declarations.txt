@@ -74,8 +74,35 @@ _global gis_program_manager << _unset
 
 (source_file
   (fragment
-    (global
-      (identifier))
+    (identifier)
+    (unset)))
+
+================================================================================
+global constant top level assignment
+================================================================================
+
+_global _constant gis_program_manager << _unset
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (fragment
+    (identifier)
+    (unset)))
+
+================================================================================
+global constant top level assignment with pragma
+================================================================================
+
+_pragma(classify_level=basic)
+_global _constant gis_program_manager << _unset
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (fragment
+    (pragma)
+    (identifier)
     (unset)))
 
 ================================================================================
