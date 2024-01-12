@@ -15,10 +15,13 @@ dynamic variable
 ================================================================================
 
 !terminal!
+sw:!terminal!
 
 --------------------------------------------------------------------------------
 
 (source_file
+  (fragment
+    (dynamic_variable))
   (fragment
     (dynamic_variable)))
 
