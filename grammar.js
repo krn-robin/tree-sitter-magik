@@ -366,7 +366,6 @@ module.exports = grammar({
 	_global_assignment: $ =>
 	    seq(
 	        optional($.pragma),
-	        optional($.documentation),
 	        "_global", optional("_constant"), $.identifier, "<<", $._expression),
 
 	constant: $ =>
@@ -450,8 +449,10 @@ module.exports = grammar({
 
 	variable: $ => prec.left($._identifier),
 
-	dynamic_variable: $ =>
-	    /![a-z0-9_\?!]*!/,
+	dynamic_variable: $ => seq(
+	    optional(seq($._identifier, ":")),
+	    /![a-z0-9_\?!]*!/
+	),
 
 	global_variable: $ =>
 	    seq($._identifier, ":", $._identifier),
