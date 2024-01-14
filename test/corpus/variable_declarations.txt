@@ -4,6 +4,7 @@ dynamic
 
 _block
   _dynamic !terminal!
+  _dynamic !output!, !terminal!
 _endblock
 
 --------------------------------------------------------------------------------
@@ -12,6 +13,9 @@ _endblock
   (fragment
     (block
       (dynamic
+        (dynamic_variable))
+      (dynamic
+        (dynamic_variable)
         (dynamic_variable)))))
 
 ================================================================================

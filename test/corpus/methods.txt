@@ -84,7 +84,7 @@ iterator method
 ================================================================================
 
 _abstract _private _iter _method object.abstract_private_iter()
-  _loopbody(_unset)
+  _loopbody(_unset, _unset)
 _endmethod
 $
 
@@ -97,6 +97,7 @@ $
       (identifier)
       (parameter_list)
       (loopbody
+        (unset)
         (unset)))))
 
 ================================================================================

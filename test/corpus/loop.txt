@@ -10,11 +10,31 @@ _loop
 _endloop
 
 _loop
+  _continue _with _unset
+_endloop
+
+_loop
+  _continue _with (_unset, _unset)
+_endloop
+
+_loop
+  _continue _with _unset, _unset
+_endloop
+
+_loop
   _leave
 _endloop
 
 _loop
   _leave _with _unset
+_endloop
+
+_loop
+  _leave _with (_unset, _unset)
+_endloop
+
+_loop
+  _leave _with _unset, _unset
 _endloop
 $
 
@@ -28,10 +48,34 @@ $
       (continue)))
   (fragment
     (loop
+      (continue
+        (unset))))
+  (fragment
+    (loop
+      (continue
+        (unset)
+        (unset))))
+  (fragment
+    (loop
+      (continue
+        (unset)
+        (unset))))
+  (fragment
+    (loop
       (leave)))
   (fragment
     (loop
       (leave
+        (unset))))
+  (fragment
+    (loop
+      (leave
+        (unset)
+        (unset))))
+  (fragment
+    (loop
+      (leave
+        (unset)
         (unset)))))
 
 ================================================================================
