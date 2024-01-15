@@ -387,7 +387,7 @@ module.exports = grammar({
     dynamic_import: $ => seq('_dynamic', '_import', $.dynamic_variable, repeat(seq(',', $.dynamic_variable))),
 
     return: $ =>
-      prec.left(
+      prec.right(
         choice(
           seq('_return', optional($._expression_list)),
           seq('>>', $._expression_list),
