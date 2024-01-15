@@ -22,6 +22,10 @@ _method my_object.method<< a
 _endmethod
 $
 
+_method my_object.method^<< a
+_endmethod
+$
+
 --------------------------------------------------------------------------------
 
 (source_file
@@ -46,6 +50,12 @@ $
       (identifier)
       (parameter_list
         (parameter)
+        (parameter))))
+  (fragment
+    (method
+      (identifier)
+      (identifier)
+      (parameter_list
         (parameter))))
   (fragment
     (method
@@ -120,6 +130,14 @@ _method object.method(first_arg, _optional second_arg, third_arg)
 _endmethod
 $
 
+_method object.method<< first_arg, second_arg
+_endmethod
+$
+
+_method object.method^<< first_arg, second_arg
+_endmethod
+$
+
 --------------------------------------------------------------------------------
 
 (source_file
@@ -148,6 +166,20 @@ $
       (identifier)
       (parameter_list
         (parameter)
+        (parameter)
+        (parameter))))
+  (fragment
+    (method
+      (identifier)
+      (identifier)
+      (parameter_list
+        (parameter)
+	(parameter))))
+  (fragment
+    (method
+      (identifier)
+      (identifier)
+      (parameter_list
         (parameter)
         (parameter)))))
 
