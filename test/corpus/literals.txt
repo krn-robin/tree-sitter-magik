@@ -38,6 +38,12 @@ number literal
 65535
 4294967295
 18446744073709551617
+0.0
+655.35
+-65535
+-655.35
+2e+2
+2.2e10
 $
 
 --------------------------------------------------------------------------------
@@ -47,6 +53,20 @@ $
     (number))
   (fragment
     (number))
+  (fragment
+    (number))
+  (fragment
+    (number))
+  (fragment
+    (number))
+  (fragment
+    (number))
+  (fragment
+    (unary_operator
+      (number)))
+  (fragment
+    (unary_operator
+      (number)))
   (fragment
     (number))
   (fragment

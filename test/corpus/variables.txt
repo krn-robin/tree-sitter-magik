@@ -42,9 +42,12 @@ global reference
 ================================================================================
 
 @gis_program_manager
+@sw:gis_program_manager
 
 --------------------------------------------------------------------------------
 
 (source_file
+  (fragment
+    (global_reference))
   (fragment
     (global_reference)))

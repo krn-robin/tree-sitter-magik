@@ -94,7 +94,7 @@ module.exports = grammar({
     assignment: $ =>
       prec.left(PREC.ASSIGN,
         seq($._expression,
-          choice('<<', '^<<', '_and<<', '_or<<', '_xor<<', '**<<', '*<<', '_mod<<', '_div<<', '-<<', '+<<'),
+          choice('<<', '^<<', '_and<<', '_or<<', '_xor<<', '**<<', '**^<<', '*<<', '*^<<', '/<<', '/^<<', '_mod<<', '_div<<', '-<<', '-^<<', '+<<', '+^<<'),
           $._expression),
       ),
 
@@ -204,9 +204,8 @@ module.exports = grammar({
 
     loopbody: $ =>
       seq(
-        '_loopbody', '(',
-        $._expression,
-        ')',
+        '_loopbody',
+        '(', seq($._expression, repeat(seq(',', $._expression))), ')',
       ),
 
     // _leave [ @ <identifier> ] [_with <rvalue tuple> ]
@@ -216,7 +215,7 @@ module.exports = grammar({
         optional($.label),
         optional(seq('_with', choice(
           seq('(', seq($._expression, repeat1(seq(',', $._expression))), ')'),
-          $._expression))),
+          seq($._expression, repeat(seq(',', $._expression)))))),
       ),
 
     // _continue _with <rvalue tuple>
@@ -226,7 +225,7 @@ module.exports = grammar({
         optional($.label),
         optional(seq('_with', choice(
           seq('(', seq($._expression, repeat1(seq(',', $._expression))), ')'),
-          $._expression))),
+          seq($._expression, repeat(seq(',', $._expression)))))),
       ),
 
     // _protect [ _locking <expression> ]
@@ -376,7 +375,7 @@ module.exports = grammar({
           $._identifier_list),
         seq('<<', $._expression)),
 
-    dynamic: $ => seq('_dynamic', $.dynamic_variable, repeat(seq(',', $.identifier)), optional(seq('<<', $._expression))),
+    dynamic: $ => seq('_dynamic', $.dynamic_variable, repeat(seq(',', $.dynamic_variable)), optional(seq('<<', $._expression))),
 
     import: $ => seq('_import', $._identifier_list),
 
@@ -458,7 +457,7 @@ module.exports = grammar({
       seq($._identifier, ':', $._identifier),
 
     global_reference: $ =>
-      /@[a-z0-9_\?!]*/,
+      prec.left(seq('@', optional(seq($._identifier, ':')), $._identifier)),
 
     identifier: $ => $._identifier,
 
@@ -467,7 +466,11 @@ module.exports = grammar({
     _identifier_list: $ =>
       prec.right(seq($.identifier, repeat(seq(',', $.identifier)))),
 
-    number: $ => /\d+/,
+    number: $ => seq(
+      choice(/\d+/, /\d+\.\d+/),
+      optional(choice(
+        seq('e+', /\d+/),
+        seq('e', /\d+/)))),
 
     vector: $ => seq(
       '{',
