@@ -370,9 +370,12 @@ module.exports = grammar({
         '_global', optional('_constant'), $.identifier, '<<', $._expression),
 
     constant: $ =>
-      seq('_constant',
+      seq(
         choice(
-          $.local,
+          '_constant',
+          seq('_constant', '_local'),
+          seq('_local', '_constant')),
+        choice(
           seq('(', $._identifier_list, ')'),
           $._identifier_list),
         seq('<<', $._expression)),
