@@ -3,6 +3,7 @@ method calls
 ================================================================================
 
 object.method
+object.getName
 object.method()
 object.method<< _unset
 object.method1.method2
@@ -14,6 +15,10 @@ $
 --------------------------------------------------------------------------------
 
 (source_file
+  (fragment
+    (call
+      (variable)
+      (identifier)))
   (fragment
     (call
       (variable)

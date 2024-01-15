@@ -305,7 +305,7 @@ module.exports = grammar({
         ),
       ),
 
-    slot_accessor: $ => prec.left(seq('.', /[a-z][a-z0-9_\?!]*/)),
+    slot_accessor: $ => prec.left(seq('.', /[a-zA-Z][a-zA-Z0-9_\?!]*/)),
 
     _expression_list: $ =>
       prec.right(seq($._expression, repeat(seq(',', $._expression)))),
@@ -444,13 +444,13 @@ module.exports = grammar({
 
     // @ <identifier>
     label: $ =>
-      /@[a-z_]*/,
+      /@[a-zA-Z_]*/,
 
     variable: $ => prec.left($._identifier),
 
     dynamic_variable: $ => seq(
       optional(seq($._identifier, ':')),
-      /![a-z0-9_\?!]*!/,
+      /![a-zA-Z0-9_\?!]*!/,
     ),
 
     global_variable: $ =>
@@ -461,7 +461,7 @@ module.exports = grammar({
 
     identifier: $ => $._identifier,
 
-    _identifier: $ => prec(-2, /[a-z][a-z0-9_\?!]*/),
+    _identifier: $ => prec(-2, /[a-zA-Z][a-zA-Z0-9_\?!]*/),
 
     _identifier_list: $ =>
       prec.right(seq($.identifier, repeat(seq(',', $.identifier)))),
