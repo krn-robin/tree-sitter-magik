@@ -446,7 +446,7 @@ module.exports = grammar({
 
     // @ <identifier>
     label: $ =>
-      /@[a-zA-Z_]*/,
+      /@\s?[a-zA-Z0-9_\?!]*/,
 
     variable: $ => prec.left($._identifier),
 
