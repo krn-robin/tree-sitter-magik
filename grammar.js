@@ -205,9 +205,7 @@ module.exports = grammar({
     loopbody: $ =>
       seq(
         '_loopbody',
-        '(',
-          seq($._expression, optional(repeat1(seq(',', $._expression)))),
-        ')',
+        '(', seq($._expression, repeat(seq(',', $._expression))), ')',
       ),
 
     // _leave [ @ <identifier> ] [_with <rvalue tuple> ]
@@ -217,7 +215,7 @@ module.exports = grammar({
         optional($.label),
         optional(seq('_with', choice(
           seq('(', seq($._expression, repeat1(seq(',', $._expression))), ')'),
-          seq($._expression, optional(repeat1(seq(',', $._expression))))))),
+          seq($._expression, repeat(seq(',', $._expression)))))),
       ),
 
     // _continue _with <rvalue tuple>
@@ -227,7 +225,7 @@ module.exports = grammar({
         optional($.label),
         optional(seq('_with', choice(
           seq('(', seq($._expression, repeat1(seq(',', $._expression))), ')'),
-          seq($._expression, optional(repeat1(seq(',', $._expression))))))),
+          seq($._expression, repeat(seq(',', $._expression)))))),
       ),
 
     // _protect [ _locking <expression> ]
@@ -459,7 +457,7 @@ module.exports = grammar({
       seq($._identifier, ':', $._identifier),
 
     global_reference: $ =>
-      /@[a-z0-9_\?!:]*/,
+      prec.left(seq('@', optional(seq($._identifier, ':')), $._identifier)),
 
     identifier: $ => $._identifier,
 
