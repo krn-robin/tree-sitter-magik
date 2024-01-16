@@ -77,7 +77,9 @@ module.exports = grammar({
           optional(seq(optional(','), '_gather', $.parameter)),
           ')',
         ),
-        seq('<<', seq($.parameter, repeat(seq(',', $.parameter)))),
+        seq(
+          choice('<<', '^<<'),
+          seq($.parameter, repeat(seq(',', $.parameter)))),
       ),
 
     parameter: $ => $._identifier,
