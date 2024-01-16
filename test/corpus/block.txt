@@ -10,7 +10,7 @@ _block
   >> _unset
 _endblock
 
-_block@label
+_block @ label1?
   _return
 _endblock
 $
