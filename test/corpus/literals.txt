@@ -81,11 +81,29 @@ symbol
 :kleenean??
 :int!internal
 :|piped|
+:?
+:_
+:int|!|internal
+:new|()|
+:|A|b|c ||()|
+:_new
 $
 
 --------------------------------------------------------------------------------
 
 (source_file
+  (fragment
+    (symbol))
+  (fragment
+    (symbol))
+  (fragment
+    (symbol))
+  (fragment
+    (symbol))
+  (fragment
+    (symbol))
+  (fragment
+    (symbol))
   (fragment
     (symbol))
   (fragment
