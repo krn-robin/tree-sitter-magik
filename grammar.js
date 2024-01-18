@@ -73,8 +73,8 @@ module.exports = grammar({
           $._terminator,
           optional($.documentation),
           optional($._codeblock),
-          '_endmethod',    
-        )
+          '_endmethod',
+        ),
       ),
 
     // _proc [@ <identifier>] ( [ <arguments> ] )
@@ -88,7 +88,7 @@ module.exports = grammar({
         '_endproc',
       ),
 
-    _chevroned_parameter_list: $ => 
+    _chevroned_parameter_list: $ =>
       seq(
         choice('<<', '^<<'),
         seq($.parameter, repeat(seq(',', $.parameter)))),
@@ -106,11 +106,11 @@ module.exports = grammar({
       ),
 
     indexed_parameter_list: $ =>
-        seq(
-          '[', 
-          optional(seq($.parameter, repeat(seq(',', $.parameter)))), 
-          ']', 
-          optional($._chevroned_parameter_list)
+      seq(
+        '[',
+        optional(seq($.parameter, repeat(seq(',', $.parameter)))),
+        ']',
+        optional($._chevroned_parameter_list),
       ),
 
     parameter: $ => $._identifier,
