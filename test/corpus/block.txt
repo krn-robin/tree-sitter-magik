@@ -3,7 +3,7 @@ block statements
 ================================================================================
 
 _block
-  _return
+  _return _unset, _unset
 _endblock
 
 _block
@@ -20,7 +20,9 @@ $
 (source_file
   (fragment
     (block
-      (return)))
+      (return
+        (unset)
+        (unset))))
   (fragment
     (block
       (return
