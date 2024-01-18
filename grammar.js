@@ -34,7 +34,7 @@ module.exports = grammar({
     _method_declaration: $ =>
       seq(
         optional($.pragma),
-        $.method,
+        choice($.method, $.indexing_method),
       ),
 
     // [_private] _method <receiver>.<message_name> [( <arguments> )]
@@ -56,6 +56,25 @@ module.exports = grammar({
           optional($._codeblock),
           '_endmethod',
         ),
+      ),
+
+    // [_private] _method <receiver>'[' <argument list> ']'
+    // <block body>
+    // _endmethod
+    indexing_method: $ =>
+      prec.left(
+        seq(
+          optional('_abstract'),
+          optional('_private'),
+          optional('_iter'),
+          '_method',
+          field('exemplarname', $.identifier),
+          $.indexed_parameter_list,
+          $._terminator,
+          optional($.documentation),
+          optional($._codeblock),
+          '_endmethod',    
+        )
       ),
 
     // _proc [@ <identifier>] ( [ <arguments> ] )
@@ -80,6 +99,16 @@ module.exports = grammar({
         seq(
           choice('<<', '^<<'),
           seq($.parameter, repeat(seq(',', $.parameter)))),
+      ),
+
+    indexed_parameter_list: $ =>
+        seq(
+          '[', 
+          optional(seq($.parameter, repeat(seq(',', $.parameter)))), 
+          ']', 
+          optional(seq(
+            choice('<<', '^<<'),
+            seq($.parameter, repeat(seq(',', $.parameter)))))
       ),
 
     parameter: $ => $._identifier,
