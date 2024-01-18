@@ -7,6 +7,8 @@ const PREC = {
   ARITHMETIC: 70,
 };
 
+const ID_REGEX = /[a-zA-Z][a-zA-Z0-9_\?!]*/;
+
 module.exports = grammar({
   name: 'magik',
 
@@ -51,7 +53,7 @@ module.exports = grammar({
           '.',
           field('name', $.identifier),
           optional($.parameter_list),
-          $._terminator,
+          $._line_terminator,
           optional($.documentation),
           optional($._codeblock),
           '_endmethod',
@@ -272,6 +274,7 @@ module.exports = grammar({
         $.self,
         $.clone,
         $.symbol,
+        $.thisthread,
         $.vector,
       ),
 
@@ -342,7 +345,16 @@ module.exports = grammar({
       $.catch,
       $.throw,
       $.primitive,
-      seq($._expression, $._terminator),
+      $.block,
+      $.iterator,
+      $.while,
+      $.if,
+      $.loop,
+      $.try,
+      $.loopbody,
+      $.protect,
+      $.lock,
+      seq($._expression, optional($._terminator)),
     ),
 
     _codeblock: $ => repeat1(choice($._statement, $._defvar)),
@@ -411,24 +423,14 @@ module.exports = grammar({
     _expression: $ =>
       choice(
         $.parenthesized_expression,
-        $.procedure,
-        $.block,
         $.call,
+        $.procedure,
         $.invoke,
         $.slot_accessor,
         $.indexed_access,
         $.gather,
         $.scatter,
         $.allresults,
-        $.iterator,
-        $.while,
-        $.if,
-        $.loop,
-        $.try,
-        $.loopbody,
-        $.protect,
-        $.lock,
-        $.thisthread,
         $.class,
         $.assignment,
         $.logical_operator,
@@ -453,29 +455,26 @@ module.exports = grammar({
 
     variable: $ => prec.left($._identifier),
 
-    dynamic_variable: $ => seq(
-      optional(seq($._identifier, ':')),
-      /![a-zA-Z0-9_\?!]*!/,
-    ),
+    dynamic_variable: $ => token(seq(
+      optional(seq(ID_REGEX, ':')),
+      /![a-zA-Z0-9_\?!]*!/)),
 
-    global_variable: $ =>
-      seq($._identifier, ':', $._identifier),
+    global_variable: $ => token(seq(ID_REGEX, ':', ID_REGEX)),
 
-    global_reference: $ =>
-      prec.left(seq('@', optional(seq($._identifier, ':')), $._identifier)),
+    global_reference: $ => token(seq('@', optional(seq(ID_REGEX, ':')), ID_REGEX)),
 
     identifier: $ => $._identifier,
 
-    _identifier: $ => prec(-2, /[a-zA-Z][a-zA-Z0-9_\?!]*/),
+    _identifier: $ => ID_REGEX,
 
     _identifier_list: $ =>
       prec.right(seq($.identifier, repeat(seq(',', $.identifier)))),
 
-    number: $ => seq(
+    number: $ => token(seq(
       choice(/\d+/, /\d+\.\d+/),
       optional(choice(
         seq('e+', /\d+/),
-        seq('e', /\d+/)))),
+        seq('e', /\d+/))))),
 
     vector: $ => seq(
       '{',
