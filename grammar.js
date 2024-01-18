@@ -513,7 +513,7 @@ module.exports = grammar({
     unary_operator: $ =>
       seq(field('operator', choice('+', '-', '_not', '~')), $._expression),
 
-    symbol: $ => /:(\|[a-zA-Z0-9_\?!() ]+\||[a-zA-Z0-9_\?!]+)+/,
+    symbol: $ => /:(\|[^|]*\||[a-zA-Z0-9_\?!]+)+/,
 
     character_literal: $ => seq('%', choice($._identifier, /./, ' ')),
 
