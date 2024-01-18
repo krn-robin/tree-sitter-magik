@@ -18,14 +18,6 @@ _method my_object.method(a, b)
 _endmethod
 $
 
-_method my_object.method<< a
-_endmethod
-$
-
-_method my_object.method^<< a
-_endmethod
-$
-
 --------------------------------------------------------------------------------
 
 (source_file
@@ -50,18 +42,6 @@ $
       (identifier)
       (parameter_list
         (parameter)
-        (parameter))))
-  (fragment
-    (method
-      (identifier)
-      (identifier)
-      (parameter_list
-        (parameter))))
-  (fragment
-    (method
-      (identifier)
-      (identifier)
-      (parameter_list
         (parameter)))))
 
 ================================================================================
@@ -116,6 +96,56 @@ $
     (indexing_method
       (identifier)
       (indexed_parameter_list
+        (parameter)
+        (parameter)))))
+
+================================================================================
+chevron methods
+================================================================================
+
+_method my_object.method<< a
+_endmethod
+$
+
+_method my_object.method^<< a
+_endmethod
+$
+
+_method my_object.method(a)<< b
+_endmethod
+$
+
+_method my_object.method(a)^<< b
+_endmethod
+$
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (fragment
+    (method
+      (identifier)
+      (identifier)
+      (parameter_list
+        (parameter))))
+  (fragment
+    (method
+      (identifier)
+      (identifier)
+      (parameter_list
+        (parameter))))
+  (fragment
+    (method
+      (identifier)
+      (identifier)
+      (parameter_list
+        (parameter)
+        (parameter))))
+  (fragment
+    (method
+      (identifier)
+      (identifier)
+      (parameter_list
         (parameter)
         (parameter)))))
 

@@ -88,17 +88,21 @@ module.exports = grammar({
         '_endproc',
       ),
 
+    _chevroned_parameter_list: $ => 
+      seq(
+        choice('<<', '^<<'),
+        seq($.parameter, repeat(seq(',', $.parameter)))),
+
     parameter_list: $ =>
       choice(
         seq('(',
           optional(seq($.parameter, repeat(seq(',', $.parameter)))),
-          optional(seq(optional(','), '_optional', $.parameter, repeat(seq(',', $.parameter)))),
+          optional(seq(optional(','), '_optional', seq($.parameter, repeat(seq(',', $.parameter))))),
           optional(seq(optional(','), '_gather', $.parameter)),
           ')',
+          optional($._chevroned_parameter_list),
         ),
-        seq(
-          choice('<<', '^<<'),
-          seq($.parameter, repeat(seq(',', $.parameter)))),
+        $._chevroned_parameter_list,
       ),
 
     indexed_parameter_list: $ =>
@@ -106,9 +110,7 @@ module.exports = grammar({
           '[', 
           optional(seq($.parameter, repeat(seq(',', $.parameter)))), 
           ']', 
-          optional(seq(
-            choice('<<', '^<<'),
-            seq($.parameter, repeat(seq(',', $.parameter)))))
+          optional($._chevroned_parameter_list)
       ),
 
     parameter: $ => $._identifier,
