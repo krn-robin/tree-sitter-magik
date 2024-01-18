@@ -85,11 +85,20 @@ symbol
 :new|()|
 :|A|b|c ||()|
 :_new
+:|=|
+:|new world|
+:||
 $
 
 --------------------------------------------------------------------------------
 
 (source_file
+  (fragment
+    (symbol))
+  (fragment
+    (symbol))
+  (fragment
+    (symbol))
   (fragment
     (symbol))
   (fragment
