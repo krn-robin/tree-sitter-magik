@@ -45,7 +45,7 @@ module.exports = grammar({
         $.method,
       ),
 
-    // [_private] _method <receiver>.<message_name> [( <arguments> )]
+    // [_private] _method <receiver>.<message_name> [( <arguments> )] | // [_private] _method <receiver>'[' <argument list> ']'
     //  <block body>
     // _endmethod
     method: $ =>
@@ -56,9 +56,9 @@ module.exports = grammar({
           optional('_iter'),
           '_method',
           field('exemplarname', $.identifier),
-          '.',
-          field('name', $.identifier),
-          optional($.parameter_list),
+          choice(
+            seq('.', field('name', $.identifier), optional($.parameter_list)),
+            $.indexed_parameter_list),
           $._line_terminator,
           optional($.documentation),
           optional($._codeblock),
@@ -77,6 +77,11 @@ module.exports = grammar({
         '_endproc',
       ),
 
+    _chevroned_parameter_list: $ =>
+      seq(
+        choice('<<', '^<<'),
+        seq($.parameter, repeat(seq(',', $.parameter)))),
+
     parameter_list: $ =>
       choice(
         seq('(',
@@ -84,10 +89,17 @@ module.exports = grammar({
           optional(seq(optional(','), '_optional', $.parameter, repeat(seq(',', $.parameter)))),
           optional(seq(optional(','), '_gather', $.parameter)),
           ')',
+          optional($._chevroned_parameter_list),
         ),
-        seq(
-          choice('<<', '^<<'),
-          seq($.parameter, repeat(seq(',', $.parameter)))),
+        $._chevroned_parameter_list,
+      ),
+
+    indexed_parameter_list: $ =>
+      seq(
+        '[',
+        seq(field('name', $.identifier), repeat(seq(',', field('name', $.identifier)))),
+        ']',
+        optional($._chevroned_parameter_list),
       ),
 
     parameter: $ => $._identifier,

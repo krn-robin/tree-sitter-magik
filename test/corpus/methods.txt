@@ -18,14 +18,6 @@ _method my_object.method(a, b)
 _endmethod
 $
 
-_method my_object.method<< a
-_endmethod
-$
-
-_method my_object.method^<< a
-_endmethod
-$
-
 --------------------------------------------------------------------------------
 
 (source_file
@@ -50,7 +42,76 @@ $
       (identifier)
       (parameter_list
         (parameter)
-        (parameter))))
+        (parameter)))))
+
+================================================================================
+indexing methods
+================================================================================
+
+_method my_object[]
+_endmethod
+$
+
+_method my_object[a]
+_endmethod
+$
+
+_method my_object[a, b]
+_endmethod
+$
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (fragment
+    (method
+      (identifier)
+      (indexed_parameter_list
+        (identifier
+          (MISSING "slot_accessor_token1")))))
+  (fragment
+    (method
+      (identifier)
+      (indexed_parameter_list
+        (identifier))))
+  (fragment
+    (method
+      (identifier)
+      (indexed_parameter_list
+        (identifier)
+        (identifier)))))
+
+================================================================================
+chevron methods
+================================================================================
+
+_method my_object.method<< a
+_endmethod
+$
+
+_method my_object.method^<< a
+_endmethod
+$
+
+_method my_object[a]<< b
+_endmethod
+$
+
+_method my_object[a]^<< a
+_endmethod
+$
+
+_method my_object.method(a)<< b
+_endmethod
+$
+
+_method my_object.method(a)^<< b
+_endmethod
+$
+
+--------------------------------------------------------------------------------
+
+(source_file
   (fragment
     (method
       (identifier)
@@ -62,6 +123,32 @@ $
       (identifier)
       (identifier)
       (parameter_list
+        (parameter))))
+  (fragment
+    (method
+      (identifier)
+      (indexed_parameter_list
+        (identifier)
+        (parameter))))
+  (fragment
+    (method
+      (identifier)
+      (indexed_parameter_list
+        (identifier)
+        (parameter))))
+  (fragment
+    (method
+      (identifier)
+      (identifier)
+      (parameter_list
+        (parameter)
+        (parameter))))
+  (fragment
+    (method
+      (identifier)
+      (identifier)
+      (parameter_list
+        (parameter)
         (parameter)))))
 
 ================================================================================
