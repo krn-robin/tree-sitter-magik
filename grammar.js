@@ -19,19 +19,25 @@ module.exports = grammar({
 
   rules: {
     source_file: $ =>
-      repeat(
-        choice(
-          $.package,
-          $.fragment),
+      prec.left(
+        repeat(
+          choice(
+            $.package,
+            $.fragment,
+            $._dollar,
+          ),
+        ),
       ),
 
     _line_terminator: $ => seq(optional('\r'), '\n'),
 
     fragment: $ =>
-      prec.left(seq(repeat1($._top_level_statement), optional(seq('$', $._line_terminator)))),
+      prec.left(seq(repeat1($._top_level_statement), optional($._dollar))),
 
     package: $ =>
       prec.left(seq('_package', $._identifier, repeat($.fragment))),
+
+    _dollar: $ => token(seq('$', optional('\r'), '\n')),
 
     _method_declaration: $ =>
       seq(
