@@ -7,7 +7,17 @@ _block
 _endblock
 
 _block
+  _if _true
+  _then _return _unset, _unset
+  _endif
+_endblock
+
+_block
   >> _unset
+_endblock
+
+_block
+  _if _true _then >> _unset _endif
 _endblock
 
 _block @ label1?
@@ -25,8 +35,21 @@ $
         (unset))))
   (fragment
     (block
+      (if
+        (true)
+        (return
+          (unset)
+          (unset)))))
+  (fragment
+    (block
       (return
         (unset))))
+  (fragment
+    (block
+      (if
+        (true)
+        (return
+          (unset)))))
   (fragment
     (block
       (label)

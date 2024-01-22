@@ -4,6 +4,7 @@ tuple
 
 (first, _gather rest) << roots(1, -6, -7, 60)
 (i, j, k) << (_scatter rest)
+(i, j, _gather k) << (_scatter rest)
 (i, j, k, _gather rest) << (first, _scatter rootsvec)
 rootsvec << _allresults roots(1, -6, -7, 60)
 _scatter _allresults roots(1, -6, -7, 60)
@@ -32,6 +33,16 @@ $
         (variable)
         (variable)
         (variable))
+      (parenthesized_expression
+        (scatter
+          (variable)))))
+  (fragment
+    (assignment
+      (parenthesized_expression
+        (variable)
+        (variable)
+        (gather
+          (variable)))
       (parenthesized_expression
         (scatter
           (variable)))))

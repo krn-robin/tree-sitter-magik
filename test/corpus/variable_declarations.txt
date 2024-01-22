@@ -141,6 +141,15 @@ local
 _block
   _local a_name
   _local a_init << 1
+  _local a_init << 1, b_init << 2
+  _local a_init << 1; b_init << 2
+  _local (a_init, _gather a_gather) << (_scatter b_values)
+  _local (_gather a_init) << b_values
+  _local a_proc << _proc() _endproc
+  _local a_proc << _proc(a_name) _import a_init; >> a_name _endproc
+  _local a_proc << a_proc.map(_proc() _import a_init; >> a_name _endproc)
+  _local a_block << _block >> _true _endblock
+  _local a_catch << _catch >> _true _endcatch
 _endblock
 
 --------------------------------------------------------------------------------
@@ -152,7 +161,60 @@ _endblock
         (identifier))
       (local
         (identifier)
-        (number)))))
+        (number))
+      (local
+        (identifier)
+        (number)
+        (identifier)
+        (number))
+      (local
+        (identifier)
+        (number)
+        (identifier)
+        (number))
+      (local
+        (identifier)
+        (identifier)
+        (parenthesized_expression
+          (scatter
+            (variable))))
+      (local
+        (identifier)
+        (number))
+      (local
+        (identifier)
+        (procedure
+          (parameter_list)))
+      (local
+        (identifier)
+        (procedure
+          (parameter_list
+            (parameter))
+          (import
+            (identifier))
+          (return
+            (variable))))
+      (local
+        (identifier)
+        (call
+          (variable)
+          (identifier)
+          (procedure
+            (parameter_list)
+            (import
+              (identifier))
+            (return
+              (variable)))))
+      (local
+        (identifier)
+        (block
+          (return
+            (true)))
+      (local
+        (identifier)
+        (catch
+          (return
+            (true))))))))
 
 ================================================================================
 constant
