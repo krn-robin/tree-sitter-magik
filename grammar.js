@@ -367,7 +367,7 @@ module.exports = grammar({
       $.global,
       $.import),
 
-    global: $ => seq('_global', $._identifier_list),
+    global: $ => seq('_global', choice($.identifier, $.global_variable, $.dynamic_variable), repeat(seq(',', choice($.identifier, $.global_variable, $.dynamic_variable)))),
 
     local: $ => prec.left(
       seq('_local',
@@ -379,7 +379,7 @@ module.exports = grammar({
     _global_assignment: $ =>
       seq(
         optional($.pragma),
-        '_global', optional('_constant'), $.identifier, '<<', $._expression),
+        '_global', optional('_constant'), choice($.identifier, $.dynamic_variable), '<<', $._expression),
 
     constant: $ =>
       seq(
