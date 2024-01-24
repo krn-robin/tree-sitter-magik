@@ -56,7 +56,10 @@ global
 ================================================================================
 
 _block
+  _global gis_program_manager
   _global sw:gis_program_manager
+  _global !current_view!
+  _global gis_program_manager, sw:sw_module_manager, !current_view!
 _endblock
 
 --------------------------------------------------------------------------------
@@ -66,19 +69,30 @@ _endblock
     (block
       (global
         (identifier))
-      (symbol))))
+      (global
+        (global_variable))
+      (global
+        (dynamic_variable))
+      (global
+        (identifier)
+        (global_variable)
+        (dynamic_variable)))))
 
 ================================================================================
 global top level assignment
 ================================================================================
 
 _global gis_program_manager << _unset
+_global !current_view! << _unset
 
 --------------------------------------------------------------------------------
 
 (source_file
   (fragment
     (identifier)
+    (unset))
+  (fragment
+    (dynamic_variable)
     (unset)))
 
 ================================================================================
@@ -86,12 +100,16 @@ global constant top level assignment
 ================================================================================
 
 _global _constant gis_program_manager << _unset
+_global _constant !current_view! << _unset
 
 --------------------------------------------------------------------------------
 
 (source_file
   (fragment
     (identifier)
+    (unset))
+  (fragment
+    (dynamic_variable)
     (unset)))
 
 ================================================================================
@@ -101,12 +119,19 @@ global constant top level assignment with pragma
 _pragma(classify_level=basic)
 _global _constant gis_program_manager << _unset
 
+_pragma(classify_level=basic)
+_global _constant !current_view! << _unset
+
 --------------------------------------------------------------------------------
 
 (source_file
   (fragment
     (pragma)
     (identifier)
+    (unset))
+  (fragment
+    (pragma)
+    (dynamic_variable)
     (unset)))
 
 ================================================================================
