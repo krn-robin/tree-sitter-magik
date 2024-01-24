@@ -98,7 +98,7 @@ module.exports = grammar({
     assignment: $ =>
       prec.left(PREC.ASSIGN,
         seq($._expression,
-          choice('<<', '^<<', '_and<<', '_or<<', '_xor<<', '**<<', '**^<<', '*<<', '*^<<', '/<<', '/^<<', '_mod<<', '_div<<', '-<<', '-^<<', '+<<', '+^<<'),
+          choice('<<', '^<<', '_and<<', '_andif<<', '_or<<', '_orif<<', '_xor<<', '**<<', '**^<<', '*<<', '*^<<', '/<<', '/^<<', '_mod<<', '_div<<', '-<<', '-^<<', '+<<', '+^<<'),
           $._expression),
       ),
 
