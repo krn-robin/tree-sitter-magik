@@ -1,12 +1,13 @@
+root = true
+
 [*]
-insert_final_newline = true
-trim_trailing_whitespace = true
+charset = utf-8
 end_of_line = lf
-
-[*.txt]
-charset = utf-8
-
-[*.js]
-charset = utf-8
 indent_size = 2
 indent_style = space
+max_line_length = 120
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.{rs,py}]
+indent_size = 4
