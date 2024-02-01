@@ -141,6 +141,7 @@ local
 _block
   _local a_name
   _local a_init << 1
+  _local a_init << 1, b_init << 2
 _endblock
 
 --------------------------------------------------------------------------------
@@ -151,6 +152,11 @@ _endblock
       (local
         (identifier))
       (local
+        (identifier)
+        (number))
+      (local
+        (identifier)
+        (number)
         (identifier)
         (number)))))
 
