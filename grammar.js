@@ -406,6 +406,8 @@ module.exports = grammar({
       seq('_local',
         choice(
           seq('(', seq($.identifier, optional(seq('<<', $._expression))), repeat(seq(',', seq($.identifier, optional(seq('<<', $._expression))))), ')'),
+          seq('(', seq($.identifier, optional(seq('<<', $._expression))), repeat(seq(',', seq($.identifier, optional(seq('<<', $._expression))))), seq(',', '_gather', seq($.identifier, optional(seq('<<', $._expression)))), ')'),
+          seq('(', seq('_gather', $.identifier, optional(seq('<<', $._expression))), ')'),
           seq(seq($.identifier, optional(seq('<<', $._expression))), repeat(seq(',', seq($.identifier, optional(seq('<<', $._expression))))))),
         optional(seq('<<', $._expression)))),
 
