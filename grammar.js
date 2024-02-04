@@ -32,7 +32,7 @@ module.exports = grammar({
     _line_terminator: $ => seq(optional('\r'), '\n'),
 
     fragment: $ =>
-      prec.left(seq(repeat1($._top_level_statement), optional($._dollar))),
+      prec.left(seq(repeat1(seq($._top_level_statement, $._line_terminator)), optional($._dollar))),
 
     package: $ =>
       prec.left(seq('_package', $._identifier, repeat($.fragment))),
@@ -149,10 +149,10 @@ module.exports = grammar({
 
     // _handling condition _with procedure
     handling: $ =>
-      seq('_handling', choice(
+      prec.left(seq('_handling', choice(
         '_default',
         seq(field('condition', $._expression), repeat(seq(',', field('condition', $._expression))), '_with', choice('_default', $._expression))),
-      ),
+      )),
 
     // _catch <expression>
     //  <block body>
@@ -160,7 +160,7 @@ module.exports = grammar({
     catch: $ => seq('_catch', $._expression, $._terminator, optional($._codeblock), '_endcatch'),
 
     // _throw <expression> [ _with <rvalue tuple> ]
-    throw: $ => seq('_throw', $._expression, optional(seq('_with', $._expression))),
+    throw: $ => prec.left(seq('_throw', $._expression, optional(seq('_with', $._expression)))),
 
     // _primitive <number>
     primitive: $ => seq('_primitive', $.number),
@@ -220,23 +220,23 @@ module.exports = grammar({
 
     // _leave [ @ <identifier> ] [_with <rvalue tuple> ]
     leave: $ =>
-      seq(
+      prec.left(seq(
         '_leave',
         optional($.label),
         optional(seq('_with', choice(
           seq('(', seq($._expression, repeat1(seq(',', $._expression))), ')'),
           seq($._expression, repeat(seq(',', $._expression)))))),
-      ),
+      )),
 
     // _continue _with <rvalue tuple>
     continue: $ =>
-      seq(
+      prec.left(seq(
         '_continue',
         optional($.label),
         optional(seq('_with', choice(
           seq('(', seq($._expression, repeat1(seq(',', $._expression))), ')'),
           seq($._expression, repeat(seq(',', $._expression)))))),
-      ),
+      )),
 
     // _protect [ _locking <expression> ]
     //   <block body>
@@ -339,11 +339,11 @@ module.exports = grammar({
     _top_level_statement: $ => choice(
       $._definition,
       $._method_declaration,
-      $._statement,
+      $._expression,
       $._global_assignment,
     ),
 
-    _statement: $ => choice(
+    _expression: $ => choice(
       $.handling,
       $.return,
       $.leave,
@@ -360,10 +360,31 @@ module.exports = grammar({
       $.loopbody,
       $.protect,
       $.lock,
-      seq($._expression, optional($._terminator)),
+      choice(
+        $.parenthesized_expression,
+        $.call,
+        $.procedure,
+        $.invoke,
+        $.slot_accessor,
+        $.indexed_access,
+        $.gather,
+        $.scatter,
+        $.allresults,
+        $.class,
+        $.assignment,
+        $.logical_operator,
+        $.relational_operator,
+        $.arithmetic_operator,
+        $.unary_operator,
+        $._literal,
+        $._variable,
+      ),
     ),
 
-    _codeblock: $ => repeat1(choice($._statement, $._defvar)),
+    _codeblock: $ => seq(
+      choice($._expression, $._defvar),
+      repeat(seq($._terminator, choice($._expression, $._defvar))),
+      optional($._terminator)),
 
     _defvar: $ => choice(
       $.local,
@@ -377,10 +398,10 @@ module.exports = grammar({
 
     local: $ => prec.left(
       seq('_local',
-          choice(
-            seq('(', $._identifier_list, ')'),
-            $._identifier_list),
-          optional(seq('<<', $._expression)))),
+        choice(
+          seq('(', $._identifier_list, ')'),
+          $._identifier_list),
+        optional(seq('<<', $._expression)))),
 
     _global_assignment: $ =>
       seq(
@@ -425,27 +446,6 @@ module.exports = grammar({
     allresults: $ => seq('_allresults', $._expression),
 
     parenthesized_expression: $ => seq('(', $._expression_list, ')'),
-
-    _expression: $ =>
-      choice(
-        $.parenthesized_expression,
-        $.call,
-        $.procedure,
-        $.invoke,
-        $.slot_accessor,
-        $.indexed_access,
-        $.gather,
-        $.scatter,
-        $.allresults,
-        $.class,
-        $.assignment,
-        $.logical_operator,
-        $.relational_operator,
-        $.arithmetic_operator,
-        $.unary_operator,
-        $._literal,
-        $._variable,
-      ),
 
     _variable: $ =>
       choice(
@@ -516,7 +516,7 @@ module.exports = grammar({
       ),
 
     unary_operator: $ =>
-      seq(field('operator', choice('+', '-', '_not', '~')), $._expression),
+      prec.right(seq(field('operator', choice('+', '-', '_not', '~')), $._expression)),
 
     symbol: $ => /:(\|[^|]*\||[a-zA-Z0-9_\?!]+)+/,
 
