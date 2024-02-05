@@ -14,6 +14,11 @@ _catch "error"
 _endcatch
 $
 
+_catch :error
+  >> _true
+_endcatch
+$
+
 --------------------------------------------------------------------------------
 
 (source_file
@@ -25,4 +30,9 @@ $
       (global_reference)))
   (fragment
     (catch
-      (string_literal))))
+      (string_literal)))
+  (fragment
+    (catch
+      (symbol)
+      (return
+        (true)))))
