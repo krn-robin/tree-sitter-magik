@@ -16,8 +16,7 @@ _proc() _endproc()
       (variable)))
   (fragment
     (invoke
-      (procedure
-        (parameter_list))))
+      (procedure)))
   (fragment
     (invoke
       (symbol))))

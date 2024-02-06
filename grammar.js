@@ -57,8 +57,19 @@ module.exports = grammar({
           '_method',
           field('exemplarname', $.identifier),
           choice(
-            seq('.', field('name', $.identifier), optional($.parameter_list)),
-            $.indexed_parameter_list),
+            seq(
+              '.', field('name', $.identifier),
+              optional(choice(
+                seq(
+                  '(',
+                  optional(seq($.argument, repeat(seq(',', $.argument)))),
+                  optional(seq(optional(','), '_optional', $._arguments)),
+                  optional(seq(optional(','), '_gather', $.argument)),
+                  ')', optional(seq(choice('<<', '^<<'), $._arguments))),
+                seq('[', optional($._arguments), ']', optional(seq(choice('<<', '^<<'), $._arguments))),
+                seq(choice('<<', '^<<'), $._arguments),
+              ))),
+            seq('[', optional($._arguments), ']', optional(seq(choice('<<', '^<<'), $._arguments)))),
           $._line_terminator,
           optional($.documentation),
           optional($._codeblock),
@@ -72,37 +83,20 @@ module.exports = grammar({
     procedure: $ =>
       seq('_proc',
         optional($.label),
-        $.parameter_list,
+        seq(
+          '(',
+          optional(seq($.argument, repeat(seq(',', $.argument)))),
+          optional(seq(optional(','), '_optional', $._arguments)),
+          optional(seq(optional(','), '_gather', $.argument)),
+          ')', optional(seq(choice('<<', '^<<'), $._arguments)),
+        ),
         optional($._codeblock),
         '_endproc',
       ),
 
-    _chevroned_parameter_list: $ =>
-      seq(
-        choice('<<', '^<<'),
-        seq($.parameter, repeat(seq(',', $.parameter)))),
+    argument: $ => $._identifier,
 
-    parameter_list: $ =>
-      choice(
-        seq('(',
-          optional(seq($.parameter, repeat(seq(',', $.parameter)))),
-          optional(seq(optional(','), '_optional', $.parameter, repeat(seq(',', $.parameter)))),
-          optional(seq(optional(','), '_gather', $.parameter)),
-          ')',
-          optional($._chevroned_parameter_list),
-        ),
-        $._chevroned_parameter_list,
-      ),
-
-    indexed_parameter_list: $ =>
-      seq(
-        '[',
-        seq(field('name', $.identifier), repeat(seq(',', field('name', $.identifier)))),
-        ']',
-        optional($._chevroned_parameter_list),
-      ),
-
-    parameter: $ => $._identifier,
+    _arguments: $ => prec.right(seq($.argument, repeat(seq(',', $.argument)))),
 
     // _block [ @ <identifier> ]
     //   <statements>

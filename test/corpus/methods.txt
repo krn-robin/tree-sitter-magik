@@ -28,21 +28,18 @@ $
   (fragment
     (method
       (identifier)
-      (identifier)
-      (parameter_list)))
+      (identifier)))
   (fragment
     (method
       (identifier)
       (identifier)
-      (parameter_list
-        (parameter))))
+      (argument)))
   (fragment
     (method
       (identifier)
       (identifier)
-      (parameter_list
-        (parameter)
-        (parameter)))))
+      (argument)
+      (argument))))
 
 ================================================================================
 indexing methods
@@ -65,21 +62,16 @@ $
 (source_file
   (fragment
     (method
-      (identifier)
-      (indexed_parameter_list
-        (identifier
-          (MISSING "slot_accessor_token1")))))
+      (identifier)))
   (fragment
     (method
       (identifier)
-      (indexed_parameter_list
-        (identifier))))
+      (argument)))
   (fragment
     (method
       (identifier)
-      (indexed_parameter_list
-        (identifier)
-        (identifier)))))
+      (argument)
+      (argument))))
 
 ================================================================================
 chevron methods
@@ -116,40 +108,34 @@ $
     (method
       (identifier)
       (identifier)
-      (parameter_list
-        (parameter))))
+        (argument)))
   (fragment
     (method
       (identifier)
       (identifier)
-      (parameter_list
-        (parameter))))
+      (argument)))
   (fragment
     (method
       (identifier)
-      (indexed_parameter_list
-        (identifier)
-        (parameter))))
+        (argument)
+        (argument)))
   (fragment
     (method
       (identifier)
-      (indexed_parameter_list
-        (identifier)
-        (parameter))))
-  (fragment
-    (method
-      (identifier)
-      (identifier)
-      (parameter_list
-        (parameter)
-        (parameter))))
+      (argument)
+      (argument)))
   (fragment
     (method
       (identifier)
       (identifier)
-      (parameter_list
-        (parameter)
-        (parameter)))))
+      (argument)
+      (argument)))
+  (fragment
+    (method
+      (identifier)
+      (identifier)
+      (argument)
+      (argument))))
 
 ================================================================================
 complex methods
@@ -206,7 +192,6 @@ $
     (method
       (identifier)
       (identifier)
-      (parameter_list)
       (return
         (if
           (true)
@@ -220,8 +205,7 @@ $
     (method
       (identifier)
       (identifier)
-      (parameter_list
-        (parameter))
+      (argument)
       (return
         (if
           (relational_operator
@@ -242,9 +226,8 @@ $
     (method
       (identifier)
       (identifier)
-      (parameter_list
-        (parameter)
-        (parameter))
+      (argument)
+      (argument)
       (return
         (call
           (if
@@ -270,7 +253,7 @@ _method my_object.method_with_doc()
 	## multi
 	## line
 	## documentation
-	
+
 	# comment
 	## comment
 _endmethod
@@ -283,7 +266,6 @@ $
     (method
       (identifier)
       (identifier)
-      (parameter_list)
       (documentation
         (comment)))))
 
@@ -303,13 +285,12 @@ $
     (method
       (identifier)
       (identifier)
-      (parameter_list)
       (loopbody
         (unset)
         (unset)))))
 
 ================================================================================
-method parameters
+method arguments
 ================================================================================
 
 _method object.method(_gather args)
@@ -343,43 +324,37 @@ $
     (method
       (identifier)
       (identifier)
-      (parameter_list
-        (parameter))))
+      (argument)))
   (fragment
     (method
       (identifier)
       (identifier)
-      (parameter_list
-        (parameter)
-        (parameter))))
+      (argument)
+      (argument)))
   (fragment
     (method
       (identifier)
       (identifier)
-      (parameter_list
-        (parameter))))
+      (argument)))
   (fragment
     (method
       (identifier)
       (identifier)
-      (parameter_list
-        (parameter)
-        (parameter)
-        (parameter))))
+      (argument)
+      (argument)
+      (argument)))
   (fragment
     (method
       (identifier)
       (identifier)
-      (parameter_list
-        (parameter)
-        (parameter))))
+      (argument)
+      (argument)))
   (fragment
     (method
       (identifier)
       (identifier)
-      (parameter_list
-        (parameter)
-        (parameter)))))
+      (argument)
+      (argument))))
 
 ================================================================================
 methods with pragma
@@ -417,29 +392,24 @@ $
     (pragma)
     (method
       (identifier)
-      (identifier)
-      (parameter_list)))
+      (identifier)))
   (fragment
     (pragma)
     (method
       (identifier)
-      (identifier)
-      (parameter_list)))
+      (identifier)))
   (fragment
     (pragma)
     (method
       (identifier)
-      (identifier)
-      (parameter_list)))
+      (identifier)))
   (fragment
     (pragma)
     (method
       (identifier)
-      (identifier)
-      (parameter_list)))
+      (identifier)))
   (fragment
     (pragma)
     (method
       (identifier)
-      (identifier)
-      (parameter_list))))
+      (identifier))))
