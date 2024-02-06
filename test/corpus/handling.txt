@@ -18,8 +18,7 @@ $
     (handling
       condition: (variable)
       (invoke
-        receiver: (procedure
-                    (parameter_list)))))
+        receiver: (procedure))))
   (fragment
     (handling
       condition: (variable)))
