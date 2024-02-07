@@ -45,7 +45,7 @@ module.exports = grammar({
         $.method,
       ),
 
-    // [_private] _method <receiver>.<message_name> [( <arguments> )]
+    // [_private] _method <receiver>.<message_name> [( <arguments> )] | // [_private] _method <receiver>'[' <argument list> ']'
     //  <block body>
     // _endmethod
     method: $ =>
@@ -56,9 +56,20 @@ module.exports = grammar({
           optional('_iter'),
           '_method',
           field('exemplarname', $.identifier),
-          '.',
-          field('name', $.identifier),
-          optional($.parameter_list),
+          choice(
+            seq(
+              '.', field('name', $.identifier),
+              optional(choice(
+                seq(
+                  '(',
+                  optional(seq($.argument, repeat(seq(',', $.argument)))),
+                  optional(seq(optional(','), '_optional', $._arguments)),
+                  optional(seq(optional(','), '_gather', $.argument)),
+                  ')', optional(seq(choice('<<', '^<<'), $._arguments))),
+                seq('[', optional($._arguments), ']', optional(seq(choice('<<', '^<<'), $._arguments))),
+                seq(choice('<<', '^<<'), $._arguments),
+              ))),
+            seq('[', optional($._arguments), ']', optional(seq(choice('<<', '^<<'), $._arguments)))),
           $._line_terminator,
           optional($.documentation),
           optional($._codeblock),
@@ -72,25 +83,20 @@ module.exports = grammar({
     procedure: $ =>
       seq('_proc',
         optional($.label),
-        $.parameter_list,
+        seq(
+          '(',
+          optional(seq($.argument, repeat(seq(',', $.argument)))),
+          optional(seq(optional(','), '_optional', $._arguments)),
+          optional(seq(optional(','), '_gather', $.argument)),
+          ')', optional(seq(choice('<<', '^<<'), $._arguments)),
+        ),
         optional($._codeblock),
         '_endproc',
       ),
 
-    parameter_list: $ =>
-      choice(
-        seq('(',
-          optional(seq($.parameter, repeat(seq(',', $.parameter)))),
-          optional(seq(optional(','), '_optional', $.parameter, repeat(seq(',', $.parameter)))),
-          optional(seq(optional(','), '_gather', $.parameter)),
-          ')',
-        ),
-        seq(
-          choice('<<', '^<<'),
-          seq($.parameter, repeat(seq(',', $.parameter)))),
-      ),
+    argument: $ => $._identifier,
 
-    parameter: $ => $._identifier,
+    _arguments: $ => prec.right(seq($.argument, repeat(seq(',', $.argument)))),
 
     // _block [ @ <identifier> ]
     //   <statements>
