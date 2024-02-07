@@ -62,9 +62,9 @@ module.exports = grammar({
               optional(choice(
                 seq(
                   '(',
-                  optional(seq($.argument, repeat(seq(',', $.argument)))),
-                  optional(seq(optional(','), '_optional', $._arguments)),
-                  optional(seq(optional(','), '_gather', $.argument)),
+                  optional($._arguments),
+                  optional(seq('_optional', $._arguments)),
+                  optional(seq('_gather', $.argument)),
                   ')', optional(seq(choice('<<', '^<<'), $._arguments))),
                 seq('[', optional($._arguments), ']', optional(seq(choice('<<', '^<<'), $._arguments))),
                 seq(choice('<<', '^<<'), $._arguments),
@@ -85,9 +85,9 @@ module.exports = grammar({
         optional($.label),
         seq(
           '(',
-          optional(seq($.argument, repeat(seq(',', $.argument)))),
-          optional(seq(optional(','), '_optional', $._arguments)),
-          optional(seq(optional(','), '_gather', $.argument)),
+          optional($._arguments),
+          optional(seq('_optional', $._arguments)),
+          optional(seq('_gather', $.argument)),
           ')', optional(seq(choice('<<', '^<<'), $._arguments)),
         ),
         optional($._codeblock),
@@ -96,7 +96,7 @@ module.exports = grammar({
 
     argument: $ => $._identifier,
 
-    _arguments: $ => prec.right(seq($.argument, repeat(seq(',', $.argument)))),
+    _arguments: $ => prec.right(seq($.argument, repeat(seq(',', $.argument)), optional(','))),
 
     // _block [ @ <identifier> ]
     //   <statements>
