@@ -108,7 +108,7 @@ $
     (method
       (identifier)
       (identifier)
-        (argument)))
+      (argument)))
   (fragment
     (method
       (identifier)
@@ -117,8 +117,8 @@ $
   (fragment
     (method
       (identifier)
-        (argument)
-        (argument)))
+      (argument)
+      (argument)))
   (fragment
     (method
       (identifier)
@@ -249,6 +249,10 @@ $
 method documentation
 ================================================================================
 
+## multi
+## line
+## documentation
+# with a comment
 _method my_object.method_with_doc()
 	## multi
 	## line
@@ -263,6 +267,8 @@ $
 
 (source_file
   (fragment
+    (documentation)
+    (comment)
     (method
       (identifier)
       (identifier)
@@ -381,6 +387,15 @@ _endmethod
 $
 
 _pragma(classify_level=basic, topic=treesitter, usage={redefinable, subclassable})
+## some documentation
+# with a comment
+_method my_object.nearly_last_method_with_pragma()
+# a comment
+## with another documentation
+_endmethod
+$
+
+_pragma(classify_level=basic, topic=treesitter, usage={redefinable, subclassable})
 _method my_object.last_method_with_pragma()
 _endmethod
 $
@@ -408,6 +423,15 @@ $
     (method
       (identifier)
       (identifier)))
+  (fragment
+    (pragma)
+    (documentation)
+    (comment)
+    (method
+      (identifier)
+      (identifier)
+      (comment)
+      (documentation)))
   (fragment
     (pragma)
     (method

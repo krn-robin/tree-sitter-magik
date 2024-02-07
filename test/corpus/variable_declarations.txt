@@ -117,6 +117,8 @@ global constant top level assignment with pragma
 ================================================================================
 
 _pragma(classify_level=basic)
+## documentation
+# with a comment
 _global _constant gis_program_manager << _unset
 
 _pragma(classify_level=basic)
@@ -127,6 +129,8 @@ _global _constant !current_view! << _unset
 (source_file
   (fragment
     (pragma)
+    (documentation)
+    (comment)
     (identifier)
     (unset))
   (fragment

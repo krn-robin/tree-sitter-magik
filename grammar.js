@@ -54,6 +54,7 @@ module.exports = grammar({
     _method_declaration: $ =>
       seq(
         optional($.pragma),
+        optional($.documentation),
         $.method,
       ),
 
@@ -433,6 +434,7 @@ module.exports = grammar({
     _global_assignment: $ =>
       seq(
         optional($.pragma),
+        optional($.documentation),
         alias(/_global/i, '_global'), optional(alias(/_constant/i, '_constant')), choice($.identifier, $.dynamic_variable), '<<', $._expression),
 
     constant: $ =>
@@ -555,6 +557,7 @@ module.exports = grammar({
     symbol: $ => /:(\|[^|]*\||[\p{L}\p{N}_?!]+)+/u,
 
     documentation: $ => prec.right(repeat1(/##.*/)),
+
     comment: $ => token(prec(PREC.COMMENT, /#.*/)),
   },
 });
