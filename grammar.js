@@ -77,11 +77,11 @@ module.exports = grammar({
         ),
       ),
 
-    // _proc [@ <identifier>] ( [ <arguments> ] )
+    // [_iter] _proc [@ <identifier>] ( [ <arguments> ] )
     // <block body>
     // _endproc
     procedure: $ =>
-      seq('_proc',
+      seq(optional('_iter'), '_proc',
         optional($.label),
         seq(
           '(',
