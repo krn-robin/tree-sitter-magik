@@ -37,46 +37,78 @@ $
     (unset)))
 
 ================================================================================
-number literal
+integer literal
 ================================================================================
 
 0
 65535
 4294967295
 18446744073709551617
-0.0
-655.35
 -65535
--655.35
-2e+2
-2.2e10
 $
 
 --------------------------------------------------------------------------------
 
 (source_file
   (fragment
-    (number))
+    (integer))
   (fragment
-    (number))
+    (integer))
   (fragment
-    (number))
+    (integer))
   (fragment
-    (number))
+    (integer))
   (fragment
-    (number))
+    (integer)))
+
+================================================================================
+float literal
+================================================================================
+
+0.0
+655.35
+-655.35
+2e2
+2e+2
+2E+2
+2.2e10
+2.2e+10
+2.2E+10
+2e-2
+2E-2
+2.2e-10
+2.2E-10
+$
+
+--------------------------------------------------------------------------------
+
+(source_file
   (fragment
-    (number))
+    (float))
   (fragment
-    (unary_operator
-      (number)))
+    (float))
   (fragment
-    (unary_operator
-      (number)))
+    (float))
   (fragment
-    (number))
+    (float))
   (fragment
-    (number)))
+    (float))
+  (fragment
+    (float))
+  (fragment
+    (float))
+  (fragment
+    (float))
+  (fragment
+    (float))
+  (fragment
+    (float))
+  (fragment
+    (float))
+  (fragment
+    (float))
+  (fragment
+    (float)))
 
 ================================================================================
 symbol
@@ -140,9 +172,9 @@ $
     (vector))
   (fragment
     (vector
-      (number)
-      (number)
-      (number))))
+      (integer)
+      (integer)
+      (integer))))
 
 ================================================================================
 regular expression

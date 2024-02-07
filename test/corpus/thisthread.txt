@@ -14,7 +14,7 @@ $
     (call
       (thisthread)
       (identifier)
-      (number)))
+      (integer)))
   (fragment
     (call
       (thisthread)

@@ -168,8 +168,8 @@ module.exports = grammar({
     // _throw <expression> [ _with <rvalue tuple> ]
     throw: $ => prec.left(seq(alias(/_throw/i, '_throw'), $._expression, optional(seq(alias(/_with/i, '_with'), $._expression_list)))),
 
-    // _primitive <number>
-    primitive: $ => seq(alias(/_primitive/i, '_primitive'), $.number),
+    // _primitive <integer>
+    primitive: $ => seq(alias(/_primitive/i, '_primitive'), $.integer),
 
     // [ _for <lvalue tuple> ] _over <iter invocation>
     // _loop [ @<identifier> ]
@@ -281,7 +281,8 @@ module.exports = grammar({
         $.character_literal,
         $.string_literal,
         $.regex_literal,
-        $.number,
+        $.integer,
+        $.float,
         $.unset,
         $.super,
         $.self,
@@ -490,11 +491,18 @@ module.exports = grammar({
     _identifier_list: $ =>
       prec.right(seq($.identifier, repeat(seq(',', $.identifier)))),
 
-    number: $ => token(seq(
-      choice(/\d+/, /\d+\.\d+/),
-      optional(choice(
-        seq('e+', /\d+/),
-        seq('e', /\d+/))))),
+    integer: $ => token(/-?[0-9]+/),
+
+    float: _ => {
+      const digits = repeat1(/-?[0-9]+/);
+      const exponent = seq(/[eE][\+-]?[0-9]+/);
+
+      return token(seq(
+        choice(
+          seq(digits, '.', digits, optional(exponent)),
+          seq(digits, exponent)),
+      ));
+    },
 
     vector: $ => seq(
       '{',
