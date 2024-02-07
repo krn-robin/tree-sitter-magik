@@ -166,7 +166,7 @@ module.exports = grammar({
     catch: $ => seq('_catch', $._expression, $._terminator, optional($._codeblock), '_endcatch'),
 
     // _throw <expression> [ _with <rvalue tuple> ]
-    throw: $ => prec.left(seq('_throw', $._expression, optional(seq('_with', $._expression)))),
+    throw: $ => prec.left(seq('_throw', $._expression, optional(seq('_with', $._expression_list)))),
 
     // _primitive <number>
     primitive: $ => seq('_primitive', $.number),
