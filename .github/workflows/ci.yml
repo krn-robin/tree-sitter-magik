@@ -42,8 +42,7 @@ jobs:
           npm run-script build-test
           ${{ matrix.cc }} -fPIC -c -Isrc/ src/parser.c -o parser.o
           ${{ matrix.cc }} -fPIC -shared parser.o -o libtree-sitter-magik.${{ matrix.ext }}
-      - if: matrix.os == 'macos-latest'
-        name: check unchanged parser.c
+      - name: check unchanged parser.c
         shell: bash
         run: |
             git status

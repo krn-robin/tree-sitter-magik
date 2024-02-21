@@ -1,0 +1,7 @@
+* text eol=lf
+
+src/** linguist-generated
+bindings/** linguist-generated
+binding.gyp linguist-generated
+
+src/scanner.c -linguist-generated
