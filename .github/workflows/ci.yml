@@ -25,12 +25,15 @@ jobs:
           - os: macos-latest
             ext: dylib
             cc: cc
+            postfix: macos64
           - os: ubuntu-latest
             ext: so
             cc: cc
+            postfix: linux64
           - os: windows-latest
             ext: dll
             cc: x86_64-w64-mingw32-gcc
+            postfix: windows64s
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -47,3 +50,9 @@ jobs:
         run: |
             git status
             exit $(git status --porcelain=v1 2>/dev/null | grep -c src/parser.c)
+      - run: tar zcfv libtree-sitter-magik-${{ matrix.postfix }}.tar.gz libtree-sitter-magik.${{ matrix.ext }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: libtree-sitter-magik-${{ matrix.postfix }}
+          path: libtree-sitter-magik-${{ matrix.postfix }}.tar.gz
+          if-no-files-found: error
