@@ -30,9 +30,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: lts/*
+      - run: npm install
       - name: build
         run: |
-             npm install && npm run-script build-test
+             npm run-script build-test
              ${{ matrix.cc }} -fPIC -c -Isrc/ src/parser.c -o parser.o
              ${{ matrix.cc }} -fPIC -shared parser.o -o libtree-sitter-magik.${{ matrix.ext }}
              tar zcfv libtree-sitter-magik-${{ matrix.postfix }}.tar.gz libtree-sitter-magik.${{ matrix.ext }}
