@@ -54,7 +54,11 @@ jobs:
           path: libtree-sitter-magik
           pattern: libtree-sitter-magik*
           merge-multiple: true
+      - name: Zip artifacts
+        run: |
+          zip libtree-sitter-magik-macOS.zip libtree-sitter-magik.dylib
+          zip libtree-sitter-magik-Linux.zip libtree-sitter-magik.so
+          zip libtree-sitter-magik-Windows.zip libtree-sitter-magik.dll
       - uses: softprops/action-gh-release@v2
         with:
-          files: |
-            libtree-sitter-magik/*
+          files: libtree-sitter-magik-*.zip
