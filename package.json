@@ -1,6 +1,6 @@
 {
 	"name": "tree-sitter-magik",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"description": "Magik grammar for tree-sitter",
 	"main": "bindings/node",
 	"keywords": [

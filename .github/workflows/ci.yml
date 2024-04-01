@@ -12,15 +12,22 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: lint
-        run: npm install && npm run lint
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Install dependencies
+        run: npm install
+      - name: Run linter
+        uses: tree-sitter/parser-test-action@v1.2
+        with:
+          lint: true
+          test-grammar: false
+          test-library: false
 
-  test:
+  build-and-test:
     runs-on: ${{ matrix.os }}
     strategy:
+      fail-fast: false
       matrix:
-        os: [macos-latest, ubuntu-latest, windows-latest]
         include:
           - os: macos-latest
             ext: dylib
@@ -32,18 +39,28 @@ jobs:
             ext: dll
             cc: x86_64-w64-mingw32-gcc
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up NodeJS
+        uses: actions/setup-node@v4
         with:
           node-version: lts/*
-      - run: npm install
-      - name: tests
-        run: |
-          npm run-script build-test
-          ${{ matrix.cc }} -fPIC -c -Isrc/ src/parser.c -o parser.o
-          ${{ matrix.cc }} -fPIC -shared parser.o -o libtree-sitter-magik.${{ matrix.ext }}
-      - name: check unchanged parser.c
+      - name: Install dependencies
+        run: npm install
+      - name: Build and test
+        run: npm run-script build-test
+      - name: Check unchanged parser
         shell: bash
         run: |
-            git status
-            exit $(git status --porcelain=v1 2>/dev/null | grep -c src/parser.c)
+          git status
+          exit $(git status --porcelain=v1 2>/dev/null | grep -c src/parser.c)
+      - name: Build lib
+        run: |
+          ${{ matrix.cc }} -fPIC -c -Isrc/ src/parser.c -o parser.o
+          ${{ matrix.cc }} -fPIC -shared parser.o -o libtree-sitter-magik.${{ matrix.ext }}
+      - name: Upload lib
+        uses: actions/upload-artifact@v4
+        with:
+          name: libtree-sitter-magik-${{ runner.os }}
+          path: libtree-sitter-magik*
+          if-no-files-found: error
