@@ -29,7 +29,7 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - os: macos-latest
+          - os: macos-14
             ext: dylib
             cc: cc
           - os: ubuntu-latest
@@ -61,7 +61,7 @@ jobs:
           ${{ matrix.cc }} -fPIC -c -Isrc/ src/parser.c -o parser.o
           ${{ matrix.cc }} -fPIC -shared parser.o -o libtree-sitter-magik.${{ matrix.ext }}
       - name: Check lib
-        if: matrix.os == 'macos-latest'
+        if: runner.os == 'macOS'
         run: file libtree-sitter-magik.${{ matrix.ext }}
       - name: Upload lib
         uses: actions/upload-artifact@v4

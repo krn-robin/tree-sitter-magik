@@ -12,7 +12,7 @@ jobs:
     strategy:
       matrix:
         include:
-          - os: macos-latest
+          - os: macos-14
             ext: dylib
             cc: cc
           - os: ubuntu-latest
