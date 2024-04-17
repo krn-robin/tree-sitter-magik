@@ -47,6 +47,8 @@ jobs:
           node-version: lts/*
       - name: Install dependencies
         run: npm install
+      - name: Show current tree-sitter version
+        run: npm run-script version
       - name: Build and test
         run: npm run-script build-test
       - name: Check unchanged parser
