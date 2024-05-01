@@ -17,7 +17,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Run linter
-        uses: tree-sitter/parser-test-action@v1.2
+        uses: tree-sitter/parser-test-action@v2
         with:
           lint: true
           test-grammar: false
