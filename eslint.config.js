@@ -1,6 +1,6 @@
 import globals from "globals";
 
-export default [
+module.exports [
   {
     languageOptions: {
       ecmaVersion: "latest",
