@@ -17,11 +17,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Run linter
-        uses: tree-sitter/parser-test-action@v2
-        with:
-          lint: true
-          test-grammar: false
-          test-library: false
+        run: npm run lint
 
   build-and-test:
     runs-on: ${{ matrix.os }}
