@@ -53,6 +53,6 @@ parallel assignment
         (variable)
         (variable))
       (parenthesized_expression
-        (number)
-        (number)
-        (number)))))
+        (integer)
+        (integer)
+        (integer)))))

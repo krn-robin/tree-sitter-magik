@@ -12,7 +12,7 @@ $
 (source_file
   (fragment
     (primitive
-      (number)))
+      (integer)))
   (fragment
     (primitive
-      (number))))
+      (integer))))
