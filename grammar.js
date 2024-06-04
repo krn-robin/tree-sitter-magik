@@ -285,7 +285,13 @@ module.exports = grammar({
       ),
 
     // _pragma (classify_level=<level>, topic={<set of topics>}, [ usage={<set of usages>} ] )
-    pragma: $ => prec.left(seq(alias(/_pragma/i, '_pragma'), /(.*)/)),
+    pragma: $ => prec.left(
+      seq(alias(/_pragma/i, '_pragma'), 
+        '(',
+          optional(seq(field('classify_level', seq(alias(/classify_level=/i, 'classify_level='), $.identifier)), optional(','))),
+          optional(seq(field('topic', seq(alias(/topic=/i, 'topic='), choice(seq('{', $._identifier_list, '}'), $.identifier))), optional(','))),
+          optional(field('usage', seq(alias(/usage=/i, 'usage='), choice(seq('{', $._identifier_list, '}'), $.identifier)))),
+        ')')),
 
     _literal: $ =>
       choice(
