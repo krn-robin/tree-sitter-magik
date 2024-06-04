@@ -126,11 +126,13 @@ _global _constant !current_view! << _unset
 
 (source_file
   (fragment
-    (pragma)
+    (pragma
+      (identifier))
     (identifier)
     (unset))
   (fragment
-    (pragma)
+    (pragma
+      (identifier))
     (dynamic_variable)
     (unset)))
 

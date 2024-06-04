@@ -108,7 +108,7 @@ $
     (method
       (identifier)
       (identifier)
-        (argument)))
+      (argument)))
   (fragment
     (method
       (identifier)
@@ -117,8 +117,8 @@ $
   (fragment
     (method
       (identifier)
-        (argument)
-        (argument)))
+      (argument)
+      (argument)))
   (fragment
     (method
       (identifier)
@@ -389,27 +389,40 @@ $
 
 (source_file
   (fragment
-    (pragma)
+    (pragma
+      (identifier))
     (method
       (identifier)
       (identifier)))
   (fragment
-    (pragma)
+    (pragma
+      (identifier)
+      (identifier))
     (method
       (identifier)
       (identifier)))
   (fragment
-    (pragma)
+    (pragma
+      (identifier)
+      (identifier)
+      (identifier))
     (method
       (identifier)
       (identifier)))
   (fragment
-    (pragma)
+    (pragma
+      (identifier)
+      (identifier)
+      (identifier))
     (method
       (identifier)
       (identifier)))
   (fragment
-    (pragma)
+    (pragma
+      (identifier)
+      (identifier)
+      (identifier)
+      (identifier))
     (method
       (identifier)
       (identifier))))
