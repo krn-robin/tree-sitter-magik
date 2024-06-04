@@ -360,6 +360,11 @@ $
 methods with pragma
 ================================================================================
 
+_pragma()
+_method my_object.method_with_empty_pragma()
+_endmethod
+$
+
 _pragma(classify_level=basic)
 _method my_object.method_with_pragma()
 _endmethod
@@ -372,6 +377,11 @@ $
 
 _pragma(classify_level=basic, topic={treesitter, magik})
 _method my_object.yet_other_method_with_pragma()
+_endmethod
+$
+
+_pragma(usage={redefinable, subclassable}, topic=treesitter, classify_level=basic)
+_method my_object.method_with_different_pragma_order()
 _endmethod
 $
 
@@ -389,6 +399,11 @@ $
 
 (source_file
   (fragment
+    (pragma)
+    (method
+      (identifier)
+      (identifier)))
+  (fragment
     (pragma
       (identifier))
     (method
@@ -403,6 +418,15 @@ $
       (identifier)))
   (fragment
     (pragma
+      (identifier)
+      (identifier)
+      (identifier))
+    (method
+      (identifier)
+      (identifier)))
+  (fragment
+    (pragma
+      (identifier)
       (identifier)
       (identifier)
       (identifier))
