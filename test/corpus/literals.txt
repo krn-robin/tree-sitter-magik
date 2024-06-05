@@ -143,3 +143,43 @@ $
       (number)
       (number)
       (number))))
+
+================================================================================
+regular expression
+================================================================================
+
+/Hello\,\s\w+!/
+
+/Hello\,\s\w+!/i
+
+/[a-t]-[1-4]/
+
+//
+
+/a\/b/i
+
+/abc\d{2,4}/i
+
+/Foo(bAr)?/i
+
+/[aB]*c,/im
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (fragment
+    (regex_literal))
+  (fragment
+    (regex_literal))
+  (fragment
+    (regex_literal))
+  (fragment
+    (regex_literal))
+  (fragment
+    (regex_literal))
+  (fragment
+    (regex_literal))
+  (fragment
+    (regex_literal))
+  (fragment
+    (regex_literal)))

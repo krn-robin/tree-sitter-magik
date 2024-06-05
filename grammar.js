@@ -280,6 +280,7 @@ module.exports = grammar({
         $.maybe,
         $.character_literal,
         $.string_literal,
+        $.regex_literal,
         $.number,
         $.unset,
         $.super,
@@ -290,11 +291,16 @@ module.exports = grammar({
         $.vector,
       ),
 
+    character_literal: $ => seq('%', choice($._identifier, /./, ' ')),
+
     string_literal: $ =>
       choice(
         seq('"', repeat(choice(/[^"\n]/, /(.|\n)/)), '"'),
         seq('\'', repeat(choice(/[^'\n]/, /(.|\n)/)), '\''),
       ),
+
+    // /<pattern>/<flags>
+    regex_literal: $ => token(/\/.*?\/[qisdlmuCX]*/,),
 
     call: $ =>
       prec.right(PREC.CALL,
@@ -527,8 +533,6 @@ module.exports = grammar({
       prec.right(seq(field('operator', choice('+', '-', alias(/_not/i, '_not'), '~')), $._expression)),
 
     symbol: $ => /:(\|[^|]*\||[a-zA-Z0-9_\?!]+)+/,
-
-    character_literal: $ => seq('%', choice($._identifier, /./, ' ')),
 
     documentation: $ => prec.right(repeat1(/##.*/)),
     comment: $ => token(prec(PREC.COMMENT, /#.*/)),
