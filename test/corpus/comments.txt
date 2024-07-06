@@ -26,3 +26,20 @@ _endblock
         (number)
         (comment)
         (number)))))
+
+================================================================================
+comment and documentation at the start of the file
+================================================================================
+
+#%text_encoding=utf8
+##
+##
+##
+
+-------------------------------------------------------------------------------
+
+(source_file
+  (comment)
+  (documentation)
+  (documentation)
+  (documentation))
