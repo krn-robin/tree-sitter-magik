@@ -195,22 +195,22 @@ $
     (while
       (relational_operator
         (variable)
-        (integer))
+        (number))
       (assignment
         (variable)
         (variable))
       (assignment
         (variable)
-        (integer))))
+        (number))))
   (fragment
     (while
       (relational_operator
         (variable)
-        (integer))
+        (number))
       (label)
       (assignment
         (variable)
         (variable))
       (assignment
         (variable)
-        (integer)))))
+        (number)))))

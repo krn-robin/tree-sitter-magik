@@ -157,7 +157,7 @@ _endblock
         (identifier))
       (local
         (identifier)
-        (integer))
+        (number))
       (local
         (identifier)
         (identifier)
@@ -198,7 +198,7 @@ _endblock
     (block
       (constant
         (identifier)
-        (integer)))))
+        (number)))))
 
 ================================================================================
 constant local
@@ -215,7 +215,7 @@ _endblock
     (block
       (constant
         (identifier)
-        (integer)))))
+        (number)))))
 
 ================================================================================
 local constant
@@ -232,7 +232,7 @@ _endblock
     (block
       (constant
         (identifier)
-        (integer)))))
+        (number)))))
 
 ================================================================================
 import

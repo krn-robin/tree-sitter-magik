@@ -13,15 +13,15 @@ d _orif<< a
   (fragment
     (assignment
       (variable)
-      (integer)))
+      (number)))
   (fragment
     (assignment
       (variable)
-      (integer)))
+      (number)))
   (fragment
     (assignment
       (variable)
-      (integer)))
+      (number)))
   (fragment
     (assignment
       (variable)

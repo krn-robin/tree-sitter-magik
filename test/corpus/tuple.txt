@@ -21,10 +21,12 @@ $
           (variable)))
       (invoke
         (variable)
-        (integer)
-        (integer)
-        (integer)
-        (integer))))
+        (number)
+        (unary_operator
+          (number))
+        (unary_operator
+          (number))
+        (number))))
   (fragment
     (assignment
       (parenthesized_expression
@@ -62,16 +64,20 @@ $
       (allresults
         (invoke
           (variable)
-          (integer)
-          (integer)
-          (integer)
-          (integer)))))
+          (number)
+          (unary_operator
+            (number))
+          (unary_operator
+            (number))
+          (number)))))
   (fragment
     (scatter
       (allresults
         (invoke
           (variable)
-          (integer)
-          (integer)
-          (integer)
-          (integer))))))
+          (number)
+          (unary_operator
+            (number))
+          (unary_operator
+            (number))
+          (number))))))

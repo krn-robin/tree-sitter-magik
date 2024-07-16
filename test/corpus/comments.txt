@@ -23,6 +23,6 @@ _endblock
   (fragment
     (block
       (logical_operator
-        (integer)
+        (number)
         (comment)
-        (integer)))))
+        (number)))))

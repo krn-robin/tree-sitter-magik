@@ -8,8 +8,7 @@
 ; Literals
 
 [
-  (integer)
-  (float)
+  (number)
 ] @number
 
 [
