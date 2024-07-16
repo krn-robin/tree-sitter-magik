@@ -4,6 +4,8 @@ method calls
 
 object.method
 object.getName
+object.|getName|
+|Object|.|getName|
 object.method()
 object.method<< _unset
 object.method1.method2
@@ -23,6 +25,14 @@ $
     (call
       (variable)
       (identifier)))
+  (fragment
+    (call
+      (variable)
+      (identifier)))
+  (fragment
+    (call
+      (variable)
+      (identifier)))      
   (fragment
     (call
       (variable)
