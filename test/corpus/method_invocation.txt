@@ -32,7 +32,7 @@ $
   (fragment
     (call
       (variable)
-      (identifier)))      
+      (identifier)))
   (fragment
     (call
       (variable)
