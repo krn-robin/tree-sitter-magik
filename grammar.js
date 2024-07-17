@@ -7,7 +7,7 @@ const PREC = {
   ARITHMETIC: 70,
 };
 
-const ID_REGEX = /(\|[a-zA-ZçÇßñÑ0-9_\?\.!]*\||[a-zA-Z][a-zA-ZçÇßñÑ0-9_\?!]*)+/;
+const ID_REGEX = /(\|[\p{L}\p{N}\p{S}\p{P} ][^|]*\||[\p{L}][\p{L}\p{N}_\?!]*)+/;
 
 module.exports = grammar({
   name: 'magik',
