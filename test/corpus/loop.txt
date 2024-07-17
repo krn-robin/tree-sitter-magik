@@ -98,6 +98,11 @@ _loop@|InnerLoop|
 _endloop
 $
 
+_loop@StraßeLoop
+  _leave @StraßeLoop
+_endloop
+$
+
 --------------------------------------------------------------------------------
 
 (source_file
@@ -108,6 +113,11 @@ $
     (loop
       (label)
       (continue
+        (label))))
+  (fragment
+    (loop
+      (label)
+      (leave
         (label))))
   (fragment
     (loop

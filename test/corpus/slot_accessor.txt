@@ -14,6 +14,9 @@ $
 .slot.invoke()
 $
 
+.garçon
+$
+
 --------------------------------------------------------------------------------
 
 (source_file
@@ -32,4 +35,6 @@ $
   (fragment
     (call
       (slot_accessor)
-      (identifier))))
+      (identifier)))
+  (fragment
+    (slot_accessor)))

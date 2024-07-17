@@ -4,13 +4,22 @@ local variable
 
 a_name
 anotherName
+garçon
+piñata
 |AnotherName|
 |A_notherName|
 |0|
+|Straße|
 
 --------------------------------------------------------------------------------
 
 (source_file
+  (fragment
+    (variable))
+  (fragment
+    (variable))
+  (fragment
+    (variable))
   (fragment
     (variable))
   (fragment
@@ -28,10 +37,13 @@ dynamic variable
 
 !terminal!
 sw:!terminal!
+!garçon!
 
 --------------------------------------------------------------------------------
 
 (source_file
+  (fragment
+    (dynamic_variable))
   (fragment
     (dynamic_variable))
   (fragment
