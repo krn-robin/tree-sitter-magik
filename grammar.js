@@ -492,9 +492,7 @@ module.exports = grammar({
 
     number: $ => token(seq(
       choice(/\d+/, /\d+\.\d+/),
-      optional(choice(
-        seq('e+', /\d+/),
-        seq('e', /\d+/))))),
+      optional(seq(/[eE&][\+-]?/, /\d+/)))),
 
     vector: $ => seq(
       '{',
