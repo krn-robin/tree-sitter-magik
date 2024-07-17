@@ -7,7 +7,7 @@ const PREC = {
   ARITHMETIC: 70,
 };
 
-const ID_REGEX = /(\|[^|][a-zA-Z][a-zA-Z0-9_\?!]+\||[a-zA-Z][a-zA-Z0-9_\?!]*)+/;
+const ID_REGEX = /(\|[a-zA-Z0-9_\?\.!]*\||[a-zA-Z][a-zA-Z0-9_\?!]*)+/;
 
 module.exports = grammar({
   name: 'magik',
@@ -471,7 +471,7 @@ module.exports = grammar({
 
     // @ <identifier>
     label: $ =>
-      /@\s?[a-zA-Z0-9_\?!]*/,
+      /@\s?(\|[a-zA-Z0-9_\?\.!]*\||[a-zA-Z0-9_\?!]*)+/,
 
     number: $ => token(seq(
       choice(/\d+/, /\d+\.\d+/),

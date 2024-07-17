@@ -4,10 +4,19 @@ local variable
 
 a_name
 anotherName
+|AnotherName|
+|A_notherName|
+|0|
 
 --------------------------------------------------------------------------------
 
 (source_file
+  (fragment
+    (variable))
+  (fragment
+    (variable))
+  (fragment
+    (variable))
   (fragment
     (variable))
   (fragment

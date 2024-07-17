@@ -25,6 +25,16 @@ _block @ label1?
 _endblock
 $
 
+_block @ |label1?|
+  _return
+_endblock
+$
+
+_block @ |la.bel1|
+  _return
+_endblock
+$
+
 --------------------------------------------------------------------------------
 
 (source_file
@@ -50,6 +60,14 @@ $
         (true)
         (return
           (unset)))))
+  (fragment
+    (block
+      (label)
+      (return)))
+  (fragment
+    (block
+      (label)
+      (return)))
   (fragment
     (block
       (label)
