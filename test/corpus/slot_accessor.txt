@@ -17,6 +17,9 @@ $
 .garçon
 $
 
+.|slot|
+$
+
 --------------------------------------------------------------------------------
 
 (source_file
@@ -36,5 +39,7 @@ $
     (call
       (slot_accessor)
       (identifier)))
+  (fragment
+    (slot_accessor))
   (fragment
     (slot_accessor)))

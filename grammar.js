@@ -328,7 +328,7 @@ module.exports = grammar({
         ),
       ),
 
-    slot_accessor: $ => prec.left(seq('.', /\p{L}[\p{L}\p{N}_\?!]*/)),
+    slot_accessor: $ => prec.left(seq('.', /(\|\p{L}[\p{L}\p{N}_\?!]*\|)|(\p{L}[\p{L}\p{N}_\?!]*)/)),
 
     _expression_list: $ =>
       prec.right(seq($._expression, repeat(seq(',', $._expression)))),
