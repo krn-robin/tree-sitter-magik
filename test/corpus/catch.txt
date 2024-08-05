@@ -19,6 +19,11 @@ _catch :error
 _endcatch
 $
 
+_catch :Straße
+  >> _true
+_endcatch
+$
+
 --------------------------------------------------------------------------------
 
 (source_file
@@ -31,6 +36,11 @@ $
   (fragment
     (catch
       (string_literal)))
+  (fragment
+    (catch
+      (symbol)
+      (return
+        (true))))
   (fragment
     (catch
       (symbol)
