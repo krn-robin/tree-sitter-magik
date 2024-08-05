@@ -328,7 +328,7 @@ module.exports = grammar({
         ),
       ),
 
-    slot_accessor: $ => prec.left(seq('.', /[a-zA-Z][a-zA-ZçÇßñÑ0-9_\?!]*/)),
+    slot_accessor: $ => prec.left(seq('.', /\p{L}[\p{L}\p{N}_\?!]*/)),
 
     _expression_list: $ =>
       prec.right(seq($._expression, repeat(seq(',', $._expression)))),
@@ -343,7 +343,7 @@ module.exports = grammar({
 
     thisthread: $ => alias(/_thisthread/i, '_thisthread'),
 
-    class: $ => seq(alias(/_class/i, '_class'), field('java_classname', seq(/\|[a-zA-ZçÇßñÑ\d\.]*\|/))),
+    class: $ => seq(alias(/_class/i, '_class'), field('java_classname', seq(/\|[\p{L}\p{N}\.]*\|/))),
 
     _terminator: $ =>
       choice(';', $._line_terminator),
@@ -471,17 +471,17 @@ module.exports = grammar({
 
     // @ <identifier>
     label: $ =>
-      /@\s?(\|[a-zA-ZçÇßñ0-9_\?\.!]*\||[a-zA-ZçÇßñÑ0-9_\?!]*)+/,
+      /@\s?(\|[\p{L}\p{N}_\?\.!]*\||[\p{L}\p{N}_\?!]*)+/,
 
     number: $ => token(seq(
-      choice(/\d+/, /\d+\.\d+/),
-      optional(seq(/[eE&][\+-]?/, /\d+/)))),
+      choice(/\p{N}+/, /\p{N}+\.\p{N}+/),
+      optional(seq(/[eE&][\+-]?/, /\p{N}+/)))),
 
     variable: $ => prec.left($._identifier),
 
     dynamic_variable: $ => token(seq(
       optional(seq(ID_REGEX, ':')),
-      /![a-zA-ZçÇßñÑ0-9_\?!]*!/)),
+      /![\p{L}\p{N}_\?!]*!/)),
 
     global_variable: $ => token(seq(ID_REGEX, ':', ID_REGEX)),
 
@@ -530,7 +530,7 @@ module.exports = grammar({
     unary_operator: $ =>
       prec.right(seq(field('operator', choice('+', '-', alias(/_not/i, '_not'), '~')), $._expression)),
 
-    symbol: $ => /:(\|[^|]*\||[a-zA-ZçÇßñÑ0-9_\?!]+)+/,
+    symbol: $ => /:(\|[^|]*\||[\p{L}\p{N}_\?!]+)+/,
 
     documentation: $ => prec.right(repeat1(/##.*/)),
     comment: $ => token(prec(PREC.COMMENT, /#.*/)),
