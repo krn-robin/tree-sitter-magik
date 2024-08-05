@@ -38,10 +38,19 @@ dynamic variable
 !terminal!
 sw:!terminal!
 !garçon!
+|!terminal!|
+|!terminal|!
+!|terminal|!
 
 --------------------------------------------------------------------------------
 
 (source_file
+  (fragment
+    (dynamic_variable))
+  (fragment
+    (dynamic_variable))
+  (fragment
+    (dynamic_variable))
   (fragment
     (dynamic_variable))
   (fragment
@@ -54,10 +63,13 @@ global variable
 ================================================================================
 
 sw:gis_program_manager
+sw:|gis_program_manager|
 
 --------------------------------------------------------------------------------
 
 (source_file
+  (fragment
+    (global_variable))
   (fragment
     (global_variable)))
 
@@ -66,11 +78,17 @@ global reference
 ================================================================================
 
 @gis_program_manager
+@|gis_program_manager|
 @sw:gis_program_manager
+@sw:|gis_program_manager|
 
 --------------------------------------------------------------------------------
 
 (source_file
+  (fragment
+    (global_reference))
+  (fragment
+    (global_reference))
   (fragment
     (global_reference))
   (fragment
