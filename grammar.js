@@ -1,3 +1,17 @@
+/**
+ * @file Magik grammar for tree-sitter
+ * @author Robin Putters <robinputters@github.com>
+ * @author Sebastiaan Speck <sebastiaanspeck@github.com>
+ * @license MIT
+ */
+
+/// <reference types="tree-sitter-cli/dsl" />
+// @ts-check
+
+const ID_REGEX = /[a-zA-Z][a-zA-Z0-9_\?!]*/;
+
+/* eslint-disable no-multi-spaces */
+
 const PREC = {
   COMMENT: -2,
   ASSIGN: 15,
@@ -7,7 +21,7 @@ const PREC = {
   ARITHMETIC: 70,
 };
 
-const ID_REGEX = /(\|[\p{L}\p{N}\p{S}\p{P} ][^|]*\||[\p{L}][\p{L}\p{N}_\?!]*)+/;
+/* eslint-enable no-multi-spaces */
 
 module.exports = grammar({
   name: 'magik',
@@ -300,7 +314,7 @@ module.exports = grammar({
       ),
 
     // /<pattern>/<flags>
-    regex_literal: $ => token(/\/.*?\/[qisdlmuCX]*/,),
+    regex_literal: $ => token(/\/.*?\/[qisdlmuCX]*/),
 
     call: $ =>
       prec.right(PREC.CALL,
@@ -343,7 +357,7 @@ module.exports = grammar({
 
     thisthread: $ => alias(/_thisthread/i, '_thisthread'),
 
-    class: $ => seq(alias(/_class/i, '_class'), field('java_classname', seq(/\|[\p{L}\p{N}\.]*\|/))),
+    class: $ => seq(alias(/_class/i, '_class'), field('java_classname', /\|[a-zA-Z\d\.]*\|/)),
 
     _terminator: $ =>
       choice(';', $._line_terminator),
