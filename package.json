@@ -6,7 +6,7 @@
   "license": "MIT",
   "author": "Robin Putters <robinputters@github.com>",
   "contributors": [
-    "Sebastiaan Speck <sebastiaanspeck@github.com>",
+    "Sebastiaan Speck <sebastiaanspeck@github.com>"
   ],
   "main": "bindings/node",
   "types": "bindings/node",
