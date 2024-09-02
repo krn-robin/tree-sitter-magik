@@ -2,28 +2,28 @@ name: CI
 
 on:
   push:
-    branches:
-      - "**"
+    branches: [main]
+    paths:
+      - grammar.js
+      - src/**
+      - test/**
+      - bindings/**
+      - binding.gyp
   pull_request:
-    branches:
-      - "**"
+    paths:
+      - grammar.js
+      - src/**
+      - test/**
+      - bindings/**
+      - binding.gyp
+
+concurrency:
+  group: ${{github.workflow}}-${{github.ref}}
+  cancel-in-progress: true
 
 jobs:
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-      - name: Install dependencies
-        run: npm install
-      - name: Run linter
-        uses: tree-sitter/parser-test-action@v1.2
-        with:
-          lint: true
-          test-grammar: false
-          test-library: false
-
-  build-and-test:
+  test:
+    name: Test parser
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -41,19 +41,12 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Set up NodeJS
-        uses: actions/setup-node@v4
+      - name: Set up tree-sitter
+        uses: tree-sitter/setup-action/cli@v1
+      - name: Run tests
+        uses: tree-sitter/parser-test-action@v2
         with:
-          node-version: 20.12.1
-      - name: Install dependencies
-        run: npm install
-      - name: Build and test
-        run: npm run-script build-test
-      - name: Check unchanged parser
-        shell: bash
-        run: |
-          git status
-          exit $(git status --porcelain=v1 2>/dev/null | grep -c src/parser.c)
+          test-rust: ${{runner.os == 'Linux'}}
       - name: Build lib
         run: |
           ${{ matrix.cc }} -fPIC -c -Isrc/ src/parser.c -o parser.o
