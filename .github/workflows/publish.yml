@@ -1,15 +1,19 @@
-name: Release
+name: Publish
 
 on:
   push:
-    tags:
-      - '*.*.*'
+    tags: ["*"]
+  
+concurrency:
+  group: ${{github.workflow}}-${{github.ref}}
+  cancel-in-progress: true
 
 jobs:
-  build-and-test:
+  test:
+    name: Test parser
     runs-on: ${{ matrix.os }}
-    continue-on-error: true
     strategy:
+      fail-fast: false
       matrix:
         include:
           - os: macos-14
@@ -24,14 +28,12 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Set up NodeJS
-        uses: actions/setup-node@v4
+      - name: Set up tree-sitter
+        uses: tree-sitter/setup-action/cli@v1
+      - name: Run tests
+        uses: tree-sitter/parser-test-action@v2
         with:
-          node-version: 20.12.1
-      - name: Install dependencies
-        run: npm install
-      - name: Build and test
-        run: npm run-script build-test
+          test-rust: ${{runner.os == 'Linux'}}
       - name: Build lib
         run: |
           ${{ matrix.cc }} -fPIC -c -Isrc/ src/parser.c -o parser.o
@@ -44,7 +46,7 @@ jobs:
           if-no-files-found: error
 
   publish:
-    needs: build-and-test
+    needs: test
     runs-on: ubuntu-latest
     permissions:
       contents: write

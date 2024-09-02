@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tree-sitter-magik"
+description = "Magik grammar for tree-sitter"
+version = "0.0.1"
+keywords = ["incremental", "parsing", "tree-sitter", "magik"]
+classifiers = [
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Software Development :: Compilers",
+  "Topic :: Text Processing :: Linguistic",
+  "Typing :: Typed",
+]
+authors = [
+  { name = "Robin Putters", email = "robinputters@github.com" },
+  { name = "Sebastiaan Speck", email = "sebastiaanspeck@github.com" },
+]
+requires-python = ">=3.9"
+license.text = "MIT"
+readme = "README.md"
+
+[project.urls]
+Homepage = "https://github.com/krn-robin/tree-sitter-magik"
+
+[project.optional-dependencies]
+core = ["tree-sitter~=0.21"]
+
+[tool.cibuildwheel]
+build = "cp39-*"
+build-frontend = "build"
