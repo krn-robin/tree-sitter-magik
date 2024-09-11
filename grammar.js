@@ -286,30 +286,25 @@ module.exports = grammar({
 
     // _pragma (classify_level=<level>, topic={<set of topics>}, [ usage={<set of usages>} ] )
     pragma: $ => {
-      const classify_level = field('classify_level', seq('classify_level=', $.identifier));
+      const classifyLevel = field('classify_level', seq('classify_level=', $.identifier));
       const usage = field('usage', seq('usage=', choice(seq('{', $._identifier_list, '}'), $.identifier)));
       const topic = field('topic', seq('topic=', choice(seq('{', $._identifier_list, '}'), $.identifier)));
+
+      const items = [classifyLevel, usage, topic];
+
+      const combinations = items.flatMap((item, i, all) => [
+        item,
+        ...all.filter((_, j) => j !== i).map(other => seq(item, ',', other)),
+        ...all.filter((_, j) => j !== i).flatMap((other, j, rest) =>
+          rest.filter((_, k) => k !== j).map(third => seq(item, ',', other, ',', third)),
+        ),
+      ]);
 
       return seq(
         alias(/_pragma/i, '_pragma'),
         '(',
-        optional(
-          choice(
-            seq(classify_level),
-            seq(topic),
-            seq(usage),
-            seq(classify_level, ',', topic),
-            seq(classify_level, ',', usage),
-            seq(topic, ',', usage),
-            seq(classify_level, ',', topic, ',', usage),
-            seq(classify_level, ',', usage, ',', topic),
-            seq(topic, ',', classify_level, ',', usage),
-            seq(topic, ',', usage, ',', classify_level),
-            seq(usage, ',', classify_level, ',', topic),
-            seq(usage, ',', topic, ',', classify_level),
-          )
-        ),
-        ')'
+        optional(choice(...combinations)),
+        ')',
       );
     },
 
