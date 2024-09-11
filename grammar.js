@@ -8,7 +8,7 @@
 /// <reference types="tree-sitter-cli/dsl" />
 // @ts-check
 
-const ID_REGEX = /[a-zA-Z][a-zA-Z0-9_\?!]*/;
+const ID_REGEX = /(\|\p{L}?[\p{L}\p{N}_\?!]*\|)|(\p{L}[\p{L}\p{N}_\?!]*)/u;
 
 /* eslint-disable no-multi-spaces */
 
@@ -342,7 +342,7 @@ module.exports = grammar({
         ),
       ),
 
-    slot_accessor: $ => prec.left(seq('.', /(\|\p{L}[\p{L}\p{N}_\?!]*\|)|(\p{L}[\p{L}\p{N}_\?!]*)/)),
+    slot_accessor: $ => prec.left(seq('.', /(\|\p{L}[\p{L}\p{N}_\?!]*\|)|(\p{L}[\p{L}\p{N}_\?!]*)/u)),
 
     _expression_list: $ =>
       prec.right(seq($._expression, repeat(seq(',', $._expression)))),
@@ -357,7 +357,7 @@ module.exports = grammar({
 
     thisthread: $ => alias(/_thisthread/i, '_thisthread'),
 
-    class: $ => seq(alias(/_class/i, '_class'), field('java_classname', /\|[a-zA-Z\d\.]*\|/)),
+    class: $ => seq(alias(/_class/i, '_class'), field('java_classname', /\|[\p{L}\p{N}\._]*\|/u)),
 
     _terminator: $ =>
       choice(';', $._line_terminator),
@@ -485,17 +485,23 @@ module.exports = grammar({
 
     // @ <identifier>
     label: $ =>
-      /@\s?(\|[\p{L}\p{N}_\?\.!]*\||[\p{L}\p{N}_\?!]*)+/,
+      /@\s?(\|[\p{L}\p{N}_\?\.!]*\||[\p{L}\p{N}_\?!]*)+/u,
 
     number: $ => token(seq(
-      choice(/\p{N}+/, /\p{N}+\.\p{N}+/),
-      optional(seq(/[eE&][\+-]?/, /\p{N}+/)))),
+      choice(/\p{N}+/u, /\p{N}+\.\p{N}+/u),
+      optional(seq(/[eE&][\+-]?/, /\p{N}+/u)))),
 
     variable: $ => prec.left($._identifier),
 
-    dynamic_variable: $ => token(seq(
-      optional(seq(ID_REGEX, ':')),
-      /![\p{L}\p{N}_\?!]*!/)),
+    dynamic_variable: $ => token(
+      choice(
+        seq('!', /[\p{L}\p{N}_\?!]+!/u),
+        seq(ID_REGEX, ':', '!', /[\p{L}\p{N}_\?!]+!/u),
+        seq('|', '!', /[\p{L}\p{N}_\?!]+/u, '!', '|'),
+        seq('|!', /[\p{L}\p{N}_\?!]+\|/u, '!'),
+        seq('!', /\|[\p{L}\p{N}_\?!]*\|/u, '!'),
+      ),
+    ),
 
     global_variable: $ => token(seq(ID_REGEX, ':', ID_REGEX)),
 
@@ -544,7 +550,7 @@ module.exports = grammar({
     unary_operator: $ =>
       prec.right(seq(field('operator', choice('+', '-', alias(/_not/i, '_not'), '~')), $._expression)),
 
-    symbol: $ => /:(\|[^|]*\||[\p{L}\p{N}_\?!]+)+/,
+    symbol: $ => /:(\|[^|]*\||[\p{L}\p{N}_\?!]+)+/u,
 
     documentation: $ => prec.right(repeat1(/##.*/)),
     comment: $ => token(prec(PREC.COMMENT, /#.*/)),
