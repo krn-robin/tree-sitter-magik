@@ -49,14 +49,5 @@
     "start": "tree-sitter playground",
     "test": "node --test bindings/node/*_test.js",
     "prebuildify": "prebuildify --napi --strip"
-  },
-  "tree-sitter": [
-    {
-      "scope": "source.magik",
-      "file-types": [
-        "magik"
-      ],
-      "highlights": "queries/highlights.scm"
-    }
-  ]
+  }
 }

@@ -1,0 +1,36 @@
+{
+  "grammars": [
+    {
+      "name": "magik",
+      "camelcase": "Magik",
+      "scope": "source.magik",
+      "path": ".",
+      "file-types": [
+        "magik"
+      ],
+      "highlights": "queries/highlights.scm"
+    }
+  ],
+  "metadata": {
+    "version": "0.0.1",
+    "license": "MIT",
+    "description": "Magik grammar for tree-sitter",
+    "authors": [
+      {
+        "name": "Robin Putters",
+        "email": "robinputters@github.com"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/krn-robin/tree-sitter-magik"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true
+  }
+}
