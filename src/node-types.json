@@ -7752,7 +7752,74 @@
   {
     "type": "pragma",
     "named": true,
-    "fields": {}
+    "fields": {
+      "classify_level": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "classify_level=",
+            "named": false
+          },
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      },
+      "topic": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "topic=",
+            "named": false
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
+          }
+        ]
+      },
+      "usage": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "usage=",
+            "named": false
+          },
+          {
+            "type": "{",
+            "named": false
+          },
+          {
+            "type": "}",
+            "named": false
+          }
+        ]
+      }
+    }
   },
   {
     "type": "primitive",
@@ -10967,6 +11034,10 @@
     "named": false
   },
   {
+    "type": "classify_level=",
+    "named": false
+  },
+  {
     "type": "comment",
     "named": true
   },
@@ -10997,6 +11068,14 @@
   {
     "type": "symbol",
     "named": true
+  },
+  {
+    "type": "topic=",
+    "named": false
+  },
+  {
+    "type": "usage=",
+    "named": false
   },
   {
     "type": "{",
