@@ -16,7 +16,7 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - os: macos-14
+          - os: macos-latest
             ext: dylib
             cc: cc
           - os: ubuntu-latest
