@@ -4081,17 +4081,8 @@
                 "type": "CHOICE",
                 "members": [
                   {
-                    "type": "SEQ",
-                    "members": [
-                      {
-                        "type": "PATTERN",
-                        "value": "[eE&][\\+-]?"
-                      },
-                      {
-                        "type": "PATTERN",
-                        "value": "\\d+"
-                      }
-                    ]
+                    "type": "PATTERN",
+                    "value": "[eE&][\\+-]?\\d+"
                   },
                   {
                     "type": "BLANK"
@@ -4101,17 +4092,8 @@
             ]
           },
           {
-            "type": "SEQ",
-            "members": [
-              {
-                "type": "PATTERN",
-                "value": "\\d+[rR]"
-              },
-              {
-                "type": "PATTERN",
-                "value": "[a-zA-Z0-9]+"
-              }
-            ]
+            "type": "PATTERN",
+            "value": "(?:[2-9]|[1-2][0-9]|3[0-6])[rR][a-zA-Z0-9]+"
           }
         ]
       }

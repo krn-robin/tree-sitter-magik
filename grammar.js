@@ -506,8 +506,8 @@ module.exports = grammar({
       choice(
         seq(
           choice(/\d+/, /\d+\.\d+/),
-          optional(seq(/[eE&][\+-]?/, /\d+/))),
-        seq(/\d+[rR]/, /[a-zA-Z0-9]+/))),
+          optional(/[eE&][\+-]?\d+/)),
+        /(?:[2-9]|[1-2][0-9]|3[0-6])[rR][a-zA-Z0-9]+/)),
 
     vector: $ => seq(
       '{',
