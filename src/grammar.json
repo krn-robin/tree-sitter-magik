@@ -4078,15 +4078,33 @@
             "type": "CHOICE",
             "members": [
               {
-                "type": "SEQ",
+                "type": "CHOICE",
                 "members": [
                   {
-                    "type": "PATTERN",
-                    "value": "[eE&][\\+-]?"
+                    "type": "SEQ",
+                    "members": [
+                      {
+                        "type": "PATTERN",
+                        "value": "[eE&][\\+-]?"
+                      },
+                      {
+                        "type": "PATTERN",
+                        "value": "\\d+"
+                      }
+                    ]
                   },
                   {
-                    "type": "PATTERN",
-                    "value": "\\d+"
+                    "type": "SEQ",
+                    "members": [
+                      {
+                        "type": "PATTERN",
+                        "value": "[rR]"
+                      },
+                      {
+                        "type": "PATTERN",
+                        "value": "[0-9a-fA-F]+"
+                      }
+                    ]
                   }
                 ]
               },

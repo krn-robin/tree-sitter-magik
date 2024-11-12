@@ -504,7 +504,11 @@ module.exports = grammar({
 
     number: $ => token(seq(
       choice(/\d+/, /\d+\.\d+/),
-      optional(seq(/[eE&][\+-]?/, /\d+/)))),
+      optional(
+        choice(
+          seq(/[eE&][\+-]?/, /\d+/),
+          seq(/[rR]/, /[0-9a-fA-F]+/),
+        )))),
 
     vector: $ => seq(
       '{',
