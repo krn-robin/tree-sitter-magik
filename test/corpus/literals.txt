@@ -63,6 +63,8 @@ number literal
 16R0123456789abcdef
 16raBcDeF0123456789
 16RaBcDeF0123456789
+36rz
+-36rZ
 $
 
 --------------------------------------------------------------------------------
@@ -115,7 +117,12 @@ $
   (fragment
     (number))
   (fragment
-    (number)))
+    (number))
+  (fragment
+    (number))
+  (fragment
+    (unary_operator
+      (number))))
 
 ================================================================================
 symbol

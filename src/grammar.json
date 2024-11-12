@@ -4059,24 +4059,24 @@
     "number": {
       "type": "TOKEN",
       "content": {
-        "type": "SEQ",
+        "type": "CHOICE",
         "members": [
           {
-            "type": "CHOICE",
+            "type": "SEQ",
             "members": [
               {
-                "type": "PATTERN",
-                "value": "\\d+"
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "PATTERN",
+                    "value": "\\d+"
+                  },
+                  {
+                    "type": "PATTERN",
+                    "value": "\\d+\\.\\d+"
+                  }
+                ]
               },
-              {
-                "type": "PATTERN",
-                "value": "\\d+\\.\\d+"
-              }
-            ]
-          },
-          {
-            "type": "CHOICE",
-            "members": [
               {
                 "type": "CHOICE",
                 "members": [
@@ -4094,22 +4094,22 @@
                     ]
                   },
                   {
-                    "type": "SEQ",
-                    "members": [
-                      {
-                        "type": "PATTERN",
-                        "value": "[rR]"
-                      },
-                      {
-                        "type": "PATTERN",
-                        "value": "[0-9a-fA-F]+"
-                      }
-                    ]
+                    "type": "BLANK"
                   }
                 ]
+              }
+            ]
+          },
+          {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "PATTERN",
+                "value": "\\d+[rR]"
               },
               {
-                "type": "BLANK"
+                "type": "PATTERN",
+                "value": "[a-zA-Z0-9]+"
               }
             ]
           }
