@@ -108,7 +108,7 @@ $
     (method
       (identifier)
       (identifier)
-        (argument)))
+      (argument)))
   (fragment
     (method
       (identifier)
@@ -117,8 +117,8 @@ $
   (fragment
     (method
       (identifier)
-        (argument)
-        (argument)))
+      (argument)
+      (argument)))
   (fragment
     (method
       (identifier)
@@ -360,6 +360,11 @@ $
 methods with pragma
 ================================================================================
 
+_pragma()
+_method my_object.method_with_empty_pragma()
+_endmethod
+$
+
 _pragma(classify_level=basic)
 _method my_object.method_with_pragma()
 _endmethod
@@ -372,6 +377,11 @@ $
 
 _pragma(classify_level=basic, topic={treesitter, magik})
 _method my_object.yet_other_method_with_pragma()
+_endmethod
+$
+
+_pragma(usage={redefinable, subclassable}, topic=treesitter, classify_level=basic)
+_method my_object.method_with_different_pragma_order()
 _endmethod
 $
 
@@ -394,22 +404,49 @@ $
       (identifier)
       (identifier)))
   (fragment
-    (pragma)
+    (pragma
+      (identifier))
     (method
       (identifier)
       (identifier)))
   (fragment
-    (pragma)
+    (pragma
+      (identifier)
+      (identifier))
     (method
       (identifier)
       (identifier)))
   (fragment
-    (pragma)
+    (pragma
+      (identifier)
+      (identifier)
+      (identifier))
     (method
       (identifier)
       (identifier)))
   (fragment
-    (pragma)
+    (pragma
+      (identifier)
+      (identifier)
+      (identifier)
+      (identifier))
+    (method
+      (identifier)
+      (identifier)))
+  (fragment
+    (pragma
+      (identifier)
+      (identifier)
+      (identifier))
+    (method
+      (identifier)
+      (identifier)))
+  (fragment
+    (pragma
+      (identifier)
+      (identifier)
+      (identifier)
+      (identifier))
     (method
       (identifier)
       (identifier))))

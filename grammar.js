@@ -283,7 +283,28 @@ module.exports = grammar({
       ),
 
     // _pragma (classify_level=<level>, topic={<set of topics>}, [ usage={<set of usages>} ] )
-    pragma: $ => prec.left(seq(alias(/_pragma/i, '_pragma'), /(.*)/)),
+    pragma: $ => {
+      const classifyLevel = field('classify_level', seq('classify_level=', $.identifier));
+      const usage = field('usage', seq('usage=', choice(seq('{', $._identifier_list, '}'), $.identifier)));
+      const topic = field('topic', seq('topic=', choice(seq('{', $._identifier_list, '}'), $.identifier)));
+
+      const items = [classifyLevel, usage, topic];
+
+      const combinations = items.flatMap((item, i, all) => [
+        item,
+        ...all.filter((_, j) => j !== i).map(other => seq(item, ',', other)),
+        ...all.filter((_, j) => j !== i).flatMap((other, j, rest) =>
+          rest.filter((_, k) => k !== j).map(third => seq(item, ',', other, ',', third)),
+        ),
+      ]);
+
+      return seq(
+        alias(/_pragma/i, '_pragma'),
+        '(',
+        optional(choice(...combinations)),
+        ')',
+      );
+    },
 
     _literal: $ =>
       choice(
