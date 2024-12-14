@@ -10,7 +10,6 @@
 
 const ID_REGEX = /[a-zA-Z][a-zA-Z0-9_\?!]*/;
 
-/* eslint-disable no-multi-spaces */
 
 const PREC = {
   COMMENT: -2,
@@ -21,7 +20,6 @@ const PREC = {
   ARITHMETIC: 70,
 };
 
-/* eslint-enable no-multi-spaces */
 
 module.exports = grammar({
   name: 'magik',
