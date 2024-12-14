@@ -2588,7 +2588,7 @@
           },
           {
             "type": "PATTERN",
-            "value": "[a-zA-Z][a-zA-Z0-9_\\?!]*"
+            "value": "[a-zA-Z][a-zA-Z0-9_?!]*"
           }
         ]
       }
@@ -2720,7 +2720,7 @@
           "name": "java_classname",
           "content": {
             "type": "PATTERN",
-            "value": "\\|[a-zA-Z\\d\\.]*\\|"
+            "value": "\\|[a-zA-Z\\d.]*\\|"
           }
         }
       ]
@@ -3919,7 +3919,7 @@
     },
     "label": {
       "type": "PATTERN",
-      "value": "@\\s?[a-zA-Z0-9_\\?!]*"
+      "value": "@\\s?[a-zA-Z0-9_?!]*"
     },
     "variable": {
       "type": "PREC_LEFT",
@@ -3942,7 +3942,7 @@
                 "members": [
                   {
                     "type": "PATTERN",
-                    "value": "[a-zA-Z][a-zA-Z0-9_\\?!]*"
+                    "value": "[a-zA-Z][a-zA-Z0-9_?!]*"
                   },
                   {
                     "type": "STRING",
@@ -3957,7 +3957,7 @@
           },
           {
             "type": "PATTERN",
-            "value": "![a-zA-Z0-9_\\?!]*!"
+            "value": "![a-zA-Z0-9_?!]*!"
           }
         ]
       }
@@ -3969,7 +3969,7 @@
         "members": [
           {
             "type": "PATTERN",
-            "value": "[a-zA-Z][a-zA-Z0-9_\\?!]*"
+            "value": "[a-zA-Z][a-zA-Z0-9_?!]*"
           },
           {
             "type": "STRING",
@@ -3977,7 +3977,7 @@
           },
           {
             "type": "PATTERN",
-            "value": "[a-zA-Z][a-zA-Z0-9_\\?!]*"
+            "value": "[a-zA-Z][a-zA-Z0-9_?!]*"
           }
         ]
       }
@@ -3999,7 +3999,7 @@
                 "members": [
                   {
                     "type": "PATTERN",
-                    "value": "[a-zA-Z][a-zA-Z0-9_\\?!]*"
+                    "value": "[a-zA-Z][a-zA-Z0-9_?!]*"
                   },
                   {
                     "type": "STRING",
@@ -4014,7 +4014,7 @@
           },
           {
             "type": "PATTERN",
-            "value": "[a-zA-Z][a-zA-Z0-9_\\?!]*"
+            "value": "[a-zA-Z][a-zA-Z0-9_?!]*"
           }
         ]
       }
@@ -4025,7 +4025,7 @@
     },
     "_identifier": {
       "type": "PATTERN",
-      "value": "[a-zA-Z][a-zA-Z0-9_\\?!]*"
+      "value": "[a-zA-Z][a-zA-Z0-9_?!]*"
     },
     "_identifier_list": {
       "type": "PREC_RIGHT",
@@ -4082,7 +4082,7 @@
                 "members": [
                   {
                     "type": "PATTERN",
-                    "value": "[eE&][\\+-]?"
+                    "value": "[eE&][+-]?"
                   },
                   {
                     "type": "PATTERN",
@@ -4429,7 +4429,7 @@
     },
     "symbol": {
       "type": "PATTERN",
-      "value": ":(\\|[^|]*\\||[a-zA-Z0-9_\\?!]+)+"
+      "value": ":(\\|[^|]*\\||[a-zA-Z0-9_?!]+)+"
     },
     "documentation": {
       "type": "PREC_RIGHT",
