@@ -59,6 +59,10 @@ number literal
 2.2E-10
 2&3
 2&-3
+2r0
+2R11
+8r0
+8R757
 16r0123456789abcdef
 16R0123456789abcdef
 16raBcDeF0123456789
@@ -88,6 +92,14 @@ $
   (fragment
     (unary_operator
       (number)))
+  (fragment
+    (number))
+  (fragment
+    (number))
+  (fragment
+    (number))
+  (fragment
+    (number))
   (fragment
     (number))
   (fragment
