@@ -502,9 +502,12 @@ module.exports = grammar({
     _identifier_list: $ =>
       prec.right(seq($.identifier, repeat(seq(',', $.identifier)))),
 
-    number: $ => token(seq(
-      choice(/\d+/, /\d+\.\d+/),
-      optional(seq(/[eE&][\+-]?/, /\d+/)))),
+    number: $ => token(
+      choice(
+        seq(
+          choice(/\d+/, /\d+\.\d+/),
+          optional(/[eE&][\+-]?\d+/)),
+        /(?:[2-9]|[1-2][0-9]|3[0-6])[rR][a-zA-Z0-9]+/)),
 
     vector: $ => seq(
       '{',

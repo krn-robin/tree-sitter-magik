@@ -4059,41 +4059,41 @@
     "number": {
       "type": "TOKEN",
       "content": {
-        "type": "SEQ",
+        "type": "CHOICE",
         "members": [
           {
-            "type": "CHOICE",
+            "type": "SEQ",
             "members": [
               {
-                "type": "PATTERN",
-                "value": "\\d+"
-              },
-              {
-                "type": "PATTERN",
-                "value": "\\d+\\.\\d+"
-              }
-            ]
-          },
-          {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "SEQ",
+                "type": "CHOICE",
                 "members": [
                   {
                     "type": "PATTERN",
-                    "value": "[eE&][\\+-]?"
+                    "value": "\\d+"
                   },
                   {
                     "type": "PATTERN",
-                    "value": "\\d+"
+                    "value": "\\d+\\.\\d+"
                   }
                 ]
               },
               {
-                "type": "BLANK"
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "PATTERN",
+                    "value": "[eE&][\\+-]?\\d+"
+                  },
+                  {
+                    "type": "BLANK"
+                  }
+                ]
               }
             ]
+          },
+          {
+            "type": "PATTERN",
+            "value": "(?:[2-9]|[1-2][0-9]|3[0-6])[rR][a-zA-Z0-9]+"
           }
         ]
       }
