@@ -3934,13 +3934,11 @@
             "members": [
               {
                 "type": "PATTERN",
-                "value": "\\p{N}+",
-                "flags": "u"
+                "value": "[0-9]+"
               },
               {
                 "type": "PATTERN",
-                "value": "\\p{N}+\\.\\p{N}+",
-                "flags": "u"
+                "value": "[0-9]+\\.[0-9]+"
               }
             ]
           },
@@ -3956,8 +3954,7 @@
                   },
                   {
                     "type": "PATTERN",
-                    "value": "\\p{N}+",
-                    "flags": "u"
+                    "value": "[0-9]+"
                   }
                 ]
               },
