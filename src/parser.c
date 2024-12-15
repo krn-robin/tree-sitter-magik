@@ -4107,6 +4107,48 @@ static TSCharacterRange sym_label_character_set_2[] = {
   {0x1083c, 0x1083c}, {0x1083f, 0x10855}, {0x10858, 0x10876}, {0x10879, 0x1089e}, {0x108a7, 0x108af}, {0x108e0, 0x108f2}, {0x108f4, 0x108f5}, {0x108fb, 0x1091b},
 };
 
+static TSCharacterRange sym_number_character_set_1[] = {
+  {'0', '9'}, {0xb2, 0xb3}, {0xb9, 0xb9}, {0xbc, 0xbe}, {0x660, 0x669}, {0x6f0, 0x6f9}, {0x7c0, 0x7c9}, {0x966, 0x96f},
+  {0x9e6, 0x9ef}, {0x9f4, 0x9f9}, {0xa66, 0xa6f}, {0xae6, 0xaef}, {0xb66, 0xb6f}, {0xb72, 0xb77}, {0xbe6, 0xbf2}, {0xc66, 0xc6f},
+  {0xc78, 0xc7e}, {0xce6, 0xcef}, {0xd58, 0xd5e}, {0xd66, 0xd78}, {0xde6, 0xdef}, {0xe50, 0xe59}, {0xed0, 0xed9}, {0xf20, 0xf33},
+  {0x1040, 0x1049}, {0x1090, 0x1099}, {0x1369, 0x137c}, {0x16ee, 0x16f0}, {0x17e0, 0x17e9}, {0x17f0, 0x17f9}, {0x1810, 0x1819}, {0x1946, 0x194f},
+  {0x19d0, 0x19da}, {0x1a80, 0x1a89}, {0x1a90, 0x1a99}, {0x1b50, 0x1b59}, {0x1bb0, 0x1bb9}, {0x1c40, 0x1c49}, {0x1c50, 0x1c59}, {0x2070, 0x2070},
+  {0x2074, 0x2079}, {0x2080, 0x2089}, {0x2150, 0x2182}, {0x2185, 0x2189}, {0x2460, 0x249b}, {0x24ea, 0x24ff}, {0x2776, 0x2793}, {0x2cfd, 0x2cfd},
+  {0x3007, 0x3007}, {0x3021, 0x3029}, {0x3038, 0x303a}, {0x3192, 0x3195}, {0x3220, 0x3229}, {0x3248, 0x324f}, {0x3251, 0x325f}, {0x3280, 0x3289},
+  {0x32b1, 0x32bf}, {0xa620, 0xa629}, {0xa6e6, 0xa6ef}, {0xa830, 0xa835}, {0xa8d0, 0xa8d9}, {0xa900, 0xa909}, {0xa9d0, 0xa9d9}, {0xa9f0, 0xa9f9},
+  {0xaa50, 0xaa59}, {0xabf0, 0xabf9}, {0xff10, 0xff19}, {0x10107, 0x10133}, {0x10140, 0x10178}, {0x1018a, 0x1018b}, {0x102e1, 0x102fb}, {0x10320, 0x10323},
+  {0x10341, 0x10341}, {0x1034a, 0x1034a}, {0x103d1, 0x103d5}, {0x104a0, 0x104a9}, {0x10858, 0x1085f}, {0x10879, 0x1087f}, {0x108a7, 0x108af}, {0x108fb, 0x108ff},
+  {0x10916, 0x1091b},
+};
+
+static TSCharacterRange sym_number_character_set_3[] = {
+  {'+', '+'}, {'-', '-'}, {'0', '9'}, {0xb2, 0xb3}, {0xb9, 0xb9}, {0xbc, 0xbe}, {0x660, 0x669}, {0x6f0, 0x6f9},
+  {0x7c0, 0x7c9}, {0x966, 0x96f}, {0x9e6, 0x9ef}, {0x9f4, 0x9f9}, {0xa66, 0xa6f}, {0xae6, 0xaef}, {0xb66, 0xb6f}, {0xb72, 0xb77},
+  {0xbe6, 0xbf2}, {0xc66, 0xc6f}, {0xc78, 0xc7e}, {0xce6, 0xcef}, {0xd58, 0xd5e}, {0xd66, 0xd78}, {0xde6, 0xdef}, {0xe50, 0xe59},
+  {0xed0, 0xed9}, {0xf20, 0xf33}, {0x1040, 0x1049}, {0x1090, 0x1099}, {0x1369, 0x137c}, {0x16ee, 0x16f0}, {0x17e0, 0x17e9}, {0x17f0, 0x17f9},
+  {0x1810, 0x1819}, {0x1946, 0x194f}, {0x19d0, 0x19da}, {0x1a80, 0x1a89}, {0x1a90, 0x1a99}, {0x1b50, 0x1b59}, {0x1bb0, 0x1bb9}, {0x1c40, 0x1c49},
+  {0x1c50, 0x1c59}, {0x2070, 0x2070}, {0x2074, 0x2079}, {0x2080, 0x2089}, {0x2150, 0x2182}, {0x2185, 0x2189}, {0x2460, 0x249b}, {0x24ea, 0x24ff},
+  {0x2776, 0x2793}, {0x2cfd, 0x2cfd}, {0x3007, 0x3007}, {0x3021, 0x3029}, {0x3038, 0x303a}, {0x3192, 0x3195}, {0x3220, 0x3229}, {0x3248, 0x324f},
+  {0x3251, 0x325f}, {0x3280, 0x3289}, {0x32b1, 0x32bf}, {0xa620, 0xa629}, {0xa6e6, 0xa6ef}, {0xa830, 0xa835}, {0xa8d0, 0xa8d9}, {0xa900, 0xa909},
+  {0xa9d0, 0xa9d9}, {0xa9f0, 0xa9f9}, {0xaa50, 0xaa59}, {0xabf0, 0xabf9}, {0xff10, 0xff19}, {0x10107, 0x10133}, {0x10140, 0x10178}, {0x1018a, 0x1018b},
+  {0x102e1, 0x102fb}, {0x10320, 0x10323}, {0x10341, 0x10341}, {0x1034a, 0x1034a}, {0x103d1, 0x103d5}, {0x104a0, 0x104a9}, {0x10858, 0x1085f}, {0x10879, 0x1087f},
+  {0x108a7, 0x108af}, {0x108fb, 0x108ff}, {0x10916, 0x1091b},
+};
+
+static TSCharacterRange sym_number_character_set_4[] = {
+  {'&', '&'}, {'0', '9'}, {'E', 'E'}, {'e', 'e'}, {0xb2, 0xb3}, {0xb9, 0xb9}, {0xbc, 0xbe}, {0x660, 0x669},
+  {0x6f0, 0x6f9}, {0x7c0, 0x7c9}, {0x966, 0x96f}, {0x9e6, 0x9ef}, {0x9f4, 0x9f9}, {0xa66, 0xa6f}, {0xae6, 0xaef}, {0xb66, 0xb6f},
+  {0xb72, 0xb77}, {0xbe6, 0xbf2}, {0xc66, 0xc6f}, {0xc78, 0xc7e}, {0xce6, 0xcef}, {0xd58, 0xd5e}, {0xd66, 0xd78}, {0xde6, 0xdef},
+  {0xe50, 0xe59}, {0xed0, 0xed9}, {0xf20, 0xf33}, {0x1040, 0x1049}, {0x1090, 0x1099}, {0x1369, 0x137c}, {0x16ee, 0x16f0}, {0x17e0, 0x17e9},
+  {0x17f0, 0x17f9}, {0x1810, 0x1819}, {0x1946, 0x194f}, {0x19d0, 0x19da}, {0x1a80, 0x1a89}, {0x1a90, 0x1a99}, {0x1b50, 0x1b59}, {0x1bb0, 0x1bb9},
+  {0x1c40, 0x1c49}, {0x1c50, 0x1c59}, {0x2070, 0x2070}, {0x2074, 0x2079}, {0x2080, 0x2089}, {0x2150, 0x2182}, {0x2185, 0x2189}, {0x2460, 0x249b},
+  {0x24ea, 0x24ff}, {0x2776, 0x2793}, {0x2cfd, 0x2cfd}, {0x3007, 0x3007}, {0x3021, 0x3029}, {0x3038, 0x303a}, {0x3192, 0x3195}, {0x3220, 0x3229},
+  {0x3248, 0x324f}, {0x3251, 0x325f}, {0x3280, 0x3289}, {0x32b1, 0x32bf}, {0xa620, 0xa629}, {0xa6e6, 0xa6ef}, {0xa830, 0xa835}, {0xa8d0, 0xa8d9},
+  {0xa900, 0xa909}, {0xa9d0, 0xa9d9}, {0xa9f0, 0xa9f9}, {0xaa50, 0xaa59}, {0xabf0, 0xabf9}, {0xff10, 0xff19}, {0x10107, 0x10133}, {0x10140, 0x10178},
+  {0x1018a, 0x1018b}, {0x102e1, 0x102fb}, {0x10320, 0x10323}, {0x10341, 0x10341}, {0x1034a, 0x1034a}, {0x103d1, 0x103d5}, {0x104a0, 0x104a9}, {0x10858, 0x1085f},
+  {0x10879, 0x1087f}, {0x108a7, 0x108af}, {0x108fb, 0x108ff}, {0x10916, 0x1091b},
+};
+
 static TSCharacterRange sym_dynamic_variable_character_set_1[] = {
   {'!', '!'}, {'A', 'Z'}, {'a', 'z'}, {'|', '|'}, {0xaa, 0xaa}, {0xb5, 0xb5}, {0xba, 0xba}, {0xc0, 0xd6},
   {0xd8, 0xf6}, {0xf8, 0x2c1}, {0x2c6, 0x2d1}, {0x2e0, 0x2e4}, {0x2ec, 0x2ec}, {0x2ee, 0x2ee}, {0x370, 0x374}, {0x376, 0x377},
@@ -4265,7 +4307,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       );
       if (('\t' <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') SKIP(0);
-      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(542);
+      if (set_contains(sym_number_character_set_3, 83, lookahead)) ADVANCE(542);
       if (set_contains(sym_dynamic_variable_character_set_1, 431, lookahead)) ADVANCE(514);
       END_STATE();
     case 1:
@@ -4306,7 +4348,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       );
       if (('\t' <= lookahead && lookahead <= '\f') ||
           lookahead == ' ') SKIP(3);
-      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(542);
+      if (set_contains(sym_number_character_set_3, 83, lookahead)) ADVANCE(542);
       if (set_contains(sym_dynamic_variable_character_set_1, 431, lookahead)) ADVANCE(559);
       END_STATE();
     case 4:
@@ -4340,7 +4382,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       );
       if (('\t' <= lookahead && lookahead <= '\f') ||
           lookahead == ' ') SKIP(4);
-      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(542);
+      if (set_contains(sym_number_character_set_3, 83, lookahead)) ADVANCE(542);
       if (set_contains(sym_dynamic_variable_character_set_1, 431, lookahead)) ADVANCE(559);
       END_STATE();
     case 5:
@@ -4423,7 +4465,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       );
       if (('\t' <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') SKIP(10);
-      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(542);
+      if (set_contains(sym_number_character_set_3, 83, lookahead)) ADVANCE(542);
       if (set_contains(sym_dynamic_variable_character_set_1, 431, lookahead)) ADVANCE(559);
       END_STATE();
     case 11:
@@ -4448,7 +4490,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       );
       if (('\t' <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') SKIP(11);
-      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(542);
+      if (set_contains(sym_number_character_set_3, 83, lookahead)) ADVANCE(542);
       if (set_contains(sym_dynamic_variable_character_set_1, 431, lookahead)) ADVANCE(559);
       END_STATE();
     case 12:
@@ -4473,7 +4515,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       );
       if (('\t' <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') SKIP(12);
-      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(542);
+      if (set_contains(sym_number_character_set_3, 83, lookahead)) ADVANCE(542);
       if (set_contains(sym_dynamic_variable_character_set_1, 431, lookahead)) ADVANCE(559);
       END_STATE();
     case 13:
@@ -4498,7 +4540,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       );
       if (('\t' <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') SKIP(13);
-      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(542);
+      if (set_contains(sym_number_character_set_3, 83, lookahead)) ADVANCE(542);
       if (set_contains(sym_dynamic_variable_character_set_1, 431, lookahead)) ADVANCE(559);
       END_STATE();
     case 14:
@@ -4550,270 +4592,24 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '.') ADVANCE(94);
       if (lookahead == '?') ADVANCE(93);
       if (lookahead == '|') ADVANCE(526);
-      if (('0' <= lookahead && lookahead <= '9') ||
-          lookahead == '_' ||
-          lookahead == 0xb2 ||
-          lookahead == 0xb3 ||
-          lookahead == 0xb9 ||
-          (0xbc <= lookahead && lookahead <= 0xbe) ||
-          (0x660 <= lookahead && lookahead <= 0x669) ||
-          (0x6f0 <= lookahead && lookahead <= 0x6f9) ||
-          (0x7c0 <= lookahead && lookahead <= 0x7c9) ||
-          (0x966 <= lookahead && lookahead <= 0x96f) ||
-          (0x9e6 <= lookahead && lookahead <= 0x9ef) ||
-          (0x9f4 <= lookahead && lookahead <= 0x9f9) ||
-          (0xa66 <= lookahead && lookahead <= 0xa6f) ||
-          (0xae6 <= lookahead && lookahead <= 0xaef) ||
-          (0xb66 <= lookahead && lookahead <= 0xb6f) ||
-          (0xb72 <= lookahead && lookahead <= 0xb77) ||
-          (0xbe6 <= lookahead && lookahead <= 0xbf2) ||
-          (0xc66 <= lookahead && lookahead <= 0xc6f) ||
-          (0xc78 <= lookahead && lookahead <= 0xc7e) ||
-          (0xce6 <= lookahead && lookahead <= 0xcef) ||
-          (0xd58 <= lookahead && lookahead <= 0xd5e) ||
-          (0xd66 <= lookahead && lookahead <= 0xd78) ||
-          (0xde6 <= lookahead && lookahead <= 0xdef) ||
-          (0xe50 <= lookahead && lookahead <= 0xe59) ||
-          (0xed0 <= lookahead && lookahead <= 0xed9) ||
-          (0xf20 <= lookahead && lookahead <= 0xf33) ||
-          (0x1040 <= lookahead && lookahead <= 0x1049) ||
-          (0x1090 <= lookahead && lookahead <= 0x1099) ||
-          (0x1369 <= lookahead && lookahead <= 0x137c) ||
-          (0x16ee <= lookahead && lookahead <= 0x16f0) ||
-          (0x17e0 <= lookahead && lookahead <= 0x17e9) ||
-          (0x17f0 <= lookahead && lookahead <= 0x17f9) ||
-          (0x1810 <= lookahead && lookahead <= 0x1819) ||
-          (0x1946 <= lookahead && lookahead <= 0x194f) ||
-          (0x19d0 <= lookahead && lookahead <= 0x19da) ||
-          (0x1a80 <= lookahead && lookahead <= 0x1a89) ||
-          (0x1a90 <= lookahead && lookahead <= 0x1a99) ||
-          (0x1b50 <= lookahead && lookahead <= 0x1b59) ||
-          (0x1bb0 <= lookahead && lookahead <= 0x1bb9) ||
-          (0x1c40 <= lookahead && lookahead <= 0x1c49) ||
-          (0x1c50 <= lookahead && lookahead <= 0x1c59) ||
-          lookahead == 0x2070 ||
-          (0x2074 <= lookahead && lookahead <= 0x2079) ||
-          (0x2080 <= lookahead && lookahead <= 0x2089) ||
-          (0x2150 <= lookahead && lookahead <= 0x2182) ||
-          (0x2185 <= lookahead && lookahead <= 0x2189) ||
-          (0x2460 <= lookahead && lookahead <= 0x249b) ||
-          (0x24ea <= lookahead && lookahead <= 0x24ff) ||
-          (0x2776 <= lookahead && lookahead <= 0x2793) ||
-          lookahead == 0x2cfd ||
-          lookahead == 0x3007 ||
-          (0x3021 <= lookahead && lookahead <= 0x3029) ||
-          (0x3038 <= lookahead && lookahead <= 0x303a) ||
-          (0x3192 <= lookahead && lookahead <= 0x3195) ||
-          (0x3220 <= lookahead && lookahead <= 0x3229) ||
-          (0x3248 <= lookahead && lookahead <= 0x324f) ||
-          (0x3251 <= lookahead && lookahead <= 0x325f) ||
-          (0x3280 <= lookahead && lookahead <= 0x3289) ||
-          (0x32b1 <= lookahead && lookahead <= 0x32bf) ||
-          (0xa620 <= lookahead && lookahead <= 0xa629) ||
-          (0xa6e6 <= lookahead && lookahead <= 0xa6ef) ||
-          (0xa830 <= lookahead && lookahead <= 0xa835) ||
-          (0xa8d0 <= lookahead && lookahead <= 0xa8d9) ||
-          (0xa900 <= lookahead && lookahead <= 0xa909) ||
-          (0xa9d0 <= lookahead && lookahead <= 0xa9d9) ||
-          (0xa9f0 <= lookahead && lookahead <= 0xa9f9) ||
-          (0xaa50 <= lookahead && lookahead <= 0xaa59) ||
-          (0xabf0 <= lookahead && lookahead <= 0xabf9) ||
-          (0xff10 <= lookahead && lookahead <= 0xff19) ||
-          (0x10107 <= lookahead && lookahead <= 0x10133) ||
-          (0x10140 <= lookahead && lookahead <= 0x10178) ||
-          lookahead == 0x1018a ||
-          lookahead == 0x1018b ||
-          (0x102e1 <= lookahead && lookahead <= 0x102fb) ||
-          (0x10320 <= lookahead && lookahead <= 0x10323) ||
-          lookahead == 0x10341 ||
-          lookahead == 0x1034a ||
-          (0x103d1 <= lookahead && lookahead <= 0x103d5) ||
-          (0x104a0 <= lookahead && lookahead <= 0x104a9) ||
-          (0x10858 <= lookahead && lookahead <= 0x1085f) ||
-          (0x10879 <= lookahead && lookahead <= 0x1087f) ||
-          (0x108a7 <= lookahead && lookahead <= 0x108af) ||
-          (0x108fb <= lookahead && lookahead <= 0x108ff) ||
-          (0x10916 <= lookahead && lookahead <= 0x1091b)) ADVANCE(29);
+      if (set_contains(sym_number_character_set_1, 81, lookahead) ||
+          lookahead == '_') ADVANCE(29);
       if (set_contains(sym_dynamic_variable_character_set_1, 431, lookahead)) ADVANCE(30);
       END_STATE();
     case 24:
       if (lookahead == '!') ADVANCE(92);
       if (lookahead == '|') ADVANCE(558);
-      if (('0' <= lookahead && lookahead <= '9') ||
+      if (set_contains(sym_number_character_set_1, 81, lookahead) ||
           lookahead == '?' ||
-          lookahead == '_' ||
-          lookahead == 0xb2 ||
-          lookahead == 0xb3 ||
-          lookahead == 0xb9 ||
-          (0xbc <= lookahead && lookahead <= 0xbe) ||
-          (0x660 <= lookahead && lookahead <= 0x669) ||
-          (0x6f0 <= lookahead && lookahead <= 0x6f9) ||
-          (0x7c0 <= lookahead && lookahead <= 0x7c9) ||
-          (0x966 <= lookahead && lookahead <= 0x96f) ||
-          (0x9e6 <= lookahead && lookahead <= 0x9ef) ||
-          (0x9f4 <= lookahead && lookahead <= 0x9f9) ||
-          (0xa66 <= lookahead && lookahead <= 0xa6f) ||
-          (0xae6 <= lookahead && lookahead <= 0xaef) ||
-          (0xb66 <= lookahead && lookahead <= 0xb6f) ||
-          (0xb72 <= lookahead && lookahead <= 0xb77) ||
-          (0xbe6 <= lookahead && lookahead <= 0xbf2) ||
-          (0xc66 <= lookahead && lookahead <= 0xc6f) ||
-          (0xc78 <= lookahead && lookahead <= 0xc7e) ||
-          (0xce6 <= lookahead && lookahead <= 0xcef) ||
-          (0xd58 <= lookahead && lookahead <= 0xd5e) ||
-          (0xd66 <= lookahead && lookahead <= 0xd78) ||
-          (0xde6 <= lookahead && lookahead <= 0xdef) ||
-          (0xe50 <= lookahead && lookahead <= 0xe59) ||
-          (0xed0 <= lookahead && lookahead <= 0xed9) ||
-          (0xf20 <= lookahead && lookahead <= 0xf33) ||
-          (0x1040 <= lookahead && lookahead <= 0x1049) ||
-          (0x1090 <= lookahead && lookahead <= 0x1099) ||
-          (0x1369 <= lookahead && lookahead <= 0x137c) ||
-          (0x16ee <= lookahead && lookahead <= 0x16f0) ||
-          (0x17e0 <= lookahead && lookahead <= 0x17e9) ||
-          (0x17f0 <= lookahead && lookahead <= 0x17f9) ||
-          (0x1810 <= lookahead && lookahead <= 0x1819) ||
-          (0x1946 <= lookahead && lookahead <= 0x194f) ||
-          (0x19d0 <= lookahead && lookahead <= 0x19da) ||
-          (0x1a80 <= lookahead && lookahead <= 0x1a89) ||
-          (0x1a90 <= lookahead && lookahead <= 0x1a99) ||
-          (0x1b50 <= lookahead && lookahead <= 0x1b59) ||
-          (0x1bb0 <= lookahead && lookahead <= 0x1bb9) ||
-          (0x1c40 <= lookahead && lookahead <= 0x1c49) ||
-          (0x1c50 <= lookahead && lookahead <= 0x1c59) ||
-          lookahead == 0x2070 ||
-          (0x2074 <= lookahead && lookahead <= 0x2079) ||
-          (0x2080 <= lookahead && lookahead <= 0x2089) ||
-          (0x2150 <= lookahead && lookahead <= 0x2182) ||
-          (0x2185 <= lookahead && lookahead <= 0x2189) ||
-          (0x2460 <= lookahead && lookahead <= 0x249b) ||
-          (0x24ea <= lookahead && lookahead <= 0x24ff) ||
-          (0x2776 <= lookahead && lookahead <= 0x2793) ||
-          lookahead == 0x2cfd ||
-          lookahead == 0x3007 ||
-          (0x3021 <= lookahead && lookahead <= 0x3029) ||
-          (0x3038 <= lookahead && lookahead <= 0x303a) ||
-          (0x3192 <= lookahead && lookahead <= 0x3195) ||
-          (0x3220 <= lookahead && lookahead <= 0x3229) ||
-          (0x3248 <= lookahead && lookahead <= 0x324f) ||
-          (0x3251 <= lookahead && lookahead <= 0x325f) ||
-          (0x3280 <= lookahead && lookahead <= 0x3289) ||
-          (0x32b1 <= lookahead && lookahead <= 0x32bf) ||
-          (0xa620 <= lookahead && lookahead <= 0xa629) ||
-          (0xa6e6 <= lookahead && lookahead <= 0xa6ef) ||
-          (0xa830 <= lookahead && lookahead <= 0xa835) ||
-          (0xa8d0 <= lookahead && lookahead <= 0xa8d9) ||
-          (0xa900 <= lookahead && lookahead <= 0xa909) ||
-          (0xa9d0 <= lookahead && lookahead <= 0xa9d9) ||
-          (0xa9f0 <= lookahead && lookahead <= 0xa9f9) ||
-          (0xaa50 <= lookahead && lookahead <= 0xaa59) ||
-          (0xabf0 <= lookahead && lookahead <= 0xabf9) ||
-          (0xff10 <= lookahead && lookahead <= 0xff19) ||
-          (0x10107 <= lookahead && lookahead <= 0x10133) ||
-          (0x10140 <= lookahead && lookahead <= 0x10178) ||
-          lookahead == 0x1018a ||
-          lookahead == 0x1018b ||
-          (0x102e1 <= lookahead && lookahead <= 0x102fb) ||
-          (0x10320 <= lookahead && lookahead <= 0x10323) ||
-          lookahead == 0x10341 ||
-          lookahead == 0x1034a ||
-          (0x103d1 <= lookahead && lookahead <= 0x103d5) ||
-          (0x104a0 <= lookahead && lookahead <= 0x104a9) ||
-          (0x10858 <= lookahead && lookahead <= 0x1085f) ||
-          (0x10879 <= lookahead && lookahead <= 0x1087f) ||
-          (0x108a7 <= lookahead && lookahead <= 0x108af) ||
-          (0x108fb <= lookahead && lookahead <= 0x108ff) ||
-          (0x10916 <= lookahead && lookahead <= 0x1091b)) ADVANCE(93);
+          lookahead == '_') ADVANCE(93);
       if (set_contains(sym_dynamic_variable_character_set_1, 431, lookahead)) ADVANCE(93);
       END_STATE();
     case 25:
       if (lookahead == '!') ADVANCE(106);
       if (lookahead == '|') ADVANCE(560);
-      if (('0' <= lookahead && lookahead <= '9') ||
+      if (set_contains(sym_number_character_set_1, 81, lookahead) ||
           lookahead == '?' ||
-          lookahead == '_' ||
-          lookahead == 0xb2 ||
-          lookahead == 0xb3 ||
-          lookahead == 0xb9 ||
-          (0xbc <= lookahead && lookahead <= 0xbe) ||
-          (0x660 <= lookahead && lookahead <= 0x669) ||
-          (0x6f0 <= lookahead && lookahead <= 0x6f9) ||
-          (0x7c0 <= lookahead && lookahead <= 0x7c9) ||
-          (0x966 <= lookahead && lookahead <= 0x96f) ||
-          (0x9e6 <= lookahead && lookahead <= 0x9ef) ||
-          (0x9f4 <= lookahead && lookahead <= 0x9f9) ||
-          (0xa66 <= lookahead && lookahead <= 0xa6f) ||
-          (0xae6 <= lookahead && lookahead <= 0xaef) ||
-          (0xb66 <= lookahead && lookahead <= 0xb6f) ||
-          (0xb72 <= lookahead && lookahead <= 0xb77) ||
-          (0xbe6 <= lookahead && lookahead <= 0xbf2) ||
-          (0xc66 <= lookahead && lookahead <= 0xc6f) ||
-          (0xc78 <= lookahead && lookahead <= 0xc7e) ||
-          (0xce6 <= lookahead && lookahead <= 0xcef) ||
-          (0xd58 <= lookahead && lookahead <= 0xd5e) ||
-          (0xd66 <= lookahead && lookahead <= 0xd78) ||
-          (0xde6 <= lookahead && lookahead <= 0xdef) ||
-          (0xe50 <= lookahead && lookahead <= 0xe59) ||
-          (0xed0 <= lookahead && lookahead <= 0xed9) ||
-          (0xf20 <= lookahead && lookahead <= 0xf33) ||
-          (0x1040 <= lookahead && lookahead <= 0x1049) ||
-          (0x1090 <= lookahead && lookahead <= 0x1099) ||
-          (0x1369 <= lookahead && lookahead <= 0x137c) ||
-          (0x16ee <= lookahead && lookahead <= 0x16f0) ||
-          (0x17e0 <= lookahead && lookahead <= 0x17e9) ||
-          (0x17f0 <= lookahead && lookahead <= 0x17f9) ||
-          (0x1810 <= lookahead && lookahead <= 0x1819) ||
-          (0x1946 <= lookahead && lookahead <= 0x194f) ||
-          (0x19d0 <= lookahead && lookahead <= 0x19da) ||
-          (0x1a80 <= lookahead && lookahead <= 0x1a89) ||
-          (0x1a90 <= lookahead && lookahead <= 0x1a99) ||
-          (0x1b50 <= lookahead && lookahead <= 0x1b59) ||
-          (0x1bb0 <= lookahead && lookahead <= 0x1bb9) ||
-          (0x1c40 <= lookahead && lookahead <= 0x1c49) ||
-          (0x1c50 <= lookahead && lookahead <= 0x1c59) ||
-          lookahead == 0x2070 ||
-          (0x2074 <= lookahead && lookahead <= 0x2079) ||
-          (0x2080 <= lookahead && lookahead <= 0x2089) ||
-          (0x2150 <= lookahead && lookahead <= 0x2182) ||
-          (0x2185 <= lookahead && lookahead <= 0x2189) ||
-          (0x2460 <= lookahead && lookahead <= 0x249b) ||
-          (0x24ea <= lookahead && lookahead <= 0x24ff) ||
-          (0x2776 <= lookahead && lookahead <= 0x2793) ||
-          lookahead == 0x2cfd ||
-          lookahead == 0x3007 ||
-          (0x3021 <= lookahead && lookahead <= 0x3029) ||
-          (0x3038 <= lookahead && lookahead <= 0x303a) ||
-          (0x3192 <= lookahead && lookahead <= 0x3195) ||
-          (0x3220 <= lookahead && lookahead <= 0x3229) ||
-          (0x3248 <= lookahead && lookahead <= 0x324f) ||
-          (0x3251 <= lookahead && lookahead <= 0x325f) ||
-          (0x3280 <= lookahead && lookahead <= 0x3289) ||
-          (0x32b1 <= lookahead && lookahead <= 0x32bf) ||
-          (0xa620 <= lookahead && lookahead <= 0xa629) ||
-          (0xa6e6 <= lookahead && lookahead <= 0xa6ef) ||
-          (0xa830 <= lookahead && lookahead <= 0xa835) ||
-          (0xa8d0 <= lookahead && lookahead <= 0xa8d9) ||
-          (0xa900 <= lookahead && lookahead <= 0xa909) ||
-          (0xa9d0 <= lookahead && lookahead <= 0xa9d9) ||
-          (0xa9f0 <= lookahead && lookahead <= 0xa9f9) ||
-          (0xaa50 <= lookahead && lookahead <= 0xaa59) ||
-          (0xabf0 <= lookahead && lookahead <= 0xabf9) ||
-          (0xff10 <= lookahead && lookahead <= 0xff19) ||
-          (0x10107 <= lookahead && lookahead <= 0x10133) ||
-          (0x10140 <= lookahead && lookahead <= 0x10178) ||
-          lookahead == 0x1018a ||
-          lookahead == 0x1018b ||
-          (0x102e1 <= lookahead && lookahead <= 0x102fb) ||
-          (0x10320 <= lookahead && lookahead <= 0x10323) ||
-          lookahead == 0x10341 ||
-          lookahead == 0x1034a ||
-          (0x103d1 <= lookahead && lookahead <= 0x103d5) ||
-          (0x104a0 <= lookahead && lookahead <= 0x104a9) ||
-          (0x10858 <= lookahead && lookahead <= 0x1085f) ||
-          (0x10879 <= lookahead && lookahead <= 0x1087f) ||
-          (0x108a7 <= lookahead && lookahead <= 0x108af) ||
-          (0x108fb <= lookahead && lookahead <= 0x108ff) ||
-          (0x10916 <= lookahead && lookahead <= 0x1091b)) ADVANCE(105);
+          lookahead == '_') ADVANCE(105);
       if (set_contains(sym_dynamic_variable_character_set_1, 431, lookahead)) ADVANCE(105);
       END_STATE();
     case 26:
@@ -4873,92 +4669,10 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 31:
       if (lookahead == '.') ADVANCE(90);
       if (lookahead == '|') ADVANCE(537);
-      if (lookahead == '!' ||
-          ('0' <= lookahead && lookahead <= '9') ||
+      if (set_contains(sym_number_character_set_1, 81, lookahead) ||
+          lookahead == '!' ||
           lookahead == '?' ||
-          lookahead == '_' ||
-          lookahead == 0xb2 ||
-          lookahead == 0xb3 ||
-          lookahead == 0xb9 ||
-          (0xbc <= lookahead && lookahead <= 0xbe) ||
-          (0x660 <= lookahead && lookahead <= 0x669) ||
-          (0x6f0 <= lookahead && lookahead <= 0x6f9) ||
-          (0x7c0 <= lookahead && lookahead <= 0x7c9) ||
-          (0x966 <= lookahead && lookahead <= 0x96f) ||
-          (0x9e6 <= lookahead && lookahead <= 0x9ef) ||
-          (0x9f4 <= lookahead && lookahead <= 0x9f9) ||
-          (0xa66 <= lookahead && lookahead <= 0xa6f) ||
-          (0xae6 <= lookahead && lookahead <= 0xaef) ||
-          (0xb66 <= lookahead && lookahead <= 0xb6f) ||
-          (0xb72 <= lookahead && lookahead <= 0xb77) ||
-          (0xbe6 <= lookahead && lookahead <= 0xbf2) ||
-          (0xc66 <= lookahead && lookahead <= 0xc6f) ||
-          (0xc78 <= lookahead && lookahead <= 0xc7e) ||
-          (0xce6 <= lookahead && lookahead <= 0xcef) ||
-          (0xd58 <= lookahead && lookahead <= 0xd5e) ||
-          (0xd66 <= lookahead && lookahead <= 0xd78) ||
-          (0xde6 <= lookahead && lookahead <= 0xdef) ||
-          (0xe50 <= lookahead && lookahead <= 0xe59) ||
-          (0xed0 <= lookahead && lookahead <= 0xed9) ||
-          (0xf20 <= lookahead && lookahead <= 0xf33) ||
-          (0x1040 <= lookahead && lookahead <= 0x1049) ||
-          (0x1090 <= lookahead && lookahead <= 0x1099) ||
-          (0x1369 <= lookahead && lookahead <= 0x137c) ||
-          (0x16ee <= lookahead && lookahead <= 0x16f0) ||
-          (0x17e0 <= lookahead && lookahead <= 0x17e9) ||
-          (0x17f0 <= lookahead && lookahead <= 0x17f9) ||
-          (0x1810 <= lookahead && lookahead <= 0x1819) ||
-          (0x1946 <= lookahead && lookahead <= 0x194f) ||
-          (0x19d0 <= lookahead && lookahead <= 0x19da) ||
-          (0x1a80 <= lookahead && lookahead <= 0x1a89) ||
-          (0x1a90 <= lookahead && lookahead <= 0x1a99) ||
-          (0x1b50 <= lookahead && lookahead <= 0x1b59) ||
-          (0x1bb0 <= lookahead && lookahead <= 0x1bb9) ||
-          (0x1c40 <= lookahead && lookahead <= 0x1c49) ||
-          (0x1c50 <= lookahead && lookahead <= 0x1c59) ||
-          lookahead == 0x2070 ||
-          (0x2074 <= lookahead && lookahead <= 0x2079) ||
-          (0x2080 <= lookahead && lookahead <= 0x2089) ||
-          (0x2150 <= lookahead && lookahead <= 0x2182) ||
-          (0x2185 <= lookahead && lookahead <= 0x2189) ||
-          (0x2460 <= lookahead && lookahead <= 0x249b) ||
-          (0x24ea <= lookahead && lookahead <= 0x24ff) ||
-          (0x2776 <= lookahead && lookahead <= 0x2793) ||
-          lookahead == 0x2cfd ||
-          lookahead == 0x3007 ||
-          (0x3021 <= lookahead && lookahead <= 0x3029) ||
-          (0x3038 <= lookahead && lookahead <= 0x303a) ||
-          (0x3192 <= lookahead && lookahead <= 0x3195) ||
-          (0x3220 <= lookahead && lookahead <= 0x3229) ||
-          (0x3248 <= lookahead && lookahead <= 0x324f) ||
-          (0x3251 <= lookahead && lookahead <= 0x325f) ||
-          (0x3280 <= lookahead && lookahead <= 0x3289) ||
-          (0x32b1 <= lookahead && lookahead <= 0x32bf) ||
-          (0xa620 <= lookahead && lookahead <= 0xa629) ||
-          (0xa6e6 <= lookahead && lookahead <= 0xa6ef) ||
-          (0xa830 <= lookahead && lookahead <= 0xa835) ||
-          (0xa8d0 <= lookahead && lookahead <= 0xa8d9) ||
-          (0xa900 <= lookahead && lookahead <= 0xa909) ||
-          (0xa9d0 <= lookahead && lookahead <= 0xa9d9) ||
-          (0xa9f0 <= lookahead && lookahead <= 0xa9f9) ||
-          (0xaa50 <= lookahead && lookahead <= 0xaa59) ||
-          (0xabf0 <= lookahead && lookahead <= 0xabf9) ||
-          (0xff10 <= lookahead && lookahead <= 0xff19) ||
-          (0x10107 <= lookahead && lookahead <= 0x10133) ||
-          (0x10140 <= lookahead && lookahead <= 0x10178) ||
-          lookahead == 0x1018a ||
-          lookahead == 0x1018b ||
-          (0x102e1 <= lookahead && lookahead <= 0x102fb) ||
-          (0x10320 <= lookahead && lookahead <= 0x10323) ||
-          lookahead == 0x10341 ||
-          lookahead == 0x1034a ||
-          (0x103d1 <= lookahead && lookahead <= 0x103d5) ||
-          (0x104a0 <= lookahead && lookahead <= 0x104a9) ||
-          (0x10858 <= lookahead && lookahead <= 0x1085f) ||
-          (0x10879 <= lookahead && lookahead <= 0x1087f) ||
-          (0x108a7 <= lookahead && lookahead <= 0x108af) ||
-          (0x108fb <= lookahead && lookahead <= 0x108ff) ||
-          (0x10916 <= lookahead && lookahead <= 0x1091b)) ADVANCE(32);
+          lookahead == '_') ADVANCE(32);
       if (set_contains(sym_dynamic_variable_character_set_1, 431, lookahead)) ADVANCE(32);
       END_STATE();
     case 32:
@@ -5429,92 +5143,10 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 96:
       if (lookahead == '|') ADVANCE(549);
-      if (lookahead == '!' ||
-          ('0' <= lookahead && lookahead <= '9') ||
+      if (set_contains(sym_number_character_set_1, 81, lookahead) ||
+          lookahead == '!' ||
           lookahead == '?' ||
-          lookahead == '_' ||
-          lookahead == 0xb2 ||
-          lookahead == 0xb3 ||
-          lookahead == 0xb9 ||
-          (0xbc <= lookahead && lookahead <= 0xbe) ||
-          (0x660 <= lookahead && lookahead <= 0x669) ||
-          (0x6f0 <= lookahead && lookahead <= 0x6f9) ||
-          (0x7c0 <= lookahead && lookahead <= 0x7c9) ||
-          (0x966 <= lookahead && lookahead <= 0x96f) ||
-          (0x9e6 <= lookahead && lookahead <= 0x9ef) ||
-          (0x9f4 <= lookahead && lookahead <= 0x9f9) ||
-          (0xa66 <= lookahead && lookahead <= 0xa6f) ||
-          (0xae6 <= lookahead && lookahead <= 0xaef) ||
-          (0xb66 <= lookahead && lookahead <= 0xb6f) ||
-          (0xb72 <= lookahead && lookahead <= 0xb77) ||
-          (0xbe6 <= lookahead && lookahead <= 0xbf2) ||
-          (0xc66 <= lookahead && lookahead <= 0xc6f) ||
-          (0xc78 <= lookahead && lookahead <= 0xc7e) ||
-          (0xce6 <= lookahead && lookahead <= 0xcef) ||
-          (0xd58 <= lookahead && lookahead <= 0xd5e) ||
-          (0xd66 <= lookahead && lookahead <= 0xd78) ||
-          (0xde6 <= lookahead && lookahead <= 0xdef) ||
-          (0xe50 <= lookahead && lookahead <= 0xe59) ||
-          (0xed0 <= lookahead && lookahead <= 0xed9) ||
-          (0xf20 <= lookahead && lookahead <= 0xf33) ||
-          (0x1040 <= lookahead && lookahead <= 0x1049) ||
-          (0x1090 <= lookahead && lookahead <= 0x1099) ||
-          (0x1369 <= lookahead && lookahead <= 0x137c) ||
-          (0x16ee <= lookahead && lookahead <= 0x16f0) ||
-          (0x17e0 <= lookahead && lookahead <= 0x17e9) ||
-          (0x17f0 <= lookahead && lookahead <= 0x17f9) ||
-          (0x1810 <= lookahead && lookahead <= 0x1819) ||
-          (0x1946 <= lookahead && lookahead <= 0x194f) ||
-          (0x19d0 <= lookahead && lookahead <= 0x19da) ||
-          (0x1a80 <= lookahead && lookahead <= 0x1a89) ||
-          (0x1a90 <= lookahead && lookahead <= 0x1a99) ||
-          (0x1b50 <= lookahead && lookahead <= 0x1b59) ||
-          (0x1bb0 <= lookahead && lookahead <= 0x1bb9) ||
-          (0x1c40 <= lookahead && lookahead <= 0x1c49) ||
-          (0x1c50 <= lookahead && lookahead <= 0x1c59) ||
-          lookahead == 0x2070 ||
-          (0x2074 <= lookahead && lookahead <= 0x2079) ||
-          (0x2080 <= lookahead && lookahead <= 0x2089) ||
-          (0x2150 <= lookahead && lookahead <= 0x2182) ||
-          (0x2185 <= lookahead && lookahead <= 0x2189) ||
-          (0x2460 <= lookahead && lookahead <= 0x249b) ||
-          (0x24ea <= lookahead && lookahead <= 0x24ff) ||
-          (0x2776 <= lookahead && lookahead <= 0x2793) ||
-          lookahead == 0x2cfd ||
-          lookahead == 0x3007 ||
-          (0x3021 <= lookahead && lookahead <= 0x3029) ||
-          (0x3038 <= lookahead && lookahead <= 0x303a) ||
-          (0x3192 <= lookahead && lookahead <= 0x3195) ||
-          (0x3220 <= lookahead && lookahead <= 0x3229) ||
-          (0x3248 <= lookahead && lookahead <= 0x324f) ||
-          (0x3251 <= lookahead && lookahead <= 0x325f) ||
-          (0x3280 <= lookahead && lookahead <= 0x3289) ||
-          (0x32b1 <= lookahead && lookahead <= 0x32bf) ||
-          (0xa620 <= lookahead && lookahead <= 0xa629) ||
-          (0xa6e6 <= lookahead && lookahead <= 0xa6ef) ||
-          (0xa830 <= lookahead && lookahead <= 0xa835) ||
-          (0xa8d0 <= lookahead && lookahead <= 0xa8d9) ||
-          (0xa900 <= lookahead && lookahead <= 0xa909) ||
-          (0xa9d0 <= lookahead && lookahead <= 0xa9d9) ||
-          (0xa9f0 <= lookahead && lookahead <= 0xa9f9) ||
-          (0xaa50 <= lookahead && lookahead <= 0xaa59) ||
-          (0xabf0 <= lookahead && lookahead <= 0xabf9) ||
-          (0xff10 <= lookahead && lookahead <= 0xff19) ||
-          (0x10107 <= lookahead && lookahead <= 0x10133) ||
-          (0x10140 <= lookahead && lookahead <= 0x10178) ||
-          lookahead == 0x1018a ||
-          lookahead == 0x1018b ||
-          (0x102e1 <= lookahead && lookahead <= 0x102fb) ||
-          (0x10320 <= lookahead && lookahead <= 0x10323) ||
-          lookahead == 0x10341 ||
-          lookahead == 0x1034a ||
-          (0x103d1 <= lookahead && lookahead <= 0x103d5) ||
-          (0x104a0 <= lookahead && lookahead <= 0x104a9) ||
-          (0x10858 <= lookahead && lookahead <= 0x1085f) ||
-          (0x10879 <= lookahead && lookahead <= 0x1087f) ||
-          (0x108a7 <= lookahead && lookahead <= 0x108af) ||
-          (0x108fb <= lookahead && lookahead <= 0x108ff) ||
-          (0x10916 <= lookahead && lookahead <= 0x1091b)) ADVANCE(97);
+          lookahead == '_') ADVANCE(97);
       if (set_contains(sym_dynamic_variable_character_set_1, 431, lookahead)) ADVANCE(97);
       END_STATE();
     case 97:
@@ -5523,92 +5155,10 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 98:
       if (lookahead == '|') ADVANCE(551);
-      if (lookahead == '!' ||
-          ('0' <= lookahead && lookahead <= '9') ||
+      if (set_contains(sym_number_character_set_1, 81, lookahead) ||
+          lookahead == '!' ||
           lookahead == '?' ||
-          lookahead == '_' ||
-          lookahead == 0xb2 ||
-          lookahead == 0xb3 ||
-          lookahead == 0xb9 ||
-          (0xbc <= lookahead && lookahead <= 0xbe) ||
-          (0x660 <= lookahead && lookahead <= 0x669) ||
-          (0x6f0 <= lookahead && lookahead <= 0x6f9) ||
-          (0x7c0 <= lookahead && lookahead <= 0x7c9) ||
-          (0x966 <= lookahead && lookahead <= 0x96f) ||
-          (0x9e6 <= lookahead && lookahead <= 0x9ef) ||
-          (0x9f4 <= lookahead && lookahead <= 0x9f9) ||
-          (0xa66 <= lookahead && lookahead <= 0xa6f) ||
-          (0xae6 <= lookahead && lookahead <= 0xaef) ||
-          (0xb66 <= lookahead && lookahead <= 0xb6f) ||
-          (0xb72 <= lookahead && lookahead <= 0xb77) ||
-          (0xbe6 <= lookahead && lookahead <= 0xbf2) ||
-          (0xc66 <= lookahead && lookahead <= 0xc6f) ||
-          (0xc78 <= lookahead && lookahead <= 0xc7e) ||
-          (0xce6 <= lookahead && lookahead <= 0xcef) ||
-          (0xd58 <= lookahead && lookahead <= 0xd5e) ||
-          (0xd66 <= lookahead && lookahead <= 0xd78) ||
-          (0xde6 <= lookahead && lookahead <= 0xdef) ||
-          (0xe50 <= lookahead && lookahead <= 0xe59) ||
-          (0xed0 <= lookahead && lookahead <= 0xed9) ||
-          (0xf20 <= lookahead && lookahead <= 0xf33) ||
-          (0x1040 <= lookahead && lookahead <= 0x1049) ||
-          (0x1090 <= lookahead && lookahead <= 0x1099) ||
-          (0x1369 <= lookahead && lookahead <= 0x137c) ||
-          (0x16ee <= lookahead && lookahead <= 0x16f0) ||
-          (0x17e0 <= lookahead && lookahead <= 0x17e9) ||
-          (0x17f0 <= lookahead && lookahead <= 0x17f9) ||
-          (0x1810 <= lookahead && lookahead <= 0x1819) ||
-          (0x1946 <= lookahead && lookahead <= 0x194f) ||
-          (0x19d0 <= lookahead && lookahead <= 0x19da) ||
-          (0x1a80 <= lookahead && lookahead <= 0x1a89) ||
-          (0x1a90 <= lookahead && lookahead <= 0x1a99) ||
-          (0x1b50 <= lookahead && lookahead <= 0x1b59) ||
-          (0x1bb0 <= lookahead && lookahead <= 0x1bb9) ||
-          (0x1c40 <= lookahead && lookahead <= 0x1c49) ||
-          (0x1c50 <= lookahead && lookahead <= 0x1c59) ||
-          lookahead == 0x2070 ||
-          (0x2074 <= lookahead && lookahead <= 0x2079) ||
-          (0x2080 <= lookahead && lookahead <= 0x2089) ||
-          (0x2150 <= lookahead && lookahead <= 0x2182) ||
-          (0x2185 <= lookahead && lookahead <= 0x2189) ||
-          (0x2460 <= lookahead && lookahead <= 0x249b) ||
-          (0x24ea <= lookahead && lookahead <= 0x24ff) ||
-          (0x2776 <= lookahead && lookahead <= 0x2793) ||
-          lookahead == 0x2cfd ||
-          lookahead == 0x3007 ||
-          (0x3021 <= lookahead && lookahead <= 0x3029) ||
-          (0x3038 <= lookahead && lookahead <= 0x303a) ||
-          (0x3192 <= lookahead && lookahead <= 0x3195) ||
-          (0x3220 <= lookahead && lookahead <= 0x3229) ||
-          (0x3248 <= lookahead && lookahead <= 0x324f) ||
-          (0x3251 <= lookahead && lookahead <= 0x325f) ||
-          (0x3280 <= lookahead && lookahead <= 0x3289) ||
-          (0x32b1 <= lookahead && lookahead <= 0x32bf) ||
-          (0xa620 <= lookahead && lookahead <= 0xa629) ||
-          (0xa6e6 <= lookahead && lookahead <= 0xa6ef) ||
-          (0xa830 <= lookahead && lookahead <= 0xa835) ||
-          (0xa8d0 <= lookahead && lookahead <= 0xa8d9) ||
-          (0xa900 <= lookahead && lookahead <= 0xa909) ||
-          (0xa9d0 <= lookahead && lookahead <= 0xa9d9) ||
-          (0xa9f0 <= lookahead && lookahead <= 0xa9f9) ||
-          (0xaa50 <= lookahead && lookahead <= 0xaa59) ||
-          (0xabf0 <= lookahead && lookahead <= 0xabf9) ||
-          (0xff10 <= lookahead && lookahead <= 0xff19) ||
-          (0x10107 <= lookahead && lookahead <= 0x10133) ||
-          (0x10140 <= lookahead && lookahead <= 0x10178) ||
-          lookahead == 0x1018a ||
-          lookahead == 0x1018b ||
-          (0x102e1 <= lookahead && lookahead <= 0x102fb) ||
-          (0x10320 <= lookahead && lookahead <= 0x10323) ||
-          lookahead == 0x10341 ||
-          lookahead == 0x1034a ||
-          (0x103d1 <= lookahead && lookahead <= 0x103d5) ||
-          (0x104a0 <= lookahead && lookahead <= 0x104a9) ||
-          (0x10858 <= lookahead && lookahead <= 0x1085f) ||
-          (0x10879 <= lookahead && lookahead <= 0x1087f) ||
-          (0x108a7 <= lookahead && lookahead <= 0x108af) ||
-          (0x108fb <= lookahead && lookahead <= 0x108ff) ||
-          (0x10916 <= lookahead && lookahead <= 0x1091b)) ADVANCE(99);
+          lookahead == '_') ADVANCE(99);
       if (set_contains(sym_dynamic_variable_character_set_1, 431, lookahead)) ADVANCE(99);
       END_STATE();
     case 99:
@@ -5617,92 +5167,10 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 100:
       if (lookahead == '|') ADVANCE(552);
-      if (lookahead == '!' ||
-          ('0' <= lookahead && lookahead <= '9') ||
+      if (set_contains(sym_number_character_set_1, 81, lookahead) ||
+          lookahead == '!' ||
           lookahead == '?' ||
-          lookahead == '_' ||
-          lookahead == 0xb2 ||
-          lookahead == 0xb3 ||
-          lookahead == 0xb9 ||
-          (0xbc <= lookahead && lookahead <= 0xbe) ||
-          (0x660 <= lookahead && lookahead <= 0x669) ||
-          (0x6f0 <= lookahead && lookahead <= 0x6f9) ||
-          (0x7c0 <= lookahead && lookahead <= 0x7c9) ||
-          (0x966 <= lookahead && lookahead <= 0x96f) ||
-          (0x9e6 <= lookahead && lookahead <= 0x9ef) ||
-          (0x9f4 <= lookahead && lookahead <= 0x9f9) ||
-          (0xa66 <= lookahead && lookahead <= 0xa6f) ||
-          (0xae6 <= lookahead && lookahead <= 0xaef) ||
-          (0xb66 <= lookahead && lookahead <= 0xb6f) ||
-          (0xb72 <= lookahead && lookahead <= 0xb77) ||
-          (0xbe6 <= lookahead && lookahead <= 0xbf2) ||
-          (0xc66 <= lookahead && lookahead <= 0xc6f) ||
-          (0xc78 <= lookahead && lookahead <= 0xc7e) ||
-          (0xce6 <= lookahead && lookahead <= 0xcef) ||
-          (0xd58 <= lookahead && lookahead <= 0xd5e) ||
-          (0xd66 <= lookahead && lookahead <= 0xd78) ||
-          (0xde6 <= lookahead && lookahead <= 0xdef) ||
-          (0xe50 <= lookahead && lookahead <= 0xe59) ||
-          (0xed0 <= lookahead && lookahead <= 0xed9) ||
-          (0xf20 <= lookahead && lookahead <= 0xf33) ||
-          (0x1040 <= lookahead && lookahead <= 0x1049) ||
-          (0x1090 <= lookahead && lookahead <= 0x1099) ||
-          (0x1369 <= lookahead && lookahead <= 0x137c) ||
-          (0x16ee <= lookahead && lookahead <= 0x16f0) ||
-          (0x17e0 <= lookahead && lookahead <= 0x17e9) ||
-          (0x17f0 <= lookahead && lookahead <= 0x17f9) ||
-          (0x1810 <= lookahead && lookahead <= 0x1819) ||
-          (0x1946 <= lookahead && lookahead <= 0x194f) ||
-          (0x19d0 <= lookahead && lookahead <= 0x19da) ||
-          (0x1a80 <= lookahead && lookahead <= 0x1a89) ||
-          (0x1a90 <= lookahead && lookahead <= 0x1a99) ||
-          (0x1b50 <= lookahead && lookahead <= 0x1b59) ||
-          (0x1bb0 <= lookahead && lookahead <= 0x1bb9) ||
-          (0x1c40 <= lookahead && lookahead <= 0x1c49) ||
-          (0x1c50 <= lookahead && lookahead <= 0x1c59) ||
-          lookahead == 0x2070 ||
-          (0x2074 <= lookahead && lookahead <= 0x2079) ||
-          (0x2080 <= lookahead && lookahead <= 0x2089) ||
-          (0x2150 <= lookahead && lookahead <= 0x2182) ||
-          (0x2185 <= lookahead && lookahead <= 0x2189) ||
-          (0x2460 <= lookahead && lookahead <= 0x249b) ||
-          (0x24ea <= lookahead && lookahead <= 0x24ff) ||
-          (0x2776 <= lookahead && lookahead <= 0x2793) ||
-          lookahead == 0x2cfd ||
-          lookahead == 0x3007 ||
-          (0x3021 <= lookahead && lookahead <= 0x3029) ||
-          (0x3038 <= lookahead && lookahead <= 0x303a) ||
-          (0x3192 <= lookahead && lookahead <= 0x3195) ||
-          (0x3220 <= lookahead && lookahead <= 0x3229) ||
-          (0x3248 <= lookahead && lookahead <= 0x324f) ||
-          (0x3251 <= lookahead && lookahead <= 0x325f) ||
-          (0x3280 <= lookahead && lookahead <= 0x3289) ||
-          (0x32b1 <= lookahead && lookahead <= 0x32bf) ||
-          (0xa620 <= lookahead && lookahead <= 0xa629) ||
-          (0xa6e6 <= lookahead && lookahead <= 0xa6ef) ||
-          (0xa830 <= lookahead && lookahead <= 0xa835) ||
-          (0xa8d0 <= lookahead && lookahead <= 0xa8d9) ||
-          (0xa900 <= lookahead && lookahead <= 0xa909) ||
-          (0xa9d0 <= lookahead && lookahead <= 0xa9d9) ||
-          (0xa9f0 <= lookahead && lookahead <= 0xa9f9) ||
-          (0xaa50 <= lookahead && lookahead <= 0xaa59) ||
-          (0xabf0 <= lookahead && lookahead <= 0xabf9) ||
-          (0xff10 <= lookahead && lookahead <= 0xff19) ||
-          (0x10107 <= lookahead && lookahead <= 0x10133) ||
-          (0x10140 <= lookahead && lookahead <= 0x10178) ||
-          lookahead == 0x1018a ||
-          lookahead == 0x1018b ||
-          (0x102e1 <= lookahead && lookahead <= 0x102fb) ||
-          (0x10320 <= lookahead && lookahead <= 0x10323) ||
-          lookahead == 0x10341 ||
-          lookahead == 0x1034a ||
-          (0x103d1 <= lookahead && lookahead <= 0x103d5) ||
-          (0x104a0 <= lookahead && lookahead <= 0x104a9) ||
-          (0x10858 <= lookahead && lookahead <= 0x1085f) ||
-          (0x10879 <= lookahead && lookahead <= 0x1087f) ||
-          (0x108a7 <= lookahead && lookahead <= 0x108af) ||
-          (0x108fb <= lookahead && lookahead <= 0x108ff) ||
-          (0x10916 <= lookahead && lookahead <= 0x1091b)) ADVANCE(101);
+          lookahead == '_') ADVANCE(101);
       if (set_contains(sym_dynamic_variable_character_set_1, 431, lookahead)) ADVANCE(101);
       END_STATE();
     case 101:
@@ -5711,92 +5179,10 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       END_STATE();
     case 102:
       if (lookahead == '|') ADVANCE(555);
-      if (lookahead == '!' ||
-          ('0' <= lookahead && lookahead <= '9') ||
+      if (set_contains(sym_number_character_set_1, 81, lookahead) ||
+          lookahead == '!' ||
           lookahead == '?' ||
-          lookahead == '_' ||
-          lookahead == 0xb2 ||
-          lookahead == 0xb3 ||
-          lookahead == 0xb9 ||
-          (0xbc <= lookahead && lookahead <= 0xbe) ||
-          (0x660 <= lookahead && lookahead <= 0x669) ||
-          (0x6f0 <= lookahead && lookahead <= 0x6f9) ||
-          (0x7c0 <= lookahead && lookahead <= 0x7c9) ||
-          (0x966 <= lookahead && lookahead <= 0x96f) ||
-          (0x9e6 <= lookahead && lookahead <= 0x9ef) ||
-          (0x9f4 <= lookahead && lookahead <= 0x9f9) ||
-          (0xa66 <= lookahead && lookahead <= 0xa6f) ||
-          (0xae6 <= lookahead && lookahead <= 0xaef) ||
-          (0xb66 <= lookahead && lookahead <= 0xb6f) ||
-          (0xb72 <= lookahead && lookahead <= 0xb77) ||
-          (0xbe6 <= lookahead && lookahead <= 0xbf2) ||
-          (0xc66 <= lookahead && lookahead <= 0xc6f) ||
-          (0xc78 <= lookahead && lookahead <= 0xc7e) ||
-          (0xce6 <= lookahead && lookahead <= 0xcef) ||
-          (0xd58 <= lookahead && lookahead <= 0xd5e) ||
-          (0xd66 <= lookahead && lookahead <= 0xd78) ||
-          (0xde6 <= lookahead && lookahead <= 0xdef) ||
-          (0xe50 <= lookahead && lookahead <= 0xe59) ||
-          (0xed0 <= lookahead && lookahead <= 0xed9) ||
-          (0xf20 <= lookahead && lookahead <= 0xf33) ||
-          (0x1040 <= lookahead && lookahead <= 0x1049) ||
-          (0x1090 <= lookahead && lookahead <= 0x1099) ||
-          (0x1369 <= lookahead && lookahead <= 0x137c) ||
-          (0x16ee <= lookahead && lookahead <= 0x16f0) ||
-          (0x17e0 <= lookahead && lookahead <= 0x17e9) ||
-          (0x17f0 <= lookahead && lookahead <= 0x17f9) ||
-          (0x1810 <= lookahead && lookahead <= 0x1819) ||
-          (0x1946 <= lookahead && lookahead <= 0x194f) ||
-          (0x19d0 <= lookahead && lookahead <= 0x19da) ||
-          (0x1a80 <= lookahead && lookahead <= 0x1a89) ||
-          (0x1a90 <= lookahead && lookahead <= 0x1a99) ||
-          (0x1b50 <= lookahead && lookahead <= 0x1b59) ||
-          (0x1bb0 <= lookahead && lookahead <= 0x1bb9) ||
-          (0x1c40 <= lookahead && lookahead <= 0x1c49) ||
-          (0x1c50 <= lookahead && lookahead <= 0x1c59) ||
-          lookahead == 0x2070 ||
-          (0x2074 <= lookahead && lookahead <= 0x2079) ||
-          (0x2080 <= lookahead && lookahead <= 0x2089) ||
-          (0x2150 <= lookahead && lookahead <= 0x2182) ||
-          (0x2185 <= lookahead && lookahead <= 0x2189) ||
-          (0x2460 <= lookahead && lookahead <= 0x249b) ||
-          (0x24ea <= lookahead && lookahead <= 0x24ff) ||
-          (0x2776 <= lookahead && lookahead <= 0x2793) ||
-          lookahead == 0x2cfd ||
-          lookahead == 0x3007 ||
-          (0x3021 <= lookahead && lookahead <= 0x3029) ||
-          (0x3038 <= lookahead && lookahead <= 0x303a) ||
-          (0x3192 <= lookahead && lookahead <= 0x3195) ||
-          (0x3220 <= lookahead && lookahead <= 0x3229) ||
-          (0x3248 <= lookahead && lookahead <= 0x324f) ||
-          (0x3251 <= lookahead && lookahead <= 0x325f) ||
-          (0x3280 <= lookahead && lookahead <= 0x3289) ||
-          (0x32b1 <= lookahead && lookahead <= 0x32bf) ||
-          (0xa620 <= lookahead && lookahead <= 0xa629) ||
-          (0xa6e6 <= lookahead && lookahead <= 0xa6ef) ||
-          (0xa830 <= lookahead && lookahead <= 0xa835) ||
-          (0xa8d0 <= lookahead && lookahead <= 0xa8d9) ||
-          (0xa900 <= lookahead && lookahead <= 0xa909) ||
-          (0xa9d0 <= lookahead && lookahead <= 0xa9d9) ||
-          (0xa9f0 <= lookahead && lookahead <= 0xa9f9) ||
-          (0xaa50 <= lookahead && lookahead <= 0xaa59) ||
-          (0xabf0 <= lookahead && lookahead <= 0xabf9) ||
-          (0xff10 <= lookahead && lookahead <= 0xff19) ||
-          (0x10107 <= lookahead && lookahead <= 0x10133) ||
-          (0x10140 <= lookahead && lookahead <= 0x10178) ||
-          lookahead == 0x1018a ||
-          lookahead == 0x1018b ||
-          (0x102e1 <= lookahead && lookahead <= 0x102fb) ||
-          (0x10320 <= lookahead && lookahead <= 0x10323) ||
-          lookahead == 0x10341 ||
-          lookahead == 0x1034a ||
-          (0x103d1 <= lookahead && lookahead <= 0x103d5) ||
-          (0x104a0 <= lookahead && lookahead <= 0x104a9) ||
-          (0x10858 <= lookahead && lookahead <= 0x1085f) ||
-          (0x10879 <= lookahead && lookahead <= 0x1087f) ||
-          (0x108a7 <= lookahead && lookahead <= 0x108af) ||
-          (0x108fb <= lookahead && lookahead <= 0x108ff) ||
-          (0x10916 <= lookahead && lookahead <= 0x1091b)) ADVANCE(103);
+          lookahead == '_') ADVANCE(103);
       if (set_contains(sym_dynamic_variable_character_set_1, 431, lookahead)) ADVANCE(103);
       END_STATE();
     case 103:
@@ -5830,7 +5216,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 110:
       if (lookahead == '+' ||
           lookahead == '-') ADVANCE(414);
-      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(544);
+      if (set_contains(sym_number_character_set_3, 83, lookahead)) ADVANCE(544);
       END_STATE();
     case 111:
       if (lookahead == 'A' ||
@@ -7355,10 +6741,10 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
           lookahead == 'y') ADVANCE(302);
       END_STATE();
     case 413:
-      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(543);
+      if (set_contains(sym_number_character_set_1, 81, lookahead)) ADVANCE(543);
       END_STATE();
     case 414:
-      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(544);
+      if (set_contains(sym_number_character_set_1, 81, lookahead)) ADVANCE(544);
       END_STATE();
     case 415:
       if (set_contains(aux_sym_slot_accessor_token1_character_set_2, 429, lookahead)) ADVANCE(104);
@@ -7399,7 +6785,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       );
       if (('\t' <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') SKIP(417);
-      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(542);
+      if (set_contains(sym_number_character_set_3, 83, lookahead)) ADVANCE(542);
       if (set_contains(sym_dynamic_variable_character_set_1, 431, lookahead)) ADVANCE(559);
       END_STATE();
     case 418:
@@ -7687,92 +7073,10 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 501:
       ACCEPT_TOKEN(aux_sym_character_literal_token1);
       if (lookahead == '|') ADVANCE(555);
-      if (lookahead == '!' ||
-          ('0' <= lookahead && lookahead <= '9') ||
+      if (set_contains(sym_number_character_set_1, 81, lookahead) ||
+          lookahead == '!' ||
           lookahead == '?' ||
-          lookahead == '_' ||
-          lookahead == 0xb2 ||
-          lookahead == 0xb3 ||
-          lookahead == 0xb9 ||
-          (0xbc <= lookahead && lookahead <= 0xbe) ||
-          (0x660 <= lookahead && lookahead <= 0x669) ||
-          (0x6f0 <= lookahead && lookahead <= 0x6f9) ||
-          (0x7c0 <= lookahead && lookahead <= 0x7c9) ||
-          (0x966 <= lookahead && lookahead <= 0x96f) ||
-          (0x9e6 <= lookahead && lookahead <= 0x9ef) ||
-          (0x9f4 <= lookahead && lookahead <= 0x9f9) ||
-          (0xa66 <= lookahead && lookahead <= 0xa6f) ||
-          (0xae6 <= lookahead && lookahead <= 0xaef) ||
-          (0xb66 <= lookahead && lookahead <= 0xb6f) ||
-          (0xb72 <= lookahead && lookahead <= 0xb77) ||
-          (0xbe6 <= lookahead && lookahead <= 0xbf2) ||
-          (0xc66 <= lookahead && lookahead <= 0xc6f) ||
-          (0xc78 <= lookahead && lookahead <= 0xc7e) ||
-          (0xce6 <= lookahead && lookahead <= 0xcef) ||
-          (0xd58 <= lookahead && lookahead <= 0xd5e) ||
-          (0xd66 <= lookahead && lookahead <= 0xd78) ||
-          (0xde6 <= lookahead && lookahead <= 0xdef) ||
-          (0xe50 <= lookahead && lookahead <= 0xe59) ||
-          (0xed0 <= lookahead && lookahead <= 0xed9) ||
-          (0xf20 <= lookahead && lookahead <= 0xf33) ||
-          (0x1040 <= lookahead && lookahead <= 0x1049) ||
-          (0x1090 <= lookahead && lookahead <= 0x1099) ||
-          (0x1369 <= lookahead && lookahead <= 0x137c) ||
-          (0x16ee <= lookahead && lookahead <= 0x16f0) ||
-          (0x17e0 <= lookahead && lookahead <= 0x17e9) ||
-          (0x17f0 <= lookahead && lookahead <= 0x17f9) ||
-          (0x1810 <= lookahead && lookahead <= 0x1819) ||
-          (0x1946 <= lookahead && lookahead <= 0x194f) ||
-          (0x19d0 <= lookahead && lookahead <= 0x19da) ||
-          (0x1a80 <= lookahead && lookahead <= 0x1a89) ||
-          (0x1a90 <= lookahead && lookahead <= 0x1a99) ||
-          (0x1b50 <= lookahead && lookahead <= 0x1b59) ||
-          (0x1bb0 <= lookahead && lookahead <= 0x1bb9) ||
-          (0x1c40 <= lookahead && lookahead <= 0x1c49) ||
-          (0x1c50 <= lookahead && lookahead <= 0x1c59) ||
-          lookahead == 0x2070 ||
-          (0x2074 <= lookahead && lookahead <= 0x2079) ||
-          (0x2080 <= lookahead && lookahead <= 0x2089) ||
-          (0x2150 <= lookahead && lookahead <= 0x2182) ||
-          (0x2185 <= lookahead && lookahead <= 0x2189) ||
-          (0x2460 <= lookahead && lookahead <= 0x249b) ||
-          (0x24ea <= lookahead && lookahead <= 0x24ff) ||
-          (0x2776 <= lookahead && lookahead <= 0x2793) ||
-          lookahead == 0x2cfd ||
-          lookahead == 0x3007 ||
-          (0x3021 <= lookahead && lookahead <= 0x3029) ||
-          (0x3038 <= lookahead && lookahead <= 0x303a) ||
-          (0x3192 <= lookahead && lookahead <= 0x3195) ||
-          (0x3220 <= lookahead && lookahead <= 0x3229) ||
-          (0x3248 <= lookahead && lookahead <= 0x324f) ||
-          (0x3251 <= lookahead && lookahead <= 0x325f) ||
-          (0x3280 <= lookahead && lookahead <= 0x3289) ||
-          (0x32b1 <= lookahead && lookahead <= 0x32bf) ||
-          (0xa620 <= lookahead && lookahead <= 0xa629) ||
-          (0xa6e6 <= lookahead && lookahead <= 0xa6ef) ||
-          (0xa830 <= lookahead && lookahead <= 0xa835) ||
-          (0xa8d0 <= lookahead && lookahead <= 0xa8d9) ||
-          (0xa900 <= lookahead && lookahead <= 0xa909) ||
-          (0xa9d0 <= lookahead && lookahead <= 0xa9d9) ||
-          (0xa9f0 <= lookahead && lookahead <= 0xa9f9) ||
-          (0xaa50 <= lookahead && lookahead <= 0xaa59) ||
-          (0xabf0 <= lookahead && lookahead <= 0xabf9) ||
-          (0xff10 <= lookahead && lookahead <= 0xff19) ||
-          (0x10107 <= lookahead && lookahead <= 0x10133) ||
-          (0x10140 <= lookahead && lookahead <= 0x10178) ||
-          lookahead == 0x1018a ||
-          lookahead == 0x1018b ||
-          (0x102e1 <= lookahead && lookahead <= 0x102fb) ||
-          (0x10320 <= lookahead && lookahead <= 0x10323) ||
-          lookahead == 0x10341 ||
-          lookahead == 0x1034a ||
-          (0x103d1 <= lookahead && lookahead <= 0x103d5) ||
-          (0x104a0 <= lookahead && lookahead <= 0x104a9) ||
-          (0x10858 <= lookahead && lookahead <= 0x1085f) ||
-          (0x10879 <= lookahead && lookahead <= 0x1087f) ||
-          (0x108a7 <= lookahead && lookahead <= 0x108af) ||
-          (0x108fb <= lookahead && lookahead <= 0x108ff) ||
-          (0x10916 <= lookahead && lookahead <= 0x1091b)) ADVANCE(103);
+          lookahead == '_') ADVANCE(103);
       if (set_contains(sym_dynamic_variable_character_set_1, 431, lookahead)) ADVANCE(103);
       END_STATE();
     case 502:
@@ -7939,92 +7243,10 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '|') ADVANCE(31);
       if (('\t' <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') ADVANCE(541);
-      if (lookahead == '!' ||
-          ('0' <= lookahead && lookahead <= '9') ||
+      if (set_contains(sym_number_character_set_1, 81, lookahead) ||
+          lookahead == '!' ||
           lookahead == '?' ||
-          lookahead == '_' ||
-          lookahead == 0xb2 ||
-          lookahead == 0xb3 ||
-          lookahead == 0xb9 ||
-          (0xbc <= lookahead && lookahead <= 0xbe) ||
-          (0x660 <= lookahead && lookahead <= 0x669) ||
-          (0x6f0 <= lookahead && lookahead <= 0x6f9) ||
-          (0x7c0 <= lookahead && lookahead <= 0x7c9) ||
-          (0x966 <= lookahead && lookahead <= 0x96f) ||
-          (0x9e6 <= lookahead && lookahead <= 0x9ef) ||
-          (0x9f4 <= lookahead && lookahead <= 0x9f9) ||
-          (0xa66 <= lookahead && lookahead <= 0xa6f) ||
-          (0xae6 <= lookahead && lookahead <= 0xaef) ||
-          (0xb66 <= lookahead && lookahead <= 0xb6f) ||
-          (0xb72 <= lookahead && lookahead <= 0xb77) ||
-          (0xbe6 <= lookahead && lookahead <= 0xbf2) ||
-          (0xc66 <= lookahead && lookahead <= 0xc6f) ||
-          (0xc78 <= lookahead && lookahead <= 0xc7e) ||
-          (0xce6 <= lookahead && lookahead <= 0xcef) ||
-          (0xd58 <= lookahead && lookahead <= 0xd5e) ||
-          (0xd66 <= lookahead && lookahead <= 0xd78) ||
-          (0xde6 <= lookahead && lookahead <= 0xdef) ||
-          (0xe50 <= lookahead && lookahead <= 0xe59) ||
-          (0xed0 <= lookahead && lookahead <= 0xed9) ||
-          (0xf20 <= lookahead && lookahead <= 0xf33) ||
-          (0x1040 <= lookahead && lookahead <= 0x1049) ||
-          (0x1090 <= lookahead && lookahead <= 0x1099) ||
-          (0x1369 <= lookahead && lookahead <= 0x137c) ||
-          (0x16ee <= lookahead && lookahead <= 0x16f0) ||
-          (0x17e0 <= lookahead && lookahead <= 0x17e9) ||
-          (0x17f0 <= lookahead && lookahead <= 0x17f9) ||
-          (0x1810 <= lookahead && lookahead <= 0x1819) ||
-          (0x1946 <= lookahead && lookahead <= 0x194f) ||
-          (0x19d0 <= lookahead && lookahead <= 0x19da) ||
-          (0x1a80 <= lookahead && lookahead <= 0x1a89) ||
-          (0x1a90 <= lookahead && lookahead <= 0x1a99) ||
-          (0x1b50 <= lookahead && lookahead <= 0x1b59) ||
-          (0x1bb0 <= lookahead && lookahead <= 0x1bb9) ||
-          (0x1c40 <= lookahead && lookahead <= 0x1c49) ||
-          (0x1c50 <= lookahead && lookahead <= 0x1c59) ||
-          lookahead == 0x2070 ||
-          (0x2074 <= lookahead && lookahead <= 0x2079) ||
-          (0x2080 <= lookahead && lookahead <= 0x2089) ||
-          (0x2150 <= lookahead && lookahead <= 0x2182) ||
-          (0x2185 <= lookahead && lookahead <= 0x2189) ||
-          (0x2460 <= lookahead && lookahead <= 0x249b) ||
-          (0x24ea <= lookahead && lookahead <= 0x24ff) ||
-          (0x2776 <= lookahead && lookahead <= 0x2793) ||
-          lookahead == 0x2cfd ||
-          lookahead == 0x3007 ||
-          (0x3021 <= lookahead && lookahead <= 0x3029) ||
-          (0x3038 <= lookahead && lookahead <= 0x303a) ||
-          (0x3192 <= lookahead && lookahead <= 0x3195) ||
-          (0x3220 <= lookahead && lookahead <= 0x3229) ||
-          (0x3248 <= lookahead && lookahead <= 0x324f) ||
-          (0x3251 <= lookahead && lookahead <= 0x325f) ||
-          (0x3280 <= lookahead && lookahead <= 0x3289) ||
-          (0x32b1 <= lookahead && lookahead <= 0x32bf) ||
-          (0xa620 <= lookahead && lookahead <= 0xa629) ||
-          (0xa6e6 <= lookahead && lookahead <= 0xa6ef) ||
-          (0xa830 <= lookahead && lookahead <= 0xa835) ||
-          (0xa8d0 <= lookahead && lookahead <= 0xa8d9) ||
-          (0xa900 <= lookahead && lookahead <= 0xa909) ||
-          (0xa9d0 <= lookahead && lookahead <= 0xa9d9) ||
-          (0xa9f0 <= lookahead && lookahead <= 0xa9f9) ||
-          (0xaa50 <= lookahead && lookahead <= 0xaa59) ||
-          (0xabf0 <= lookahead && lookahead <= 0xabf9) ||
-          (0xff10 <= lookahead && lookahead <= 0xff19) ||
-          (0x10107 <= lookahead && lookahead <= 0x10133) ||
-          (0x10140 <= lookahead && lookahead <= 0x10178) ||
-          lookahead == 0x1018a ||
-          lookahead == 0x1018b ||
-          (0x102e1 <= lookahead && lookahead <= 0x102fb) ||
-          (0x10320 <= lookahead && lookahead <= 0x10323) ||
-          lookahead == 0x10341 ||
-          lookahead == 0x1034a ||
-          (0x103d1 <= lookahead && lookahead <= 0x103d5) ||
-          (0x104a0 <= lookahead && lookahead <= 0x104a9) ||
-          (0x10858 <= lookahead && lookahead <= 0x1085f) ||
-          (0x10879 <= lookahead && lookahead <= 0x1087f) ||
-          (0x108a7 <= lookahead && lookahead <= 0x108af) ||
-          (0x108fb <= lookahead && lookahead <= 0x108ff) ||
-          (0x10916 <= lookahead && lookahead <= 0x1091b)) ADVANCE(541);
+          lookahead == '_') ADVANCE(541);
       if (set_contains(sym_dynamic_variable_character_set_1, 431, lookahead)) ADVANCE(538);
       END_STATE();
     case 540:
@@ -8045,18 +7267,18 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '&' ||
           lookahead == 'E' ||
           lookahead == 'e') ADVANCE(110);
-      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(542);
+      if (set_contains(sym_number_character_set_4, 84, lookahead)) ADVANCE(542);
       END_STATE();
     case 543:
       ACCEPT_TOKEN(sym_number);
       if (lookahead == '&' ||
           lookahead == 'E' ||
           lookahead == 'e') ADVANCE(110);
-      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(543);
+      if (set_contains(sym_number_character_set_4, 84, lookahead)) ADVANCE(543);
       END_STATE();
     case 544:
       ACCEPT_TOKEN(sym_number);
-      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(544);
+      if (set_contains(sym_number_character_set_1, 81, lookahead)) ADVANCE(544);
       END_STATE();
     case 545:
       ACCEPT_TOKEN(sym_dynamic_variable);
