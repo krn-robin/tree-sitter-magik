@@ -45,7 +45,5 @@ $
 (source_file
   (fragment
     (procedure
-      (identifier)
-      (identifier)
       (documentation
         (comment)))))
