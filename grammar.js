@@ -486,8 +486,8 @@ module.exports = grammar({
       /@\s?(\|[\p{L}\p{N}_\?\.!]*\||[\p{L}\p{N}_\?!]*)+/u,
 
     number: $ => token(seq(
-      choice(/\p{N}+/u, /\p{N}+\.\p{N}+/u),
-      optional(seq(/[eE&][\+-]?/, /\p{N}+/u)))),
+      choice(/[0-9]+/, /[0-9]+\.[0-9]+/),
+      optional(seq(/[eE&][\+-]?/, /[0-9]+/)))),
 
     variable: $ => prec.left($._identifier),
 
