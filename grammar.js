@@ -8,7 +8,7 @@
 /// <reference types="tree-sitter-cli/dsl" />
 // @ts-check
 
-const ID_REGEX = /[a-zA-Z][a-zA-Z0-9_\?!]*/;
+const ID_REGEX = /[a-zA-Z][a-zA-Z0-9_?!]*/;
 
 
 const PREC = {
@@ -340,7 +340,7 @@ module.exports = grammar({
         ),
       ),
 
-    slot_accessor: $ => prec.left(seq('.', /[a-zA-Z][a-zA-Z0-9_\?!]*/)),
+    slot_accessor: $ => prec.left(seq('.', /[a-zA-Z][a-zA-Z0-9_?!]*/)),
 
     _expression_list: $ =>
       prec.right(seq($._expression, repeat(seq(',', $._expression)))),
@@ -355,7 +355,7 @@ module.exports = grammar({
 
     thisthread: $ => alias(/_thisthread/i, '_thisthread'),
 
-    class: $ => seq(alias(/_class/i, '_class'), field('java_classname', /\|[a-zA-Z\d\.]*\|/)),
+    class: $ => seq(alias(/_class/i, '_class'), field('java_classname', /\|[a-zA-Z\d.]*\|/)),
 
     _terminator: $ =>
       choice(';', $._line_terminator),
@@ -483,13 +483,13 @@ module.exports = grammar({
 
     // @ <identifier>
     label: $ =>
-      /@\s?[a-zA-Z0-9_\?!]*/,
+      /@\s?[a-zA-Z0-9_?!]*/,
 
     variable: $ => prec.left($._identifier),
 
     dynamic_variable: $ => token(seq(
       optional(seq(ID_REGEX, ':')),
-      /![a-zA-Z0-9_\?!]*!/)),
+      /![a-zA-Z0-9_?!]*!/)),
 
     global_variable: $ => token(seq(ID_REGEX, ':', ID_REGEX)),
 
@@ -504,7 +504,7 @@ module.exports = grammar({
 
     number: $ => token(seq(
       choice(/\d+/, /\d+\.\d+/),
-      optional(seq(/[eE&][\+-]?/, /\d+/)))),
+      optional(seq(/[eE&][+-]?/, /\d+/)))),
 
     vector: $ => seq(
       '{',
@@ -542,7 +542,7 @@ module.exports = grammar({
     unary_operator: $ =>
       prec.right(seq(field('operator', choice('+', '-', alias(/_not/i, '_not'), '~')), $._expression)),
 
-    symbol: $ => /:(\|[^|]*\||[a-zA-Z0-9_\?!]+)+/,
+    symbol: $ => /:(\|[^|]*\||[a-zA-Z0-9_?!]+)+/,
 
     documentation: $ => prec.right(repeat1(/##.*/)),
     comment: $ => token(prec(PREC.COMMENT, /#.*/)),
