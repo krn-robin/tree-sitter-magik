@@ -7826,6 +7826,10 @@
           "named": true
         },
         {
+          "type": "documentation",
+          "named": true
+        },
+        {
           "type": "dynamic",
           "named": true
         },
@@ -10969,8 +10973,7 @@
   },
   {
     "type": "comment",
-    "named": true,
-    "extra": true
+    "named": true
   },
   {
     "type": "dynamic_variable",
