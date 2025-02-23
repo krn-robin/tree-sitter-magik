@@ -18,7 +18,7 @@ authors = [
   { name = "Robin Putters", email = "robinputters@github.com" },
   { name = "Sebastiaan Speck", email = "sebastiaanspeck@github.com" },
 ]
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 license.text = "MIT"
 readme = "README.md"
 
@@ -29,5 +29,5 @@ Homepage = "https://github.com/krn-robin/tree-sitter-magik"
 core = ["tree-sitter~=0.21"]
 
 [tool.cibuildwheel]
-build = "cp39-*"
+build = "cp310-*"
 build-frontend = "build"
