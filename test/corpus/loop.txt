@@ -92,6 +92,20 @@ _endloop
 _loop @outer_loop
   _leave@outer_loop
 _endloop
+
+_loop@|InnerLoop|
+  _leave@|InnerLoop|
+_endloop
+$
+
+_loop@StraßeLoop
+  _leave @StraßeLoop
+_endloop
+$
+
+_loop@||
+  _leave @||
+_endloop
 $
 
 --------------------------------------------------------------------------------
@@ -104,6 +118,21 @@ $
     (loop
       (label)
       (continue
+        (label))))
+  (fragment
+    (loop
+      (label)
+      (leave
+        (label))))
+  (fragment
+    (loop
+      (label)
+      (leave
+        (label))))
+  (fragment
+    (loop
+      (label)
+      (leave
         (label))))
   (fragment
     (loop
