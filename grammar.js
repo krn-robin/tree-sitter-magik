@@ -483,11 +483,11 @@ module.exports = grammar({
 
     // @ <identifier>
     label: $ =>
-      /@\s?(\|[\p{L}\p{N}_?.!]*\||[\p{L}\p{N}_?!]*)+/u,
+      /@\s?(\|[\p{L}\p{N}_?.!]*\||[\p{L}\p{N}_?!]+)+/u,
 
     number: $ => token(seq(
-      choice(/\p{N}+/, /\p{N}+\.\p{N}+/),
-      optional(seq(/[eE&][+-]?/, /\p{N}+/)))),
+      choice(/\p{N}+/u, /\p{N}+\.\p{N}+/u),
+      optional(seq(/[eE&][+-]?/, /\p{N}+/u)))),
 
     variable: $ => prec.left($._identifier),
 

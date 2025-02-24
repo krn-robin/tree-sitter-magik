@@ -3921,7 +3921,7 @@
     },
     "label": {
       "type": "PATTERN",
-      "value": "@\\s?(\\|[\\p{L}\\p{N}_?.!]*\\||[\\p{L}\\p{N}_?!]*)+",
+      "value": "@\\s?(\\|[\\p{L}\\p{N}_?.!]*\\||[\\p{L}\\p{N}_?!]+)+",
       "flags": "u"
     },
     "number": {
@@ -3934,11 +3934,13 @@
             "members": [
               {
                 "type": "PATTERN",
-                "value": "\\p{N}+"
+                "value": "\\p{N}+",
+                "flags": "u"
               },
               {
                 "type": "PATTERN",
-                "value": "\\p{N}+\\.\\p{N}+"
+                "value": "\\p{N}+\\.\\p{N}+",
+                "flags": "u"
               }
             ]
           },
@@ -3954,7 +3956,8 @@
                   },
                   {
                     "type": "PATTERN",
-                    "value": "\\p{N}+"
+                    "value": "\\p{N}+",
+                    "flags": "u"
                   }
                 ]
               },
