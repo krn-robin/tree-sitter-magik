@@ -41,7 +41,7 @@ jobs:
           test-rust: true
       - name: Build lib
         run: |
-          echo "Building with ABI version: $TREE_SITTER_ABI_VERSION"
+          echo "Building with ABI version: ${{ matrix.abi_version }}"
           ${{ matrix.cc }} -fPIC -c -Isrc/ src/parser.c -o parser.o
           ${{ matrix.cc }} -fPIC -shared parser.o -o libtree-sitter-magik.${{ matrix.ext }}
       - name: Upload lib
@@ -50,3 +50,29 @@ jobs:
           name: libtree-sitter-magik-${{ runner.os }}-ABI-${{ matrix.abi_version }}
           path: libtree-sitter-magik.*
           if-no-files-found: error
+
+  # FOR TESTING ONLY!
+  publish:
+    needs: test
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: libtree-sitter-magik
+          pattern: libtree-sitter-magik-*
+          merge-multiple: true
+      - name: Zip artifacts
+        run: |
+          tree
+          for file in libtree-sitter-magik/*; do
+            abi_version=$(echo "$file" | grep -oP 'ABI-\K\d+')
+            if [[ "$file" =~ \.dylib$ ]]; then
+              zip "libtree-sitter-magik-macOS-abi$abi_version.zip" "$file"
+            elif [[ "$file" =~ \.so$ ]]; then
+              zip "libtree-sitter-magik-Linux-abi$abi_version.zip" "$file"
+            elif [[ "$file" =~ \.dll$ ]]; then
+              zip "libtree-sitter-magik-Windows-abi$abi_version.zip" "$file"
+            fi
+          done

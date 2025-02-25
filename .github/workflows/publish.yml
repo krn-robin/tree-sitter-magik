@@ -41,7 +41,7 @@ jobs:
           test-rust: true
       - name: Build lib
         run: |
-          echo "Building with ABI version: $TREE_SITTER_ABI_VERSION"
+          echo "Building with ABI version: ${{ matrix.abi_version }}"
           ${{ matrix.cc }} -fPIC -c -Isrc/ src/parser.c -o parser.o
           ${{ matrix.cc }} -fPIC -shared parser.o -o libtree-sitter-magik.${{ matrix.ext }}
       - name: Upload lib
@@ -64,6 +64,7 @@ jobs:
           merge-multiple: true
       - name: Zip artifacts
         run: |
+          tree
           for file in libtree-sitter-magik/*; do
             abi_version=$(echo "$file" | grep -oP 'ABI-\K\d+')
             if [[ "$file" =~ \.dylib$ ]]; then
