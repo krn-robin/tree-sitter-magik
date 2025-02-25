@@ -39,6 +39,9 @@ jobs:
         with:
           generate: ${{ matrix.abi_version == 15 }}
           test-rust: true
+      - name: Generate parser
+        run: |
+          tree-sitter generate --abi=${{ matrix.abi_version }}
       - name: Build lib
         run: |
           ${{ matrix.cc }} -fPIC -c -Isrc/ src/parser.c -o parser.o
