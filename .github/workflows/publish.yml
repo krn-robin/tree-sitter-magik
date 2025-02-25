@@ -63,7 +63,7 @@ jobs:
         with:
           path: libtree-sitter-magik
           pattern: libtree-sitter-magik-*
-          merge-multiple: true
+          merge-multiple: false
       - name: Zip artifacts
         run: |
           for file in libtree-sitter-magik/**/*; do
