@@ -7822,6 +7822,10 @@
           "named": true
         },
         {
+          "type": "documentation",
+          "named": true
+        },
+        {
           "type": "dynamic",
           "named": true
         },
