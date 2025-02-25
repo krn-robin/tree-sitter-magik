@@ -75,4 +75,4 @@ jobs:
           done
       - uses: softprops/action-gh-release@v2
         with:
-          files: libtree-sitter-magik/*.zip
+          files: libtree-sitter-magik-*.zip

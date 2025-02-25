@@ -67,6 +67,7 @@ jobs:
           tree
           for file in libtree-sitter-magik/*; do
             abi_version=$(echo "$file" | grep -oP 'ABI-\K\d+')
+            echo "ABI version: $abi_version - FILE: $file"
             if [[ "$file" =~ \.dylib$ ]]; then
               zip "libtree-sitter-magik-macOS-ABI-$abi_version.zip" "$file"
             elif [[ "$file" =~ \.so$ ]]; then
@@ -78,7 +79,7 @@ jobs:
           tree
       - uses: softprops/action-gh-release@v2
         with:
-          files: libtree-sitter-magik/*.zip
+          files: libtree-sitter-magik-*.zip
           tag_name: 0.0.2-SNAPSHOT
           prerelease: true
 
