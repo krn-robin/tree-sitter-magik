@@ -3,7 +3,7 @@ name: Publish
 on:
   push:
     tags: ["*"]
-  
+
 concurrency:
   group: ${{github.workflow}}-${{github.ref}}
   cancel-in-progress: true
@@ -15,6 +15,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
+        abi_version: [14, 15]
+        os: [macos-latest, ubuntu-latest, windows-latest]
         include:
           - os: macos-latest
             ext: dylib
@@ -25,6 +27,8 @@ jobs:
           - os: windows-latest
             ext: dll
             cc: x86_64-w64-mingw32-gcc
+    env:
+      TREE_SITTER_ABI_VERSION: ${{ matrix.abi_version }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -33,8 +37,11 @@ jobs:
       - name: Run tests
         uses: tree-sitter/parser-test-action@v2
         with:
-          generate: true
+          generate: ${{ matrix.abi_version == 15 }}
           test-rust: true
+      - name: Generate parser
+        if: ${{ matrix.abi_version != 15 }}
+        run: tree-sitter generate --abi=${{ matrix.abi_version }}
       - name: Build lib
         run: |
           ${{ matrix.cc }} -fPIC -c -Isrc/ src/parser.c -o parser.o
@@ -42,7 +49,7 @@ jobs:
       - name: Upload lib
         uses: actions/upload-artifact@v4
         with:
-          name: libtree-sitter-magik-${{ runner.os }}
+          name: libtree-sitter-magik-${{ runner.os }}-ABI-${{ matrix.abi_version }}
           path: libtree-sitter-magik*
           if-no-files-found: error
 
@@ -55,13 +62,20 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           path: libtree-sitter-magik
-          pattern: libtree-sitter-magik*
-          merge-multiple: true
+          pattern: libtree-sitter-magik-*
+          merge-multiple: false
       - name: Zip artifacts
         run: |
-          zip libtree-sitter-magik-macOS.zip libtree-sitter-magik.dylib
-          zip libtree-sitter-magik-Linux.zip libtree-sitter-magik.so
-          zip libtree-sitter-magik-Windows.zip libtree-sitter-magik.dll
+          for file in libtree-sitter-magik/**/*; do
+            abi_version=$(echo "$file" | grep -oP 'ABI-\K\d+')
+            if [[ "$file" =~ \.dylib$ ]]; then
+              zip -j "libtree-sitter-magik-macOS-ABI-$abi_version.zip" "$file"
+            elif [[ "$file" =~ \.so$ ]]; then
+              zip -j "libtree-sitter-magik-Linux-ABI-$abi_version.zip" "$file"
+            elif [[ "$file" =~ \.dll$ ]]; then
+              zip -j "libtree-sitter-magik-Windows-ABI-$abi_version.zip" "$file"
+            fi
+          done
       - uses: softprops/action-gh-release@v2
         with:
           files: libtree-sitter-magik-*.zip
