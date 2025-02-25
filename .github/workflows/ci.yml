@@ -40,8 +40,7 @@ jobs:
           generate: ${{ matrix.abi_version == 15 }}
           test-rust: true
       - name: Generate parser
-        run: |
-          tree-sitter generate --abi=${{ matrix.abi_version }}
+        run: tree-sitter generate --abi=${{ matrix.abi_version }}
       - name: Build lib
         run: |
           ${{ matrix.cc }} -fPIC -c -Isrc/ src/parser.c -o parser.o
@@ -72,11 +71,11 @@ jobs:
             abi_version=$(echo "$file" | grep -oP 'ABI-\K\d+')
             echo "ABI version: $abi_version - FILE: $file"
             if [[ "$file" =~ \.dylib$ ]]; then
-              zip "libtree-sitter-magik-macOS-ABI-$abi_version.zip" "$file"
+              zip -j "libtree-sitter-magik-macOS-ABI-$abi_version.zip" "$file"
             elif [[ "$file" =~ \.so$ ]]; then
-              zip "libtree-sitter-magik-Linux-ABI-$abi_version.zip" "$file"
+              zip -j "libtree-sitter-magik-Linux-ABI-$abi_version.zip" "$file"
             elif [[ "$file" =~ \.dll$ ]]; then
-              zip "libtree-sitter-magik-Windows-ABI-$abi_version.zip" "$file"
+              zip -j "libtree-sitter-magik-Windows-ABI-$abi_version.zip" "$file"
             fi
           done
           tree
