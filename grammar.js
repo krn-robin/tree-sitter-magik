@@ -525,7 +525,7 @@ module.exports = grammar({
       prec.left(PREC.BOOLEAN,
         seq(
           field('left', $._expression),
-          field('operator', choice(alias(/_and/i, '_and'), alias(/_or/i, '_or'), alias(/_xor/i, '_xor'), alias(/_andif/i, '_andif'), alias(/_orif/i, '_orif'), alias(/_xorif/i, '_xorif'))),
+          field('operator', choice(alias(/_and/i, '_and'), alias(/_or/i, '_or'), alias(/_xor/i, '_xor'), alias(/_andif/i, '_andif'), alias(/_orif/i, '_orif'))),
           field('right', $._expression),
         ),
       ),
