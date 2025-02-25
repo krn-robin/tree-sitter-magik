@@ -65,7 +65,7 @@ jobs:
       - name: Zip artifacts
         run: |
           tree
-          for file in libtree-sitter-magik/*; do
+          for file in libtree-sitter-magik/**/*; do
             abi_version=$(echo "$file" | grep -oP 'ABI-\K\d+')
             echo "ABI version: $abi_version - FILE: $file"
             if [[ "$file" =~ \.dylib$ ]]; then
