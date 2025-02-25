@@ -16,6 +16,7 @@ jobs:
       fail-fast: false
       matrix:
         abi_version: [14, 15]
+        os: [macos-latest, ubuntu-latest, windows-latest]
         include:
           - os: macos-latest
             ext: dylib
