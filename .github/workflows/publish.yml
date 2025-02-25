@@ -40,6 +40,7 @@ jobs:
           generate: ${{ matrix.abi_version == 15 }}
           test-rust: true
       - name: Generate parser
+        if: ${{ matrix.abi_version != 15 }}
         run: tree-sitter generate --abi=${{ matrix.abi_version }}
       - name: Build lib
         run: |
@@ -49,7 +50,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: libtree-sitter-magik-${{ runner.os }}-ABI-${{ matrix.abi_version }}
-          path: libtree-sitter-magik.*
+          path: libtree-sitter-magik*
           if-no-files-found: error
 
   publish:
@@ -62,7 +63,7 @@ jobs:
         with:
           path: libtree-sitter-magik
           pattern: libtree-sitter-magik-*
-          merge-multiple: false
+          merge-multiple: true
       - name: Zip artifacts
         run: |
           for file in libtree-sitter-magik/**/*; do
