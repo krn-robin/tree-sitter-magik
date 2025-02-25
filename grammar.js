@@ -489,7 +489,7 @@ module.exports = grammar({
     number: $ => token(
       choice(
         seq(
-          choice(/\p{N}+/u, /\p{N}+.\p{N}+/u),
+          choice(/\p{N}+/u, /\p{N}+\.\p{N}+/u),
           optional(seq(/[eE&][+-]?/, /\p{N}+/u))),
         /(?:[2-9]|[1-2]\d|3[0-6])[rR][a-zA-Z0-9]+/)),
 
