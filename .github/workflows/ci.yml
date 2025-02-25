@@ -68,13 +68,14 @@ jobs:
           for file in libtree-sitter-magik/*; do
             abi_version=$(echo "$file" | grep -oP 'ABI-\K\d+')
             if [[ "$file" =~ \.dylib$ ]]; then
-              zip "libtree-sitter-magik-macOS-abi$abi_version.zip" "$file"
+              zip "libtree-sitter-magik-macOS-ABI-$abi_version.zip" "$file"
             elif [[ "$file" =~ \.so$ ]]; then
-              zip "libtree-sitter-magik-Linux-abi$abi_version.zip" "$file"
+              zip "libtree-sitter-magik-Linux-ABI-$abi_version.zip" "$file"
             elif [[ "$file" =~ \.dll$ ]]; then
-              zip "libtree-sitter-magik-Windows-abi$abi_version.zip" "$file"
+              zip "libtree-sitter-magik-Windows-ABI-$abi_version.zip" "$file"
             fi
           done
+          tree
       - uses: softprops/action-gh-release@v2
         with:
           files: libtree-sitter-magik/*.zip
