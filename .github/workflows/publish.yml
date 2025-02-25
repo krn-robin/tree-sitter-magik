@@ -65,14 +65,14 @@ jobs:
           merge-multiple: false
       - name: Zip artifacts
         run: |
-          for file in libtree-sitter-magik/*; do
+          for file in libtree-sitter-magik/**/*; do
             abi_version=$(echo "$file" | grep -oP 'ABI-\K\d+')
             if [[ "$file" =~ \.dylib$ ]]; then
-              zip -j "libtree-sitter-magik-macOS-abi$abi_version.zip" "$file"
+              zip -j "libtree-sitter-magik-macOS-ABI-$abi_version.zip" "$file"
             elif [[ "$file" =~ \.so$ ]]; then
-              zip -j "libtree-sitter-magik-Linux-abi$abi_version.zip" "$file"
+              zip -j "libtree-sitter-magik-Linux-ABI-$abi_version.zip" "$file"
             elif [[ "$file" =~ \.dll$ ]]; then
-              zip -j "libtree-sitter-magik-Windows-abi$abi_version.zip" "$file"
+              zip -j "libtree-sitter-magik-Windows-ABI-$abi_version.zip" "$file"
             fi
           done
       - uses: softprops/action-gh-release@v2
