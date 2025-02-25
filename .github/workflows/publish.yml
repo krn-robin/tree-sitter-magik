@@ -41,7 +41,6 @@ jobs:
           test-rust: true
       - name: Build lib
         run: |
-          echo "Building with ABI version: ${{ matrix.abi_version }}"
           ${{ matrix.cc }} -fPIC -c -Isrc/ src/parser.c -o parser.o
           ${{ matrix.cc }} -fPIC -shared parser.o -o libtree-sitter-magik.${{ matrix.ext }}
       - name: Upload lib
@@ -61,7 +60,7 @@ jobs:
         with:
           path: libtree-sitter-magik
           pattern: libtree-sitter-magik-*
-          merge-multiple: true
+          merge-multiple: false
       - name: Zip artifacts
         run: |
           tree

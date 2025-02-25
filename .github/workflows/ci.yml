@@ -41,7 +41,6 @@ jobs:
           test-rust: true
       - name: Build lib
         run: |
-          echo "Building with ABI version: ${{ matrix.abi_version }}"
           ${{ matrix.cc }} -fPIC -c -Isrc/ src/parser.c -o parser.o
           ${{ matrix.cc }} -fPIC -shared parser.o -o libtree-sitter-magik.${{ matrix.ext }}
       - name: Upload lib
@@ -76,3 +75,9 @@ jobs:
               zip "libtree-sitter-magik-Windows-abi$abi_version.zip" "$file"
             fi
           done
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: libtree-sitter-magik/*.zip
+          tag_name: 0.0.2-SNAPSHOT
+          prerelease: true
+
