@@ -15,6 +15,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
+        abi_version: [14, 15]
+        os: [macos-latest, ubuntu-latest, windows-latest]
         include:
           - os: macos-latest
             ext: dylib
@@ -25,6 +27,8 @@ jobs:
           - os: windows-latest
             ext: dll
             cc: x86_64-w64-mingw32-gcc
+    env:
+      TREE_SITTER_ABI_VERSION: ${{ matrix.abi_version }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -33,8 +37,11 @@ jobs:
       - name: Run tests
         uses: tree-sitter/parser-test-action@v2
         with:
-          generate: true
+          generate: ${{ matrix.abi_version == 15 }}
           test-rust: true
+      - name: Generate parser
+        if: ${{ matrix.abi_version != 15 }}
+        run: tree-sitter generate --abi=${{ matrix.abi_version }}
       - name: Build lib
         run: |
           ${{ matrix.cc }} -fPIC -c -Isrc/ src/parser.c -o parser.o
@@ -42,6 +49,6 @@ jobs:
       - name: Upload lib
         uses: actions/upload-artifact@v4
         with:
-          name: libtree-sitter-magik-${{ runner.os }}
+          name: libtree-sitter-magik-${{ runner.os }}-ABI-${{ matrix.abi_version }}
           path: libtree-sitter-magik*
           if-no-files-found: error

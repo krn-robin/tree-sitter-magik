@@ -25,3 +25,25 @@ $
     (procedure
       (loopbody
         (variable)))))
+
+================================================================================
+procedure documentation
+================================================================================
+
+_proc()
+	## multi
+	## line
+	## documentation
+
+	# comment
+	## comment
+_endproc
+$
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (fragment
+    (procedure
+      (documentation
+        (comment)))))
