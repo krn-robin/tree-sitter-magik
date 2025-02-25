@@ -43,10 +43,10 @@ jobs:
         run: |
           echo "Building with ABI version: $TREE_SITTER_ABI_VERSION"
           ${{ matrix.cc }} -fPIC -c -Isrc/ src/parser.c -o parser.o
-          ${{ matrix.cc }} -fPIC -shared parser.o -o libtree-sitter-magik-${{ matrix.abi_version }}.${{ matrix.ext }}
+          ${{ matrix.cc }} -fPIC -shared parser.o -o libtree-sitter-magik.${{ matrix.ext }}
       - name: Upload lib
         uses: actions/upload-artifact@v4
         with:
-          name: libtree-sitter-magik-${{ runner.os }}-abi${{ matrix.abi_version }}
-          path: libtree-sitter-magik-${{ matrix.abi_version }}.*
+          name: libtree-sitter-magik-${{ runner.os }}-ABI-${{ matrix.abi_version }}
+          path: libtree-sitter-magik.*
           if-no-files-found: error
