@@ -3939,44 +3939,53 @@
     "number": {
       "type": "TOKEN",
       "content": {
-        "type": "SEQ",
+        "type": "CHOICE",
         "members": [
           {
-            "type": "CHOICE",
+            "type": "SEQ",
             "members": [
               {
-                "type": "PATTERN",
-                "value": "\\p{N}+",
-                "flags": "u"
-              },
-              {
-                "type": "PATTERN",
-                "value": "\\p{N}+\\.\\p{N}+",
-                "flags": "u"
-              }
-            ]
-          },
-          {
-            "type": "CHOICE",
-            "members": [
-              {
-                "type": "SEQ",
+                "type": "CHOICE",
                 "members": [
                   {
                     "type": "PATTERN",
-                    "value": "[eE&][+-]?"
+                    "value": "\\p{N}+",
+                    "flags": "u"
                   },
                   {
                     "type": "PATTERN",
-                    "value": "\\p{N}+",
+                    "value": "\\p{N}+\\.\\p{N}+",
                     "flags": "u"
                   }
                 ]
               },
               {
-                "type": "BLANK"
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "SEQ",
+                    "members": [
+                      {
+                        "type": "PATTERN",
+                        "value": "[eE&][+-]?"
+                      },
+                      {
+                        "type": "PATTERN",
+                        "value": "\\p{N}+",
+                        "flags": "u"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "BLANK"
+                  }
+                ]
               }
             ]
+          },
+          {
+            "type": "PATTERN",
+            "value": "(?:[2-9]|[1-2]\\d|3[0-6])[rR][a-zA-Z0-9]+"
           }
         ]
       }
