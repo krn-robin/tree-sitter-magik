@@ -102,6 +102,7 @@ module.exports = grammar({
           optional(seq(optional(','), alias(/_gather/i, '_gather'), $.argument)),
           ')', optional(seq(choice('<<', '^<<'), $._arguments)),
         ),
+        optional($.documentation),
         optional($._codeblock),
         alias(/_endproc/i, '_endproc'),
       ),
