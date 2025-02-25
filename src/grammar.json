@@ -2600,7 +2600,8 @@
           },
           {
             "type": "PATTERN",
-            "value": "[a-zA-Z][a-zA-Z0-9_?!]*"
+            "value": "(\\|\\p{L}[\\p{L}\\p{N}_?!]*\\|)|(\\p{L}[\\p{L}\\p{N}_?!]*)",
+            "flags": "u"
           }
         ]
       }
@@ -2732,7 +2733,8 @@
           "name": "java_classname",
           "content": {
             "type": "PATTERN",
-            "value": "\\|[a-zA-Z\\d.]*\\|"
+            "value": "\\|[\\p{L}\\p{N}._]*\\|",
+            "flags": "u"
           }
         }
       ]
@@ -3931,7 +3933,62 @@
     },
     "label": {
       "type": "PATTERN",
-      "value": "@\\s?[a-zA-Z0-9_?!]*"
+      "value": "@\\s?(\\|[\\p{L}\\p{N}_?.!]*\\||[\\p{L}\\p{N}_?!]*)+",
+      "flags": "u"
+    },
+    "number": {
+      "type": "TOKEN",
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "PATTERN",
+                    "value": "\\p{N}+",
+                    "flags": "u"
+                  },
+                  {
+                    "type": "PATTERN",
+                    "value": "\\p{N}+\\.\\p{N}+",
+                    "flags": "u"
+                  }
+                ]
+              },
+              {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "SEQ",
+                    "members": [
+                      {
+                        "type": "PATTERN",
+                        "value": "[eE&][+-]?"
+                      },
+                      {
+                        "type": "PATTERN",
+                        "value": "\\p{N}+",
+                        "flags": "u"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "BLANK"
+                  }
+                ]
+              },
+              {
+                "type": "PATTERN",
+                "value": "(?:[2-9]|[1-2][0-9]|3[0-6])[rR][a-zA-Z0-9]+"
+              }
+            ]
+          }
+        ]
+      }
     },
     "variable": {
       "type": "PREC_LEFT",
@@ -3944,32 +4001,106 @@
     "dynamic_variable": {
       "type": "TOKEN",
       "content": {
-        "type": "SEQ",
+        "type": "CHOICE",
         "members": [
           {
-            "type": "CHOICE",
+            "type": "SEQ",
             "members": [
               {
-                "type": "SEQ",
-                "members": [
-                  {
-                    "type": "PATTERN",
-                    "value": "[a-zA-Z][a-zA-Z0-9_?!]*"
-                  },
-                  {
-                    "type": "STRING",
-                    "value": ":"
-                  }
-                ]
+                "type": "STRING",
+                "value": "!"
               },
               {
-                "type": "BLANK"
+                "type": "PATTERN",
+                "value": "[\\p{L}\\p{N}_?!]+!",
+                "flags": "u"
               }
             ]
           },
           {
-            "type": "PATTERN",
-            "value": "![a-zA-Z0-9_?!]*!"
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "PATTERN",
+                "value": "(\\|\\p{L}?[\\p{L}\\p{N}_?!]*\\|)|(\\p{L}[\\p{L}\\p{N}_?!]*)",
+                "flags": "u"
+              },
+              {
+                "type": "STRING",
+                "value": ":"
+              },
+              {
+                "type": "STRING",
+                "value": "!"
+              },
+              {
+                "type": "PATTERN",
+                "value": "[\\p{L}\\p{N}_?!]+!",
+                "flags": "u"
+              }
+            ]
+          },
+          {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "STRING",
+                "value": "|"
+              },
+              {
+                "type": "STRING",
+                "value": "!"
+              },
+              {
+                "type": "PATTERN",
+                "value": "[\\p{L}\\p{N}_?!]+",
+                "flags": "u"
+              },
+              {
+                "type": "STRING",
+                "value": "!"
+              },
+              {
+                "type": "STRING",
+                "value": "|"
+              }
+            ]
+          },
+          {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "STRING",
+                "value": "|!"
+              },
+              {
+                "type": "PATTERN",
+                "value": "[\\p{L}\\p{N}_?!]+\\|",
+                "flags": "u"
+              },
+              {
+                "type": "STRING",
+                "value": "!"
+              }
+            ]
+          },
+          {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "STRING",
+                "value": "!"
+              },
+              {
+                "type": "PATTERN",
+                "value": "\\|[\\p{L}\\p{N}_?!]*\\|",
+                "flags": "u"
+              },
+              {
+                "type": "STRING",
+                "value": "!"
+              }
+            ]
           }
         ]
       }
@@ -3981,7 +4112,8 @@
         "members": [
           {
             "type": "PATTERN",
-            "value": "[a-zA-Z][a-zA-Z0-9_?!]*"
+            "value": "(\\|\\p{L}?[\\p{L}\\p{N}_?!]*\\|)|(\\p{L}[\\p{L}\\p{N}_?!]*)",
+            "flags": "u"
           },
           {
             "type": "STRING",
@@ -3989,7 +4121,8 @@
           },
           {
             "type": "PATTERN",
-            "value": "[a-zA-Z][a-zA-Z0-9_?!]*"
+            "value": "(\\|\\p{L}?[\\p{L}\\p{N}_?!]*\\|)|(\\p{L}[\\p{L}\\p{N}_?!]*)",
+            "flags": "u"
           }
         ]
       }
@@ -4011,7 +4144,8 @@
                 "members": [
                   {
                     "type": "PATTERN",
-                    "value": "[a-zA-Z][a-zA-Z0-9_?!]*"
+                    "value": "(\\|\\p{L}?[\\p{L}\\p{N}_?!]*\\|)|(\\p{L}[\\p{L}\\p{N}_?!]*)",
+                    "flags": "u"
                   },
                   {
                     "type": "STRING",
@@ -4026,7 +4160,8 @@
           },
           {
             "type": "PATTERN",
-            "value": "[a-zA-Z][a-zA-Z0-9_?!]*"
+            "value": "(\\|\\p{L}?[\\p{L}\\p{N}_?!]*\\|)|(\\p{L}[\\p{L}\\p{N}_?!]*)",
+            "flags": "u"
           }
         ]
       }
@@ -4037,7 +4172,8 @@
     },
     "_identifier": {
       "type": "PATTERN",
-      "value": "[a-zA-Z][a-zA-Z0-9_?!]*"
+      "value": "(\\|\\p{L}?[\\p{L}\\p{N}_?!]*\\|)|(\\p{L}[\\p{L}\\p{N}_?!]*)",
+      "flags": "u"
     },
     "_identifier_list": {
       "type": "PREC_RIGHT",
@@ -4064,48 +4200,6 @@
                 }
               ]
             }
-          }
-        ]
-      }
-    },
-    "number": {
-      "type": "TOKEN",
-      "content": {
-        "type": "CHOICE",
-        "members": [
-          {
-            "type": "SEQ",
-            "members": [
-              {
-                "type": "CHOICE",
-                "members": [
-                  {
-                    "type": "PATTERN",
-                    "value": "\\d+"
-                  },
-                  {
-                    "type": "PATTERN",
-                    "value": "\\d+\\.\\d+"
-                  }
-                ]
-              },
-              {
-                "type": "CHOICE",
-                "members": [
-                  {
-                    "type": "PATTERN",
-                    "value": "[eE&][+-]?\\d+"
-                  },
-                  {
-                    "type": "BLANK"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "PATTERN",
-            "value": "(?:[2-9]|[1-2][0-9]|3[0-6])[rR][a-zA-Z0-9]+"
           }
         ]
       }
@@ -4441,7 +4535,8 @@
     },
     "symbol": {
       "type": "PATTERN",
-      "value": ":(\\|[^|]*\\||[a-zA-Z0-9_?!]+)+"
+      "value": ":(\\|[^|]*\\||[\\p{L}\\p{N}_?!]+)+",
+      "flags": "u"
     },
     "documentation": {
       "type": "PREC_RIGHT",

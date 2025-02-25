@@ -8,7 +8,7 @@
 /// <reference types="tree-sitter-cli/dsl" />
 // @ts-check
 
-const ID_REGEX = /[a-zA-Z][a-zA-Z0-9_?!]*/;
+const ID_REGEX = /(\|\p{L}?[\p{L}\p{N}_?!]*\|)|(\p{L}[\p{L}\p{N}_?!]*)/u;
 
 
 const PREC = {
@@ -341,7 +341,7 @@ module.exports = grammar({
         ),
       ),
 
-    slot_accessor: $ => prec.left(seq('.', /[a-zA-Z][a-zA-Z0-9_?!]*/)),
+    slot_accessor: $ => prec.left(seq('.', /(\|\p{L}[\p{L}\p{N}_?!]*\|)|(\p{L}[\p{L}\p{N}_?!]*)/u)),
 
     _expression_list: $ =>
       prec.right(seq($._expression, repeat(seq(',', $._expression)))),
@@ -356,7 +356,7 @@ module.exports = grammar({
 
     thisthread: $ => alias(/_thisthread/i, '_thisthread'),
 
-    class: $ => seq(alias(/_class/i, '_class'), field('java_classname', /\|[a-zA-Z\d.]*\|/)),
+    class: $ => seq(alias(/_class/i, '_class'), field('java_classname', /\|[\p{L}\p{N}._]*\|/u)),
 
     _terminator: $ =>
       choice(';', $._line_terminator),
@@ -484,13 +484,26 @@ module.exports = grammar({
 
     // @ <identifier>
     label: $ =>
-      /@\s?[a-zA-Z0-9_?!]*/,
+      /@\s?(\|[\p{L}\p{N}_?.!]*\||[\p{L}\p{N}_?!]*)+/u,
+
+    number: $ => token(
+      choice(
+        seq(
+          choice(/\p{N}+/u, /\p{N}+\.\p{N}+/u),
+          optional(seq(/[eE&][+-]?/, /\p{N}+/u)),
+          /(?:[2-9]|[1-2][0-9]|3[0-6])[rR][a-zA-Z0-9]+/))),
 
     variable: $ => prec.left($._identifier),
 
-    dynamic_variable: $ => token(seq(
-      optional(seq(ID_REGEX, ':')),
-      /![a-zA-Z0-9_?!]*!/)),
+    dynamic_variable: $ => token(
+      choice(
+        seq('!', /[\p{L}\p{N}_?!]+!/u),
+        seq(ID_REGEX, ':', '!', /[\p{L}\p{N}_?!]+!/u),
+        seq('|', '!', /[\p{L}\p{N}_?!]+/u, '!', '|'),
+        seq('|!', /[\p{L}\p{N}_?!]+\|/u, '!'),
+        seq('!', /\|[\p{L}\p{N}_?!]*\|/u, '!'),
+      ),
+    ),
 
     global_variable: $ => token(seq(ID_REGEX, ':', ID_REGEX)),
 
@@ -502,13 +515,6 @@ module.exports = grammar({
 
     _identifier_list: $ =>
       prec.right(seq($.identifier, repeat(seq(',', $.identifier)))),
-
-    number: $ => token(
-      choice(
-        seq(
-          choice(/\d+/, /\d+\.\d+/),
-          optional(/[eE&][+-]?\d+/)),
-        /(?:[2-9]|[1-2][0-9]|3[0-6])[rR][a-zA-Z0-9]+/)),
 
     vector: $ => seq(
       '{',
@@ -546,7 +552,7 @@ module.exports = grammar({
     unary_operator: $ =>
       prec.right(seq(field('operator', choice('+', '-', alias(/_not/i, '_not'), '~')), $._expression)),
 
-    symbol: $ => /:(\|[^|]*\||[a-zA-Z0-9_?!]+)+/,
+    symbol: $ => /:(\|[^|]*\||[\p{L}\p{N}_?!]+)+/u,
 
     documentation: $ => prec.right(repeat1(/##.*/)),
     comment: $ => token(prec(PREC.COMMENT, /#.*/)),
