@@ -51,4 +51,3 @@ jobs:
           name: libtree-sitter-magik-${{ runner.os }}-ABI-${{ matrix.abi_version }}
           path: libtree-sitter-magik.*
           if-no-files-found: error
-
