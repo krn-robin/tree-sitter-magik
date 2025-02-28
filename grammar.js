@@ -298,6 +298,7 @@ module.exports = grammar({
         $.unset,
         $.super,
         $.self,
+        $.private,
         $.clone,
         $.symbol,
         $.thisthread,
@@ -352,6 +353,7 @@ module.exports = grammar({
     unset: $ => alias(/_unset/i, '_unset'),
     super: $ => alias(/_super/i, '_super'),
     self: $ => alias(/_self/i, '_self'),
+    private: $ => alias(/_private/i, '_private'),
     clone: $ => alias(/_clone/i, '_clone'),
 
     thisthread: $ => alias(/_thisthread/i, '_thisthread'),
