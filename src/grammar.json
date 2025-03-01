@@ -2296,6 +2296,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "private"
+        },
+        {
+          "type": "SYMBOL",
           "name": "clone"
         },
         {
@@ -2694,6 +2698,16 @@
       },
       "named": false,
       "value": "_self"
+    },
+    "private": {
+      "type": "ALIAS",
+      "content": {
+        "type": "PATTERN",
+        "value": "_private",
+        "flags": "i"
+      },
+      "named": false,
+      "value": "_private"
     },
     "clone": {
       "type": "ALIAS",
