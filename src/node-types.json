@@ -124,6 +124,10 @@
           "named": true
         },
         {
+          "type": "private",
+          "named": true
+        },
+        {
           "type": "procedure",
           "named": true
         },
@@ -333,6 +337,10 @@
           },
           {
             "type": "primitive",
+            "named": true
+          },
+          {
+            "type": "private",
             "named": true
           },
           {
@@ -572,6 +580,10 @@
             "named": true
           },
           {
+            "type": "private",
+            "named": true
+          },
+          {
             "type": "procedure",
             "named": true
           },
@@ -777,6 +789,10 @@
         },
         {
           "type": "primitive",
+          "named": true
+        },
+        {
+          "type": "private",
           "named": true
         },
         {
@@ -1015,6 +1031,10 @@
           "named": true
         },
         {
+          "type": "private",
+          "named": true
+        },
+        {
           "type": "procedure",
           "named": true
         },
@@ -1242,6 +1262,10 @@
             "named": true
           },
           {
+            "type": "private",
+            "named": true
+          },
+          {
             "type": "procedure",
             "named": true
           },
@@ -1442,6 +1466,10 @@
         },
         {
           "type": "primitive",
+          "named": true
+        },
+        {
+          "type": "private",
           "named": true
         },
         {
@@ -1676,6 +1704,10 @@
           "named": true
         },
         {
+          "type": "private",
+          "named": true
+        },
+        {
           "type": "procedure",
           "named": true
         },
@@ -1902,6 +1934,10 @@
           "named": true
         },
         {
+          "type": "private",
+          "named": true
+        },
+        {
           "type": "procedure",
           "named": true
         },
@@ -2110,6 +2146,10 @@
         },
         {
           "type": "primitive",
+          "named": true
+        },
+        {
+          "type": "private",
           "named": true
         },
         {
@@ -2322,6 +2362,10 @@
         },
         {
           "type": "primitive",
+          "named": true
+        },
+        {
+          "type": "private",
           "named": true
         },
         {
@@ -2544,6 +2588,10 @@
           },
           {
             "type": "primitive",
+            "named": true
+          },
+          {
+            "type": "private",
             "named": true
           },
           {
@@ -2771,6 +2819,10 @@
         },
         {
           "type": "primitive",
+          "named": true
+        },
+        {
+          "type": "private",
           "named": true
         },
         {
@@ -3002,6 +3054,10 @@
         },
         {
           "type": "primitive",
+          "named": true
+        },
+        {
+          "type": "private",
           "named": true
         },
         {
@@ -3245,6 +3301,10 @@
           "named": true
         },
         {
+          "type": "private",
+          "named": true
+        },
+        {
           "type": "procedure",
           "named": true
         },
@@ -3468,6 +3528,10 @@
           "named": true
         },
         {
+          "type": "private",
+          "named": true
+        },
+        {
           "type": "procedure",
           "named": true
         },
@@ -3672,6 +3736,10 @@
         },
         {
           "type": "primitive",
+          "named": true
+        },
+        {
+          "type": "private",
           "named": true
         },
         {
@@ -3905,6 +3973,10 @@
             "named": true
           },
           {
+            "type": "private",
+            "named": true
+          },
+          {
             "type": "procedure",
             "named": true
           },
@@ -4105,6 +4177,10 @@
         },
         {
           "type": "primitive",
+          "named": true
+        },
+        {
+          "type": "private",
           "named": true
         },
         {
@@ -4317,6 +4393,10 @@
           },
           {
             "type": "primitive",
+            "named": true
+          },
+          {
+            "type": "private",
             "named": true
           },
           {
@@ -4555,6 +4635,10 @@
           "named": true
         },
         {
+          "type": "private",
+          "named": true
+        },
+        {
           "type": "procedure",
           "named": true
         },
@@ -4789,6 +4873,10 @@
             "named": true
           },
           {
+            "type": "private",
+            "named": true
+          },
+          {
             "type": "procedure",
             "named": true
           },
@@ -4988,6 +5076,10 @@
           },
           {
             "type": "primitive",
+            "named": true
+          },
+          {
+            "type": "private",
             "named": true
           },
           {
@@ -5199,6 +5291,10 @@
             "named": true
           },
           {
+            "type": "private",
+            "named": true
+          },
+          {
             "type": "procedure",
             "named": true
           },
@@ -5399,6 +5495,10 @@
         },
         {
           "type": "primitive",
+          "named": true
+        },
+        {
+          "type": "private",
           "named": true
         },
         {
@@ -5645,6 +5745,10 @@
           "named": true
         },
         {
+          "type": "private",
+          "named": true
+        },
+        {
           "type": "procedure",
           "named": true
         },
@@ -5856,6 +5960,10 @@
           "named": true
         },
         {
+          "type": "private",
+          "named": true
+        },
+        {
           "type": "procedure",
           "named": true
         },
@@ -6064,6 +6172,10 @@
         },
         {
           "type": "primitive",
+          "named": true
+        },
+        {
+          "type": "private",
           "named": true
         },
         {
@@ -6298,6 +6410,10 @@
           "named": true
         },
         {
+          "type": "private",
+          "named": true
+        },
+        {
           "type": "procedure",
           "named": true
         },
@@ -6502,6 +6618,10 @@
           },
           {
             "type": "primitive",
+            "named": true
+          },
+          {
+            "type": "private",
             "named": true
           },
           {
@@ -6734,6 +6854,10 @@
           },
           {
             "type": "primitive",
+            "named": true
+          },
+          {
+            "type": "private",
             "named": true
           },
           {
@@ -6973,6 +7097,10 @@
           "named": true
         },
         {
+          "type": "private",
+          "named": true
+        },
+        {
           "type": "procedure",
           "named": true
         },
@@ -7177,6 +7305,10 @@
         },
         {
           "type": "primitive",
+          "named": true
+        },
+        {
+          "type": "private",
           "named": true
         },
         {
@@ -7445,6 +7577,10 @@
           "named": true
         },
         {
+          "type": "private",
+          "named": true
+        },
+        {
           "type": "procedure",
           "named": true
         },
@@ -7667,6 +7803,10 @@
           "named": true
         },
         {
+          "type": "private",
+          "named": true
+        },
+        {
           "type": "procedure",
           "named": true
         },
@@ -7768,6 +7908,11 @@
         }
       ]
     }
+  },
+  {
+    "type": "private",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "procedure",
@@ -7927,6 +8072,10 @@
         },
         {
           "type": "primitive",
+          "named": true
+        },
+        {
+          "type": "private",
           "named": true
         },
         {
@@ -8161,6 +8310,10 @@
           "named": true
         },
         {
+          "type": "private",
+          "named": true
+        },
+        {
           "type": "procedure",
           "named": true
         },
@@ -8365,6 +8518,10 @@
           },
           {
             "type": "primitive",
+            "named": true
+          },
+          {
+            "type": "private",
             "named": true
           },
           {
@@ -8616,6 +8773,10 @@
             "named": true
           },
           {
+            "type": "private",
+            "named": true
+          },
+          {
             "type": "procedure",
             "named": true
           },
@@ -8824,6 +8985,10 @@
           "named": true
         },
         {
+          "type": "private",
+          "named": true
+        },
+        {
           "type": "procedure",
           "named": true
         },
@@ -9028,6 +9193,10 @@
         },
         {
           "type": "primitive",
+          "named": true
+        },
+        {
+          "type": "private",
           "named": true
         },
         {
@@ -9280,6 +9449,10 @@
         },
         {
           "type": "primitive",
+          "named": true
+        },
+        {
+          "type": "private",
           "named": true
         },
         {
@@ -9540,6 +9713,10 @@
           "named": true
         },
         {
+          "type": "private",
+          "named": true
+        },
+        {
           "type": "procedure",
           "named": true
         },
@@ -9770,6 +9947,10 @@
           "named": true
         },
         {
+          "type": "private",
+          "named": true
+        },
+        {
           "type": "procedure",
           "named": true
         },
@@ -9987,6 +10168,10 @@
           "named": true
         },
         {
+          "type": "private",
+          "named": true
+        },
+        {
           "type": "procedure",
           "named": true
         },
@@ -10191,6 +10376,10 @@
           },
           {
             "type": "primitive",
+            "named": true
+          },
+          {
+            "type": "private",
             "named": true
           },
           {
@@ -10422,6 +10611,10 @@
         },
         {
           "type": "primitive",
+          "named": true
+        },
+        {
+          "type": "private",
           "named": true
         },
         {
