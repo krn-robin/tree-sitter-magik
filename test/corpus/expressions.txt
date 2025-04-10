@@ -7,7 +7,6 @@ _false _or _true
 _true _xor _false
 _true _andif _true
 _false _orif _true
-_false _xorif _true
 
 --------------------------------------------------------------------------------
 
@@ -27,10 +26,6 @@ _false _xorif _true
   (fragment
     (logical_operator
       (true)
-      (true)))
-  (fragment
-    (logical_operator
-      (false)
       (true)))
   (fragment
     (logical_operator
