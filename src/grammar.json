@@ -2340,8 +2340,9 @@
           "type": "CHOICE",
           "members": [
             {
-              "type": "SYMBOL",
-              "name": "_identifier"
+              "type": "PATTERN",
+              "value": "\\p{L}[\\p{L}\\p{N}_?!]*",
+              "flags": "u"
             },
             {
               "type": "PATTERN",
