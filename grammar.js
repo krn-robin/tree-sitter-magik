@@ -37,6 +37,7 @@ module.exports = grammar({
             $.package,
             $.fragment,
             $._dollar,
+            $.documentation,
           ),
         ),
       ),
@@ -52,11 +53,11 @@ module.exports = grammar({
     _dollar: $ => token(seq('$', optional('\r'), '\n')),
 
     _method_declaration: $ =>
-      seq(
+      prec(2, seq(
         optional($.pragma),
         optional($.documentation),
         $.method,
-      ),
+      )),
 
     // [_private] _method <receiver>.<message_name> [( <arguments> )] | // [_private] _method <receiver>'[' <argument list> ']'
     //  <block body>
@@ -432,10 +433,10 @@ module.exports = grammar({
         optional(seq('<<', $._expression)))),
 
     _global_assignment: $ =>
-      seq(
+      prec(2, seq(
         optional($.pragma),
         optional($.documentation),
-        alias(/_global/i, '_global'), optional(alias(/_constant/i, '_constant')), choice($.identifier, $.dynamic_variable), '<<', $._expression),
+        alias(/_global/i, '_global'), optional(alias(/_constant/i, '_constant')), choice($.identifier, $.dynamic_variable), '<<', $._expression)),
 
     constant: $ =>
       seq(
