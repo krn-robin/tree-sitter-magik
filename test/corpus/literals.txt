@@ -203,6 +203,48 @@ $
       (number))))
 
 ================================================================================
+character literal
+================================================================================
+
+%a
+%.
+%,
+%-
+%?
+%/
+%|
+% 
+%space
+%newline
+%tab
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (fragment
+    (character_literal))
+  (fragment
+    (character_literal))
+  (fragment
+    (character_literal))
+  (fragment
+    (character_literal))
+  (fragment
+    (character_literal))
+  (fragment
+    (character_literal))
+  (fragment
+    (character_literal))
+  (fragment
+    (character_literal))
+  (fragment
+    (character_literal))
+  (fragment
+    (character_literal))
+  (fragment
+    (character_literal)))
+
+================================================================================
 regular expression
 ================================================================================
 
