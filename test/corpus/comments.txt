@@ -40,4 +40,6 @@ comment and documentation at the start of the file
 
 (source_file
   (comment)
-  (documentation))
+  (comment)
+  (comment)
+  (comment))
