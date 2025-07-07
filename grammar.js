@@ -37,7 +37,6 @@ module.exports = grammar({
             $.package,
             $.fragment,
             $._dollar,
-            $.documentation,
           ),
         ),
       ),
@@ -53,11 +52,11 @@ module.exports = grammar({
     _dollar: $ => token(seq('$', optional('\r'), '\n')),
 
     _method_declaration: $ =>
-      prec(2, seq(
+      seq(
         optional($.pragma),
         optional($.documentation),
         $.method,
-      )),
+      ),
 
     // [_private] _method <receiver>.<message_name> [( <arguments> )] | // [_private] _method <receiver>'[' <argument list> ']'
     //  <block body>
@@ -433,10 +432,10 @@ module.exports = grammar({
         optional(seq('<<', $._expression)))),
 
     _global_assignment: $ =>
-      prec(2, seq(
+      seq(
         optional($.pragma),
         optional($.documentation),
-        alias(/_global/i, '_global'), optional(alias(/_constant/i, '_constant')), choice($.identifier, $.dynamic_variable), '<<', $._expression)),
+        alias(/_global/i, '_global'), optional(alias(/_constant/i, '_constant')), choice($.identifier, $.dynamic_variable), '<<', $._expression),
 
     constant: $ =>
       seq(
@@ -558,7 +557,6 @@ module.exports = grammar({
     symbol: $ => /:(\|[^|]*\||[\p{L}\p{N}_?!]+)+/u,
 
     documentation: $ => prec.right(repeat1(/##.*/)),
-
     comment: $ => token(prec(PREC.COMMENT, /#.*/)),
   },
 });
