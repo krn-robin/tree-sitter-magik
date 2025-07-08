@@ -254,12 +254,12 @@ method documentation
 ## documentation
 # with a comment
 _method my_object.method_with_doc()
-	## multi
-	## line
-	## documentation
+  ## multi
+  ## line
+  ## documentation
 
-	# comment
-	## comment
+  # comment
+  ## comment
 _endmethod
 $
 
@@ -392,8 +392,8 @@ _pragma(classify_level=basic, topic=treesitter, usage={redefinable, subclassable
 ## some documentation
 # with a comment
 _method my_object.nearly_last_method_with_pragma()
-# a comment
-## with another documentation
+  # a comment
+  ## with another documentation
 _endmethod
 $
 
