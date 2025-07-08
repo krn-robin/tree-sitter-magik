@@ -33,7 +33,7 @@ comment and documentation at the start of the file
 
 #%text_encoding=utf8
 ##
-##
+## Some documentation (treated as comment)
 ##
 
 -------------------------------------------------------------------------------
