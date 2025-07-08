@@ -266,9 +266,11 @@ $
 --------------------------------------------------------------------------------
 
 (source_file
+  (comment)
+  (comment)
+  (comment)
+  (comment)
   (fragment
-    (documentation)
-    (comment)
     (method
       (identifier)
       (identifier)
