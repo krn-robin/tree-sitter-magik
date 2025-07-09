@@ -251,6 +251,11 @@ method documentation
 
 ## multi
 ## line
+## comments
+# with a comment
+_pragma(classify_level=basic)
+## multi
+## line
 ## documentation
 # with a comment
 _method my_object.method_with_doc()
@@ -266,11 +271,12 @@ $
 --------------------------------------------------------------------------------
 
 (source_file
-  (comment)
-  (comment)
-  (comment)
-  (comment)
   (fragment
+    (documentation)
+    (comment)
+    (pragma)
+    (documentation)
+    (comment)
     (method
       (identifier)
       (identifier)
