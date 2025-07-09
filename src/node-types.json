@@ -9133,6 +9133,10 @@
       "required": false,
       "types": [
         {
+          "type": "comment",
+          "named": true
+        },
+        {
           "type": "fragment",
           "named": true
         },
