@@ -251,7 +251,7 @@ method documentation
 
 ## multi
 ## line
-## documentation
+## comments
 # with a comment
 _pragma(classify_level=basic)
 ## multi
@@ -276,6 +276,9 @@ $
   (comment)
   (comment)
   (fragment
+    (pragma)
+    (documentation)
+    (comment)
     (method
       (identifier)
       (identifier)

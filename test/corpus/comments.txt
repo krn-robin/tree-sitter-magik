@@ -28,7 +28,7 @@ _endblock
         (number)))))
 
 ================================================================================
-comment and documentation at the start of the file
+comments at the start of the file
 ================================================================================
 
 #%text_encoding=utf8
