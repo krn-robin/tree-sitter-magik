@@ -53,7 +53,9 @@ module.exports = grammar({
 
     _method_declaration: $ =>
       seq(
-        optional(seq($.pragma, optional($.documentation))),
+        optional($.documentation),
+        optional($.pragma),
+        optional($.documentation),
         $.method,
       ),
 
@@ -432,7 +434,9 @@ module.exports = grammar({
 
     _global_assignment: $ =>
       seq(
-        optional(seq($.pragma, optional($.documentation))),
+        optional($.documentation),
+        optional($.pragma),
+        optional($.documentation),
         alias(/_global/i, '_global'), optional(alias(/_constant/i, '_constant')), choice($.identifier, $.dynamic_variable), '<<', $._expression),
 
     constant: $ =>
