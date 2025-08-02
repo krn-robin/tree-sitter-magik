@@ -21,6 +21,10 @@
             {
               "type": "SYMBOL",
               "name": "_dollar"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "comment"
             }
           ]
         }
@@ -150,7 +154,31 @@
           "members": [
             {
               "type": "SYMBOL",
+              "name": "documentation"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
               "name": "pragma"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "documentation"
             },
             {
               "type": "BLANK"
@@ -3462,7 +3490,31 @@
           "members": [
             {
               "type": "SYMBOL",
+              "name": "documentation"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
               "name": "pragma"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "documentation"
             },
             {
               "type": "BLANK"
