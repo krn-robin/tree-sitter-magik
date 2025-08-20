@@ -31,7 +31,7 @@ jobs:
       TREE_SITTER_ABI_VERSION: ${{ matrix.abi_version }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Set up tree-sitter
         uses: tree-sitter/setup-action/cli@v2
       - name: Run tests
@@ -59,7 +59,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v5
         with:
           path: libtree-sitter-magik
           pattern: libtree-sitter-magik-*

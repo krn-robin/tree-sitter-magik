@@ -4391,16 +4391,6 @@
                   },
                   "named": false,
                   "value": "_orif"
-                },
-                {
-                  "type": "ALIAS",
-                  "content": {
-                    "type": "PATTERN",
-                    "value": "_xorif",
-                    "flags": "i"
-                  },
-                  "named": false,
-                  "value": "_xorif"
                 }
               ]
             }
