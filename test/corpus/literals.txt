@@ -207,6 +207,7 @@ character literal
 ================================================================================
 
 %a
+%ß
 %1
 %.
 %,
@@ -224,6 +225,8 @@ character literal
 --------------------------------------------------------------------------------
 
 (source_file
+  (fragment
+    (character_literal))
   (fragment
     (character_literal))
   (fragment
