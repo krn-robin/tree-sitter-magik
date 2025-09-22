@@ -37,7 +37,7 @@
     }
   },
   "devDependencies": {
-    "eslint": "^9.35.0",
+    "eslint": "^9.36.0",
     "eslint-config-treesitter": "^1.0.2",
     "tree-sitter-cli": "^0.25.9",
     "prebuildify": "^6.0.1"
