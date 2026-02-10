@@ -39,8 +39,9 @@
   "devDependencies": {
     "eslint": "^10.0.0",
     "eslint-config-treesitter": "^1.0.2",
-    "tree-sitter-cli": "^0.26.5",
-    "prebuildify": "^6.0.1"
+    "globals": "^17.3.0",
+    "prebuildify": "^6.0.1",
+    "tree-sitter-cli": "^0.26.5"
   },
   "scripts": {
     "install": "node-gyp-build",
