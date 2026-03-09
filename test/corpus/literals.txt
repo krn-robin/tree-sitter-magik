@@ -152,11 +152,17 @@ symbol
 :|=|
 :|new world|
 :||
+:|ABC|\||def|
+:||\D|D|
 $
 
 --------------------------------------------------------------------------------
 
 (source_file
+  (fragment
+    (symbol))
+  (fragment
+    (symbol))
   (fragment
     (symbol))
   (fragment
