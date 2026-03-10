@@ -552,7 +552,7 @@ module.exports = grammar({
     unary_operator: $ =>
       prec.right(seq(field('operator', choice('+', '-', alias(/_not/i, '_not'), '~')), $._expression)),
 
-    symbol: $ => /:(\|[^|]*\||[\p{L}\p{N}_?!]+)+/u,
+    symbol: $ => /:(\|[^|]*\||\\.|[\p{L}\p{N}_?!]+)+/u,
 
     documentation: $ => prec.right(repeat1(/##.*/)),
     comment: $ => token(prec(PREC.COMMENT, /#.*/)),
