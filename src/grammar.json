@@ -4525,7 +4525,7 @@
     },
     "symbol": {
       "type": "PATTERN",
-      "value": ":(\\|[^|]*\\||[\\p{L}\\p{N}_?!]+)+",
+      "value": ":(\\|[^|]*\\||\\\\.|[\\p{L}\\p{N}_?!]+)+",
       "flags": "u"
     },
     "documentation": {
