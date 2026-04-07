@@ -7649,8 +7649,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       ACCEPT_TOKEN(sym_regex_literal);
       ADVANCE_MAP(
         '/', 519,
-        'C', 519,
-        'X', 519,
+        'c', 519,
         'd', 519,
         'i', 519,
         'l', 519,
@@ -7658,6 +7657,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
         'q', 519,
         's', 519,
         'u', 519,
+        'x', 519,
       );
       if (lookahead != 0 &&
           lookahead != '\n') ADVANCE(36);
