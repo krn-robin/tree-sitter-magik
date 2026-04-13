@@ -76,6 +76,6 @@ jobs:
               zip -j "libtree-sitter-magik-Windows-ABI-$abi_version.zip" "$file"
             fi
           done
-      - uses: softprops/action-gh-release@v2
+      - uses: softprops/action-gh-release@v3
         with:
           files: libtree-sitter-magik-*.zip
