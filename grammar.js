@@ -313,7 +313,7 @@ module.exports = grammar({
       ),
 
     // /<pattern>/<flags>
-    regex_literal: $ => token(/\/.*?\/[qisdlmuCX]*/),
+    regex_literal: $ => token(/\/.*?\/[qisdlmucx]*/),
 
     call: $ =>
       prec.right(PREC.CALL,
