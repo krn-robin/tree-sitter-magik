@@ -37,7 +37,7 @@
     }
   },
   "devDependencies": {
-    "eslint": "^10.7.0",
+    "eslint": "^10.8.0",
     "eslint-config-treesitter": "^1.0.2",
     "globals": "^17.7.0",
     "prebuildify": "^6.0.1",
