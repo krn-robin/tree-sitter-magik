@@ -228,9 +228,17 @@ regular expression
 
 /[aB]*c,/im
 
+/garçon/c
+
+/a.b/x
+
 --------------------------------------------------------------------------------
 
 (source_file
+  (fragment
+    (regex_literal))
+  (fragment
+    (regex_literal))
   (fragment
     (regex_literal))
   (fragment
