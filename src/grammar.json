@@ -2422,7 +2422,7 @@
       "type": "TOKEN",
       "content": {
         "type": "PATTERN",
-        "value": "\\/.*?\\/[qisdlmuCX]*"
+        "value": "\\/.*?\\/[qisdlmucx]*"
       }
     },
     "call": {
