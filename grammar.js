@@ -304,7 +304,7 @@ module.exports = grammar({
         $.vector,
       ),
 
-    character_literal: $ => seq('%', choice(/\p{L}[\p{L}\p{N}_?!]*/u, /./, ' ')),
+    character_literal: $ => seq('%', choice(/\p{L}[\p{L}\p{N}]*/u, /./, ' ')),
 
     string_literal: $ =>
       choice(
