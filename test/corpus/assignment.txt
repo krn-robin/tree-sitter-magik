@@ -7,8 +7,28 @@ b ^<< 1
 b ^ << 1
 c +<< 1
 c + << 1
+c -<< 1
+c - << 1
+c *<< 1
+c * << 1
+c **<< 1
+c ** << 1
+c /<< 1
+c / << 1
+c _mod<< 1
+c _mod << 1
+c _div<< 1
+c _div << 1
 d _orif<< a
 d _orif << a
+d _or<< a
+d _or << a
+d _andif<< a
+d _andif << a
+d _and<< a
+d _and << a
+d _xor<< a
+d _xor << a
 
 --------------------------------------------------------------------------------
 
@@ -33,6 +53,86 @@ d _orif << a
     (assignment
       (variable)
       (number)))
+  (fragment
+    (assignment
+      (variable)
+      (number)))
+  (fragment
+    (assignment
+      (variable)
+      (number)))
+  (fragment
+    (assignment
+      (variable)
+      (number)))
+  (fragment
+    (assignment
+      (variable)
+      (number)))
+  (fragment
+    (assignment
+      (variable)
+      (number)))
+  (fragment
+    (assignment
+      (variable)
+      (number)))
+  (fragment
+    (assignment
+      (variable)
+      (number)))
+  (fragment
+    (assignment
+      (variable)
+      (number)))
+  (fragment
+    (assignment
+      (variable)
+      (number)))
+  (fragment
+    (assignment
+      (variable)
+      (number)))
+  (fragment
+    (assignment
+      (variable)
+      (number)))
+  (fragment
+    (assignment
+      (variable)
+      (number)))
+  (fragment
+    (assignment
+      (variable)
+      (variable)))
+  (fragment
+    (assignment
+      (variable)
+      (variable)))
+  (fragment
+    (assignment
+      (variable)
+      (variable)))
+  (fragment
+    (assignment
+      (variable)
+      (variable)))
+  (fragment
+    (assignment
+      (variable)
+      (variable)))
+  (fragment
+    (assignment
+      (variable)
+      (variable)))
+  (fragment
+    (assignment
+      (variable)
+      (variable)))
+  (fragment
+    (assignment
+      (variable)
+      (variable)))
   (fragment
     (assignment
       (variable)
