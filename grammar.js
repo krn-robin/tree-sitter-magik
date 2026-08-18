@@ -125,7 +125,7 @@ module.exports = grammar({
         seq($._expression,
           choice(
             '<<',
-            /(?:\^|_andif|_and|_orif|_or|_xor|\*\*\^|\*\*|\*\^|\*|\/\^|\/|_mod|_div|-\^|-|\+\^|\+)\s*<</,
+            /(?:\^|(?:\*\*|\*|\/|-|\+)\^?|_andif|_and|_orif|_or|_xor|_mod|_div)\s*<</,
           ),
           $._expression),
       ),
