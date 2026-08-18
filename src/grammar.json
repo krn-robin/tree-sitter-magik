@@ -970,7 +970,7 @@
               },
               {
                 "type": "PATTERN",
-                "value": "(?:\\^|(?:\\*\\*|\\*|\\/|-|\\+)\\^?|_andif|_and|_orif|_or|_xor|_mod|_div)\\s*<<"
+                "value": "(?:\\^|(?:\\*\\*|\\*|\\/|-|\\+)\\^?|_andif|_and|_orif|_or|_xor|_mod|_div)[ \\t]*<<"
               }
             ]
           },
