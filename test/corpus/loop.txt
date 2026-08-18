@@ -79,6 +79,48 @@ $
         (unset)))))
 
 ================================================================================
+scatter without a preceding comma
+================================================================================
+
+_block
+	foo(a, b _scatter c)
+	_loop
+		_leave _with a _scatter b
+	_endloop
+	_loop
+		_continue _with a _scatter b
+	_endloop
+	_loopbody(a _scatter b)
+_endblock
+$
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (fragment
+    (block
+      (invoke
+        receiver: (variable)
+        (variable)
+        (variable)
+        (scatter
+          (variable)))
+      (loop
+        (leave
+          (variable)
+          (scatter
+            (variable))))
+      (loop
+        (continue
+          (variable)
+          (scatter
+            (variable))))
+      (loopbody
+        (variable)
+        (scatter
+          (variable))))))
+
+================================================================================
 labelled loop
 ================================================================================
 

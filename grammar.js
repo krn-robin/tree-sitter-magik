@@ -234,7 +234,7 @@ module.exports = grammar({
     loopbody: $ =>
       seq(
         alias(/_loopbody/i, '_loopbody'),
-        '(', seq($._expression, repeat(seq(',', $._expression))), ')',
+        '(', $._expression_list, ')',
       ),
 
     // _leave [ @ <identifier> ] [_with <rvalue tuple> ]
@@ -243,8 +243,8 @@ module.exports = grammar({
         alias(/_leave/i, '_leave'),
         optional($.label),
         optional(seq(alias(/_with/i, '_with'), choice(
-          seq('(', seq($._expression, repeat1(seq(',', $._expression))), ')'),
-          seq($._expression, repeat(seq(',', $._expression)))))),
+          seq('(', seq($._expression, repeat1(choice(seq(',', $._expression), $.scatter))), ')'),
+          $._expression_list))),
       )),
 
     // _continue _with <rvalue tuple>
@@ -253,8 +253,8 @@ module.exports = grammar({
         alias(/_continue/i, '_continue'),
         optional($.label),
         optional(seq(alias(/_with/i, '_with'), choice(
-          seq('(', seq($._expression, repeat1(seq(',', $._expression))), ')'),
-          seq($._expression, repeat(seq(',', $._expression)))))),
+          seq('(', seq($._expression, repeat1(choice(seq(',', $._expression), $.scatter))), ')'),
+          $._expression_list))),
       )),
 
     // _protect [ _locking <expression> ]
@@ -344,7 +344,7 @@ module.exports = grammar({
     slot_accessor: $ => prec.left(seq('.', /(\|\p{L}[\p{L}\p{N}_?!]*\|)|(\p{L}[\p{L}\p{N}_?!]*)/u)),
 
     _expression_list: $ =>
-      prec.right(seq($._expression, repeat(seq(',', $._expression)))),
+      prec.right(seq($._expression, repeat(choice(seq(',', $._expression), $.scatter)))),
 
     true: $ => alias(/_true/i, '_true'),
     false: $ => alias(/_false/i, '_false'),

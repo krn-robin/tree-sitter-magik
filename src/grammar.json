@@ -1831,29 +1831,8 @@
           "value": "("
         },
         {
-          "type": "SEQ",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "_expression"
-            },
-            {
-              "type": "REPEAT",
-              "content": {
-                "type": "SEQ",
-                "members": [
-                  {
-                    "type": "STRING",
-                    "value": ","
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "_expression"
-                  }
-                ]
-              }
-            }
-          ]
+          "type": "SYMBOL",
+          "name": "_expression_list"
         },
         {
           "type": "STRING",
@@ -1925,15 +1904,24 @@
                               {
                                 "type": "REPEAT1",
                                 "content": {
-                                  "type": "SEQ",
+                                  "type": "CHOICE",
                                   "members": [
                                     {
-                                      "type": "STRING",
-                                      "value": ","
+                                      "type": "SEQ",
+                                      "members": [
+                                        {
+                                          "type": "STRING",
+                                          "value": ","
+                                        },
+                                        {
+                                          "type": "SYMBOL",
+                                          "name": "_expression"
+                                        }
+                                      ]
                                     },
                                     {
                                       "type": "SYMBOL",
-                                      "name": "_expression"
+                                      "name": "scatter"
                                     }
                                   ]
                                 }
@@ -1947,29 +1935,8 @@
                         ]
                       },
                       {
-                        "type": "SEQ",
-                        "members": [
-                          {
-                            "type": "SYMBOL",
-                            "name": "_expression"
-                          },
-                          {
-                            "type": "REPEAT",
-                            "content": {
-                              "type": "SEQ",
-                              "members": [
-                                {
-                                  "type": "STRING",
-                                  "value": ","
-                                },
-                                {
-                                  "type": "SYMBOL",
-                                  "name": "_expression"
-                                }
-                              ]
-                            }
-                          }
-                        ]
+                        "type": "SYMBOL",
+                        "name": "_expression_list"
                       }
                     ]
                   }
@@ -2047,15 +2014,24 @@
                               {
                                 "type": "REPEAT1",
                                 "content": {
-                                  "type": "SEQ",
+                                  "type": "CHOICE",
                                   "members": [
                                     {
-                                      "type": "STRING",
-                                      "value": ","
+                                      "type": "SEQ",
+                                      "members": [
+                                        {
+                                          "type": "STRING",
+                                          "value": ","
+                                        },
+                                        {
+                                          "type": "SYMBOL",
+                                          "name": "_expression"
+                                        }
+                                      ]
                                     },
                                     {
                                       "type": "SYMBOL",
-                                      "name": "_expression"
+                                      "name": "scatter"
                                     }
                                   ]
                                 }
@@ -2069,29 +2045,8 @@
                         ]
                       },
                       {
-                        "type": "SEQ",
-                        "members": [
-                          {
-                            "type": "SYMBOL",
-                            "name": "_expression"
-                          },
-                          {
-                            "type": "REPEAT",
-                            "content": {
-                              "type": "SEQ",
-                              "members": [
-                                {
-                                  "type": "STRING",
-                                  "value": ","
-                                },
-                                {
-                                  "type": "SYMBOL",
-                                  "name": "_expression"
-                                }
-                              ]
-                            }
-                          }
-                        ]
+                        "type": "SYMBOL",
+                        "name": "_expression_list"
                       }
                     ]
                   }
@@ -2637,15 +2592,24 @@
           {
             "type": "REPEAT",
             "content": {
-              "type": "SEQ",
+              "type": "CHOICE",
               "members": [
                 {
-                  "type": "STRING",
-                  "value": ","
+                  "type": "SEQ",
+                  "members": [
+                    {
+                      "type": "STRING",
+                      "value": ","
+                    },
+                    {
+                      "type": "SYMBOL",
+                      "name": "_expression"
+                    }
+                  ]
                 },
                 {
                   "type": "SYMBOL",
-                  "name": "_expression"
+                  "name": "scatter"
                 }
               ]
             }
