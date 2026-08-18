@@ -425,7 +425,7 @@ module.exports = grammar({
       seq(alias(/_local/i, '_local'),
         choice(
           seq('(', seq($.identifier, optional(seq('<<', $._expression))), repeat(seq(',', seq($.identifier, optional(seq('<<', $._expression))))), ')'),
-          seq('(', seq($.identifier, optional(seq('<<', $._expression))), repeat(seq(',', seq($.identifier, optional(seq('<<', $._expression))))), seq(',', alias(/_gather/i, '_gather'), seq($.identifier, optional(seq('<<', $._expression)))), ')'),
+          seq('(', seq($.identifier, optional(seq('<<', $._expression))), repeat(seq(',', seq($.identifier, optional(seq('<<', $._expression))))), seq(optional(','), alias(/_gather/i, '_gather'), seq($.identifier, optional(seq('<<', $._expression)))), ')'),
           seq('(', seq(alias(/_gather/i, '_gather'), $.identifier, optional(seq('<<', $._expression))), ')'),
           seq(seq($.identifier, optional(seq('<<', $._expression))), repeat(seq(',', seq($.identifier, optional(seq('<<', $._expression))))))),
         optional(seq('<<', $._expression)))),
