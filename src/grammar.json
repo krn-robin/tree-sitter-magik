@@ -1275,7 +1275,7 @@
                 },
                 {
                   "type": "SYMBOL",
-                  "name": "_identifier_list"
+                  "name": "_gather_identifier_list"
                 }
               ]
             },
@@ -1529,7 +1529,7 @@
                 },
                 {
                   "type": "SYMBOL",
-                  "name": "_identifier_list"
+                  "name": "_gather_identifier_list"
                 }
               ]
             },
@@ -4235,6 +4235,98 @@
                 }
               ]
             }
+          }
+        ]
+      }
+    },
+    "_gather_identifier_list": {
+      "type": "PREC_RIGHT",
+      "value": 0,
+      "content": {
+        "type": "CHOICE",
+        "members": [
+          {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "identifier"
+              },
+              {
+                "type": "REPEAT",
+                "content": {
+                  "type": "SEQ",
+                  "members": [
+                    {
+                      "type": "STRING",
+                      "value": ","
+                    },
+                    {
+                      "type": "SYMBOL",
+                      "name": "identifier"
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "SEQ",
+                    "members": [
+                      {
+                        "type": "CHOICE",
+                        "members": [
+                          {
+                            "type": "STRING",
+                            "value": ","
+                          },
+                          {
+                            "type": "BLANK"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "ALIAS",
+                        "content": {
+                          "type": "PATTERN",
+                          "value": "_gather",
+                          "flags": "i"
+                        },
+                        "named": false,
+                        "value": "_gather"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "identifier"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "BLANK"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "ALIAS",
+                "content": {
+                  "type": "PATTERN",
+                  "value": "_gather",
+                  "flags": "i"
+                },
+                "named": false,
+                "value": "_gather"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "identifier"
+              }
+            ]
           }
         ]
       }
