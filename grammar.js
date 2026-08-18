@@ -234,7 +234,7 @@ module.exports = grammar({
     loopbody: $ =>
       seq(
         alias(/_loopbody/i, '_loopbody'),
-        '(', seq($._expression, repeat(seq(',', $._expression))), ')',
+        '(', $._expression_list, ')',
       ),
 
     // _leave [ @ <identifier> ] [_with <rvalue tuple> ]
@@ -243,8 +243,8 @@ module.exports = grammar({
         alias(/_leave/i, '_leave'),
         optional($.label),
         optional(seq(alias(/_with/i, '_with'), choice(
-          seq('(', seq($._expression, repeat1(seq(',', $._expression))), ')'),
-          seq($._expression, repeat(seq(',', $._expression)))))),
+          seq('(', $._expression, ',', $._expression_list, ')'),
+          $._expression_list))),
       )),
 
     // _continue _with <rvalue tuple>
@@ -253,8 +253,8 @@ module.exports = grammar({
         alias(/_continue/i, '_continue'),
         optional($.label),
         optional(seq(alias(/_with/i, '_with'), choice(
-          seq('(', seq($._expression, repeat1(seq(',', $._expression))), ')'),
-          seq($._expression, repeat(seq(',', $._expression)))))),
+          seq('(', $._expression, ',', $._expression_list, ')'),
+          $._expression_list))),
       )),
 
     // _protect [ _locking <expression> ]
@@ -344,7 +344,11 @@ module.exports = grammar({
     slot_accessor: $ => prec.left(seq('.', /(\|\p{L}[\p{L}\p{N}_?!]*\|)|(\p{L}[\p{L}\p{N}_?!]*)/u)),
 
     _expression_list: $ =>
-      prec.right(seq($._expression, repeat(seq(',', $._expression)))),
+      prec.right(seq($._expression, optional(choice(
+        seq(',', $._expression_list),
+        $.scatter,
+        $.gather,
+      )))),
 
     true: $ => alias(/_true/i, '_true'),
     false: $ => alias(/_false/i, '_false'),
@@ -425,7 +429,7 @@ module.exports = grammar({
       seq(alias(/_local/i, '_local'),
         choice(
           seq('(', seq($.identifier, optional(seq('<<', $._expression))), repeat(seq(',', seq($.identifier, optional(seq('<<', $._expression))))), ')'),
-          seq('(', seq($.identifier, optional(seq('<<', $._expression))), repeat(seq(',', seq($.identifier, optional(seq('<<', $._expression))))), seq(',', alias(/_gather/i, '_gather'), seq($.identifier, optional(seq('<<', $._expression)))), ')'),
+          seq('(', seq($.identifier, optional(seq('<<', $._expression))), repeat(seq(',', seq($.identifier, optional(seq('<<', $._expression))))), seq(optional(','), alias(/_gather/i, '_gather'), seq($.identifier, optional(seq('<<', $._expression)))), ')'),
           seq('(', seq(alias(/_gather/i, '_gather'), $.identifier, optional(seq('<<', $._expression))), ')'),
           seq(seq($.identifier, optional(seq('<<', $._expression))), repeat(seq(',', seq($.identifier, optional(seq('<<', $._expression))))))),
         optional(seq('<<', $._expression)))),
