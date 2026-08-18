@@ -343,13 +343,11 @@ module.exports = grammar({
 
     slot_accessor: $ => prec.left(seq('.', /(\|\p{L}[\p{L}\p{N}_?!]*\|)|(\p{L}[\p{L}\p{N}_?!]*)/u)),
 
-    // _scatter is always the last item in a list, whether comma-preceded or
-    // not - nothing may follow it, so it can't be folded into a plain
-    // repeat() alongside comma-separated items.
     _expression_list: $ =>
       prec.right(seq($._expression, optional(choice(
         seq(',', $._expression_list),
         $.scatter,
+        $.gather,
       )))),
 
     true: $ => alias(/_true/i, '_true'),
