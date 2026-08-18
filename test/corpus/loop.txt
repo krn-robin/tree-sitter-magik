@@ -84,11 +84,18 @@ scatter without a preceding comma
 
 _block
 	foo(a, b _scatter c)
+	foo(a, b, c _scatter d)
 	_loop
 		_leave _with a _scatter b
 	_endloop
 	_loop
+		_leave _with (a, b _scatter c)
+	_endloop
+	_loop
 		_continue _with a _scatter b
+	_endloop
+	_loop
+		_continue _with (a, b _scatter c)
 	_endloop
 	_loopbody(a _scatter b)
 _endblock
@@ -105,13 +112,32 @@ $
         (variable)
         (scatter
           (variable)))
+      (invoke
+        receiver: (variable)
+        (variable)
+        (variable)
+        (variable)
+        (scatter
+          (variable)))
       (loop
         (leave
           (variable)
           (scatter
             (variable))))
       (loop
+        (leave
+          (variable)
+          (variable)
+          (scatter
+            (variable))))
+      (loop
         (continue
+          (variable)
+          (scatter
+            (variable))))
+      (loop
+        (continue
+          (variable)
           (variable)
           (scatter
             (variable))))
