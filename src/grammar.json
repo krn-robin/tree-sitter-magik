@@ -973,24 +973,29 @@
                 "value": "^<<"
               },
               {
-                "type": "STRING",
-                "value": "_and<<"
+                "type": "PATTERN",
+                "value": "_and<<",
+                "flags": "i"
               },
               {
-                "type": "STRING",
-                "value": "_andif<<"
+                "type": "PATTERN",
+                "value": "_andif<<",
+                "flags": "i"
               },
               {
-                "type": "STRING",
-                "value": "_or<<"
+                "type": "PATTERN",
+                "value": "_or<<",
+                "flags": "i"
               },
               {
-                "type": "STRING",
-                "value": "_orif<<"
+                "type": "PATTERN",
+                "value": "_orif<<",
+                "flags": "i"
               },
               {
-                "type": "STRING",
-                "value": "_xor<<"
+                "type": "PATTERN",
+                "value": "_xor<<",
+                "flags": "i"
               },
               {
                 "type": "STRING",
@@ -1017,12 +1022,14 @@
                 "value": "/^<<"
               },
               {
-                "type": "STRING",
-                "value": "_mod<<"
+                "type": "PATTERN",
+                "value": "_mod<<",
+                "flags": "i"
               },
               {
-                "type": "STRING",
-                "value": "_div<<"
+                "type": "PATTERN",
+                "value": "_div<<",
+                "flags": "i"
               },
               {
                 "type": "STRING",
