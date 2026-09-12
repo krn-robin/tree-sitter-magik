@@ -146,6 +146,8 @@ _block
   _local a_name
   _local a_init << 1
   _local (a_init, _gather a_gather) << (_scatter b_values)
+  _local (a_init _gather a_gather) << (_scatter b_values)
+  _local (a_init, b_init _gather c_gather) << (_scatter d_values)
   _local (_gather a_init) << b_values
   _local a_init << _false, b_init
   _local a_init << _false, b_init << _true
@@ -163,6 +165,19 @@ _endblock
         (identifier)
         (number))
       (local
+        (identifier)
+        (identifier)
+        (parenthesized_expression
+          (scatter
+            (variable))))
+      (local
+        (identifier)
+        (identifier)
+        (parenthesized_expression
+          (scatter
+            (variable))))
+      (local
+        (identifier)
         (identifier)
         (identifier)
         (parenthesized_expression
