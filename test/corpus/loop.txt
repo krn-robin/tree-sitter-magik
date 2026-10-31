@@ -201,6 +201,65 @@ $
       (finally))))
 
 ================================================================================
+loop with finally
+================================================================================
+
+_loop
+_finally
+_endloop
+$
+
+_loop
+  _leave _with 7
+_finally
+  _leave
+_endloop
+$
+
+_loop
+_finally _with r
+_endloop
+$
+
+_block
+  _local v << _loop
+    _leave _with 7
+  _finally
+    out.add_last(:finally_ran)
+  _endloop
+_endblock
+$
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (fragment
+    (loop
+      (finally)))
+  (fragment
+    (loop
+      (leave
+        (number))
+      (finally
+        (leave))))
+  (fragment
+    (loop
+      (finally
+        (identifier))))
+  (fragment
+    (block
+      (local
+        (identifier)
+        (loop
+          (leave
+            (number))
+          (finally
+            (call
+              receiver: (variable)
+              message: (identifier)
+              (symbol))))))))
+
+================================================================================
 while
 ================================================================================
 
