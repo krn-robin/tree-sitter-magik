@@ -6,6 +6,9 @@ a << 1
 b ^<< 1
 c +<< 1
 d _orif<< a
+d _ORIF<< a
+c _mod<< 1
+c _MOD<< 1
 
 --------------------------------------------------------------------------------
 
@@ -25,4 +28,16 @@ d _orif<< a
   (fragment
     (assignment
       (variable)
-      (variable))))
+      (variable)))
+  (fragment
+    (assignment
+      (variable)
+      (variable)))
+  (fragment
+    (assignment
+      (variable)
+      (number)))
+  (fragment
+    (assignment
+      (variable)
+      (number))))
