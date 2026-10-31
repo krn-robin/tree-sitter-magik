@@ -9,8 +9,21 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  prepare:
+    name: Prepare
+    runs-on: ubuntu-latest
+    outputs:
+      tree-sitter-version: ${{ steps.tree-sitter-version.outputs.version }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+      - name: Read tree-sitter CLI version
+        id: tree-sitter-version
+        run: echo "version=v$(node -p "require('./package-lock.json').packages['node_modules/tree-sitter-cli'].version")" >> "$GITHUB_OUTPUT"
+
   test:
     name: Test parser
+    needs: prepare
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -32,14 +45,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v7
-      - name: Read tree-sitter CLI version
-        id: tree-sitter-version
-        shell: bash
-        run: echo "version=v$(node -p "require('./package-lock.json').packages['node_modules/tree-sitter-cli'].version")" >> "$GITHUB_OUTPUT"
       - name: Set up tree-sitter
         uses: tree-sitter/setup-action/cli@v2
         with:
-          tree-sitter-ref: ${{ steps.tree-sitter-version.outputs.version }}
+          tree-sitter-ref: ${{ needs.prepare.outputs.tree-sitter-version }}
       - name: Run tests
         uses: tree-sitter/parser-test-action@v3
         with:
@@ -61,18 +70,15 @@ jobs:
 
   build-wasm:
     name: Build WASM
+    needs: prepare
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v7
-      - name: Read tree-sitter CLI version
-        id: tree-sitter-version
-        shell: bash
-        run: echo "version=v$(node -p "require('./package-lock.json').packages['node_modules/tree-sitter-cli'].version")" >> "$GITHUB_OUTPUT"
       - name: Set up tree-sitter
         uses: tree-sitter/setup-action/cli@v2
         with:
-          tree-sitter-ref: ${{ steps.tree-sitter-version.outputs.version }}
+          tree-sitter-ref: ${{ needs.prepare.outputs.tree-sitter-version }}
       - name: Build WASM
         run: tree-sitter build --wasm
       - name: Upload WASM
