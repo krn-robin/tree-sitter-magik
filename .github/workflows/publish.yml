@@ -59,8 +59,31 @@ jobs:
           path: libtree-sitter-magik*
           if-no-files-found: error
 
+  build-wasm:
+    name: Build WASM
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+      - name: Read tree-sitter CLI version
+        id: tree-sitter-version
+        shell: bash
+        run: echo "version=v$(node -p "require('./package-lock.json').packages['node_modules/tree-sitter-cli'].version")" >> "$GITHUB_OUTPUT"
+      - name: Set up tree-sitter
+        uses: tree-sitter/setup-action/cli@v2
+        with:
+          tree-sitter-ref: ${{ steps.tree-sitter-version.outputs.version }}
+      - name: Build WASM
+        run: tree-sitter build --wasm
+      - name: Upload WASM
+        uses: actions/upload-artifact@v7
+        with:
+          name: tree-sitter-magik-wasm
+          path: tree-sitter-magik.wasm
+          if-no-files-found: error
+
   publish:
-    needs: test
+    needs: [test, build-wasm]
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -70,6 +93,9 @@ jobs:
           path: libtree-sitter-magik
           pattern: libtree-sitter-magik-*
           merge-multiple: false
+      - uses: actions/download-artifact@v8
+        with:
+          name: tree-sitter-magik-wasm
       - name: Zip artifacts
         run: |
           for file in libtree-sitter-magik/**/*; do
@@ -84,4 +110,6 @@ jobs:
           done
       - uses: softprops/action-gh-release@v3
         with:
-          files: libtree-sitter-magik-*.zip
+          files: |
+            libtree-sitter-magik-*.zip
+            tree-sitter-magik.wasm
