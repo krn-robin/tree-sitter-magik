@@ -32,8 +32,14 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v7
+      - name: Read tree-sitter CLI version
+        id: tree-sitter-version
+        shell: bash
+        run: echo "version=v$(node -p "require('./package-lock.json').packages['node_modules/tree-sitter-cli'].version")" >> "$GITHUB_OUTPUT"
       - name: Set up tree-sitter
         uses: tree-sitter/setup-action/cli@v2
+        with:
+          tree-sitter-ref: ${{ steps.tree-sitter-version.outputs.version }}
       - name: Run tests
         uses: tree-sitter/parser-test-action@v3
         with:
