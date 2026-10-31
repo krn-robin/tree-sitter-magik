@@ -164,7 +164,7 @@ module.exports = grammar({
 
     // [ _finally [ _with <lvalue tuple> ]
     //  <block body> ]
-    finally: $ => seq(alias(/_finally/i, '_finally'), optional(seq(alias(/_with/i, '_with'), $._identifier_list)), optional($._codeblock)),
+    finally: $ => seq(alias(/_finally/i, '_finally'), optional(seq(alias(/_with/i, '_with'), $._gather_identifier_list)), optional($._codeblock)),
 
     // _handling condition _with procedure
     handling: $ =>
@@ -192,7 +192,7 @@ module.exports = grammar({
     // _endloop
     iterator: $ =>
       seq(
-        optional(seq(alias(/_for/i, '_for'), $._identifier_list)),
+        optional(seq(alias(/_for/i, '_for'), $._gather_identifier_list)),
         alias(/_over/i, '_over'), $._expression,
         seq(
           alias(/_loop/i, '_loop'),
@@ -515,6 +515,14 @@ module.exports = grammar({
 
     _identifier_list: $ =>
       prec.right(seq($.identifier, repeat(seq(',', $.identifier)))),
+
+    _gather_identifier_list: $ =>
+      prec.right(
+        choice(
+          seq($.identifier, repeat(seq(',', $.identifier)), optional(seq(optional(','), alias(/_gather/i, '_gather'), $.identifier))),
+          seq(alias(/_gather/i, '_gather'), $.identifier),
+        ),
+      ),
 
     vector: $ => seq(
       '{',
