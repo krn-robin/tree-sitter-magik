@@ -20,6 +20,14 @@ _block
   _if _true _then >> _unset _endif
 _endblock
 
+_block
+  _return a _scatter b
+_endblock
+
+_block
+  >> a _scatter b
+_endblock
+
 _block @ label1?
   _return
 _endblock
@@ -60,6 +68,18 @@ $
         (true)
         (return
           (unset)))))
+  (fragment
+    (block
+      (return
+        (variable)
+        (scatter
+          (variable)))))
+  (fragment
+    (block
+      (return
+        (variable)
+        (scatter
+          (variable)))))
   (fragment
     (block
       (label)
