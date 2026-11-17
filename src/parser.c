@@ -51,19 +51,19 @@ enum ts_symbol_identifiers {
   aux_sym_procedure_token2 = 21,
   aux_sym_block_token1 = 22,
   aux_sym_block_token2 = 23,
-  anon_sym__and_LT_LT = 24,
-  anon_sym__andif_LT_LT = 25,
-  anon_sym__or_LT_LT = 26,
-  anon_sym__orif_LT_LT = 27,
-  anon_sym__xor_LT_LT = 28,
+  aux_sym_assignment_token1 = 24,
+  aux_sym_assignment_token2 = 25,
+  aux_sym_assignment_token3 = 26,
+  aux_sym_assignment_token4 = 27,
+  aux_sym_assignment_token5 = 28,
   anon_sym_STAR_STAR_LT_LT = 29,
   anon_sym_STAR_STAR_CARET_LT_LT = 30,
   anon_sym_STAR_LT_LT = 31,
   anon_sym_STAR_CARET_LT_LT = 32,
   anon_sym_SLASH_LT_LT = 33,
   anon_sym_SLASH_CARET_LT_LT = 34,
-  anon_sym__mod_LT_LT = 35,
-  anon_sym__div_LT_LT = 36,
+  aux_sym_assignment_token6 = 35,
+  aux_sym_assignment_token7 = 36,
   anon_sym_DASH_LT_LT = 37,
   anon_sym_DASH_CARET_LT_LT = 38,
   anon_sym_PLUS_LT_LT = 39,
@@ -284,19 +284,19 @@ static const char * const ts_symbol_names[] = {
   [aux_sym_procedure_token2] = "_endproc",
   [aux_sym_block_token1] = "_block",
   [aux_sym_block_token2] = "_endblock",
-  [anon_sym__and_LT_LT] = "_and<<",
-  [anon_sym__andif_LT_LT] = "_andif<<",
-  [anon_sym__or_LT_LT] = "_or<<",
-  [anon_sym__orif_LT_LT] = "_orif<<",
-  [anon_sym__xor_LT_LT] = "_xor<<",
+  [aux_sym_assignment_token1] = "assignment_token1",
+  [aux_sym_assignment_token2] = "assignment_token2",
+  [aux_sym_assignment_token3] = "assignment_token3",
+  [aux_sym_assignment_token4] = "assignment_token4",
+  [aux_sym_assignment_token5] = "assignment_token5",
   [anon_sym_STAR_STAR_LT_LT] = "**<<",
   [anon_sym_STAR_STAR_CARET_LT_LT] = "**^<<",
   [anon_sym_STAR_LT_LT] = "*<<",
   [anon_sym_STAR_CARET_LT_LT] = "*^<<",
   [anon_sym_SLASH_LT_LT] = "/<<",
   [anon_sym_SLASH_CARET_LT_LT] = "/^<<",
-  [anon_sym__mod_LT_LT] = "_mod<<",
-  [anon_sym__div_LT_LT] = "_div<<",
+  [aux_sym_assignment_token6] = "assignment_token6",
+  [aux_sym_assignment_token7] = "assignment_token7",
   [anon_sym_DASH_LT_LT] = "-<<",
   [anon_sym_DASH_CARET_LT_LT] = "-^<<",
   [anon_sym_PLUS_LT_LT] = "+<<",
@@ -517,19 +517,19 @@ static const TSSymbol ts_symbol_map[] = {
   [aux_sym_procedure_token2] = aux_sym_procedure_token2,
   [aux_sym_block_token1] = aux_sym_block_token1,
   [aux_sym_block_token2] = aux_sym_block_token2,
-  [anon_sym__and_LT_LT] = anon_sym__and_LT_LT,
-  [anon_sym__andif_LT_LT] = anon_sym__andif_LT_LT,
-  [anon_sym__or_LT_LT] = anon_sym__or_LT_LT,
-  [anon_sym__orif_LT_LT] = anon_sym__orif_LT_LT,
-  [anon_sym__xor_LT_LT] = anon_sym__xor_LT_LT,
+  [aux_sym_assignment_token1] = aux_sym_assignment_token1,
+  [aux_sym_assignment_token2] = aux_sym_assignment_token2,
+  [aux_sym_assignment_token3] = aux_sym_assignment_token3,
+  [aux_sym_assignment_token4] = aux_sym_assignment_token4,
+  [aux_sym_assignment_token5] = aux_sym_assignment_token5,
   [anon_sym_STAR_STAR_LT_LT] = anon_sym_STAR_STAR_LT_LT,
   [anon_sym_STAR_STAR_CARET_LT_LT] = anon_sym_STAR_STAR_CARET_LT_LT,
   [anon_sym_STAR_LT_LT] = anon_sym_STAR_LT_LT,
   [anon_sym_STAR_CARET_LT_LT] = anon_sym_STAR_CARET_LT_LT,
   [anon_sym_SLASH_LT_LT] = anon_sym_SLASH_LT_LT,
   [anon_sym_SLASH_CARET_LT_LT] = anon_sym_SLASH_CARET_LT_LT,
-  [anon_sym__mod_LT_LT] = anon_sym__mod_LT_LT,
-  [anon_sym__div_LT_LT] = anon_sym__div_LT_LT,
+  [aux_sym_assignment_token6] = aux_sym_assignment_token6,
+  [aux_sym_assignment_token7] = aux_sym_assignment_token7,
   [anon_sym_DASH_LT_LT] = anon_sym_DASH_LT_LT,
   [anon_sym_DASH_CARET_LT_LT] = anon_sym_DASH_CARET_LT_LT,
   [anon_sym_PLUS_LT_LT] = anon_sym_PLUS_LT_LT,
@@ -822,24 +822,24 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = true,
     .named = false,
   },
-  [anon_sym__and_LT_LT] = {
-    .visible = true,
+  [aux_sym_assignment_token1] = {
+    .visible = false,
     .named = false,
   },
-  [anon_sym__andif_LT_LT] = {
-    .visible = true,
+  [aux_sym_assignment_token2] = {
+    .visible = false,
     .named = false,
   },
-  [anon_sym__or_LT_LT] = {
-    .visible = true,
+  [aux_sym_assignment_token3] = {
+    .visible = false,
     .named = false,
   },
-  [anon_sym__orif_LT_LT] = {
-    .visible = true,
+  [aux_sym_assignment_token4] = {
+    .visible = false,
     .named = false,
   },
-  [anon_sym__xor_LT_LT] = {
-    .visible = true,
+  [aux_sym_assignment_token5] = {
+    .visible = false,
     .named = false,
   },
   [anon_sym_STAR_STAR_LT_LT] = {
@@ -866,12 +866,12 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = true,
     .named = false,
   },
-  [anon_sym__mod_LT_LT] = {
-    .visible = true,
+  [aux_sym_assignment_token6] = {
+    .visible = false,
     .named = false,
   },
-  [anon_sym__div_LT_LT] = {
-    .visible = true,
+  [aux_sym_assignment_token7] = {
+    .visible = false,
     .named = false,
   },
   [anon_sym_DASH_LT_LT] = {
@@ -4913,407 +4913,407 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
   eof = lexer->eof(lexer);
   switch (state) {
     case 0:
-      if (eof) ADVANCE(422);
+      if (eof) ADVANCE(403);
       ADVANCE_MAP(
-        '"', 507,
-        '#', 606,
+        '"', 488,
+        '#', 580,
         '$', 2,
-        '%', 502,
-        '\'', 513,
-        '(', 433,
-        ')', 437,
-        '*', 590,
-        '+', 600,
-        ',', 434,
-        '-', 598,
-        '.', 432,
-        '/', 591,
-        '1', 543,
-        '2', 541,
-        '3', 540,
-        ':', 86,
-        ';', 527,
-        '<', 576,
-        '=', 571,
-        '>', 578,
-        '@', 88,
-        '[', 440,
-        ']', 441,
+        '%', 483,
+        '\'', 494,
+        '(', 414,
+        ')', 418,
+        '*', 566,
+        '+', 574,
+        ',', 415,
+        '-', 572,
+        '.', 413,
+        '/', 567,
+        '1', 524,
+        '2', 522,
+        '3', 521,
+        ':', 61,
+        ';', 508,
+        '<', 557,
+        '=', 552,
+        '>', 559,
+        '@', 63,
+        '[', 421,
+        ']', 422,
         '^', 53,
-        '_', 61,
-        '{', 566,
-        '|', 90,
-        '}', 567,
-        '~', 603,
+        '_', 86,
+        '{', 547,
+        '|', 65,
+        '}', 548,
+        '~', 577,
       );
       if (('\t' <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') SKIP(0);
-      if (('4' <= lookahead && lookahead <= '9')) ADVANCE(542);
-      if (set_contains(sym_number_character_set_4, 146, lookahead)) ADVANCE(544);
-      if (set_contains(aux_sym_class_token2_character_set_1, 773, lookahead)) ADVANCE(503);
+      if (('4' <= lookahead && lookahead <= '9')) ADVANCE(523);
+      if (set_contains(sym_number_character_set_4, 146, lookahead)) ADVANCE(525);
+      if (set_contains(aux_sym_class_token2_character_set_1, 773, lookahead)) ADVANCE(484);
       END_STATE();
     case 1:
-      if (lookahead == '\n') ADVANCE(427);
+      if (lookahead == '\n') ADVANCE(408);
       END_STATE();
     case 2:
-      if (lookahead == '\n') ADVANCE(427);
+      if (lookahead == '\n') ADVANCE(408);
       if (lookahead == '\r') ADVANCE(1);
       END_STATE();
     case 3:
       ADVANCE_MAP(
-        '\n', 424,
-        '\r', 423,
-        '!', 109,
-        '"', 507,
-        '#', 607,
-        '%', 502,
-        '\'', 513,
-        '(', 433,
-        '*', 590,
-        '+', 600,
-        ',', 434,
-        '-', 598,
-        '.', 432,
-        '/', 591,
-        '1', 543,
-        '2', 541,
-        '3', 540,
-        ':', 86,
-        ';', 527,
-        '<', 576,
-        '=', 571,
-        '>', 578,
-        '@', 106,
-        '[', 440,
+        '\n', 405,
+        '\r', 404,
+        '!', 84,
+        '"', 488,
+        '#', 581,
+        '%', 483,
+        '\'', 494,
+        '(', 414,
+        '*', 566,
+        '+', 574,
+        ',', 415,
+        '-', 572,
+        '.', 413,
+        '/', 567,
+        '1', 524,
+        '2', 522,
+        '3', 521,
+        ':', 61,
+        ';', 508,
+        '<', 557,
+        '=', 552,
+        '>', 559,
+        '@', 81,
+        '[', 421,
         '^', 53,
-        '_', 63,
-        '{', 566,
+        '_', 102,
+        '{', 547,
         '|', 23,
-        '~', 603,
+        '~', 577,
       );
       if (('\t' <= lookahead && lookahead <= '\f') ||
           lookahead == ' ') SKIP(3);
-      if (('4' <= lookahead && lookahead <= '9')) ADVANCE(542);
-      if (set_contains(sym_number_character_set_4, 146, lookahead)) ADVANCE(544);
-      if (set_contains(sym_dynamic_variable_character_set_1, 679, lookahead)) ADVANCE(562);
+      if (('4' <= lookahead && lookahead <= '9')) ADVANCE(523);
+      if (set_contains(sym_number_character_set_4, 146, lookahead)) ADVANCE(525);
+      if (set_contains(sym_dynamic_variable_character_set_1, 679, lookahead)) ADVANCE(543);
       END_STATE();
     case 4:
       ADVANCE_MAP(
-        '\n', 424,
-        '\r', 423,
-        '!', 109,
-        '"', 507,
-        '#', 607,
-        '%', 502,
-        '\'', 513,
-        '(', 433,
-        '*', 590,
-        '+', 600,
-        ',', 434,
-        '-', 598,
-        '.', 432,
-        '/', 591,
-        '1', 543,
-        '2', 541,
-        '3', 540,
-        ':', 86,
-        ';', 527,
-        '<', 576,
-        '=', 571,
-        '>', 578,
-        '@', 106,
-        '[', 440,
+        '\n', 405,
+        '\r', 404,
+        '!', 84,
+        '"', 488,
+        '#', 581,
+        '%', 483,
+        '\'', 494,
+        '(', 414,
+        '*', 566,
+        '+', 574,
+        ',', 415,
+        '-', 572,
+        '.', 413,
+        '/', 567,
+        '1', 524,
+        '2', 522,
+        '3', 521,
+        ':', 61,
+        ';', 508,
+        '<', 557,
+        '=', 552,
+        '>', 559,
+        '@', 81,
+        '[', 421,
         '^', 53,
-        '_', 64,
-        '{', 566,
+        '_', 103,
+        '{', 547,
         '|', 23,
-        '~', 603,
+        '~', 577,
       );
       if (('\t' <= lookahead && lookahead <= '\f') ||
           lookahead == ' ') SKIP(4);
-      if (('4' <= lookahead && lookahead <= '9')) ADVANCE(542);
-      if (set_contains(sym_number_character_set_4, 146, lookahead)) ADVANCE(544);
-      if (set_contains(sym_dynamic_variable_character_set_1, 679, lookahead)) ADVANCE(562);
+      if (('4' <= lookahead && lookahead <= '9')) ADVANCE(523);
+      if (set_contains(sym_number_character_set_4, 146, lookahead)) ADVANCE(525);
+      if (set_contains(sym_dynamic_variable_character_set_1, 679, lookahead)) ADVANCE(543);
       END_STATE();
     case 5:
       ADVANCE_MAP(
-        '\n', 424,
-        '\r', 423,
-        '#', 607,
-        '(', 433,
-        '*', 590,
-        '+', 600,
-        ',', 434,
-        '-', 598,
-        '.', 432,
-        '/', 592,
-        ';', 527,
-        '<', 576,
-        '=', 571,
-        '>', 577,
-        '@', 91,
-        '[', 440,
+        '\n', 405,
+        '\r', 404,
+        '#', 581,
+        '(', 414,
+        '*', 566,
+        '+', 574,
+        ',', 415,
+        '-', 572,
+        '.', 413,
+        '/', 568,
+        ';', 508,
+        '<', 557,
+        '=', 552,
+        '>', 558,
+        '@', 66,
+        '[', 421,
         '^', 53,
-        '_', 66,
-        '|', 103,
+        '_', 126,
+        '|', 78,
         '~', 59,
       );
       if (('\t' <= lookahead && lookahead <= '\f') ||
           lookahead == ' ') SKIP(5);
-      if (set_contains(aux_sym_slot_accessor_token1_character_set_1, 678, lookahead)) ADVANCE(565);
+      if (set_contains(aux_sym_slot_accessor_token1_character_set_1, 678, lookahead)) ADVANCE(546);
       END_STATE();
     case 6:
-      if (lookahead == '\n') ADVANCE(511);
-      if (lookahead == '"') ADVANCE(507);
-      if (lookahead == '#') ADVANCE(508);
+      if (lookahead == '\n') ADVANCE(492);
+      if (lookahead == '"') ADVANCE(488);
+      if (lookahead == '#') ADVANCE(489);
       if (('\t' <= lookahead && lookahead <= '\r') ||
-          lookahead == ' ') ADVANCE(509);
-      if (lookahead != 0) ADVANCE(508);
+          lookahead == ' ') ADVANCE(490);
+      if (lookahead != 0) ADVANCE(489);
       END_STATE();
     case 7:
-      if (lookahead == '\n') ADVANCE(512);
-      if (lookahead == '#') ADVANCE(510);
-      if (lookahead == '\'') ADVANCE(513);
+      if (lookahead == '\n') ADVANCE(493);
+      if (lookahead == '#') ADVANCE(491);
+      if (lookahead == '\'') ADVANCE(494);
       if (('\t' <= lookahead && lookahead <= '\r') ||
-          lookahead == ' ') ADVANCE(512);
-      if (lookahead != 0) ADVANCE(510);
+          lookahead == ' ') ADVANCE(493);
+      if (lookahead != 0) ADVANCE(491);
       END_STATE();
     case 8:
       if (lookahead == '\n') SKIP(8);
-      if (lookahead == ' ') ADVANCE(506);
-      if (lookahead == '#') ADVANCE(504);
-      if (('\t' <= lookahead && lookahead <= '\r')) ADVANCE(505);
-      if (set_contains(aux_sym_character_literal_token1_character_set_1, 677, lookahead)) ADVANCE(503);
-      if (lookahead != 0) ADVANCE(504);
+      if (lookahead == ' ') ADVANCE(487);
+      if (lookahead == '#') ADVANCE(485);
+      if (('\t' <= lookahead && lookahead <= '\r')) ADVANCE(486);
+      if (set_contains(aux_sym_character_literal_token1_character_set_1, 677, lookahead)) ADVANCE(484);
+      if (lookahead != 0) ADVANCE(485);
       END_STATE();
     case 9:
-      if (lookahead == '\n') ADVANCE(425);
-      if (lookahead == '#') ADVANCE(607);
+      if (lookahead == '\n') ADVANCE(406);
+      if (lookahead == '#') ADVANCE(581);
       if (('\t' <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') SKIP(9);
       END_STATE();
     case 10:
-      if (lookahead == '!') ADVANCE(549);
+      if (lookahead == '!') ADVANCE(530);
       if (set_contains(aux_sym_slot_accessor_token1_character_set_2, 773, lookahead)) ADVANCE(10);
       END_STATE();
     case 11:
-      if (lookahead == '!') ADVANCE(419);
+      if (lookahead == '!') ADVANCE(400);
       END_STATE();
     case 12:
-      if (lookahead == '!') ADVANCE(419);
-      if (lookahead == '|') ADVANCE(101);
-      if (set_contains(sym_dynamic_variable_character_set_1, 679, lookahead)) ADVANCE(553);
+      if (lookahead == '!') ADVANCE(400);
+      if (lookahead == '|') ADVANCE(76);
+      if (set_contains(sym_dynamic_variable_character_set_1, 679, lookahead)) ADVANCE(534);
       END_STATE();
     case 13:
-      if (lookahead == '!') ADVANCE(548);
+      if (lookahead == '!') ADVANCE(529);
       END_STATE();
     case 14:
       if (lookahead == '!') ADVANCE(15);
-      if (lookahead == '|') ADVANCE(559);
+      if (lookahead == '|') ADVANCE(540);
       if (set_contains(aux_sym_slot_accessor_token1_character_set_3, 774, lookahead)) ADVANCE(14);
       END_STATE();
     case 15:
       if (lookahead == '!') ADVANCE(15);
-      if (lookahead == '|') ADVANCE(550);
+      if (lookahead == '|') ADVANCE(531);
       if (set_contains(aux_sym_slot_accessor_token1_character_set_3, 774, lookahead)) ADVANCE(14);
       END_STATE();
     case 16:
       ADVANCE_MAP(
-        '!', 109,
-        '"', 507,
-        '#', 606,
-        '%', 502,
-        '\'', 513,
-        '(', 433,
-        '+', 599,
-        ',', 434,
-        '-', 597,
-        '.', 432,
+        '!', 84,
+        '"', 488,
+        '#', 580,
+        '%', 483,
+        '\'', 494,
+        '(', 414,
+        '+', 573,
+        ',', 415,
+        '-', 571,
+        '.', 413,
         '/', 33,
-        '1', 543,
-        '2', 541,
-        '3', 540,
-        ':', 86,
+        '1', 524,
+        '2', 522,
+        '3', 521,
+        ':', 61,
         '<', 34,
         '>', 60,
-        '@', 106,
+        '@', 81,
         '^', 53,
-        '_', 121,
-        '{', 566,
+        '_', 101,
+        '{', 547,
         '|', 23,
-        '~', 602,
+        '~', 576,
       );
       if (('\t' <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') SKIP(16);
-      if (('4' <= lookahead && lookahead <= '9')) ADVANCE(542);
-      if (set_contains(sym_number_character_set_4, 146, lookahead)) ADVANCE(544);
-      if (set_contains(sym_dynamic_variable_character_set_1, 679, lookahead)) ADVANCE(562);
+      if (('4' <= lookahead && lookahead <= '9')) ADVANCE(523);
+      if (set_contains(sym_number_character_set_4, 146, lookahead)) ADVANCE(525);
+      if (set_contains(sym_dynamic_variable_character_set_1, 679, lookahead)) ADVANCE(543);
       END_STATE();
     case 17:
       ADVANCE_MAP(
-        '!', 109,
-        '"', 507,
-        '#', 607,
-        '%', 502,
-        '\'', 513,
-        '(', 433,
-        '+', 599,
-        '-', 597,
-        '.', 432,
+        '!', 84,
+        '"', 488,
+        '#', 581,
+        '%', 483,
+        '\'', 494,
+        '(', 414,
+        '+', 573,
+        '-', 571,
+        '.', 413,
         '/', 33,
-        '1', 543,
-        '2', 541,
-        '3', 540,
-        ':', 86,
+        '1', 524,
+        '2', 522,
+        '3', 521,
+        ':', 61,
         '>', 60,
-        '@', 88,
-        '_', 141,
-        '{', 566,
+        '@', 63,
+        '_', 122,
+        '{', 547,
         '|', 23,
-        '~', 602,
+        '~', 576,
       );
       if (('\t' <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') SKIP(17);
-      if (('4' <= lookahead && lookahead <= '9')) ADVANCE(542);
-      if (set_contains(sym_number_character_set_4, 146, lookahead)) ADVANCE(544);
-      if (set_contains(sym_dynamic_variable_character_set_1, 679, lookahead)) ADVANCE(562);
+      if (('4' <= lookahead && lookahead <= '9')) ADVANCE(523);
+      if (set_contains(sym_number_character_set_4, 146, lookahead)) ADVANCE(525);
+      if (set_contains(sym_dynamic_variable_character_set_1, 679, lookahead)) ADVANCE(543);
       END_STATE();
     case 18:
       ADVANCE_MAP(
-        '!', 109,
-        '"', 507,
-        '#', 607,
-        '%', 502,
-        '\'', 513,
-        '(', 433,
-        '+', 599,
-        '-', 597,
-        '.', 432,
+        '!', 84,
+        '"', 488,
+        '#', 581,
+        '%', 483,
+        '\'', 494,
+        '(', 414,
+        '+', 573,
+        '-', 571,
+        '.', 413,
         '/', 33,
-        '1', 543,
-        '2', 541,
-        '3', 540,
-        ':', 86,
+        '1', 524,
+        '2', 522,
+        '3', 521,
+        ':', 61,
         '>', 60,
-        '@', 106,
-        '_', 142,
-        '{', 566,
+        '@', 81,
+        '_', 123,
+        '{', 547,
         '|', 23,
-        '~', 602,
+        '~', 576,
       );
       if (('\t' <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') SKIP(18);
-      if (('4' <= lookahead && lookahead <= '9')) ADVANCE(542);
-      if (set_contains(sym_number_character_set_4, 146, lookahead)) ADVANCE(544);
-      if (set_contains(sym_dynamic_variable_character_set_1, 679, lookahead)) ADVANCE(562);
+      if (('4' <= lookahead && lookahead <= '9')) ADVANCE(523);
+      if (set_contains(sym_number_character_set_4, 146, lookahead)) ADVANCE(525);
+      if (set_contains(sym_dynamic_variable_character_set_1, 679, lookahead)) ADVANCE(543);
       END_STATE();
     case 19:
       ADVANCE_MAP(
-        '!', 109,
-        '"', 507,
-        '#', 607,
-        '%', 502,
-        '\'', 513,
-        '(', 433,
-        '+', 599,
-        '-', 597,
-        '.', 432,
+        '!', 84,
+        '"', 488,
+        '#', 581,
+        '%', 483,
+        '\'', 494,
+        '(', 414,
+        '+', 573,
+        '-', 571,
+        '.', 413,
         '/', 33,
-        '1', 543,
-        '2', 541,
-        '3', 540,
-        ':', 86,
+        '1', 524,
+        '2', 522,
+        '3', 521,
+        ':', 61,
         '>', 60,
-        '@', 106,
-        '_', 143,
-        '{', 566,
+        '@', 81,
+        '_', 124,
+        '{', 547,
         '|', 23,
-        '~', 602,
+        '~', 576,
       );
       if (('\t' <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') SKIP(19);
-      if (('4' <= lookahead && lookahead <= '9')) ADVANCE(542);
-      if (set_contains(sym_number_character_set_4, 146, lookahead)) ADVANCE(544);
-      if (set_contains(sym_dynamic_variable_character_set_1, 679, lookahead)) ADVANCE(562);
+      if (('4' <= lookahead && lookahead <= '9')) ADVANCE(523);
+      if (set_contains(sym_number_character_set_4, 146, lookahead)) ADVANCE(525);
+      if (set_contains(sym_dynamic_variable_character_set_1, 679, lookahead)) ADVANCE(543);
       END_STATE();
     case 20:
-      if (lookahead == '!') ADVANCE(109);
-      if (lookahead == '#') ADVANCE(607);
-      if (lookahead == '_') ADVANCE(172);
+      if (lookahead == '!') ADVANCE(84);
+      if (lookahead == '#') ADVANCE(581);
+      if (lookahead == '_') ADVANCE(152);
       if (lookahead == '|') ADVANCE(24);
       if (('\t' <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') SKIP(20);
-      if (set_contains(sym_dynamic_variable_character_set_1, 679, lookahead)) ADVANCE(564);
+      if (set_contains(sym_dynamic_variable_character_set_1, 679, lookahead)) ADVANCE(545);
       END_STATE();
     case 21:
       if (lookahead == '!') ADVANCE(22);
-      if (lookahead == '|') ADVANCE(560);
+      if (lookahead == '|') ADVANCE(541);
       if (set_contains(aux_sym_slot_accessor_token1_character_set_3, 774, lookahead)) ADVANCE(21);
       END_STATE();
     case 22:
       if (lookahead == '!') ADVANCE(22);
-      if (lookahead == '|') ADVANCE(551);
+      if (lookahead == '|') ADVANCE(532);
       if (set_contains(aux_sym_slot_accessor_token1_character_set_3, 774, lookahead)) ADVANCE(21);
       END_STATE();
     case 23:
-      if (lookahead == '!') ADVANCE(96);
-      if (lookahead == '|') ADVANCE(561);
+      if (lookahead == '!') ADVANCE(71);
+      if (lookahead == '|') ADVANCE(542);
       if (set_contains(sym_number_character_set_1, 144, lookahead) ||
           lookahead == '?' ||
-          lookahead == '_') ADVANCE(97);
-      if (set_contains(sym_dynamic_variable_character_set_1, 679, lookahead)) ADVANCE(97);
+          lookahead == '_') ADVANCE(72);
+      if (set_contains(sym_dynamic_variable_character_set_1, 679, lookahead)) ADVANCE(72);
       END_STATE();
     case 24:
-      if (lookahead == '!') ADVANCE(108);
-      if (lookahead == '|') ADVANCE(563);
+      if (lookahead == '!') ADVANCE(83);
+      if (lookahead == '|') ADVANCE(544);
       if (set_contains(sym_number_character_set_1, 144, lookahead) ||
           lookahead == '?' ||
-          lookahead == '_') ADVANCE(107);
-      if (set_contains(sym_dynamic_variable_character_set_1, 679, lookahead)) ADVANCE(107);
+          lookahead == '_') ADVANCE(82);
+      if (set_contains(sym_dynamic_variable_character_set_1, 679, lookahead)) ADVANCE(82);
       END_STATE();
     case 25:
       ADVANCE_MAP(
-        '#', 607,
-        '(', 433,
-        ')', 437,
-        '*', 590,
-        '+', 600,
-        ',', 434,
-        '-', 598,
-        '.', 432,
-        '/', 592,
-        '<', 576,
-        '=', 571,
-        '>', 577,
-        '@', 91,
-        '[', 440,
-        ']', 441,
+        '#', 581,
+        '(', 414,
+        ')', 418,
+        '*', 566,
+        '+', 574,
+        ',', 415,
+        '-', 572,
+        '.', 413,
+        '/', 568,
+        '<', 557,
+        '=', 552,
+        '>', 558,
+        '@', 66,
+        '[', 421,
+        ']', 422,
         '^', 53,
-        '_', 65,
-        '|', 103,
-        '}', 567,
+        '_', 125,
+        '|', 78,
+        '}', 548,
         '~', 59,
       );
       if (('\t' <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') SKIP(25);
-      if (set_contains(aux_sym_slot_accessor_token1_character_set_1, 678, lookahead)) ADVANCE(565);
+      if (set_contains(aux_sym_slot_accessor_token1_character_set_1, 678, lookahead)) ADVANCE(546);
       END_STATE();
     case 26:
-      if (lookahead == '#') ADVANCE(607);
-      if (lookahead == '|') ADVANCE(90);
+      if (lookahead == '#') ADVANCE(581);
+      if (lookahead == '|') ADVANCE(65);
       if (('\t' <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') SKIP(26);
       END_STATE();
     case 27:
-      if (lookahead == '#') ADVANCE(607);
-      if (lookahead == '|') ADVANCE(418);
+      if (lookahead == '#') ADVANCE(581);
+      if (lookahead == '|') ADVANCE(399);
       if (('\t' <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') SKIP(27);
-      if (set_contains(aux_sym_slot_accessor_token1_character_set_1, 678, lookahead)) ADVANCE(516);
+      if (set_contains(aux_sym_slot_accessor_token1_character_set_1, 678, lookahead)) ADVANCE(497);
       END_STATE();
     case 28:
-      if (lookahead == '.') ADVANCE(89);
-      if (lookahead == '|') ADVANCE(537);
+      if (lookahead == '.') ADVANCE(64);
+      if (lookahead == '|') ADVANCE(518);
       if (set_contains(sym_number_character_set_1, 144, lookahead) ||
           lookahead == '!' ||
           lookahead == '?' ||
@@ -5321,89 +5321,89 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (set_contains(sym_dynamic_variable_character_set_1, 679, lookahead)) ADVANCE(29);
       END_STATE();
     case 29:
-      if (lookahead == '.') ADVANCE(89);
-      if (lookahead == '|') ADVANCE(537);
+      if (lookahead == '.') ADVANCE(64);
+      if (lookahead == '|') ADVANCE(518);
       if (set_contains(sym_label_character_set_2, 775, lookahead)) ADVANCE(29);
       END_STATE();
     case 30:
-      if (lookahead == '/') ADVANCE(514);
-      if (lookahead == '<') ADVANCE(457);
+      if (lookahead == '/') ADVANCE(495);
+      if (lookahead == '<') ADVANCE(438);
       if (lookahead != 0 &&
           lookahead != '\n') ADVANCE(33);
       END_STATE();
     case 31:
-      if (lookahead == '/') ADVANCE(514);
-      if (lookahead == '<') ADVANCE(459);
+      if (lookahead == '/') ADVANCE(495);
+      if (lookahead == '<') ADVANCE(440);
       if (lookahead != 0 &&
           lookahead != '\n') ADVANCE(33);
       END_STATE();
     case 32:
-      if (lookahead == '/') ADVANCE(514);
+      if (lookahead == '/') ADVANCE(495);
       if (lookahead == '<') ADVANCE(31);
       if (lookahead != 0 &&
           lookahead != '\n') ADVANCE(33);
       END_STATE();
     case 33:
-      if (lookahead == '/') ADVANCE(514);
+      if (lookahead == '/') ADVANCE(495);
       if (lookahead != 0 &&
           lookahead != '\n') ADVANCE(33);
       END_STATE();
     case 34:
-      if (lookahead == '<') ADVANCE(438);
+      if (lookahead == '<') ADVANCE(419);
       END_STATE();
     case 35:
-      if (lookahead == '<') ADVANCE(454);
+      if (lookahead == '<') ADVANCE(435);
       END_STATE();
     case 36:
-      if (lookahead == '<') ADVANCE(464);
+      if (lookahead == '<') ADVANCE(445);
       END_STATE();
     case 37:
-      if (lookahead == '<') ADVANCE(462);
+      if (lookahead == '<') ADVANCE(443);
       END_STATE();
     case 38:
-      if (lookahead == '<') ADVANCE(439);
+      if (lookahead == '<') ADVANCE(420);
       END_STATE();
     case 39:
-      if (lookahead == '<') ADVANCE(452);
+      if (lookahead == '<') ADVANCE(433);
       END_STATE();
     case 40:
-      if (lookahead == '<') ADVANCE(455);
+      if (lookahead == '<') ADVANCE(436);
       END_STATE();
     case 41:
-      if (lookahead == '<') ADVANCE(465);
+      if (lookahead == '<') ADVANCE(446);
       END_STATE();
     case 42:
-      if (lookahead == '<') ADVANCE(463);
+      if (lookahead == '<') ADVANCE(444);
       END_STATE();
     case 43:
-      if (lookahead == '<') ADVANCE(453);
+      if (lookahead == '<') ADVANCE(434);
       END_STATE();
     case 44:
-      if (lookahead == '<') ADVANCE(449);
+      if (lookahead == '<') ADVANCE(430);
       END_STATE();
     case 45:
-      if (lookahead == '<') ADVANCE(447);
+      if (lookahead == '<') ADVANCE(428);
       END_STATE();
     case 46:
-      if (lookahead == '<') ADVANCE(461);
+      if (lookahead == '<') ADVANCE(442);
       END_STATE();
     case 47:
-      if (lookahead == '<') ADVANCE(460);
+      if (lookahead == '<') ADVANCE(441);
       END_STATE();
     case 48:
-      if (lookahead == '<') ADVANCE(451);
+      if (lookahead == '<') ADVANCE(432);
       END_STATE();
     case 49:
-      if (lookahead == '<') ADVANCE(450);
+      if (lookahead == '<') ADVANCE(431);
       END_STATE();
     case 50:
-      if (lookahead == '<') ADVANCE(448);
+      if (lookahead == '<') ADVANCE(429);
       END_STATE();
     case 51:
-      if (lookahead == '<') ADVANCE(456);
+      if (lookahead == '<') ADVANCE(437);
       END_STATE();
     case 52:
-      if (lookahead == '<') ADVANCE(458);
+      if (lookahead == '<') ADVANCE(439);
       END_STATE();
     case 53:
       if (lookahead == '<') ADVANCE(38);
@@ -5424,2807 +5424,2682 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
       if (lookahead == '<') ADVANCE(52);
       END_STATE();
     case 59:
-      if (lookahead == '=') ADVANCE(572);
+      if (lookahead == '=') ADVANCE(553);
       END_STATE();
     case 60:
-      if (lookahead == '>') ADVANCE(534);
+      if (lookahead == '>') ADVANCE(515);
       END_STATE();
     case 61:
-      ADVANCE_MAP(
-        'A', 150,
-        'D', 187,
-        'M', 113,
-        'O', 336,
-        'X', 311,
-        'a', 74,
-        'd', 72,
-        'm', 79,
-        'o', 82,
-        'x', 76,
-        'B', 275,
-        'b', 275,
-        'C', 128,
-        'c', 128,
-        'E', 269,
-        'e', 269,
-        'F', 125,
-        'f', 125,
-        'G', 146,
-        'g', 146,
-        'H', 131,
-        'h', 131,
-        'I', 222,
-        'i', 222,
-        'L', 199,
-        'l', 199,
-        'N', 318,
-        'n', 318,
-        'P', 115,
-        'p', 115,
-        'R', 204,
-        'r', 204,
-        'S', 164,
-        's', 164,
-        'T', 235,
-        't', 235,
-        'U', 297,
-        'u', 297,
-        'W', 236,
-        'w', 236,
-      );
+      if (lookahead == '\\') ADVANCE(401);
+      if (lookahead == '|') ADVANCE(62);
+      if (set_contains(sym_symbol_character_set_1, 775, lookahead)) ADVANCE(578);
       END_STATE();
     case 62:
-      ADVANCE_MAP(
-        'A', 150,
-        'D', 187,
-        'M', 113,
-        'O', 336,
-        'X', 311,
-        'a', 74,
-        'd', 72,
-        'm', 79,
-        'o', 82,
-        'x', 76,
-        'B', 275,
-        'b', 275,
-        'C', 128,
-        'c', 128,
-        'E', 269,
-        'e', 269,
-        'F', 125,
-        'f', 125,
-        'G', 146,
-        'g', 146,
-        'H', 131,
-        'h', 131,
-        'I', 222,
-        'i', 222,
-        'L', 200,
-        'l', 200,
-        'N', 318,
-        'n', 318,
-        'P', 116,
-        'p', 116,
-        'R', 204,
-        'r', 204,
-        'S', 164,
-        's', 164,
-        'T', 235,
-        't', 235,
-        'U', 297,
-        'u', 297,
-        'W', 236,
-        'w', 236,
-      );
+      if (lookahead == '|') ADVANCE(578);
+      if (lookahead != 0) ADVANCE(62);
       END_STATE();
     case 63:
-      ADVANCE_MAP(
-        'A', 274,
-        'D', 248,
-        'M', 114,
-        'O', 340,
-        'X', 311,
-        'a', 75,
-        'd', 71,
-        'm', 78,
-        'o', 83,
-        'x', 76,
-        'B', 275,
-        'b', 275,
-        'C', 129,
-        'c', 129,
-        'E', 269,
-        'e', 269,
-        'F', 125,
-        'f', 125,
-        'G', 145,
-        'g', 145,
-        'H', 131,
-        'h', 131,
-        'I', 224,
-        'i', 224,
-        'L', 201,
-        'l', 201,
-        'N', 318,
-        'n', 318,
-        'P', 348,
-        'p', 348,
-        'R', 204,
-        'r', 204,
-        'S', 164,
-        's', 164,
-        'T', 240,
-        't', 240,
-        'U', 297,
-        'u', 297,
-        'W', 236,
-        'w', 236,
-      );
-      END_STATE();
-    case 64:
-      ADVANCE_MAP(
-        'A', 274,
-        'D', 248,
-        'M', 114,
-        'O', 340,
-        'X', 311,
-        'a', 75,
-        'd', 71,
-        'm', 78,
-        'o', 83,
-        'x', 76,
-        'B', 275,
-        'b', 275,
-        'C', 129,
-        'c', 129,
-        'E', 269,
-        'e', 269,
-        'F', 125,
-        'f', 125,
-        'G', 145,
-        'g', 145,
-        'H', 131,
-        'h', 131,
-        'I', 224,
-        'i', 224,
-        'L', 201,
-        'l', 201,
-        'N', 318,
-        'n', 318,
-        'P', 359,
-        'p', 359,
-        'R', 204,
-        'r', 204,
-        'S', 164,
-        's', 164,
-        'T', 240,
-        't', 240,
-        'U', 297,
-        'u', 297,
-        'W', 236,
-        'w', 236,
-      );
-      END_STATE();
-    case 65:
-      ADVANCE_MAP(
-        'A', 291,
-        'D', 248,
-        'M', 313,
-        'O', 335,
-        'X', 311,
-        'a', 73,
-        'd', 71,
-        'm', 77,
-        'o', 81,
-        'x', 76,
-        'C', 221,
-        'c', 221,
-        'G', 145,
-        'g', 145,
-        'I', 360,
-        'i', 360,
-        'L', 317,
-        'l', 317,
-        'T', 245,
-        't', 245,
-        'W', 263,
-        'w', 263,
-      );
-      END_STATE();
-    case 66:
-      ADVANCE_MAP(
-        'A', 291,
-        'D', 248,
-        'M', 313,
-        'O', 339,
-        'X', 311,
-        'a', 73,
-        'd', 71,
-        'm', 77,
-        'o', 80,
-        'x', 76,
-        'C', 220,
-        'c', 220,
-        'E', 269,
-        'e', 269,
-        'F', 261,
-        'f', 261,
-        'I', 360,
-        'i', 360,
-        'P', 358,
-        'p', 358,
-        'W', 244,
-        'w', 244,
-      );
-      END_STATE();
-    case 67:
-      if (lookahead == 'D') ADVANCE(580);
-      if (lookahead == 'd') ADVANCE(579);
-      END_STATE();
-    case 68:
-      if (lookahead == 'D') ADVANCE(593);
-      if (lookahead == 'd') ADVANCE(594);
-      END_STATE();
-    case 69:
-      if (lookahead == 'F') ADVANCE(587);
-      if (lookahead == 'f') ADVANCE(588);
-      END_STATE();
-    case 70:
-      if (lookahead == 'F') ADVANCE(585);
-      if (lookahead == 'f') ADVANCE(586);
-      END_STATE();
-    case 71:
-      if (lookahead == 'I') ADVANCE(405);
-      if (lookahead == 'i') ADVANCE(85);
-      END_STATE();
-    case 72:
-      if (lookahead == 'I') ADVANCE(405);
-      if (lookahead == 'i') ADVANCE(85);
-      if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(230);
-      if (lookahead == 'Y' ||
-          lookahead == 'y') ADVANCE(302);
-      END_STATE();
-    case 73:
-      if (lookahead == 'N') ADVANCE(177);
-      if (lookahead == 'n') ADVANCE(67);
-      END_STATE();
-    case 74:
-      if (lookahead == 'N') ADVANCE(177);
-      if (lookahead == 'n') ADVANCE(67);
-      if (lookahead == 'B' ||
-          lookahead == 'b') ADVANCE(364);
-      if (lookahead == 'L' ||
-          lookahead == 'l') ADVANCE(277);
-      END_STATE();
-    case 75:
-      if (lookahead == 'N') ADVANCE(177);
-      if (lookahead == 'n') ADVANCE(67);
-      if (lookahead == 'L' ||
-          lookahead == 'l') ADVANCE(277);
-      END_STATE();
-    case 76:
-      if (lookahead == 'O') ADVANCE(341);
-      if (lookahead == 'o') ADVANCE(84);
-      END_STATE();
-    case 77:
-      if (lookahead == 'O') ADVANCE(178);
-      if (lookahead == 'o') ADVANCE(68);
-      END_STATE();
-    case 78:
-      if (lookahead == 'O') ADVANCE(178);
-      if (lookahead == 'o') ADVANCE(68);
-      if (lookahead == 'A' ||
-          lookahead == 'a') ADVANCE(410);
-      END_STATE();
-    case 79:
-      if (lookahead == 'O') ADVANCE(178);
-      if (lookahead == 'o') ADVANCE(68);
-      if (lookahead == 'A' ||
-          lookahead == 'a') ADVANCE(410);
-      if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(371);
-      END_STATE();
-    case 80:
-      if (lookahead == 'R') ADVANCE(582);
-      if (lookahead == 'r') ADVANCE(581);
-      END_STATE();
-    case 81:
-      if (lookahead == 'R') ADVANCE(582);
-      if (lookahead == 'r') ADVANCE(581);
-      if (lookahead == 'P' ||
-          lookahead == 'p') ADVANCE(372);
-      END_STATE();
-    case 82:
-      if (lookahead == 'R') ADVANCE(582);
-      if (lookahead == 'r') ADVANCE(581);
-      if (lookahead == 'P' ||
-          lookahead == 'p') ADVANCE(372);
-      if (lookahead == 'V' ||
-          lookahead == 'v') ADVANCE(203);
-      END_STATE();
-    case 83:
-      if (lookahead == 'R') ADVANCE(582);
-      if (lookahead == 'r') ADVANCE(581);
-      if (lookahead == 'V' ||
-          lookahead == 'v') ADVANCE(203);
-      END_STATE();
-    case 84:
-      if (lookahead == 'R') ADVANCE(583);
-      if (lookahead == 'r') ADVANCE(584);
-      END_STATE();
-    case 85:
-      if (lookahead == 'V') ADVANCE(595);
-      if (lookahead == 'v') ADVANCE(596);
-      END_STATE();
-    case 86:
-      if (lookahead == '\\') ADVANCE(420);
-      if (lookahead == '|') ADVANCE(87);
-      if (set_contains(sym_symbol_character_set_1, 775, lookahead)) ADVANCE(604);
-      END_STATE();
-    case 87:
-      if (lookahead == '|') ADVANCE(604);
-      if (lookahead != 0) ADVANCE(87);
-      END_STATE();
-    case 88:
       if (lookahead == '|') ADVANCE(28);
       if (('\t' <= lookahead && lookahead <= '\r') ||
-          lookahead == ' ') ADVANCE(92);
+          lookahead == ' ') ADVANCE(67);
       if (set_contains(sym_number_character_set_1, 144, lookahead) ||
           lookahead == '!' ||
           lookahead == '?' ||
-          lookahead == '_') ADVANCE(539);
-      if (set_contains(sym_dynamic_variable_character_set_1, 679, lookahead)) ADVANCE(538);
+          lookahead == '_') ADVANCE(520);
+      if (set_contains(sym_dynamic_variable_character_set_1, 679, lookahead)) ADVANCE(519);
       END_STATE();
-    case 89:
-      if (lookahead == '|') ADVANCE(539);
-      if (set_contains(sym_label_character_set_2, 775, lookahead)) ADVANCE(89);
+    case 64:
+      if (lookahead == '|') ADVANCE(520);
+      if (set_contains(sym_label_character_set_2, 775, lookahead)) ADVANCE(64);
       END_STATE();
-    case 90:
-      if (lookahead == '|') ADVANCE(526);
-      if (set_contains(aux_sym_class_token2_character_set_1, 773, lookahead)) ADVANCE(90);
+    case 65:
+      if (lookahead == '|') ADVANCE(507);
+      if (set_contains(aux_sym_class_token2_character_set_1, 773, lookahead)) ADVANCE(65);
       END_STATE();
-    case 91:
-      if (lookahead == '|') ADVANCE(89);
+    case 66:
+      if (lookahead == '|') ADVANCE(64);
       if (('\t' <= lookahead && lookahead <= '\r') ||
-          lookahead == ' ') ADVANCE(92);
-      if (set_contains(sym_label_character_set_1, 775, lookahead)) ADVANCE(539);
+          lookahead == ' ') ADVANCE(67);
+      if (set_contains(sym_label_character_set_1, 775, lookahead)) ADVANCE(520);
       END_STATE();
-    case 92:
-      if (lookahead == '|') ADVANCE(89);
-      if (set_contains(aux_sym_slot_accessor_token1_character_set_3, 774, lookahead)) ADVANCE(539);
+    case 67:
+      if (lookahead == '|') ADVANCE(64);
+      if (set_contains(aux_sym_slot_accessor_token1_character_set_3, 774, lookahead)) ADVANCE(520);
       END_STATE();
-    case 93:
-      if (lookahead == '|') ADVANCE(94);
-      if (set_contains(aux_sym_slot_accessor_token1_character_set_1, 678, lookahead)) ADVANCE(557);
+    case 68:
+      if (lookahead == '|') ADVANCE(69);
+      if (set_contains(aux_sym_slot_accessor_token1_character_set_1, 678, lookahead)) ADVANCE(538);
       END_STATE();
-    case 94:
-      if (lookahead == '|') ADVANCE(554);
+    case 69:
+      if (lookahead == '|') ADVANCE(535);
       if (set_contains(sym_number_character_set_1, 144, lookahead) ||
           lookahead == '!' ||
           lookahead == '?' ||
-          lookahead == '_') ADVANCE(95);
-      if (set_contains(sym_dynamic_variable_character_set_1, 679, lookahead)) ADVANCE(95);
+          lookahead == '_') ADVANCE(70);
+      if (set_contains(sym_dynamic_variable_character_set_1, 679, lookahead)) ADVANCE(70);
       END_STATE();
-    case 95:
-      if (lookahead == '|') ADVANCE(554);
-      if (set_contains(aux_sym_slot_accessor_token1_character_set_3, 774, lookahead)) ADVANCE(95);
+    case 70:
+      if (lookahead == '|') ADVANCE(535);
+      if (set_contains(aux_sym_slot_accessor_token1_character_set_3, 774, lookahead)) ADVANCE(70);
       END_STATE();
-    case 96:
-      if (lookahead == '|') ADVANCE(561);
+    case 71:
+      if (lookahead == '|') ADVANCE(542);
       if (set_contains(aux_sym_slot_accessor_token1_character_set_3, 774, lookahead)) ADVANCE(14);
       END_STATE();
-    case 97:
-      if (lookahead == '|') ADVANCE(561);
-      if (set_contains(aux_sym_slot_accessor_token1_character_set_3, 774, lookahead)) ADVANCE(97);
+    case 72:
+      if (lookahead == '|') ADVANCE(542);
+      if (set_contains(aux_sym_slot_accessor_token1_character_set_3, 774, lookahead)) ADVANCE(72);
       END_STATE();
-    case 98:
+    case 73:
       if (lookahead == '|') ADVANCE(13);
-      if (set_contains(aux_sym_slot_accessor_token1_character_set_3, 774, lookahead)) ADVANCE(98);
+      if (set_contains(aux_sym_slot_accessor_token1_character_set_3, 774, lookahead)) ADVANCE(73);
       END_STATE();
-    case 99:
-      if (lookahead == '|') ADVANCE(555);
+    case 74:
+      if (lookahead == '|') ADVANCE(536);
       if (set_contains(sym_number_character_set_1, 144, lookahead) ||
           lookahead == '!' ||
           lookahead == '?' ||
-          lookahead == '_') ADVANCE(100);
-      if (set_contains(sym_dynamic_variable_character_set_1, 679, lookahead)) ADVANCE(100);
+          lookahead == '_') ADVANCE(75);
+      if (set_contains(sym_dynamic_variable_character_set_1, 679, lookahead)) ADVANCE(75);
       END_STATE();
-    case 100:
-      if (lookahead == '|') ADVANCE(555);
-      if (set_contains(aux_sym_slot_accessor_token1_character_set_3, 774, lookahead)) ADVANCE(100);
+    case 75:
+      if (lookahead == '|') ADVANCE(536);
+      if (set_contains(aux_sym_slot_accessor_token1_character_set_3, 774, lookahead)) ADVANCE(75);
       END_STATE();
-    case 101:
-      if (lookahead == '|') ADVANCE(552);
+    case 76:
+      if (lookahead == '|') ADVANCE(533);
       if (set_contains(sym_number_character_set_1, 144, lookahead) ||
           lookahead == '!' ||
           lookahead == '?' ||
-          lookahead == '_') ADVANCE(102);
-      if (set_contains(sym_dynamic_variable_character_set_1, 679, lookahead)) ADVANCE(102);
+          lookahead == '_') ADVANCE(77);
+      if (set_contains(sym_dynamic_variable_character_set_1, 679, lookahead)) ADVANCE(77);
       END_STATE();
-    case 102:
-      if (lookahead == '|') ADVANCE(552);
-      if (set_contains(aux_sym_slot_accessor_token1_character_set_3, 774, lookahead)) ADVANCE(102);
+    case 77:
+      if (lookahead == '|') ADVANCE(533);
+      if (set_contains(aux_sym_slot_accessor_token1_character_set_3, 774, lookahead)) ADVANCE(77);
       END_STATE();
-    case 103:
-      if (lookahead == '|') ADVANCE(558);
+    case 78:
+      if (lookahead == '|') ADVANCE(539);
       if (set_contains(sym_number_character_set_1, 144, lookahead) ||
           lookahead == '!' ||
           lookahead == '?' ||
-          lookahead == '_') ADVANCE(104);
-      if (set_contains(sym_dynamic_variable_character_set_1, 679, lookahead)) ADVANCE(104);
+          lookahead == '_') ADVANCE(79);
+      if (set_contains(sym_dynamic_variable_character_set_1, 679, lookahead)) ADVANCE(79);
       END_STATE();
-    case 104:
-      if (lookahead == '|') ADVANCE(558);
-      if (set_contains(aux_sym_slot_accessor_token1_character_set_3, 774, lookahead)) ADVANCE(104);
+    case 79:
+      if (lookahead == '|') ADVANCE(539);
+      if (set_contains(aux_sym_slot_accessor_token1_character_set_3, 774, lookahead)) ADVANCE(79);
       END_STATE();
-    case 105:
-      if (lookahead == '|') ADVANCE(515);
-      if (set_contains(aux_sym_slot_accessor_token1_character_set_3, 774, lookahead)) ADVANCE(105);
+    case 80:
+      if (lookahead == '|') ADVANCE(496);
+      if (set_contains(aux_sym_slot_accessor_token1_character_set_3, 774, lookahead)) ADVANCE(80);
       END_STATE();
-    case 106:
-      if (lookahead == '|') ADVANCE(99);
-      if (set_contains(aux_sym_slot_accessor_token1_character_set_1, 678, lookahead)) ADVANCE(556);
+    case 81:
+      if (lookahead == '|') ADVANCE(74);
+      if (set_contains(aux_sym_slot_accessor_token1_character_set_1, 678, lookahead)) ADVANCE(537);
       END_STATE();
-    case 107:
-      if (lookahead == '|') ADVANCE(563);
-      if (set_contains(aux_sym_slot_accessor_token1_character_set_3, 774, lookahead)) ADVANCE(107);
+    case 82:
+      if (lookahead == '|') ADVANCE(544);
+      if (set_contains(aux_sym_slot_accessor_token1_character_set_3, 774, lookahead)) ADVANCE(82);
       END_STATE();
-    case 108:
-      if (lookahead == '|') ADVANCE(563);
+    case 83:
+      if (lookahead == '|') ADVANCE(544);
       if (set_contains(aux_sym_slot_accessor_token1_character_set_3, 774, lookahead)) ADVANCE(21);
       END_STATE();
-    case 109:
-      if (lookahead == '|') ADVANCE(98);
+    case 84:
+      if (lookahead == '|') ADVANCE(73);
       if (set_contains(aux_sym_slot_accessor_token1_character_set_3, 774, lookahead)) ADVANCE(10);
       END_STATE();
-    case 110:
+    case 85:
       if (lookahead == '+' ||
-          lookahead == '-') ADVANCE(417);
-      if (set_contains(sym_number_character_set_4, 146, lookahead)) ADVANCE(547);
+          lookahead == '-') ADVANCE(398);
+      if (set_contains(sym_number_character_set_4, 146, lookahead)) ADVANCE(528);
       END_STATE();
-    case 111:
-      if (lookahead == 'A' ||
-          lookahead == 'a') ADVANCE(410);
-      END_STATE();
-    case 112:
-      if (lookahead == 'A' ||
-          lookahead == 'a') ADVANCE(410);
-      if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(371);
-      END_STATE();
-    case 113:
-      if (lookahead == 'A' ||
-          lookahead == 'a') ADVANCE(410);
-      if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(371);
-      if (lookahead == 'O' ||
-          lookahead == 'o') ADVANCE(178);
-      END_STATE();
-    case 114:
-      if (lookahead == 'A' ||
-          lookahead == 'a') ADVANCE(410);
-      if (lookahead == 'O' ||
-          lookahead == 'o') ADVANCE(178);
-      END_STATE();
-    case 115:
-      if (lookahead == 'A' ||
-          lookahead == 'a') ADVANCE(156);
-      if (lookahead == 'R' ||
-          lookahead == 'r') ADVANCE(117);
-      END_STATE();
-    case 116:
-      if (lookahead == 'A' ||
-          lookahead == 'a') ADVANCE(156);
-      if (lookahead == 'R' ||
-          lookahead == 'r') ADVANCE(118);
-      END_STATE();
-    case 117:
-      if (lookahead == 'A' ||
-          lookahead == 'a') ADVANCE(233);
-      if (lookahead == 'I' ||
-          lookahead == 'i') ADVANCE(287);
-      if (lookahead == 'O' ||
-          lookahead == 'o') ADVANCE(157);
-      END_STATE();
-    case 118:
-      if (lookahead == 'A' ||
-          lookahead == 'a') ADVANCE(233);
-      if (lookahead == 'I' ||
-          lookahead == 'i') ADVANCE(287);
-      if (lookahead == 'O' ||
-          lookahead == 'o') ADVANCE(158);
-      END_STATE();
-    case 119:
-      if (lookahead == 'A' ||
-          lookahead == 'a') ADVANCE(288);
-      END_STATE();
-    case 120:
-      if (lookahead == 'A' ||
-          lookahead == 'a') ADVANCE(499);
-      END_STATE();
-    case 121:
+    case 86:
       ADVANCE_MAP(
-        'A', 149,
-        'a', 149,
-        'B', 275,
-        'b', 275,
-        'C', 130,
-        'c', 130,
-        'D', 414,
-        'd', 414,
-        'E', 305,
-        'e', 305,
-        'F', 126,
-        'f', 126,
-        'G', 146,
-        'g', 146,
-        'H', 131,
-        'h', 131,
-        'I', 223,
-        'i', 223,
-        'L', 200,
-        'l', 200,
-        'M', 112,
-        'm', 112,
-        'N', 318,
-        'n', 318,
-        'O', 406,
-        'o', 406,
-        'P', 350,
-        'p', 350,
-        'R', 204,
-        'r', 204,
-        'S', 164,
-        's', 164,
-        'T', 240,
-        't', 240,
-        'U', 297,
-        'u', 297,
-        'W', 242,
-        'w', 242,
+        'A', 131,
+        'a', 131,
+        'B', 256,
+        'b', 256,
+        'C', 88,
+        'c', 88,
+        'D', 168,
+        'd', 168,
+        'E', 250,
+        'e', 250,
+        'F', 109,
+        'f', 109,
+        'G', 105,
+        'g', 105,
+        'H', 112,
+        'h', 112,
+        'I', 203,
+        'i', 203,
+        'L', 180,
+        'l', 180,
+        'M', 93,
+        'm', 93,
+        'N', 299,
+        'n', 299,
+        'O', 317,
+        'o', 317,
+        'P', 95,
+        'p', 95,
+        'R', 189,
+        'r', 189,
+        'S', 145,
+        's', 145,
+        'T', 216,
+        't', 216,
+        'U', 278,
+        'u', 278,
+        'W', 217,
+        'w', 217,
+        'X', 294,
+        'x', 294,
       );
       END_STATE();
-    case 122:
-      if (lookahead == 'A' ||
-          lookahead == 'a') ADVANCE(407);
-      END_STATE();
-    case 123:
-      if (lookahead == 'A' ||
-          lookahead == 'a') ADVANCE(234);
-      END_STATE();
-    case 124:
-      if (lookahead == 'A' ||
-          lookahead == 'a') ADVANCE(401);
-      END_STATE();
-    case 125:
-      if (lookahead == 'A' ||
-          lookahead == 'a') ADVANCE(278);
-      if (lookahead == 'I' ||
-          lookahead == 'i') ADVANCE(303);
-      if (lookahead == 'O' ||
-          lookahead == 'o') ADVANCE(342);
-      END_STATE();
-    case 126:
-      if (lookahead == 'A' ||
-          lookahead == 'a') ADVANCE(278);
-      if (lookahead == 'O' ||
-          lookahead == 'o') ADVANCE(342);
-      END_STATE();
-    case 127:
-      if (lookahead == 'A' ||
-          lookahead == 'a') ADVANCE(363);
-      if (lookahead == 'O' ||
-          lookahead == 'o') ADVANCE(304);
-      END_STATE();
-    case 128:
+    case 87:
       ADVANCE_MAP(
-        'A', 384,
-        'a', 384,
-        'F', 570,
-        'f', 570,
-        'L', 127,
-        'l', 127,
-        'O', 292,
-        'o', 292,
+        'A', 131,
+        'a', 131,
+        'B', 256,
+        'b', 256,
+        'C', 88,
+        'c', 88,
+        'D', 168,
+        'd', 168,
+        'E', 250,
+        'e', 250,
+        'F', 109,
+        'f', 109,
+        'G', 105,
+        'g', 105,
+        'H', 112,
+        'h', 112,
+        'I', 203,
+        'i', 203,
+        'L', 181,
+        'l', 181,
+        'M', 93,
+        'm', 93,
+        'N', 299,
+        'n', 299,
+        'O', 317,
+        'o', 317,
+        'P', 96,
+        'p', 96,
+        'R', 189,
+        'r', 189,
+        'S', 145,
+        's', 145,
+        'T', 216,
+        't', 216,
+        'U', 278,
+        'u', 278,
+        'W', 217,
+        'w', 217,
+        'X', 294,
+        'x', 294,
       );
       END_STATE();
-    case 129:
+    case 88:
       ADVANCE_MAP(
-        'A', 384,
-        'a', 384,
-        'F', 570,
-        'f', 570,
-        'L', 127,
-        'l', 127,
-        'O', 308,
-        'o', 308,
+        'A', 365,
+        'a', 365,
+        'F', 551,
+        'f', 551,
+        'L', 111,
+        'l', 111,
+        'O', 273,
+        'o', 273,
       );
       END_STATE();
-    case 130:
-      if (lookahead == 'A' ||
-          lookahead == 'a') ADVANCE(384);
-      if (lookahead == 'L' ||
-          lookahead == 'l') ADVANCE(127);
-      if (lookahead == 'O' ||
-          lookahead == 'o') ADVANCE(292);
-      END_STATE();
-    case 131:
-      if (lookahead == 'A' ||
-          lookahead == 'a') ADVANCE(300);
-      END_STATE();
-    case 132:
-      if (lookahead == 'A' ||
-          lookahead == 'a') ADVANCE(280);
-      END_STATE();
-    case 133:
-      if (lookahead == 'A' ||
-          lookahead == 'a') ADVANCE(270);
-      END_STATE();
-    case 134:
-      if (lookahead == 'A' ||
-          lookahead == 'a') ADVANCE(270);
-      if (lookahead == 'K' ||
-          lookahead == 'k') ADVANCE(497);
-      END_STATE();
-    case 135:
-      if (lookahead == 'A' ||
-          lookahead == 'a') ADVANCE(270);
-      if (lookahead == 'K' ||
-          lookahead == 'k') ADVANCE(496);
-      END_STATE();
-    case 136:
-      if (lookahead == 'A' ||
-          lookahead == 'a') ADVANCE(182);
-      END_STATE();
-    case 137:
-      if (lookahead == 'A' ||
-          lookahead == 'a') ADVANCE(392);
-      END_STATE();
-    case 138:
-      if (lookahead == 'A' ||
-          lookahead == 'a') ADVANCE(271);
-      END_STATE();
-    case 139:
-      if (lookahead == 'A' ||
-          lookahead == 'a') ADVANCE(307);
-      END_STATE();
-    case 140:
-      if (lookahead == 'A' ||
-          lookahead == 'a') ADVANCE(272);
-      END_STATE();
-    case 141:
+    case 89:
       ADVANCE_MAP(
-        'A', 273,
-        'a', 273,
-        'B', 275,
-        'b', 275,
-        'C', 130,
-        'c', 130,
-        'D', 414,
-        'd', 414,
-        'E', 306,
-        'e', 306,
-        'F', 125,
-        'f', 125,
-        'G', 146,
-        'g', 146,
-        'H', 131,
-        'h', 131,
-        'I', 223,
-        'i', 223,
-        'L', 200,
-        'l', 200,
-        'M', 111,
-        'm', 111,
-        'N', 318,
-        'n', 318,
-        'O', 406,
-        'o', 406,
-        'P', 348,
-        'p', 348,
-        'R', 204,
-        'r', 204,
-        'S', 164,
-        's', 164,
-        'T', 240,
-        't', 240,
-        'U', 297,
-        'u', 297,
-        'W', 242,
-        'w', 242,
+        'A', 365,
+        'a', 365,
+        'F', 551,
+        'f', 551,
+        'L', 111,
+        'l', 111,
+        'O', 289,
+        'o', 289,
       );
       END_STATE();
-    case 142:
-      ADVANCE_MAP(
-        'A', 273,
-        'a', 273,
-        'B', 275,
-        'b', 275,
-        'C', 130,
-        'c', 130,
-        'D', 414,
-        'd', 414,
-        'F', 126,
-        'f', 126,
-        'G', 146,
-        'g', 146,
-        'H', 131,
-        'h', 131,
-        'I', 223,
-        'i', 223,
-        'L', 199,
-        'l', 199,
-        'M', 111,
-        'm', 111,
-        'N', 318,
-        'n', 318,
-        'O', 406,
-        'o', 406,
-        'P', 359,
-        'p', 359,
-        'R', 204,
-        'r', 204,
-        'S', 164,
-        's', 164,
-        'T', 240,
-        't', 240,
-        'U', 297,
-        'u', 297,
-        'W', 242,
-        'w', 242,
-      );
-      END_STATE();
-    case 143:
-      ADVANCE_MAP(
-        'A', 273,
-        'a', 273,
-        'B', 275,
-        'b', 275,
-        'C', 130,
-        'c', 130,
-        'D', 414,
-        'd', 414,
-        'F', 126,
-        'f', 126,
-        'G', 146,
-        'g', 146,
-        'H', 131,
-        'h', 131,
-        'I', 223,
-        'i', 223,
-        'L', 200,
-        'l', 200,
-        'M', 111,
-        'm', 111,
-        'N', 318,
-        'n', 318,
-        'O', 406,
-        'o', 406,
-        'P', 359,
-        'p', 359,
-        'R', 204,
-        'r', 204,
-        'S', 164,
-        's', 164,
-        'T', 240,
-        't', 240,
-        'U', 297,
-        'u', 297,
-        'W', 242,
-        'w', 242,
-      );
-      END_STATE();
-    case 144:
+    case 90:
       if (lookahead == 'A' ||
-          lookahead == 'a') ADVANCE(393);
+          lookahead == 'a') ADVANCE(365);
+      if (lookahead == 'L' ||
+          lookahead == 'l') ADVANCE(111);
+      if (lookahead == 'O' ||
+          lookahead == 'o') ADVANCE(273);
       END_STATE();
-    case 145:
+    case 91:
       if (lookahead == 'A' ||
-          lookahead == 'a') ADVANCE(385);
+          lookahead == 'a') ADVANCE(394);
       END_STATE();
-    case 146:
+    case 92:
       if (lookahead == 'A' ||
-          lookahead == 'a') ADVANCE(385);
-      if (lookahead == 'L' ||
-          lookahead == 'l') ADVANCE(315);
+          lookahead == 'a') ADVANCE(394);
+      if (lookahead == 'E' ||
+          lookahead == 'e') ADVANCE(366);
       END_STATE();
-    case 147:
+    case 93:
       if (lookahead == 'A' ||
-          lookahead == 'a') ADVANCE(398);
-      END_STATE();
-    case 148:
-      if (lookahead == 'A' ||
-          lookahead == 'a') ADVANCE(171);
-      END_STATE();
-    case 149:
-      if (lookahead == 'B' ||
-          lookahead == 'b') ADVANCE(364);
-      if (lookahead == 'L' ||
-          lookahead == 'l') ADVANCE(277);
-      END_STATE();
-    case 150:
-      if (lookahead == 'B' ||
-          lookahead == 'b') ADVANCE(364);
-      if (lookahead == 'L' ||
-          lookahead == 'l') ADVANCE(277);
-      if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(177);
-      END_STATE();
-    case 151:
-      if (lookahead == 'B' ||
-          lookahead == 'b') ADVANCE(190);
-      END_STATE();
-    case 152:
-      if (lookahead == 'B' ||
-          lookahead == 'b') ADVANCE(138);
-      END_STATE();
-    case 153:
-      ADVANCE_MAP(
-        'B', 285,
-        'b', 285,
-        'C', 147,
-        'c', 147,
-        'I', 229,
-        'i', 229,
-        'L', 314,
-        'l', 314,
-        'M', 219,
-        'm', 219,
-        'P', 352,
-        'p', 352,
-        'T', 349,
-        't', 349,
-      );
-      END_STATE();
-    case 154:
-      if (lookahead == 'B' ||
-          lookahead == 'b') ADVANCE(285);
-      if (lookahead == 'L' ||
-          lookahead == 'l') ADVANCE(326);
-      END_STATE();
-    case 155:
-      if (lookahead == 'C' ||
-          lookahead == 'c') ADVANCE(134);
-      if (lookahead == 'O' ||
-          lookahead == 'o') ADVANCE(332);
-      END_STATE();
-    case 156:
-      if (lookahead == 'C' ||
-          lookahead == 'c') ADVANCE(268);
-      END_STATE();
-    case 157:
-      if (lookahead == 'C' ||
-          lookahead == 'c') ADVANCE(443);
-      if (lookahead == 'T' ||
-          lookahead == 't') ADVANCE(202);
-      END_STATE();
-    case 158:
-      if (lookahead == 'C' ||
-          lookahead == 'c') ADVANCE(443);
-      if (lookahead == 'T' ||
-          lookahead == 't') ADVANCE(218);
-      END_STATE();
-    case 159:
-      if (lookahead == 'C' ||
-          lookahead == 'c') ADVANCE(531);
-      END_STATE();
-    case 160:
-      if (lookahead == 'C' ||
-          lookahead == 'c') ADVANCE(444);
-      END_STATE();
-    case 161:
-      if (lookahead == 'C' ||
-          lookahead == 'c') ADVANCE(444);
-      if (lookahead == 'T' ||
-          lookahead == 't') ADVANCE(217);
-      END_STATE();
-    case 162:
-      if (lookahead == 'C' ||
-          lookahead == 'c') ADVANCE(135);
-      if (lookahead == 'O' ||
-          lookahead == 'o') ADVANCE(332);
-      END_STATE();
-    case 163:
-      if (lookahead == 'C' ||
-          lookahead == 'c') ADVANCE(264);
-      END_STATE();
-    case 164:
-      if (lookahead == 'C' ||
-          lookahead == 'c') ADVANCE(137);
+          lookahead == 'a') ADVANCE(394);
       if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(279);
-      if (lookahead == 'U' ||
-          lookahead == 'u') ADVANCE(338);
-      END_STATE();
-    case 165:
-      if (lookahead == 'C' ||
-          lookahead == 'c') ADVANCE(265);
-      if (lookahead == 'O' ||
-          lookahead == 'o') ADVANCE(333);
-      END_STATE();
-    case 166:
-      if (lookahead == 'C' ||
-          lookahead == 'c') ADVANCE(238);
-      END_STATE();
-    case 167:
-      if (lookahead == 'C' ||
-          lookahead == 'c') ADVANCE(266);
-      END_STATE();
-    case 168:
-      if (lookahead == 'C' ||
-          lookahead == 'c') ADVANCE(267);
-      if (lookahead == 'O' ||
-          lookahead == 'o') ADVANCE(332);
-      END_STATE();
-    case 169:
-      if (lookahead == 'C' ||
-          lookahead == 'c') ADVANCE(239);
-      END_STATE();
-    case 170:
-      if (lookahead == 'C' ||
-          lookahead == 'c') ADVANCE(379);
-      END_STATE();
-    case 171:
-      if (lookahead == 'C' ||
-          lookahead == 'c') ADVANCE(380);
-      END_STATE();
-    case 172:
-      if (lookahead == 'C' ||
-          lookahead == 'c') ADVANCE(328);
-      END_STATE();
-    case 173:
-      if (lookahead == 'C' ||
-          lookahead == 'c') ADVANCE(382);
-      END_STATE();
-    case 174:
-      if (lookahead == 'C' ||
-          lookahead == 'c') ADVANCE(383);
-      END_STATE();
-    case 175:
-      if (lookahead == 'C' ||
-          lookahead == 'c') ADVANCE(397);
-      END_STATE();
-    case 176:
-      if (lookahead == 'C' ||
-          lookahead == 'c') ADVANCE(133);
-      if (lookahead == 'O' ||
-          lookahead == 'o') ADVANCE(334);
-      END_STATE();
-    case 177:
-      if (lookahead == 'D' ||
-          lookahead == 'd') ADVANCE(580);
-      END_STATE();
-    case 178:
-      if (lookahead == 'D' ||
-          lookahead == 'd') ADVANCE(593);
-      END_STATE();
-    case 179:
-      if (lookahead == 'D' ||
-          lookahead == 'd') ADVANCE(153);
-      END_STATE();
-    case 180:
-      if (lookahead == 'D' ||
-          lookahead == 'd') ADVANCE(431);
-      END_STATE();
-    case 181:
-      if (lookahead == 'D' ||
-          lookahead == 'd') ADVANCE(442);
-      END_STATE();
-    case 182:
-      if (lookahead == 'D' ||
-          lookahead == 'd') ADVANCE(524);
-      END_STATE();
-    case 183:
-      if (lookahead == 'D' ||
-          lookahead == 'd') ADVANCE(290);
-      END_STATE();
-    case 184:
-      if (lookahead == 'D' ||
-          lookahead == 'd') ADVANCE(154);
-      END_STATE();
-    case 185:
-      if (lookahead == 'D' ||
-          lookahead == 'd') ADVANCE(413);
-      END_STATE();
-    case 186:
-      if (lookahead == 'D' ||
-          lookahead == 'd') ADVANCE(284);
-      END_STATE();
-    case 187:
-      if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(230);
-      if (lookahead == 'I' ||
-          lookahead == 'i') ADVANCE(405);
-      if (lookahead == 'Y' ||
-          lookahead == 'y') ADVANCE(302);
-      END_STATE();
-    case 188:
-      if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(470);
-      END_STATE();
-    case 189:
-      if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(517);
-      END_STATE();
-    case 190:
-      if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(519);
-      END_STATE();
-    case 191:
-      if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(523);
-      END_STATE();
-    case 192:
-      if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(518);
-      END_STATE();
-    case 193:
-      if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(489);
-      END_STATE();
-    case 194:
-      if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(484);
-      END_STATE();
-    case 195:
-      if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(426);
-      END_STATE();
-    case 196:
-      if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(429);
-      END_STATE();
-    case 197:
-      if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(490);
-      END_STATE();
-    case 198:
-      if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(481);
-      END_STATE();
-    case 199:
-      if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(122);
-      if (lookahead == 'O' ||
-          lookahead == 'o') ADVANCE(155);
-      END_STATE();
-    case 200:
-      if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(122);
-      if (lookahead == 'O' ||
-          lookahead == 'o') ADVANCE(162);
-      END_STATE();
-    case 201:
-      if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(122);
-      if (lookahead == 'O' ||
-          lookahead == 'o') ADVANCE(168);
-      END_STATE();
-    case 202:
-      if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(170);
-      END_STATE();
-    case 203:
-      if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(343);
-      END_STATE();
-    case 204:
-      if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(374);
-      END_STATE();
-    case 205:
-      if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(344);
-      END_STATE();
-    case 206:
-      if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(293);
-      END_STATE();
-    case 207:
-      if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(293);
-      if (lookahead == 'I' ||
-          lookahead == 'i') ADVANCE(369);
-      if (lookahead == 'R' ||
-          lookahead == 'r') ADVANCE(312);
-      END_STATE();
-    case 208:
-      if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(370);
-      END_STATE();
-    case 209:
-      if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(175);
-      END_STATE();
-    case 210:
-      if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(294);
-      END_STATE();
-    case 211:
-      if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(294);
-      if (lookahead == 'I' ||
-          lookahead == 'i') ADVANCE(281);
-      END_STATE();
-    case 212:
-      if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(136);
-      END_STATE();
-    case 213:
-      if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(376);
-      END_STATE();
-    case 214:
-      if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(345);
-      END_STATE();
-    case 215:
-      if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(346);
-      END_STATE();
-    case 216:
-      if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(347);
-      END_STATE();
-    case 217:
-      if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(173);
-      END_STATE();
-    case 218:
-      if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(174);
-      END_STATE();
-    case 219:
-      if (lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(396);
-      END_STATE();
-    case 220:
-      if (lookahead == 'F' ||
-          lookahead == 'f') ADVANCE(570);
-      END_STATE();
-    case 221:
-      if (lookahead == 'F' ||
-          lookahead == 'f') ADVANCE(570);
-      if (lookahead == 'O' ||
-          lookahead == 'o') ADVANCE(310);
-      END_STATE();
-    case 222:
-      ADVANCE_MAP(
-        'F', 466,
-        'f', 466,
-        'M', 337,
-        'm', 337,
-        'S', 568,
-        's', 568,
-        'T', 205,
-        't', 205,
-      );
-      END_STATE();
-    case 223:
-      if (lookahead == 'F' ||
-          lookahead == 'f') ADVANCE(466);
-      if (lookahead == 'M' ||
-          lookahead == 'm') ADVANCE(337);
-      if (lookahead == 'T' ||
-          lookahead == 't') ADVANCE(205);
-      END_STATE();
-    case 224:
-      if (lookahead == 'F' ||
-          lookahead == 'f') ADVANCE(466);
-      if (lookahead == 'S' ||
-          lookahead == 's') ADVANCE(568);
-      if (lookahead == 'T' ||
-          lookahead == 't') ADVANCE(205);
-      END_STATE();
-    case 225:
-      if (lookahead == 'F' ||
-          lookahead == 'f') ADVANCE(587);
-      END_STATE();
-    case 226:
-      if (lookahead == 'F' ||
-          lookahead == 'f') ADVANCE(469);
-      END_STATE();
-    case 227:
-      if (lookahead == 'F' ||
-          lookahead == 'f') ADVANCE(522);
-      END_STATE();
-    case 228:
-      if (lookahead == 'F' ||
-          lookahead == 'f') ADVANCE(585);
-      END_STATE();
-    case 229:
-      if (lookahead == 'F' ||
-          lookahead == 'f') ADVANCE(468);
-      END_STATE();
-    case 230:
-      if (lookahead == 'F' ||
-          lookahead == 'f') ADVANCE(124);
-      END_STATE();
-    case 231:
-      if (lookahead == 'G' ||
-          lookahead == 'g') ADVANCE(493);
-      END_STATE();
-    case 232:
-      if (lookahead == 'G' ||
-          lookahead == 'g') ADVANCE(476);
-      END_STATE();
-    case 233:
-      if (lookahead == 'G' ||
-          lookahead == 'g') ADVANCE(289);
-      END_STATE();
-    case 234:
-      if (lookahead == 'G' ||
-          lookahead == 'g') ADVANCE(195);
-      END_STATE();
-    case 235:
-      if (lookahead == 'H' ||
-          lookahead == 'h') ADVANCE(207);
-      if (lookahead == 'R' ||
-          lookahead == 'r') ADVANCE(400);
-      END_STATE();
-    case 236:
-      if (lookahead == 'H' ||
-          lookahead == 'h') ADVANCE(211);
-      if (lookahead == 'I' ||
-          lookahead == 'i') ADVANCE(387);
-      END_STATE();
-    case 237:
-      if (lookahead == 'H' ||
-          lookahead == 'h') ADVANCE(475);
-      END_STATE();
-    case 238:
-      if (lookahead == 'H' ||
-          lookahead == 'h') ADVANCE(478);
-      END_STATE();
-    case 239:
-      if (lookahead == 'H' ||
-          lookahead == 'h') ADVANCE(479);
-      END_STATE();
-    case 240:
-      if (lookahead == 'H' ||
-          lookahead == 'h') ADVANCE(258);
-      if (lookahead == 'R' ||
-          lookahead == 'r') ADVANCE(400);
-      END_STATE();
-    case 241:
-      if (lookahead == 'H' ||
-          lookahead == 'h') ADVANCE(320);
-      END_STATE();
-    case 242:
-      if (lookahead == 'H' ||
-          lookahead == 'h') ADVANCE(252);
-      END_STATE();
-    case 243:
-      if (lookahead == 'H' ||
-          lookahead == 'h') ADVANCE(323);
-      END_STATE();
-    case 244:
-      if (lookahead == 'H' ||
-          lookahead == 'h') ADVANCE(210);
-      if (lookahead == 'I' ||
-          lookahead == 'i') ADVANCE(387);
-      END_STATE();
-    case 245:
-      if (lookahead == 'H' ||
-          lookahead == 'h') ADVANCE(206);
-      END_STATE();
-    case 246:
-      if (lookahead == 'H' ||
-          lookahead == 'h') ADVANCE(357);
-      END_STATE();
-    case 247:
-      if (lookahead == 'H' ||
-          lookahead == 'h') ADVANCE(215);
-      END_STATE();
-    case 248:
-      if (lookahead == 'I' ||
-          lookahead == 'i') ADVANCE(405);
-      END_STATE();
-    case 249:
-      if (lookahead == 'I' ||
-          lookahead == 'i') ADVANCE(287);
-      if (lookahead == 'O' ||
-          lookahead == 'o') ADVANCE(158);
-      END_STATE();
-    case 250:
-      if (lookahead == 'I' ||
-          lookahead == 'i') ADVANCE(226);
-      if (lookahead == 'S' ||
-          lookahead == 's') ADVANCE(188);
-      END_STATE();
-    case 251:
-      if (lookahead == 'I' ||
-          lookahead == 'i') ADVANCE(159);
-      END_STATE();
-    case 252:
-      if (lookahead == 'I' ||
-          lookahead == 'i') ADVANCE(281);
-      END_STATE();
-    case 253:
-      if (lookahead == 'I' ||
-          lookahead == 'i') ADVANCE(331);
-      END_STATE();
-    case 254:
-      if (lookahead == 'I' ||
-          lookahead == 'i') ADVANCE(299);
-      END_STATE();
-    case 255:
-      if (lookahead == 'I' ||
-          lookahead == 'i') ADVANCE(325);
-      END_STATE();
-    case 256:
-      if (lookahead == 'I' ||
-          lookahead == 'i') ADVANCE(301);
-      END_STATE();
-    case 257:
-      if (lookahead == 'I' ||
-          lookahead == 'i') ADVANCE(389);
-      END_STATE();
-    case 258:
-      if (lookahead == 'I' ||
-          lookahead == 'i') ADVANCE(369);
-      if (lookahead == 'R' ||
-          lookahead == 'r') ADVANCE(312);
-      END_STATE();
-    case 259:
-      if (lookahead == 'I' ||
-          lookahead == 'i') ADVANCE(286);
-      if (lookahead == 'O' ||
-          lookahead == 'o') ADVANCE(157);
-      END_STATE();
-    case 260:
-      if (lookahead == 'I' ||
-          lookahead == 'i') ADVANCE(286);
-      if (lookahead == 'O' ||
-          lookahead == 'o') ADVANCE(158);
-      END_STATE();
-    case 261:
-      if (lookahead == 'I' ||
-          lookahead == 'i') ADVANCE(303);
-      END_STATE();
-    case 262:
-      if (lookahead == 'I' ||
-          lookahead == 'i') ADVANCE(408);
-      END_STATE();
-    case 263:
-      if (lookahead == 'I' ||
-          lookahead == 'i') ADVANCE(387);
-      END_STATE();
-    case 264:
-      if (lookahead == 'K' ||
-          lookahead == 'k') ADVANCE(445);
-      END_STATE();
-    case 265:
-      if (lookahead == 'K' ||
-          lookahead == 'k') ADVANCE(498);
-      END_STATE();
-    case 266:
-      if (lookahead == 'K' ||
-          lookahead == 'k') ADVANCE(446);
-      END_STATE();
-    case 267:
-      if (lookahead == 'K' ||
-          lookahead == 'k') ADVANCE(496);
-      END_STATE();
-    case 268:
-      if (lookahead == 'K' ||
-          lookahead == 'k') ADVANCE(123);
-      END_STATE();
-    case 269:
-      if (lookahead == 'L' ||
-          lookahead == 'l') ADVANCE(250);
-      if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(179);
-      END_STATE();
-    case 270:
-      if (lookahead == 'L' ||
-          lookahead == 'l') ADVANCE(529);
-      END_STATE();
-    case 271:
-      if (lookahead == 'L' ||
-          lookahead == 'l') ADVANCE(528);
-      END_STATE();
-    case 272:
-      if (lookahead == 'L' ||
-          lookahead == 'l') ADVANCE(435);
-      END_STATE();
-    case 273:
-      if (lookahead == 'L' ||
-          lookahead == 'l') ADVANCE(277);
-      END_STATE();
-    case 274:
-      if (lookahead == 'L' ||
-          lookahead == 'l') ADVANCE(277);
-      if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(177);
-      END_STATE();
-    case 275:
-      if (lookahead == 'L' ||
-          lookahead == 'l') ADVANCE(329);
-      END_STATE();
-    case 276:
-      if (lookahead == 'L' ||
-          lookahead == 'l') ADVANCE(412);
-      END_STATE();
-    case 277:
-      if (lookahead == 'L' ||
-          lookahead == 'l') ADVANCE(351);
-      END_STATE();
-    case 278:
-      if (lookahead == 'L' ||
-          lookahead == 'l') ADVANCE(365);
-      END_STATE();
-    case 279:
-      if (lookahead == 'L' ||
-          lookahead == 'l') ADVANCE(227);
-      END_STATE();
-    case 280:
-      if (lookahead == 'L' ||
-          lookahead == 'l') ADVANCE(276);
-      END_STATE();
-    case 281:
-      if (lookahead == 'L' ||
-          lookahead == 'l') ADVANCE(194);
-      END_STATE();
-    case 282:
-      if (lookahead == 'L' ||
-          lookahead == 'l') ADVANCE(378);
-      END_STATE();
-    case 283:
-      if (lookahead == 'L' ||
-          lookahead == 'l') ADVANCE(391);
-      END_STATE();
-    case 284:
-      if (lookahead == 'L' ||
-          lookahead == 'l') ADVANCE(256);
-      END_STATE();
-    case 285:
-      if (lookahead == 'L' ||
-          lookahead == 'l') ADVANCE(330);
-      END_STATE();
-    case 286:
-      if (lookahead == 'M' ||
-          lookahead == 'm') ADVANCE(257);
-      END_STATE();
-    case 287:
-      if (lookahead == 'M' ||
-          lookahead == 'm') ADVANCE(257);
-      if (lookahead == 'V' ||
-          lookahead == 'v') ADVANCE(144);
-      END_STATE();
-    case 288:
-      if (lookahead == 'M' ||
-          lookahead == 'm') ADVANCE(251);
-      END_STATE();
-    case 289:
-      if (lookahead == 'M' ||
-          lookahead == 'm') ADVANCE(120);
-      END_STATE();
-    case 290:
-      if (lookahead == 'M' ||
-          lookahead == 'm') ADVANCE(219);
-      if (lookahead == 'P' ||
-          lookahead == 'p') ADVANCE(356);
-      END_STATE();
-    case 291:
-      if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(177);
-      END_STATE();
-    case 292:
-      if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(367);
-      END_STATE();
-    case 293:
-      if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(467);
-      END_STATE();
-    case 294:
-      if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(486);
-      END_STATE();
-    case 295:
-      if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(533);
-      END_STATE();
-    case 296:
-      if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(494);
-      END_STATE();
-    case 297:
-      if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(368);
-      END_STATE();
-    case 298:
-      if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(231);
-      END_STATE();
-    case 299:
-      if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(403);
-      END_STATE();
-    case 300:
-      if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(186);
-      END_STATE();
-    case 301:
-      if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(232);
-      END_STATE();
-    case 302:
-      if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(119);
-      END_STATE();
-    case 303:
-      if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(132);
-      END_STATE();
-    case 304:
-      if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(191);
-      END_STATE();
-    case 305:
-      if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(183);
-      END_STATE();
-    case 306:
-      if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(184);
-      END_STATE();
-    case 307:
-      if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(381);
-      END_STATE();
-    case 308:
-      if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(386);
-      END_STATE();
-    case 309:
-      if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(140);
-      END_STATE();
-    case 310:
-      if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(366);
-      END_STATE();
-    case 311:
-      if (lookahead == 'O' ||
-          lookahead == 'o') ADVANCE(341);
-      END_STATE();
-    case 312:
-      if (lookahead == 'O' ||
-          lookahead == 'o') ADVANCE(409);
-      END_STATE();
-    case 313:
-      if (lookahead == 'O' ||
-          lookahead == 'o') ADVANCE(178);
-      END_STATE();
-    case 314:
-      if (lookahead == 'O' ||
-          lookahead == 'o') ADVANCE(165);
-      END_STATE();
-    case 315:
-      if (lookahead == 'O' ||
-          lookahead == 'o') ADVANCE(152);
-      END_STATE();
-    case 316:
-      if (lookahead == 'O' ||
-          lookahead == 'o') ADVANCE(161);
-      END_STATE();
-    case 317:
-      if (lookahead == 'O' ||
-          lookahead == 'o') ADVANCE(176);
-      END_STATE();
-    case 318:
-      if (lookahead == 'O' ||
-          lookahead == 'o') ADVANCE(373);
-      END_STATE();
-    case 319:
-      if (lookahead == 'O' ||
-          lookahead == 'o') ADVANCE(333);
-      END_STATE();
-    case 320:
-      if (lookahead == 'O' ||
-          lookahead == 'o') ADVANCE(180);
-      END_STATE();
-    case 321:
+          lookahead == 'e') ADVANCE(366);
       if (lookahead == 'O' ||
           lookahead == 'o') ADVANCE(160);
       END_STATE();
-    case 322:
+    case 94:
+      if (lookahead == 'A' ||
+          lookahead == 'a') ADVANCE(394);
       if (lookahead == 'O' ||
-          lookahead == 'o') ADVANCE(185);
+          lookahead == 'o') ADVANCE(160);
+      END_STATE();
+    case 95:
+      if (lookahead == 'A' ||
+          lookahead == 'a') ADVANCE(137);
+      if (lookahead == 'R' ||
+          lookahead == 'r') ADVANCE(97);
+      END_STATE();
+    case 96:
+      if (lookahead == 'A' ||
+          lookahead == 'a') ADVANCE(137);
+      if (lookahead == 'R' ||
+          lookahead == 'r') ADVANCE(98);
+      END_STATE();
+    case 97:
+      if (lookahead == 'A' ||
+          lookahead == 'a') ADVANCE(214);
+      if (lookahead == 'I' ||
+          lookahead == 'i') ADVANCE(268);
+      if (lookahead == 'O' ||
+          lookahead == 'o') ADVANCE(138);
+      END_STATE();
+    case 98:
+      if (lookahead == 'A' ||
+          lookahead == 'a') ADVANCE(214);
+      if (lookahead == 'I' ||
+          lookahead == 'i') ADVANCE(268);
+      if (lookahead == 'O' ||
+          lookahead == 'o') ADVANCE(139);
+      END_STATE();
+    case 99:
+      if (lookahead == 'A' ||
+          lookahead == 'a') ADVANCE(269);
+      END_STATE();
+    case 100:
+      if (lookahead == 'A' ||
+          lookahead == 'a') ADVANCE(480);
+      END_STATE();
+    case 101:
+      ADVANCE_MAP(
+        'A', 130,
+        'a', 130,
+        'B', 256,
+        'b', 256,
+        'C', 90,
+        'c', 90,
+        'D', 395,
+        'd', 395,
+        'E', 286,
+        'e', 286,
+        'F', 110,
+        'f', 110,
+        'G', 105,
+        'g', 105,
+        'H', 112,
+        'h', 112,
+        'I', 204,
+        'i', 204,
+        'L', 181,
+        'l', 181,
+        'M', 92,
+        'm', 92,
+        'N', 299,
+        'n', 299,
+        'O', 389,
+        'o', 389,
+        'P', 331,
+        'p', 331,
+        'R', 189,
+        'r', 189,
+        'S', 145,
+        's', 145,
+        'T', 221,
+        't', 221,
+        'U', 278,
+        'u', 278,
+        'W', 223,
+        'w', 223,
+      );
+      END_STATE();
+    case 102:
+      ADVANCE_MAP(
+        'A', 255,
+        'a', 255,
+        'B', 256,
+        'b', 256,
+        'C', 89,
+        'c', 89,
+        'D', 229,
+        'd', 229,
+        'E', 250,
+        'e', 250,
+        'F', 109,
+        'f', 109,
+        'G', 104,
+        'g', 104,
+        'H', 112,
+        'h', 112,
+        'I', 205,
+        'i', 205,
+        'L', 182,
+        'l', 182,
+        'M', 94,
+        'm', 94,
+        'N', 299,
+        'n', 299,
+        'O', 321,
+        'o', 321,
+        'P', 329,
+        'p', 329,
+        'R', 189,
+        'r', 189,
+        'S', 145,
+        's', 145,
+        'T', 221,
+        't', 221,
+        'U', 278,
+        'u', 278,
+        'W', 217,
+        'w', 217,
+        'X', 294,
+        'x', 294,
+      );
+      END_STATE();
+    case 103:
+      ADVANCE_MAP(
+        'A', 255,
+        'a', 255,
+        'B', 256,
+        'b', 256,
+        'C', 89,
+        'c', 89,
+        'D', 229,
+        'd', 229,
+        'E', 250,
+        'e', 250,
+        'F', 109,
+        'f', 109,
+        'G', 104,
+        'g', 104,
+        'H', 112,
+        'h', 112,
+        'I', 205,
+        'i', 205,
+        'L', 182,
+        'l', 182,
+        'M', 94,
+        'm', 94,
+        'N', 299,
+        'n', 299,
+        'O', 321,
+        'o', 321,
+        'P', 340,
+        'p', 340,
+        'R', 189,
+        'r', 189,
+        'S', 145,
+        's', 145,
+        'T', 221,
+        't', 221,
+        'U', 278,
+        'u', 278,
+        'W', 217,
+        'w', 217,
+        'X', 294,
+        'x', 294,
+      );
+      END_STATE();
+    case 104:
+      if (lookahead == 'A' ||
+          lookahead == 'a') ADVANCE(352);
+      END_STATE();
+    case 105:
+      if (lookahead == 'A' ||
+          lookahead == 'a') ADVANCE(352);
+      if (lookahead == 'L' ||
+          lookahead == 'l') ADVANCE(292);
+      END_STATE();
+    case 106:
+      if (lookahead == 'A' ||
+          lookahead == 'a') ADVANCE(387);
+      END_STATE();
+    case 107:
+      if (lookahead == 'A' ||
+          lookahead == 'a') ADVANCE(215);
+      END_STATE();
+    case 108:
+      if (lookahead == 'A' ||
+          lookahead == 'a') ADVANCE(382);
+      END_STATE();
+    case 109:
+      if (lookahead == 'A' ||
+          lookahead == 'a') ADVANCE(259);
+      if (lookahead == 'I' ||
+          lookahead == 'i') ADVANCE(284);
+      if (lookahead == 'O' ||
+          lookahead == 'o') ADVANCE(322);
+      END_STATE();
+    case 110:
+      if (lookahead == 'A' ||
+          lookahead == 'a') ADVANCE(259);
+      if (lookahead == 'O' ||
+          lookahead == 'o') ADVANCE(322);
+      END_STATE();
+    case 111:
+      if (lookahead == 'A' ||
+          lookahead == 'a') ADVANCE(344);
+      if (lookahead == 'O' ||
+          lookahead == 'o') ADVANCE(285);
+      END_STATE();
+    case 112:
+      if (lookahead == 'A' ||
+          lookahead == 'a') ADVANCE(281);
+      END_STATE();
+    case 113:
+      if (lookahead == 'A' ||
+          lookahead == 'a') ADVANCE(261);
+      END_STATE();
+    case 114:
+      if (lookahead == 'A' ||
+          lookahead == 'a') ADVANCE(251);
+      END_STATE();
+    case 115:
+      if (lookahead == 'A' ||
+          lookahead == 'a') ADVANCE(251);
+      if (lookahead == 'K' ||
+          lookahead == 'k') ADVANCE(478);
+      END_STATE();
+    case 116:
+      if (lookahead == 'A' ||
+          lookahead == 'a') ADVANCE(251);
+      if (lookahead == 'K' ||
+          lookahead == 'k') ADVANCE(477);
+      END_STATE();
+    case 117:
+      if (lookahead == 'A' ||
+          lookahead == 'a') ADVANCE(163);
+      END_STATE();
+    case 118:
+      if (lookahead == 'A' ||
+          lookahead == 'a') ADVANCE(373);
+      END_STATE();
+    case 119:
+      if (lookahead == 'A' ||
+          lookahead == 'a') ADVANCE(252);
+      END_STATE();
+    case 120:
+      if (lookahead == 'A' ||
+          lookahead == 'a') ADVANCE(288);
+      END_STATE();
+    case 121:
+      if (lookahead == 'A' ||
+          lookahead == 'a') ADVANCE(253);
+      END_STATE();
+    case 122:
+      ADVANCE_MAP(
+        'A', 254,
+        'a', 254,
+        'B', 256,
+        'b', 256,
+        'C', 90,
+        'c', 90,
+        'D', 395,
+        'd', 395,
+        'E', 287,
+        'e', 287,
+        'F', 109,
+        'f', 109,
+        'G', 105,
+        'g', 105,
+        'H', 112,
+        'h', 112,
+        'I', 204,
+        'i', 204,
+        'L', 181,
+        'l', 181,
+        'M', 91,
+        'm', 91,
+        'N', 299,
+        'n', 299,
+        'O', 389,
+        'o', 389,
+        'P', 329,
+        'p', 329,
+        'R', 189,
+        'r', 189,
+        'S', 145,
+        's', 145,
+        'T', 221,
+        't', 221,
+        'U', 278,
+        'u', 278,
+        'W', 223,
+        'w', 223,
+      );
+      END_STATE();
+    case 123:
+      ADVANCE_MAP(
+        'A', 254,
+        'a', 254,
+        'B', 256,
+        'b', 256,
+        'C', 90,
+        'c', 90,
+        'D', 395,
+        'd', 395,
+        'F', 110,
+        'f', 110,
+        'G', 105,
+        'g', 105,
+        'H', 112,
+        'h', 112,
+        'I', 204,
+        'i', 204,
+        'L', 180,
+        'l', 180,
+        'M', 91,
+        'm', 91,
+        'N', 299,
+        'n', 299,
+        'O', 389,
+        'o', 389,
+        'P', 340,
+        'p', 340,
+        'R', 189,
+        'r', 189,
+        'S', 145,
+        's', 145,
+        'T', 221,
+        't', 221,
+        'U', 278,
+        'u', 278,
+        'W', 223,
+        'w', 223,
+      );
+      END_STATE();
+    case 124:
+      ADVANCE_MAP(
+        'A', 254,
+        'a', 254,
+        'B', 256,
+        'b', 256,
+        'C', 90,
+        'c', 90,
+        'D', 395,
+        'd', 395,
+        'F', 110,
+        'f', 110,
+        'G', 105,
+        'g', 105,
+        'H', 112,
+        'h', 112,
+        'I', 204,
+        'i', 204,
+        'L', 181,
+        'l', 181,
+        'M', 91,
+        'm', 91,
+        'N', 299,
+        'n', 299,
+        'O', 389,
+        'o', 389,
+        'P', 340,
+        'p', 340,
+        'R', 189,
+        'r', 189,
+        'S', 145,
+        's', 145,
+        'T', 221,
+        't', 221,
+        'U', 278,
+        'u', 278,
+        'W', 223,
+        'w', 223,
+      );
+      END_STATE();
+    case 125:
+      ADVANCE_MAP(
+        'A', 272,
+        'a', 272,
+        'C', 202,
+        'c', 202,
+        'D', 229,
+        'd', 229,
+        'G', 104,
+        'g', 104,
+        'I', 341,
+        'i', 341,
+        'L', 298,
+        'l', 298,
+        'M', 297,
+        'm', 297,
+        'O', 316,
+        'o', 316,
+        'T', 226,
+        't', 226,
+        'W', 234,
+        'w', 234,
+        'X', 294,
+        'x', 294,
+      );
+      END_STATE();
+    case 126:
+      ADVANCE_MAP(
+        'A', 272,
+        'a', 272,
+        'C', 201,
+        'c', 201,
+        'D', 229,
+        'd', 229,
+        'E', 250,
+        'e', 250,
+        'F', 244,
+        'f', 244,
+        'I', 341,
+        'i', 341,
+        'M', 297,
+        'm', 297,
+        'O', 320,
+        'o', 320,
+        'P', 339,
+        'p', 339,
+        'W', 225,
+        'w', 225,
+        'X', 294,
+        'x', 294,
+      );
+      END_STATE();
+    case 127:
+      if (lookahead == 'A' ||
+          lookahead == 'a') ADVANCE(374);
+      END_STATE();
+    case 128:
+      if (lookahead == 'A' ||
+          lookahead == 'a') ADVANCE(154);
+      END_STATE();
+    case 129:
+      if (lookahead == 'A' ||
+          lookahead == 'a') ADVANCE(377);
+      END_STATE();
+    case 130:
+      if (lookahead == 'B' ||
+          lookahead == 'b') ADVANCE(346);
+      if (lookahead == 'L' ||
+          lookahead == 'l') ADVANCE(257);
+      END_STATE();
+    case 131:
+      if (lookahead == 'B' ||
+          lookahead == 'b') ADVANCE(346);
+      if (lookahead == 'L' ||
+          lookahead == 'l') ADVANCE(257);
+      if (lookahead == 'N' ||
+          lookahead == 'n') ADVANCE(158);
+      END_STATE();
+    case 132:
+      if (lookahead == 'B' ||
+          lookahead == 'b') ADVANCE(119);
+      END_STATE();
+    case 133:
+      if (lookahead == 'B' ||
+          lookahead == 'b') ADVANCE(174);
+      END_STATE();
+    case 134:
+      ADVANCE_MAP(
+        'B', 266,
+        'b', 266,
+        'C', 129,
+        'c', 129,
+        'I', 210,
+        'i', 210,
+        'L', 295,
+        'l', 295,
+        'M', 197,
+        'm', 197,
+        'P', 333,
+        'p', 333,
+        'T', 330,
+        't', 330,
+      );
+      END_STATE();
+    case 135:
+      if (lookahead == 'B' ||
+          lookahead == 'b') ADVANCE(266);
+      if (lookahead == 'L' ||
+          lookahead == 'l') ADVANCE(307);
+      END_STATE();
+    case 136:
+      if (lookahead == 'C' ||
+          lookahead == 'c') ADVANCE(115);
+      if (lookahead == 'O' ||
+          lookahead == 'o') ADVANCE(313);
+      END_STATE();
+    case 137:
+      if (lookahead == 'C' ||
+          lookahead == 'c') ADVANCE(249);
+      END_STATE();
+    case 138:
+      if (lookahead == 'C' ||
+          lookahead == 'c') ADVANCE(424);
+      if (lookahead == 'T' ||
+          lookahead == 't') ADVANCE(183);
+      END_STATE();
+    case 139:
+      if (lookahead == 'C' ||
+          lookahead == 'c') ADVANCE(424);
+      if (lookahead == 'T' ||
+          lookahead == 't') ADVANCE(199);
+      END_STATE();
+    case 140:
+      if (lookahead == 'C' ||
+          lookahead == 'c') ADVANCE(512);
+      END_STATE();
+    case 141:
+      if (lookahead == 'C' ||
+          lookahead == 'c') ADVANCE(425);
+      END_STATE();
+    case 142:
+      if (lookahead == 'C' ||
+          lookahead == 'c') ADVANCE(425);
+      if (lookahead == 'T' ||
+          lookahead == 't') ADVANCE(198);
+      END_STATE();
+    case 143:
+      if (lookahead == 'C' ||
+          lookahead == 'c') ADVANCE(116);
+      if (lookahead == 'O' ||
+          lookahead == 'o') ADVANCE(313);
+      END_STATE();
+    case 144:
+      if (lookahead == 'C' ||
+          lookahead == 'c') ADVANCE(245);
+      END_STATE();
+    case 145:
+      if (lookahead == 'C' ||
+          lookahead == 'c') ADVANCE(118);
+      if (lookahead == 'E' ||
+          lookahead == 'e') ADVANCE(260);
+      if (lookahead == 'U' ||
+          lookahead == 'u') ADVANCE(319);
+      END_STATE();
+    case 146:
+      if (lookahead == 'C' ||
+          lookahead == 'c') ADVANCE(246);
+      if (lookahead == 'O' ||
+          lookahead == 'o') ADVANCE(314);
+      END_STATE();
+    case 147:
+      if (lookahead == 'C' ||
+          lookahead == 'c') ADVANCE(219);
+      END_STATE();
+    case 148:
+      if (lookahead == 'C' ||
+          lookahead == 'c') ADVANCE(247);
+      END_STATE();
+    case 149:
+      if (lookahead == 'C' ||
+          lookahead == 'c') ADVANCE(248);
+      if (lookahead == 'O' ||
+          lookahead == 'o') ADVANCE(313);
+      END_STATE();
+    case 150:
+      if (lookahead == 'C' ||
+          lookahead == 'c') ADVANCE(220);
+      END_STATE();
+    case 151:
+      if (lookahead == 'C' ||
+          lookahead == 'c') ADVANCE(114);
+      if (lookahead == 'O' ||
+          lookahead == 'o') ADVANCE(315);
+      END_STATE();
+    case 152:
+      if (lookahead == 'C' ||
+          lookahead == 'c') ADVANCE(309);
+      END_STATE();
+    case 153:
+      if (lookahead == 'C' ||
+          lookahead == 'c') ADVANCE(360);
+      END_STATE();
+    case 154:
+      if (lookahead == 'C' ||
+          lookahead == 'c') ADVANCE(361);
+      END_STATE();
+    case 155:
+      if (lookahead == 'C' ||
+          lookahead == 'c') ADVANCE(363);
+      END_STATE();
+    case 156:
+      if (lookahead == 'C' ||
+          lookahead == 'c') ADVANCE(364);
+      END_STATE();
+    case 157:
+      if (lookahead == 'C' ||
+          lookahead == 'c') ADVANCE(376);
+      END_STATE();
+    case 158:
+      if (lookahead == 'D' ||
+          lookahead == 'd') ADVANCE(560);
+      END_STATE();
+    case 159:
+      if (lookahead == 'D' ||
+          lookahead == 'd') ADVANCE(134);
+      END_STATE();
+    case 160:
+      if (lookahead == 'D' ||
+          lookahead == 'd') ADVANCE(569);
+      END_STATE();
+    case 161:
+      if (lookahead == 'D' ||
+          lookahead == 'd') ADVANCE(412);
+      END_STATE();
+    case 162:
+      if (lookahead == 'D' ||
+          lookahead == 'd') ADVANCE(423);
+      END_STATE();
+    case 163:
+      if (lookahead == 'D' ||
+          lookahead == 'd') ADVANCE(505);
+      END_STATE();
+    case 164:
+      if (lookahead == 'D' ||
+          lookahead == 'd') ADVANCE(271);
+      END_STATE();
+    case 165:
+      if (lookahead == 'D' ||
+          lookahead == 'd') ADVANCE(135);
+      END_STATE();
+    case 166:
+      if (lookahead == 'D' ||
+          lookahead == 'd') ADVANCE(393);
+      END_STATE();
+    case 167:
+      if (lookahead == 'D' ||
+          lookahead == 'd') ADVANCE(265);
+      END_STATE();
+    case 168:
+      if (lookahead == 'E' ||
+          lookahead == 'e') ADVANCE(211);
+      if (lookahead == 'I' ||
+          lookahead == 'i') ADVANCE(386);
+      if (lookahead == 'Y' ||
+          lookahead == 'y') ADVANCE(283);
+      END_STATE();
+    case 169:
+      if (lookahead == 'E' ||
+          lookahead == 'e') ADVANCE(451);
+      END_STATE();
+    case 170:
+      if (lookahead == 'E' ||
+          lookahead == 'e') ADVANCE(498);
+      END_STATE();
+    case 171:
+      if (lookahead == 'E' ||
+          lookahead == 'e') ADVANCE(504);
+      END_STATE();
+    case 172:
+      if (lookahead == 'E' ||
+          lookahead == 'e') ADVANCE(499);
+      END_STATE();
+    case 173:
+      if (lookahead == 'E' ||
+          lookahead == 'e') ADVANCE(470);
+      END_STATE();
+    case 174:
+      if (lookahead == 'E' ||
+          lookahead == 'e') ADVANCE(500);
+      END_STATE();
+    case 175:
+      if (lookahead == 'E' ||
+          lookahead == 'e') ADVANCE(465);
+      END_STATE();
+    case 176:
+      if (lookahead == 'E' ||
+          lookahead == 'e') ADVANCE(407);
+      END_STATE();
+    case 177:
+      if (lookahead == 'E' ||
+          lookahead == 'e') ADVANCE(410);
+      END_STATE();
+    case 178:
+      if (lookahead == 'E' ||
+          lookahead == 'e') ADVANCE(471);
+      END_STATE();
+    case 179:
+      if (lookahead == 'E' ||
+          lookahead == 'e') ADVANCE(462);
+      END_STATE();
+    case 180:
+      if (lookahead == 'E' ||
+          lookahead == 'e') ADVANCE(106);
+      if (lookahead == 'O' ||
+          lookahead == 'o') ADVANCE(136);
+      END_STATE();
+    case 181:
+      if (lookahead == 'E' ||
+          lookahead == 'e') ADVANCE(106);
+      if (lookahead == 'O' ||
+          lookahead == 'o') ADVANCE(143);
+      END_STATE();
+    case 182:
+      if (lookahead == 'E' ||
+          lookahead == 'e') ADVANCE(106);
+      if (lookahead == 'O' ||
+          lookahead == 'o') ADVANCE(149);
+      END_STATE();
+    case 183:
+      if (lookahead == 'E' ||
+          lookahead == 'e') ADVANCE(153);
+      END_STATE();
+    case 184:
+      if (lookahead == 'E' ||
+          lookahead == 'e') ADVANCE(324);
+      END_STATE();
+    case 185:
+      if (lookahead == 'E' ||
+          lookahead == 'e') ADVANCE(325);
+      END_STATE();
+    case 186:
+      if (lookahead == 'E' ||
+          lookahead == 'e') ADVANCE(274);
+      END_STATE();
+    case 187:
+      if (lookahead == 'E' ||
+          lookahead == 'e') ADVANCE(274);
+      if (lookahead == 'I' ||
+          lookahead == 'i') ADVANCE(349);
+      if (lookahead == 'R' ||
+          lookahead == 'r') ADVANCE(293);
+      END_STATE();
+    case 188:
+      if (lookahead == 'E' ||
+          lookahead == 'e') ADVANCE(351);
+      END_STATE();
+    case 189:
+      if (lookahead == 'E' ||
+          lookahead == 'e') ADVANCE(355);
+      END_STATE();
+    case 190:
+      if (lookahead == 'E' ||
+          lookahead == 'e') ADVANCE(275);
+      END_STATE();
+    case 191:
+      if (lookahead == 'E' ||
+          lookahead == 'e') ADVANCE(275);
+      if (lookahead == 'I' ||
+          lookahead == 'i') ADVANCE(262);
+      END_STATE();
+    case 192:
+      if (lookahead == 'E' ||
+          lookahead == 'e') ADVANCE(326);
+      END_STATE();
+    case 193:
+      if (lookahead == 'E' ||
+          lookahead == 'e') ADVANCE(117);
+      END_STATE();
+    case 194:
+      if (lookahead == 'E' ||
+          lookahead == 'e') ADVANCE(327);
+      END_STATE();
+    case 195:
+      if (lookahead == 'E' ||
+          lookahead == 'e') ADVANCE(328);
+      END_STATE();
+    case 196:
+      if (lookahead == 'E' ||
+          lookahead == 'e') ADVANCE(357);
+      END_STATE();
+    case 197:
+      if (lookahead == 'E' ||
+          lookahead == 'e') ADVANCE(378);
+      END_STATE();
+    case 198:
+      if (lookahead == 'E' ||
+          lookahead == 'e') ADVANCE(155);
+      END_STATE();
+    case 199:
+      if (lookahead == 'E' ||
+          lookahead == 'e') ADVANCE(156);
+      END_STATE();
+    case 200:
+      if (lookahead == 'E' ||
+          lookahead == 'e') ADVANCE(157);
+      END_STATE();
+    case 201:
+      if (lookahead == 'F' ||
+          lookahead == 'f') ADVANCE(551);
+      END_STATE();
+    case 202:
+      if (lookahead == 'F' ||
+          lookahead == 'f') ADVANCE(551);
+      if (lookahead == 'O' ||
+          lookahead == 'o') ADVANCE(291);
+      END_STATE();
+    case 203:
+      ADVANCE_MAP(
+        'F', 447,
+        'f', 447,
+        'M', 318,
+        'm', 318,
+        'S', 549,
+        's', 549,
+        'T', 184,
+        't', 184,
+      );
+      END_STATE();
+    case 204:
+      if (lookahead == 'F' ||
+          lookahead == 'f') ADVANCE(447);
+      if (lookahead == 'M' ||
+          lookahead == 'm') ADVANCE(318);
+      if (lookahead == 'T' ||
+          lookahead == 't') ADVANCE(184);
+      END_STATE();
+    case 205:
+      if (lookahead == 'F' ||
+          lookahead == 'f') ADVANCE(447);
+      if (lookahead == 'S' ||
+          lookahead == 's') ADVANCE(549);
+      if (lookahead == 'T' ||
+          lookahead == 't') ADVANCE(184);
+      END_STATE();
+    case 206:
+      if (lookahead == 'F' ||
+          lookahead == 'f') ADVANCE(450);
+      END_STATE();
+    case 207:
+      if (lookahead == 'F' ||
+          lookahead == 'f') ADVANCE(564);
+      END_STATE();
+    case 208:
+      if (lookahead == 'F' ||
+          lookahead == 'f') ADVANCE(503);
+      END_STATE();
+    case 209:
+      if (lookahead == 'F' ||
+          lookahead == 'f') ADVANCE(563);
+      END_STATE();
+    case 210:
+      if (lookahead == 'F' ||
+          lookahead == 'f') ADVANCE(449);
+      END_STATE();
+    case 211:
+      if (lookahead == 'F' ||
+          lookahead == 'f') ADVANCE(108);
+      END_STATE();
+    case 212:
+      if (lookahead == 'G' ||
+          lookahead == 'g') ADVANCE(474);
+      END_STATE();
+    case 213:
+      if (lookahead == 'G' ||
+          lookahead == 'g') ADVANCE(457);
+      END_STATE();
+    case 214:
+      if (lookahead == 'G' ||
+          lookahead == 'g') ADVANCE(270);
+      END_STATE();
+    case 215:
+      if (lookahead == 'G' ||
+          lookahead == 'g') ADVANCE(176);
+      END_STATE();
+    case 216:
+      if (lookahead == 'H' ||
+          lookahead == 'h') ADVANCE(187);
+      if (lookahead == 'R' ||
+          lookahead == 'r') ADVANCE(381);
+      END_STATE();
+    case 217:
+      if (lookahead == 'H' ||
+          lookahead == 'h') ADVANCE(191);
+      if (lookahead == 'I' ||
+          lookahead == 'i') ADVANCE(368);
+      END_STATE();
+    case 218:
+      if (lookahead == 'H' ||
+          lookahead == 'h') ADVANCE(456);
+      END_STATE();
+    case 219:
+      if (lookahead == 'H' ||
+          lookahead == 'h') ADVANCE(459);
+      END_STATE();
+    case 220:
+      if (lookahead == 'H' ||
+          lookahead == 'h') ADVANCE(460);
+      END_STATE();
+    case 221:
+      if (lookahead == 'H' ||
+          lookahead == 'h') ADVANCE(240);
+      if (lookahead == 'R' ||
+          lookahead == 'r') ADVANCE(381);
+      END_STATE();
+    case 222:
+      if (lookahead == 'H' ||
+          lookahead == 'h') ADVANCE(301);
+      END_STATE();
+    case 223:
+      if (lookahead == 'H' ||
+          lookahead == 'h') ADVANCE(233);
+      END_STATE();
+    case 224:
+      if (lookahead == 'H' ||
+          lookahead == 'h') ADVANCE(304);
+      END_STATE();
+    case 225:
+      if (lookahead == 'H' ||
+          lookahead == 'h') ADVANCE(190);
+      if (lookahead == 'I' ||
+          lookahead == 'i') ADVANCE(368);
+      END_STATE();
+    case 226:
+      if (lookahead == 'H' ||
+          lookahead == 'h') ADVANCE(186);
+      END_STATE();
+    case 227:
+      if (lookahead == 'H' ||
+          lookahead == 'h') ADVANCE(337);
+      END_STATE();
+    case 228:
+      if (lookahead == 'H' ||
+          lookahead == 'h') ADVANCE(194);
+      END_STATE();
+    case 229:
+      if (lookahead == 'I' ||
+          lookahead == 'i') ADVANCE(386);
+      END_STATE();
+    case 230:
+      if (lookahead == 'I' ||
+          lookahead == 'i') ADVANCE(268);
+      if (lookahead == 'O' ||
+          lookahead == 'o') ADVANCE(139);
+      END_STATE();
+    case 231:
+      if (lookahead == 'I' ||
+          lookahead == 'i') ADVANCE(206);
+      if (lookahead == 'S' ||
+          lookahead == 's') ADVANCE(169);
+      END_STATE();
+    case 232:
+      if (lookahead == 'I' ||
+          lookahead == 'i') ADVANCE(140);
+      END_STATE();
+    case 233:
+      if (lookahead == 'I' ||
+          lookahead == 'i') ADVANCE(262);
+      END_STATE();
+    case 234:
+      if (lookahead == 'I' ||
+          lookahead == 'i') ADVANCE(368);
+      END_STATE();
+    case 235:
+      if (lookahead == 'I' ||
+          lookahead == 'i') ADVANCE(312);
+      END_STATE();
+    case 236:
+      if (lookahead == 'I' ||
+          lookahead == 'i') ADVANCE(280);
+      END_STATE();
+    case 237:
+      if (lookahead == 'I' ||
+          lookahead == 'i') ADVANCE(306);
+      END_STATE();
+    case 238:
+      if (lookahead == 'I' ||
+          lookahead == 'i') ADVANCE(282);
+      END_STATE();
+    case 239:
+      if (lookahead == 'I' ||
+          lookahead == 'i') ADVANCE(370);
+      END_STATE();
+    case 240:
+      if (lookahead == 'I' ||
+          lookahead == 'i') ADVANCE(349);
+      if (lookahead == 'R' ||
+          lookahead == 'r') ADVANCE(293);
+      END_STATE();
+    case 241:
+      if (lookahead == 'I' ||
+          lookahead == 'i') ADVANCE(267);
+      if (lookahead == 'O' ||
+          lookahead == 'o') ADVANCE(138);
+      END_STATE();
+    case 242:
+      if (lookahead == 'I' ||
+          lookahead == 'i') ADVANCE(267);
+      if (lookahead == 'O' ||
+          lookahead == 'o') ADVANCE(139);
+      END_STATE();
+    case 243:
+      if (lookahead == 'I' ||
+          lookahead == 'i') ADVANCE(388);
+      END_STATE();
+    case 244:
+      if (lookahead == 'I' ||
+          lookahead == 'i') ADVANCE(284);
+      END_STATE();
+    case 245:
+      if (lookahead == 'K' ||
+          lookahead == 'k') ADVANCE(426);
+      END_STATE();
+    case 246:
+      if (lookahead == 'K' ||
+          lookahead == 'k') ADVANCE(479);
+      END_STATE();
+    case 247:
+      if (lookahead == 'K' ||
+          lookahead == 'k') ADVANCE(427);
+      END_STATE();
+    case 248:
+      if (lookahead == 'K' ||
+          lookahead == 'k') ADVANCE(477);
+      END_STATE();
+    case 249:
+      if (lookahead == 'K' ||
+          lookahead == 'k') ADVANCE(107);
+      END_STATE();
+    case 250:
+      if (lookahead == 'L' ||
+          lookahead == 'l') ADVANCE(231);
+      if (lookahead == 'N' ||
+          lookahead == 'n') ADVANCE(159);
+      END_STATE();
+    case 251:
+      if (lookahead == 'L' ||
+          lookahead == 'l') ADVANCE(510);
+      END_STATE();
+    case 252:
+      if (lookahead == 'L' ||
+          lookahead == 'l') ADVANCE(509);
+      END_STATE();
+    case 253:
+      if (lookahead == 'L' ||
+          lookahead == 'l') ADVANCE(416);
+      END_STATE();
+    case 254:
+      if (lookahead == 'L' ||
+          lookahead == 'l') ADVANCE(257);
+      END_STATE();
+    case 255:
+      if (lookahead == 'L' ||
+          lookahead == 'l') ADVANCE(257);
+      if (lookahead == 'N' ||
+          lookahead == 'n') ADVANCE(158);
+      END_STATE();
+    case 256:
+      if (lookahead == 'L' ||
+          lookahead == 'l') ADVANCE(310);
+      END_STATE();
+    case 257:
+      if (lookahead == 'L' ||
+          lookahead == 'l') ADVANCE(332);
+      END_STATE();
+    case 258:
+      if (lookahead == 'L' ||
+          lookahead == 'l') ADVANCE(392);
+      END_STATE();
+    case 259:
+      if (lookahead == 'L' ||
+          lookahead == 'l') ADVANCE(345);
+      END_STATE();
+    case 260:
+      if (lookahead == 'L' ||
+          lookahead == 'l') ADVANCE(208);
+      END_STATE();
+    case 261:
+      if (lookahead == 'L' ||
+          lookahead == 'l') ADVANCE(258);
+      END_STATE();
+    case 262:
+      if (lookahead == 'L' ||
+          lookahead == 'l') ADVANCE(175);
+      END_STATE();
+    case 263:
+      if (lookahead == 'L' ||
+          lookahead == 'l') ADVANCE(359);
+      END_STATE();
+    case 264:
+      if (lookahead == 'L' ||
+          lookahead == 'l') ADVANCE(372);
+      END_STATE();
+    case 265:
+      if (lookahead == 'L' ||
+          lookahead == 'l') ADVANCE(238);
+      END_STATE();
+    case 266:
+      if (lookahead == 'L' ||
+          lookahead == 'l') ADVANCE(311);
+      END_STATE();
+    case 267:
+      if (lookahead == 'M' ||
+          lookahead == 'm') ADVANCE(239);
+      END_STATE();
+    case 268:
+      if (lookahead == 'M' ||
+          lookahead == 'm') ADVANCE(239);
+      if (lookahead == 'V' ||
+          lookahead == 'v') ADVANCE(127);
+      END_STATE();
+    case 269:
+      if (lookahead == 'M' ||
+          lookahead == 'm') ADVANCE(232);
+      END_STATE();
+    case 270:
+      if (lookahead == 'M' ||
+          lookahead == 'm') ADVANCE(100);
+      END_STATE();
+    case 271:
+      if (lookahead == 'M' ||
+          lookahead == 'm') ADVANCE(197);
+      if (lookahead == 'P' ||
+          lookahead == 'p') ADVANCE(336);
+      END_STATE();
+    case 272:
+      if (lookahead == 'N' ||
+          lookahead == 'n') ADVANCE(158);
+      END_STATE();
+    case 273:
+      if (lookahead == 'N' ||
+          lookahead == 'n') ADVANCE(348);
+      END_STATE();
+    case 274:
+      if (lookahead == 'N' ||
+          lookahead == 'n') ADVANCE(448);
+      END_STATE();
+    case 275:
+      if (lookahead == 'N' ||
+          lookahead == 'n') ADVANCE(467);
+      END_STATE();
+    case 276:
+      if (lookahead == 'N' ||
+          lookahead == 'n') ADVANCE(514);
+      END_STATE();
+    case 277:
+      if (lookahead == 'N' ||
+          lookahead == 'n') ADVANCE(475);
+      END_STATE();
+    case 278:
+      if (lookahead == 'N' ||
+          lookahead == 'n') ADVANCE(350);
+      END_STATE();
+    case 279:
+      if (lookahead == 'N' ||
+          lookahead == 'n') ADVANCE(212);
+      END_STATE();
+    case 280:
+      if (lookahead == 'N' ||
+          lookahead == 'n') ADVANCE(384);
+      END_STATE();
+    case 281:
+      if (lookahead == 'N' ||
+          lookahead == 'n') ADVANCE(167);
+      END_STATE();
+    case 282:
+      if (lookahead == 'N' ||
+          lookahead == 'n') ADVANCE(213);
+      END_STATE();
+    case 283:
+      if (lookahead == 'N' ||
+          lookahead == 'n') ADVANCE(99);
+      END_STATE();
+    case 284:
+      if (lookahead == 'N' ||
+          lookahead == 'n') ADVANCE(113);
+      END_STATE();
+    case 285:
+      if (lookahead == 'N' ||
+          lookahead == 'n') ADVANCE(171);
+      END_STATE();
+    case 286:
+      if (lookahead == 'N' ||
+          lookahead == 'n') ADVANCE(164);
+      END_STATE();
+    case 287:
+      if (lookahead == 'N' ||
+          lookahead == 'n') ADVANCE(165);
+      END_STATE();
+    case 288:
+      if (lookahead == 'N' ||
+          lookahead == 'n') ADVANCE(362);
+      END_STATE();
+    case 289:
+      if (lookahead == 'N' ||
+          lookahead == 'n') ADVANCE(367);
+      END_STATE();
+    case 290:
+      if (lookahead == 'N' ||
+          lookahead == 'n') ADVANCE(121);
+      END_STATE();
+    case 291:
+      if (lookahead == 'N' ||
+          lookahead == 'n') ADVANCE(347);
+      END_STATE();
+    case 292:
+      if (lookahead == 'O' ||
+          lookahead == 'o') ADVANCE(132);
+      END_STATE();
+    case 293:
+      if (lookahead == 'O' ||
+          lookahead == 'o') ADVANCE(390);
+      END_STATE();
+    case 294:
+      if (lookahead == 'O' ||
+          lookahead == 'o') ADVANCE(323);
+      END_STATE();
+    case 295:
+      if (lookahead == 'O' ||
+          lookahead == 'o') ADVANCE(146);
+      END_STATE();
+    case 296:
+      if (lookahead == 'O' ||
+          lookahead == 'o') ADVANCE(142);
+      END_STATE();
+    case 297:
+      if (lookahead == 'O' ||
+          lookahead == 'o') ADVANCE(160);
+      END_STATE();
+    case 298:
+      if (lookahead == 'O' ||
+          lookahead == 'o') ADVANCE(151);
+      END_STATE();
+    case 299:
+      if (lookahead == 'O' ||
+          lookahead == 'o') ADVANCE(353);
+      END_STATE();
+    case 300:
+      if (lookahead == 'O' ||
+          lookahead == 'o') ADVANCE(314);
+      END_STATE();
+    case 301:
+      if (lookahead == 'O' ||
+          lookahead == 'o') ADVANCE(161);
+      END_STATE();
+    case 302:
+      if (lookahead == 'O' ||
+          lookahead == 'o') ADVANCE(141);
+      END_STATE();
+    case 303:
+      if (lookahead == 'O' ||
+          lookahead == 'o') ADVANCE(166);
+      END_STATE();
+    case 304:
+      if (lookahead == 'O' ||
+          lookahead == 'o') ADVANCE(162);
+      END_STATE();
+    case 305:
+      if (lookahead == 'O' ||
+          lookahead == 'o') ADVANCE(338);
+      END_STATE();
+    case 306:
+      if (lookahead == 'O' ||
+          lookahead == 'o') ADVANCE(277);
+      END_STATE();
+    case 307:
+      if (lookahead == 'O' ||
+          lookahead == 'o') ADVANCE(300);
+      END_STATE();
+    case 308:
+      if (lookahead == 'O' ||
+          lookahead == 'o') ADVANCE(380);
+      END_STATE();
+    case 309:
+      if (lookahead == 'O' ||
+          lookahead == 'o') ADVANCE(291);
+      END_STATE();
+    case 310:
+      if (lookahead == 'O' ||
+          lookahead == 'o') ADVANCE(144);
+      END_STATE();
+    case 311:
+      if (lookahead == 'O' ||
+          lookahead == 'o') ADVANCE(148);
+      END_STATE();
+    case 312:
+      if (lookahead == 'O' ||
+          lookahead == 'o') ADVANCE(290);
+      END_STATE();
+    case 313:
+      if (lookahead == 'P' ||
+          lookahead == 'p') ADVANCE(453);
+      END_STATE();
+    case 314:
+      if (lookahead == 'P' ||
+          lookahead == 'p') ADVANCE(454);
+      END_STATE();
+    case 315:
+      if (lookahead == 'P' ||
+          lookahead == 'p') ADVANCE(452);
+      END_STATE();
+    case 316:
+      if (lookahead == 'P' ||
+          lookahead == 'p') ADVANCE(354);
+      if (lookahead == 'R' ||
+          lookahead == 'r') ADVANCE(561);
+      END_STATE();
+    case 317:
+      if (lookahead == 'P' ||
+          lookahead == 'p') ADVANCE(354);
+      if (lookahead == 'R' ||
+          lookahead == 'r') ADVANCE(561);
+      if (lookahead == 'V' ||
+          lookahead == 'v') ADVANCE(185);
+      END_STATE();
+    case 318:
+      if (lookahead == 'P' ||
+          lookahead == 'p') ADVANCE(305);
+      END_STATE();
+    case 319:
+      if (lookahead == 'P' ||
+          lookahead == 'p') ADVANCE(192);
+      END_STATE();
+    case 320:
+      if (lookahead == 'R' ||
+          lookahead == 'r') ADVANCE(561);
+      END_STATE();
+    case 321:
+      if (lookahead == 'R' ||
+          lookahead == 'r') ADVANCE(561);
+      if (lookahead == 'V' ||
+          lookahead == 'v') ADVANCE(185);
+      END_STATE();
+    case 322:
+      if (lookahead == 'R' ||
+          lookahead == 'r') ADVANCE(463);
       END_STATE();
     case 323:
-      if (lookahead == 'O' ||
-          lookahead == 'o') ADVANCE(181);
+      if (lookahead == 'R' ||
+          lookahead == 'r') ADVANCE(562);
       END_STATE();
     case 324:
-      if (lookahead == 'O' ||
-          lookahead == 'o') ADVANCE(355);
-      END_STATE();
-    case 325:
-      if (lookahead == 'O' ||
-          lookahead == 'o') ADVANCE(296);
-      END_STATE();
-    case 326:
-      if (lookahead == 'O' ||
-          lookahead == 'o') ADVANCE(319);
-      END_STATE();
-    case 327:
-      if (lookahead == 'O' ||
-          lookahead == 'o') ADVANCE(394);
-      END_STATE();
-    case 328:
-      if (lookahead == 'O' ||
-          lookahead == 'o') ADVANCE(310);
-      END_STATE();
-    case 329:
-      if (lookahead == 'O' ||
-          lookahead == 'o') ADVANCE(163);
-      END_STATE();
-    case 330:
-      if (lookahead == 'O' ||
-          lookahead == 'o') ADVANCE(167);
-      END_STATE();
-    case 331:
-      if (lookahead == 'O' ||
-          lookahead == 'o') ADVANCE(309);
-      END_STATE();
-    case 332:
-      if (lookahead == 'P' ||
-          lookahead == 'p') ADVANCE(472);
-      END_STATE();
-    case 333:
-      if (lookahead == 'P' ||
-          lookahead == 'p') ADVANCE(473);
-      END_STATE();
-    case 334:
-      if (lookahead == 'P' ||
-          lookahead == 'p') ADVANCE(471);
-      END_STATE();
-    case 335:
-      if (lookahead == 'P' ||
-          lookahead == 'p') ADVANCE(372);
-      if (lookahead == 'R' ||
-          lookahead == 'r') ADVANCE(582);
-      END_STATE();
-    case 336:
-      if (lookahead == 'P' ||
-          lookahead == 'p') ADVANCE(372);
-      if (lookahead == 'R' ||
-          lookahead == 'r') ADVANCE(582);
-      if (lookahead == 'V' ||
-          lookahead == 'v') ADVANCE(203);
-      END_STATE();
-    case 337:
-      if (lookahead == 'P' ||
-          lookahead == 'p') ADVANCE(324);
-      END_STATE();
-    case 338:
-      if (lookahead == 'P' ||
-          lookahead == 'p') ADVANCE(214);
-      END_STATE();
-    case 339:
-      if (lookahead == 'R' ||
-          lookahead == 'r') ADVANCE(582);
-      END_STATE();
-    case 340:
-      if (lookahead == 'R' ||
-          lookahead == 'r') ADVANCE(582);
-      if (lookahead == 'V' ||
-          lookahead == 'v') ADVANCE(203);
-      END_STATE();
-    case 341:
-      if (lookahead == 'R' ||
-          lookahead == 'r') ADVANCE(583);
-      END_STATE();
-    case 342:
-      if (lookahead == 'R' ||
-          lookahead == 'r') ADVANCE(482);
-      END_STATE();
-    case 343:
-      if (lookahead == 'R' ||
-          lookahead == 'r') ADVANCE(483);
-      END_STATE();
-    case 344:
-      if (lookahead == 'R' ||
-          lookahead == 'r') ADVANCE(430);
-      END_STATE();
-    case 345:
-      if (lookahead == 'R' ||
-          lookahead == 'r') ADVANCE(521);
-      END_STATE();
-    case 346:
-      if (lookahead == 'R' ||
-          lookahead == 'r') ADVANCE(436);
-      END_STATE();
-    case 347:
-      if (lookahead == 'R' ||
-          lookahead == 'r') ADVANCE(535);
-      END_STATE();
-    case 348:
-      if (lookahead == 'R' ||
-          lookahead == 'r') ADVANCE(260);
-      END_STATE();
-    case 349:
       if (lookahead == 'R' ||
           lookahead == 'r') ADVANCE(411);
       END_STATE();
-    case 350:
+    case 325:
       if (lookahead == 'R' ||
-          lookahead == 'r') ADVANCE(249);
+          lookahead == 'r') ADVANCE(464);
+      END_STATE();
+    case 326:
+      if (lookahead == 'R' ||
+          lookahead == 'r') ADVANCE(502);
+      END_STATE();
+    case 327:
+      if (lookahead == 'R' ||
+          lookahead == 'r') ADVANCE(417);
+      END_STATE();
+    case 328:
+      if (lookahead == 'R' ||
+          lookahead == 'r') ADVANCE(516);
+      END_STATE();
+    case 329:
+      if (lookahead == 'R' ||
+          lookahead == 'r') ADVANCE(242);
+      END_STATE();
+    case 330:
+      if (lookahead == 'R' ||
+          lookahead == 'r') ADVANCE(391);
+      END_STATE();
+    case 331:
+      if (lookahead == 'R' ||
+          lookahead == 'r') ADVANCE(230);
+      END_STATE();
+    case 332:
+      if (lookahead == 'R' ||
+          lookahead == 'r') ADVANCE(188);
+      END_STATE();
+    case 333:
+      if (lookahead == 'R' ||
+          lookahead == 'r') ADVANCE(296);
+      END_STATE();
+    case 334:
+      if (lookahead == 'R' ||
+          lookahead == 'r') ADVANCE(128);
+      END_STATE();
+    case 335:
+      if (lookahead == 'R' ||
+          lookahead == 'r') ADVANCE(276);
+      END_STATE();
+    case 336:
+      if (lookahead == 'R' ||
+          lookahead == 'r') ADVANCE(302);
+      END_STATE();
+    case 337:
+      if (lookahead == 'R' ||
+          lookahead == 'r') ADVANCE(193);
+      END_STATE();
+    case 338:
+      if (lookahead == 'R' ||
+          lookahead == 'r') ADVANCE(358);
+      END_STATE();
+    case 339:
+      if (lookahead == 'R' ||
+          lookahead == 'r') ADVANCE(308);
+      END_STATE();
+    case 340:
+      if (lookahead == 'R' ||
+          lookahead == 'r') ADVANCE(241);
+      END_STATE();
+    case 341:
+      if (lookahead == 'S' ||
+          lookahead == 's') ADVANCE(549);
+      END_STATE();
+    case 342:
+      if (lookahead == 'S' ||
+          lookahead == 's') ADVANCE(506);
+      END_STATE();
+    case 343:
+      if (lookahead == 'S' ||
+          lookahead == 's') ADVANCE(517);
+      END_STATE();
+    case 344:
+      if (lookahead == 'S' ||
+          lookahead == 's') ADVANCE(342);
+      END_STATE();
+    case 345:
+      if (lookahead == 'S' ||
+          lookahead == 's') ADVANCE(172);
+      END_STATE();
+    case 346:
+      if (lookahead == 'S' ||
+          lookahead == 's') ADVANCE(371);
+      END_STATE();
+    case 347:
+      if (lookahead == 'S' ||
+          lookahead == 's') ADVANCE(375);
+      END_STATE();
+    case 348:
+      if (lookahead == 'S' ||
+          lookahead == 's') ADVANCE(375);
+      if (lookahead == 'T' ||
+          lookahead == 't') ADVANCE(236);
+      END_STATE();
+    case 349:
+      if (lookahead == 'S' ||
+          lookahead == 's') ADVANCE(369);
+      END_STATE();
+    case 350:
+      if (lookahead == 'S' ||
+          lookahead == 's') ADVANCE(196);
       END_STATE();
     case 351:
-      if (lookahead == 'R' ||
-          lookahead == 'r') ADVANCE(208);
+      if (lookahead == 'S' ||
+          lookahead == 's') ADVANCE(385);
       END_STATE();
     case 352:
-      if (lookahead == 'R' ||
-          lookahead == 'r') ADVANCE(316);
+      if (lookahead == 'T' ||
+          lookahead == 't') ADVANCE(228);
       END_STATE();
     case 353:
-      if (lookahead == 'R' ||
-          lookahead == 'r') ADVANCE(148);
+      if (lookahead == 'T' ||
+          lookahead == 't') ADVANCE(575);
       END_STATE();
     case 354:
-      if (lookahead == 'R' ||
-          lookahead == 'r') ADVANCE(295);
+      if (lookahead == 'T' ||
+          lookahead == 't') ADVANCE(235);
       END_STATE();
     case 355:
-      if (lookahead == 'R' ||
-          lookahead == 'r') ADVANCE(377);
+      if (lookahead == 'T' ||
+          lookahead == 't') ADVANCE(383);
       END_STATE();
     case 356:
-      if (lookahead == 'R' ||
-          lookahead == 'r') ADVANCE(321);
+      if (lookahead == 'T' ||
+          lookahead == 't') ADVANCE(550);
       END_STATE();
     case 357:
-      if (lookahead == 'R' ||
-          lookahead == 'r') ADVANCE(212);
+      if (lookahead == 'T' ||
+          lookahead == 't') ADVANCE(501);
       END_STATE();
     case 358:
-      if (lookahead == 'R' ||
-          lookahead == 'r') ADVANCE(327);
+      if (lookahead == 'T' ||
+          lookahead == 't') ADVANCE(513);
       END_STATE();
     case 359:
-      if (lookahead == 'R' ||
-          lookahead == 'r') ADVANCE(259);
+      if (lookahead == 'T' ||
+          lookahead == 't') ADVANCE(458);
       END_STATE();
     case 360:
-      if (lookahead == 'S' ||
-          lookahead == 's') ADVANCE(568);
+      if (lookahead == 'T' ||
+          lookahead == 't') ADVANCE(473);
       END_STATE();
     case 361:
-      if (lookahead == 'S' ||
-          lookahead == 's') ADVANCE(525);
+      if (lookahead == 'T' ||
+          lookahead == 't') ADVANCE(409);
       END_STATE();
     case 362:
-      if (lookahead == 'S' ||
-          lookahead == 's') ADVANCE(536);
+      if (lookahead == 'T' ||
+          lookahead == 't') ADVANCE(511);
       END_STATE();
     case 363:
-      if (lookahead == 'S' ||
-          lookahead == 's') ADVANCE(361);
+      if (lookahead == 'T' ||
+          lookahead == 't') ADVANCE(476);
       END_STATE();
     case 364:
-      if (lookahead == 'S' ||
-          lookahead == 's') ADVANCE(390);
+      if (lookahead == 'T' ||
+          lookahead == 't') ADVANCE(472);
       END_STATE();
     case 365:
-      if (lookahead == 'S' ||
-          lookahead == 's') ADVANCE(192);
+      if (lookahead == 'T' ||
+          lookahead == 't') ADVANCE(147);
       END_STATE();
     case 366:
-      if (lookahead == 'S' ||
-          lookahead == 's') ADVANCE(395);
+      if (lookahead == 'T' ||
+          lookahead == 't') ADVANCE(222);
       END_STATE();
     case 367:
-      if (lookahead == 'S' ||
-          lookahead == 's') ADVANCE(395);
       if (lookahead == 'T' ||
-          lookahead == 't') ADVANCE(254);
+          lookahead == 't') ADVANCE(236);
       END_STATE();
     case 368:
-      if (lookahead == 'S' ||
-          lookahead == 's') ADVANCE(213);
+      if (lookahead == 'T' ||
+          lookahead == 't') ADVANCE(218);
       END_STATE();
     case 369:
-      if (lookahead == 'S' ||
-          lookahead == 's') ADVANCE(388);
+      if (lookahead == 'T' ||
+          lookahead == 't') ADVANCE(227);
       END_STATE();
     case 370:
-      if (lookahead == 'S' ||
-          lookahead == 's') ADVANCE(404);
-      END_STATE();
-    case 371:
-      if (lookahead == 'T' ||
-          lookahead == 't') ADVANCE(241);
-      END_STATE();
-    case 372:
-      if (lookahead == 'T' ||
-          lookahead == 't') ADVANCE(253);
-      END_STATE();
-    case 373:
-      if (lookahead == 'T' ||
-          lookahead == 't') ADVANCE(601);
-      END_STATE();
-    case 374:
-      if (lookahead == 'T' ||
-          lookahead == 't') ADVANCE(402);
-      END_STATE();
-    case 375:
-      if (lookahead == 'T' ||
-          lookahead == 't') ADVANCE(569);
-      END_STATE();
-    case 376:
-      if (lookahead == 'T' ||
-          lookahead == 't') ADVANCE(520);
-      END_STATE();
-    case 377:
-      if (lookahead == 'T' ||
-          lookahead == 't') ADVANCE(532);
-      END_STATE();
-    case 378:
-      if (lookahead == 'T' ||
-          lookahead == 't') ADVANCE(477);
-      END_STATE();
-    case 379:
-      if (lookahead == 'T' ||
-          lookahead == 't') ADVANCE(492);
-      END_STATE();
-    case 380:
-      if (lookahead == 'T' ||
-          lookahead == 't') ADVANCE(428);
-      END_STATE();
-    case 381:
-      if (lookahead == 'T' ||
-          lookahead == 't') ADVANCE(530);
-      END_STATE();
-    case 382:
-      if (lookahead == 'T' ||
-          lookahead == 't') ADVANCE(495);
-      END_STATE();
-    case 383:
-      if (lookahead == 'T' ||
-          lookahead == 't') ADVANCE(491);
-      END_STATE();
-    case 384:
-      if (lookahead == 'T' ||
-          lookahead == 't') ADVANCE(166);
-      END_STATE();
-    case 385:
-      if (lookahead == 'T' ||
-          lookahead == 't') ADVANCE(247);
-      END_STATE();
-    case 386:
-      if (lookahead == 'T' ||
-          lookahead == 't') ADVANCE(254);
-      END_STATE();
-    case 387:
-      if (lookahead == 'T' ||
-          lookahead == 't') ADVANCE(237);
-      END_STATE();
-    case 388:
-      if (lookahead == 'T' ||
-          lookahead == 't') ADVANCE(246);
-      END_STATE();
-    case 389:
-      if (lookahead == 'T' ||
-          lookahead == 't') ADVANCE(262);
-      END_STATE();
-    case 390:
-      if (lookahead == 'T' ||
-          lookahead == 't') ADVANCE(353);
-      END_STATE();
-    case 391:
-      if (lookahead == 'T' ||
-          lookahead == 't') ADVANCE(362);
-      END_STATE();
-    case 392:
-      if (lookahead == 'T' ||
-          lookahead == 't') ADVANCE(399);
-      END_STATE();
-    case 393:
-      if (lookahead == 'T' ||
-          lookahead == 't') ADVANCE(196);
-      END_STATE();
-    case 394:
-      if (lookahead == 'T' ||
-          lookahead == 't') ADVANCE(209);
-      END_STATE();
-    case 395:
-      if (lookahead == 'T' ||
-          lookahead == 't') ADVANCE(139);
-      END_STATE();
-    case 396:
       if (lookahead == 'T' ||
           lookahead == 't') ADVANCE(243);
       END_STATE();
-    case 397:
+    case 371:
       if (lookahead == 'T' ||
-          lookahead == 't') ADVANCE(255);
+          lookahead == 't') ADVANCE(334);
+      END_STATE();
+    case 372:
+      if (lookahead == 'T' ||
+          lookahead == 't') ADVANCE(343);
+      END_STATE();
+    case 373:
+      if (lookahead == 'T' ||
+          lookahead == 't') ADVANCE(379);
+      END_STATE();
+    case 374:
+      if (lookahead == 'T' ||
+          lookahead == 't') ADVANCE(177);
+      END_STATE();
+    case 375:
+      if (lookahead == 'T' ||
+          lookahead == 't') ADVANCE(120);
+      END_STATE();
+    case 376:
+      if (lookahead == 'T' ||
+          lookahead == 't') ADVANCE(237);
+      END_STATE();
+    case 377:
+      if (lookahead == 'T' ||
+          lookahead == 't') ADVANCE(150);
+      END_STATE();
+    case 378:
+      if (lookahead == 'T' ||
+          lookahead == 't') ADVANCE(224);
+      END_STATE();
+    case 379:
+      if (lookahead == 'T' ||
+          lookahead == 't') ADVANCE(195);
+      END_STATE();
+    case 380:
+      if (lookahead == 'T' ||
+          lookahead == 't') ADVANCE(200);
+      END_STATE();
+    case 381:
+      if (lookahead == 'U' ||
+          lookahead == 'u') ADVANCE(170);
+      if (lookahead == 'Y' ||
+          lookahead == 'y') ADVANCE(466);
+      END_STATE();
+    case 382:
+      if (lookahead == 'U' ||
+          lookahead == 'u') ADVANCE(263);
+      END_STATE();
+    case 383:
+      if (lookahead == 'U' ||
+          lookahead == 'u') ADVANCE(335);
+      END_STATE();
+    case 384:
+      if (lookahead == 'U' ||
+          lookahead == 'u') ADVANCE(178);
+      END_STATE();
+    case 385:
+      if (lookahead == 'U' ||
+          lookahead == 'u') ADVANCE(264);
+      END_STATE();
+    case 386:
+      if (lookahead == 'V' ||
+          lookahead == 'v') ADVANCE(570);
+      END_STATE();
+    case 387:
+      if (lookahead == 'V' ||
+          lookahead == 'v') ADVANCE(173);
+      END_STATE();
+    case 388:
+      if (lookahead == 'V' ||
+          lookahead == 'v') ADVANCE(179);
+      END_STATE();
+    case 389:
+      if (lookahead == 'V' ||
+          lookahead == 'v') ADVANCE(185);
+      END_STATE();
+    case 390:
+      if (lookahead == 'W' ||
+          lookahead == 'w') ADVANCE(461);
+      END_STATE();
+    case 391:
+      if (lookahead == 'Y' ||
+          lookahead == 'y') ADVANCE(468);
+      END_STATE();
+    case 392:
+      if (lookahead == 'Y' ||
+          lookahead == 'y') ADVANCE(455);
+      END_STATE();
+    case 393:
+      if (lookahead == 'Y' ||
+          lookahead == 'y') ADVANCE(469);
+      END_STATE();
+    case 394:
+      if (lookahead == 'Y' ||
+          lookahead == 'y') ADVANCE(133);
+      END_STATE();
+    case 395:
+      if (lookahead == 'Y' ||
+          lookahead == 'y') ADVANCE(283);
+      END_STATE();
+    case 396:
+      if (('0' <= lookahead && lookahead <= '9') ||
+          ('A' <= lookahead && lookahead <= 'Z') ||
+          ('a' <= lookahead && lookahead <= 'z')) ADVANCE(527);
+      END_STATE();
+    case 397:
+      if (set_contains(sym_number_character_set_1, 144, lookahead)) ADVANCE(526);
       END_STATE();
     case 398:
-      if (lookahead == 'T' ||
-          lookahead == 't') ADVANCE(169);
+      if (set_contains(sym_number_character_set_1, 144, lookahead)) ADVANCE(528);
       END_STATE();
     case 399:
-      if (lookahead == 'T' ||
-          lookahead == 't') ADVANCE(216);
+      if (set_contains(aux_sym_character_literal_token1_character_set_1, 677, lookahead)) ADVANCE(80);
       END_STATE();
     case 400:
-      if (lookahead == 'U' ||
-          lookahead == 'u') ADVANCE(189);
-      if (lookahead == 'Y' ||
-          lookahead == 'y') ADVANCE(485);
+      if (set_contains(aux_sym_slot_accessor_token1_character_set_2, 773, lookahead)) ADVANCE(10);
       END_STATE();
     case 401:
-      if (lookahead == 'U' ||
-          lookahead == 'u') ADVANCE(282);
+      if (lookahead != 0 &&
+          lookahead != '\n') ADVANCE(578);
       END_STATE();
     case 402:
-      if (lookahead == 'U' ||
-          lookahead == 'u') ADVANCE(354);
+      if (eof) ADVANCE(403);
+      ADVANCE_MAP(
+        '!', 84,
+        '"', 488,
+        '#', 581,
+        '$', 2,
+        '%', 483,
+        '\'', 494,
+        '(', 414,
+        ')', 418,
+        '*', 566,
+        '+', 574,
+        ',', 415,
+        '-', 572,
+        '.', 413,
+        '/', 567,
+        '1', 524,
+        '2', 522,
+        '3', 521,
+        ':', 61,
+        '<', 557,
+        '=', 552,
+        '>', 559,
+        '@', 81,
+        '[', 421,
+        ']', 422,
+        '^', 53,
+        '_', 87,
+        '{', 547,
+        '|', 23,
+        '}', 548,
+        '~', 577,
+      );
+      if (('\t' <= lookahead && lookahead <= '\r') ||
+          lookahead == ' ') SKIP(402);
+      if (('4' <= lookahead && lookahead <= '9')) ADVANCE(523);
+      if (set_contains(sym_number_character_set_4, 146, lookahead)) ADVANCE(525);
+      if (set_contains(sym_dynamic_variable_character_set_1, 679, lookahead)) ADVANCE(543);
       END_STATE();
     case 403:
-      if (lookahead == 'U' ||
-          lookahead == 'u') ADVANCE(197);
-      END_STATE();
-    case 404:
-      if (lookahead == 'U' ||
-          lookahead == 'u') ADVANCE(283);
-      END_STATE();
-    case 405:
-      if (lookahead == 'V' ||
-          lookahead == 'v') ADVANCE(595);
-      END_STATE();
-    case 406:
-      if (lookahead == 'V' ||
-          lookahead == 'v') ADVANCE(203);
-      END_STATE();
-    case 407:
-      if (lookahead == 'V' ||
-          lookahead == 'v') ADVANCE(193);
-      END_STATE();
-    case 408:
-      if (lookahead == 'V' ||
-          lookahead == 'v') ADVANCE(198);
-      END_STATE();
-    case 409:
-      if (lookahead == 'W' ||
-          lookahead == 'w') ADVANCE(480);
-      END_STATE();
-    case 410:
-      if (lookahead == 'Y' ||
-          lookahead == 'y') ADVANCE(151);
-      END_STATE();
-    case 411:
-      if (lookahead == 'Y' ||
-          lookahead == 'y') ADVANCE(487);
-      END_STATE();
-    case 412:
-      if (lookahead == 'Y' ||
-          lookahead == 'y') ADVANCE(474);
-      END_STATE();
-    case 413:
-      if (lookahead == 'Y' ||
-          lookahead == 'y') ADVANCE(488);
-      END_STATE();
-    case 414:
-      if (lookahead == 'Y' ||
-          lookahead == 'y') ADVANCE(302);
-      END_STATE();
-    case 415:
-      if (('0' <= lookahead && lookahead <= '9') ||
-          ('A' <= lookahead && lookahead <= 'Z') ||
-          ('a' <= lookahead && lookahead <= 'z')) ADVANCE(546);
-      END_STATE();
-    case 416:
-      if (set_contains(sym_number_character_set_1, 144, lookahead)) ADVANCE(545);
-      END_STATE();
-    case 417:
-      if (set_contains(sym_number_character_set_1, 144, lookahead)) ADVANCE(547);
-      END_STATE();
-    case 418:
-      if (set_contains(aux_sym_character_literal_token1_character_set_1, 677, lookahead)) ADVANCE(105);
-      END_STATE();
-    case 419:
-      if (set_contains(aux_sym_slot_accessor_token1_character_set_2, 773, lookahead)) ADVANCE(10);
-      END_STATE();
-    case 420:
-      if (lookahead != 0 &&
-          lookahead != '\n') ADVANCE(604);
-      END_STATE();
-    case 421:
-      if (eof) ADVANCE(422);
-      ADVANCE_MAP(
-        '!', 109,
-        '"', 507,
-        '#', 607,
-        '$', 2,
-        '%', 502,
-        '\'', 513,
-        '(', 433,
-        ')', 437,
-        '*', 590,
-        '+', 600,
-        ',', 434,
-        '-', 598,
-        '.', 432,
-        '/', 591,
-        '1', 543,
-        '2', 541,
-        '3', 540,
-        ':', 86,
-        '<', 576,
-        '=', 571,
-        '>', 578,
-        '@', 106,
-        '[', 440,
-        ']', 441,
-        '^', 53,
-        '_', 62,
-        '{', 566,
-        '|', 23,
-        '}', 567,
-        '~', 603,
-      );
-      if (('\t' <= lookahead && lookahead <= '\r') ||
-          lookahead == ' ') SKIP(421);
-      if (('4' <= lookahead && lookahead <= '9')) ADVANCE(542);
-      if (set_contains(sym_number_character_set_4, 146, lookahead)) ADVANCE(544);
-      if (set_contains(sym_dynamic_variable_character_set_1, 679, lookahead)) ADVANCE(562);
-      END_STATE();
-    case 422:
       ACCEPT_TOKEN(ts_builtin_sym_end);
       END_STATE();
-    case 423:
+    case 404:
       ACCEPT_TOKEN(anon_sym_CR);
-      if (lookahead == '\n') ADVANCE(424);
-      if (lookahead == '\r') ADVANCE(423);
+      if (lookahead == '\n') ADVANCE(405);
+      if (lookahead == '\r') ADVANCE(404);
       END_STATE();
-    case 424:
+    case 405:
       ACCEPT_TOKEN(anon_sym_LF);
-      if (lookahead == '\n') ADVANCE(424);
-      if (lookahead == '\r') ADVANCE(423);
+      if (lookahead == '\n') ADVANCE(405);
+      if (lookahead == '\r') ADVANCE(404);
       END_STATE();
-    case 425:
+    case 406:
       ACCEPT_TOKEN(anon_sym_LF);
-      if (lookahead == '\n') ADVANCE(425);
+      if (lookahead == '\n') ADVANCE(406);
       END_STATE();
-    case 426:
+    case 407:
       ACCEPT_TOKEN(aux_sym_package_token1);
       END_STATE();
-    case 427:
+    case 408:
       ACCEPT_TOKEN(sym__dollar);
       END_STATE();
-    case 428:
+    case 409:
       ACCEPT_TOKEN(aux_sym_method_token1);
       END_STATE();
-    case 429:
+    case 410:
       ACCEPT_TOKEN(aux_sym_method_token2);
       END_STATE();
-    case 430:
+    case 411:
       ACCEPT_TOKEN(aux_sym_method_token3);
       END_STATE();
-    case 431:
+    case 412:
       ACCEPT_TOKEN(aux_sym_method_token4);
       END_STATE();
-    case 432:
+    case 413:
       ACCEPT_TOKEN(anon_sym_DOT);
       END_STATE();
-    case 433:
+    case 414:
       ACCEPT_TOKEN(anon_sym_LPAREN);
       END_STATE();
-    case 434:
+    case 415:
       ACCEPT_TOKEN(anon_sym_COMMA);
       END_STATE();
-    case 435:
+    case 416:
       ACCEPT_TOKEN(aux_sym_method_token5);
       END_STATE();
-    case 436:
+    case 417:
       ACCEPT_TOKEN(aux_sym_method_token6);
       END_STATE();
-    case 437:
+    case 418:
       ACCEPT_TOKEN(anon_sym_RPAREN);
       END_STATE();
-    case 438:
+    case 419:
       ACCEPT_TOKEN(anon_sym_LT_LT);
       END_STATE();
-    case 439:
+    case 420:
       ACCEPT_TOKEN(anon_sym_CARET_LT_LT);
       END_STATE();
-    case 440:
+    case 421:
       ACCEPT_TOKEN(anon_sym_LBRACK);
       END_STATE();
-    case 441:
+    case 422:
       ACCEPT_TOKEN(anon_sym_RBRACK);
       END_STATE();
-    case 442:
+    case 423:
       ACCEPT_TOKEN(aux_sym_method_token7);
       END_STATE();
-    case 443:
+    case 424:
       ACCEPT_TOKEN(aux_sym_procedure_token1);
       END_STATE();
-    case 444:
+    case 425:
       ACCEPT_TOKEN(aux_sym_procedure_token2);
       END_STATE();
-    case 445:
+    case 426:
       ACCEPT_TOKEN(aux_sym_block_token1);
       END_STATE();
-    case 446:
+    case 427:
       ACCEPT_TOKEN(aux_sym_block_token2);
       END_STATE();
-    case 447:
-      ACCEPT_TOKEN(anon_sym__and_LT_LT);
+    case 428:
+      ACCEPT_TOKEN(aux_sym_assignment_token1);
       END_STATE();
-    case 448:
-      ACCEPT_TOKEN(anon_sym__andif_LT_LT);
+    case 429:
+      ACCEPT_TOKEN(aux_sym_assignment_token2);
       END_STATE();
-    case 449:
-      ACCEPT_TOKEN(anon_sym__or_LT_LT);
+    case 430:
+      ACCEPT_TOKEN(aux_sym_assignment_token3);
       END_STATE();
-    case 450:
-      ACCEPT_TOKEN(anon_sym__orif_LT_LT);
+    case 431:
+      ACCEPT_TOKEN(aux_sym_assignment_token4);
       END_STATE();
-    case 451:
-      ACCEPT_TOKEN(anon_sym__xor_LT_LT);
+    case 432:
+      ACCEPT_TOKEN(aux_sym_assignment_token5);
       END_STATE();
-    case 452:
+    case 433:
       ACCEPT_TOKEN(anon_sym_STAR_STAR_LT_LT);
       END_STATE();
-    case 453:
+    case 434:
       ACCEPT_TOKEN(anon_sym_STAR_STAR_CARET_LT_LT);
       END_STATE();
-    case 454:
+    case 435:
       ACCEPT_TOKEN(anon_sym_STAR_LT_LT);
       END_STATE();
-    case 455:
+    case 436:
       ACCEPT_TOKEN(anon_sym_STAR_CARET_LT_LT);
       END_STATE();
-    case 456:
+    case 437:
       ACCEPT_TOKEN(anon_sym_SLASH_LT_LT);
       END_STATE();
-    case 457:
+    case 438:
       ACCEPT_TOKEN(anon_sym_SLASH_LT_LT);
-      if (lookahead == '/') ADVANCE(514);
+      if (lookahead == '/') ADVANCE(495);
       if (lookahead != 0 &&
           lookahead != '\n') ADVANCE(33);
       END_STATE();
-    case 458:
+    case 439:
       ACCEPT_TOKEN(anon_sym_SLASH_CARET_LT_LT);
       END_STATE();
-    case 459:
+    case 440:
       ACCEPT_TOKEN(anon_sym_SLASH_CARET_LT_LT);
-      if (lookahead == '/') ADVANCE(514);
+      if (lookahead == '/') ADVANCE(495);
       if (lookahead != 0 &&
           lookahead != '\n') ADVANCE(33);
       END_STATE();
-    case 460:
-      ACCEPT_TOKEN(anon_sym__mod_LT_LT);
+    case 441:
+      ACCEPT_TOKEN(aux_sym_assignment_token6);
       END_STATE();
-    case 461:
-      ACCEPT_TOKEN(anon_sym__div_LT_LT);
+    case 442:
+      ACCEPT_TOKEN(aux_sym_assignment_token7);
       END_STATE();
-    case 462:
+    case 443:
       ACCEPT_TOKEN(anon_sym_DASH_LT_LT);
       END_STATE();
-    case 463:
+    case 444:
       ACCEPT_TOKEN(anon_sym_DASH_CARET_LT_LT);
       END_STATE();
-    case 464:
+    case 445:
       ACCEPT_TOKEN(anon_sym_PLUS_LT_LT);
       END_STATE();
-    case 465:
+    case 446:
       ACCEPT_TOKEN(anon_sym_PLUS_CARET_LT_LT);
       END_STATE();
-    case 466:
+    case 447:
       ACCEPT_TOKEN(aux_sym_if_token1);
       END_STATE();
-    case 467:
+    case 448:
       ACCEPT_TOKEN(aux_sym_if_token2);
       END_STATE();
-    case 468:
+    case 449:
       ACCEPT_TOKEN(aux_sym_if_token3);
       END_STATE();
-    case 469:
+    case 450:
       ACCEPT_TOKEN(aux_sym_elif_token1);
       END_STATE();
-    case 470:
+    case 451:
       ACCEPT_TOKEN(aux_sym_else_token1);
       END_STATE();
-    case 471:
+    case 452:
       ACCEPT_TOKEN(aux_sym_loop_token1);
       END_STATE();
-    case 472:
+    case 453:
       ACCEPT_TOKEN(aux_sym_loop_token1);
       if (lookahead == 'B' ||
-          lookahead == 'b') ADVANCE(322);
+          lookahead == 'b') ADVANCE(303);
       END_STATE();
-    case 473:
+    case 454:
       ACCEPT_TOKEN(aux_sym_loop_token2);
       END_STATE();
-    case 474:
+    case 455:
       ACCEPT_TOKEN(aux_sym_finally_token1);
       END_STATE();
-    case 475:
+    case 456:
       ACCEPT_TOKEN(aux_sym_finally_token2);
       END_STATE();
-    case 476:
+    case 457:
       ACCEPT_TOKEN(aux_sym_handling_token1);
       END_STATE();
-    case 477:
+    case 458:
       ACCEPT_TOKEN(aux_sym_handling_token2);
       END_STATE();
-    case 478:
+    case 459:
       ACCEPT_TOKEN(aux_sym_catch_token1);
       END_STATE();
-    case 479:
+    case 460:
       ACCEPT_TOKEN(aux_sym_catch_token2);
       END_STATE();
-    case 480:
+    case 461:
       ACCEPT_TOKEN(aux_sym_throw_token1);
       END_STATE();
-    case 481:
+    case 462:
       ACCEPT_TOKEN(aux_sym_primitive_token1);
       END_STATE();
-    case 482:
+    case 463:
       ACCEPT_TOKEN(aux_sym_iterator_token1);
       END_STATE();
-    case 483:
+    case 464:
       ACCEPT_TOKEN(aux_sym_iterator_token2);
       END_STATE();
-    case 484:
+    case 465:
       ACCEPT_TOKEN(aux_sym_while_token1);
       END_STATE();
-    case 485:
+    case 466:
       ACCEPT_TOKEN(aux_sym_try_token1);
       END_STATE();
-    case 486:
+    case 467:
       ACCEPT_TOKEN(aux_sym_try_token2);
       END_STATE();
-    case 487:
+    case 468:
       ACCEPT_TOKEN(aux_sym_try_token3);
       END_STATE();
-    case 488:
+    case 469:
       ACCEPT_TOKEN(aux_sym_loopbody_token1);
       END_STATE();
-    case 489:
+    case 470:
       ACCEPT_TOKEN(aux_sym_leave_token1);
       END_STATE();
-    case 490:
+    case 471:
       ACCEPT_TOKEN(aux_sym_continue_token1);
       END_STATE();
-    case 491:
+    case 472:
       ACCEPT_TOKEN(aux_sym_protect_token1);
       END_STATE();
-    case 492:
+    case 473:
       ACCEPT_TOKEN(aux_sym_protect_token1);
       if (lookahead == 'I' ||
-          lookahead == 'i') ADVANCE(325);
+          lookahead == 'i') ADVANCE(306);
       END_STATE();
-    case 493:
+    case 474:
       ACCEPT_TOKEN(aux_sym_protect_token2);
       END_STATE();
-    case 494:
+    case 475:
       ACCEPT_TOKEN(aux_sym_protect_token3);
       END_STATE();
-    case 495:
+    case 476:
       ACCEPT_TOKEN(aux_sym_protect_token4);
       END_STATE();
-    case 496:
+    case 477:
       ACCEPT_TOKEN(aux_sym_lock_token1);
       END_STATE();
-    case 497:
+    case 478:
       ACCEPT_TOKEN(aux_sym_lock_token1);
       if (lookahead == 'I' ||
-          lookahead == 'i') ADVANCE(298);
+          lookahead == 'i') ADVANCE(279);
       END_STATE();
-    case 498:
+    case 479:
       ACCEPT_TOKEN(aux_sym_lock_token2);
       END_STATE();
-    case 499:
+    case 480:
       ACCEPT_TOKEN(aux_sym_pragma_token1);
       END_STATE();
-    case 500:
+    case 481:
       ACCEPT_TOKEN(aux_sym_pragma_token2);
-      if (lookahead == '#') ADVANCE(501);
+      if (lookahead == '#') ADVANCE(482);
       if (lookahead == '\t' ||
           (0x0b <= lookahead && lookahead <= '\r') ||
-          lookahead == ' ') ADVANCE(500);
+          lookahead == ' ') ADVANCE(481);
       if (lookahead != 0 &&
-          (lookahead < '\t' || '\r' < lookahead)) ADVANCE(501);
+          (lookahead < '\t' || '\r' < lookahead)) ADVANCE(482);
       END_STATE();
-    case 501:
+    case 482:
       ACCEPT_TOKEN(aux_sym_pragma_token2);
       if (lookahead != 0 &&
-          lookahead != '\n') ADVANCE(501);
+          lookahead != '\n') ADVANCE(482);
       END_STATE();
-    case 502:
+    case 483:
       ACCEPT_TOKEN(anon_sym_PERCENT);
       END_STATE();
-    case 503:
+    case 484:
       ACCEPT_TOKEN(aux_sym_character_literal_token1);
-      if (set_contains(aux_sym_character_literal_token1_character_set_2, 770, lookahead)) ADVANCE(503);
+      if (set_contains(aux_sym_character_literal_token1_character_set_2, 770, lookahead)) ADVANCE(484);
       END_STATE();
-    case 504:
+    case 485:
       ACCEPT_TOKEN(aux_sym_character_literal_token2);
       END_STATE();
-    case 505:
+    case 486:
       ACCEPT_TOKEN(aux_sym_character_literal_token2);
-      if (lookahead == ' ') ADVANCE(506);
-      if (lookahead == '#') ADVANCE(504);
+      if (lookahead == ' ') ADVANCE(487);
+      if (lookahead == '#') ADVANCE(485);
       if (lookahead == '\t' ||
-          (0x0b <= lookahead && lookahead <= '\r')) ADVANCE(505);
-      if (set_contains(aux_sym_character_literal_token1_character_set_1, 677, lookahead)) ADVANCE(503);
+          (0x0b <= lookahead && lookahead <= '\r')) ADVANCE(486);
+      if (set_contains(aux_sym_character_literal_token1_character_set_1, 677, lookahead)) ADVANCE(484);
       if (lookahead != 0 &&
-          (lookahead < '\t' || '\r' < lookahead)) ADVANCE(504);
+          (lookahead < '\t' || '\r' < lookahead)) ADVANCE(485);
       END_STATE();
-    case 506:
+    case 487:
       ACCEPT_TOKEN(anon_sym_SPACE);
-      if (lookahead == ' ') ADVANCE(506);
+      if (lookahead == ' ') ADVANCE(487);
       if (lookahead == '\t' ||
-          (0x0b <= lookahead && lookahead <= '\r')) ADVANCE(505);
+          (0x0b <= lookahead && lookahead <= '\r')) ADVANCE(486);
       END_STATE();
-    case 507:
+    case 488:
       ACCEPT_TOKEN(anon_sym_DQUOTE);
       END_STATE();
-    case 508:
+    case 489:
       ACCEPT_TOKEN(aux_sym_string_literal_token1);
       END_STATE();
-    case 509:
+    case 490:
       ACCEPT_TOKEN(aux_sym_string_literal_token1);
-      if (lookahead == '\n') ADVANCE(511);
-      if (lookahead == '#') ADVANCE(508);
+      if (lookahead == '\n') ADVANCE(492);
+      if (lookahead == '#') ADVANCE(489);
       if (('\t' <= lookahead && lookahead <= '\r') ||
-          lookahead == ' ') ADVANCE(509);
+          lookahead == ' ') ADVANCE(490);
       if (lookahead != 0 &&
           lookahead != '"' &&
-          lookahead != '#') ADVANCE(508);
+          lookahead != '#') ADVANCE(489);
       END_STATE();
-    case 510:
+    case 491:
       ACCEPT_TOKEN(aux_sym_string_literal_token2);
       END_STATE();
-    case 511:
+    case 492:
       ACCEPT_TOKEN(aux_sym_string_literal_token2);
-      if (lookahead == '\n') ADVANCE(511);
-      if (lookahead == '"') ADVANCE(507);
-      if (lookahead == '#') ADVANCE(508);
+      if (lookahead == '\n') ADVANCE(492);
+      if (lookahead == '"') ADVANCE(488);
+      if (lookahead == '#') ADVANCE(489);
       if (('\t' <= lookahead && lookahead <= '\r') ||
-          lookahead == ' ') ADVANCE(509);
-      if (lookahead != 0) ADVANCE(508);
+          lookahead == ' ') ADVANCE(490);
+      if (lookahead != 0) ADVANCE(489);
       END_STATE();
-    case 512:
+    case 493:
       ACCEPT_TOKEN(aux_sym_string_literal_token2);
-      if (lookahead == '\n') ADVANCE(512);
-      if (lookahead == '#') ADVANCE(510);
-      if (lookahead == '\'') ADVANCE(513);
+      if (lookahead == '\n') ADVANCE(493);
+      if (lookahead == '#') ADVANCE(491);
+      if (lookahead == '\'') ADVANCE(494);
       if (('\t' <= lookahead && lookahead <= '\r') ||
-          lookahead == ' ') ADVANCE(512);
-      if (lookahead != 0) ADVANCE(510);
+          lookahead == ' ') ADVANCE(493);
+      if (lookahead != 0) ADVANCE(491);
       END_STATE();
-    case 513:
+    case 494:
       ACCEPT_TOKEN(anon_sym_SQUOTE);
       END_STATE();
-    case 514:
+    case 495:
       ACCEPT_TOKEN(sym_regex_literal);
       ADVANCE_MAP(
-        '/', 514,
-        'c', 514,
-        'd', 514,
-        'i', 514,
-        'l', 514,
-        'm', 514,
-        'q', 514,
-        's', 514,
-        'u', 514,
-        'x', 514,
+        '/', 495,
+        'c', 495,
+        'd', 495,
+        'i', 495,
+        'l', 495,
+        'm', 495,
+        'q', 495,
+        's', 495,
+        'u', 495,
+        'x', 495,
       );
       if (lookahead != 0 &&
           lookahead != '\n') ADVANCE(33);
       END_STATE();
-    case 515:
+    case 496:
       ACCEPT_TOKEN(aux_sym_slot_accessor_token1);
       END_STATE();
-    case 516:
+    case 497:
       ACCEPT_TOKEN(aux_sym_slot_accessor_token1);
-      if (set_contains(aux_sym_slot_accessor_token1_character_set_2, 773, lookahead)) ADVANCE(516);
+      if (set_contains(aux_sym_slot_accessor_token1_character_set_2, 773, lookahead)) ADVANCE(497);
       END_STATE();
-    case 517:
+    case 498:
       ACCEPT_TOKEN(aux_sym_true_token1);
       END_STATE();
-    case 518:
+    case 499:
       ACCEPT_TOKEN(aux_sym_false_token1);
       END_STATE();
-    case 519:
+    case 500:
       ACCEPT_TOKEN(aux_sym_maybe_token1);
       END_STATE();
-    case 520:
+    case 501:
       ACCEPT_TOKEN(aux_sym_unset_token1);
       END_STATE();
-    case 521:
+    case 502:
       ACCEPT_TOKEN(aux_sym_super_token1);
       END_STATE();
-    case 522:
+    case 503:
       ACCEPT_TOKEN(aux_sym_self_token1);
       END_STATE();
-    case 523:
+    case 504:
       ACCEPT_TOKEN(aux_sym_clone_token1);
       END_STATE();
-    case 524:
+    case 505:
       ACCEPT_TOKEN(aux_sym_thisthread_token1);
       END_STATE();
-    case 525:
+    case 506:
       ACCEPT_TOKEN(aux_sym_class_token1);
       END_STATE();
-    case 526:
+    case 507:
       ACCEPT_TOKEN(aux_sym_class_token2);
       END_STATE();
-    case 527:
+    case 508:
       ACCEPT_TOKEN(anon_sym_SEMI);
       END_STATE();
-    case 528:
+    case 509:
       ACCEPT_TOKEN(aux_sym_global_token1);
       END_STATE();
-    case 529:
+    case 510:
       ACCEPT_TOKEN(aux_sym_local_token1);
       END_STATE();
-    case 530:
+    case 511:
       ACCEPT_TOKEN(aux_sym__global_assignment_token1);
       END_STATE();
-    case 531:
+    case 512:
       ACCEPT_TOKEN(aux_sym_dynamic_token1);
       END_STATE();
-    case 532:
+    case 513:
       ACCEPT_TOKEN(aux_sym_import_token1);
       END_STATE();
-    case 533:
+    case 514:
       ACCEPT_TOKEN(aux_sym_return_token1);
       END_STATE();
-    case 534:
+    case 515:
       ACCEPT_TOKEN(anon_sym_GT_GT);
       END_STATE();
-    case 535:
+    case 516:
       ACCEPT_TOKEN(aux_sym_scatter_token1);
       END_STATE();
-    case 536:
+    case 517:
       ACCEPT_TOKEN(aux_sym_allresults_token1);
       END_STATE();
-    case 537:
+    case 518:
       ACCEPT_TOKEN(sym_label);
-      if (lookahead == ':') ADVANCE(93);
-      if (lookahead == '|') ADVANCE(89);
-      if (set_contains(sym_dynamic_variable_character_set_2, 773, lookahead)) ADVANCE(539);
+      if (lookahead == ':') ADVANCE(68);
+      if (lookahead == '|') ADVANCE(64);
+      if (set_contains(sym_dynamic_variable_character_set_2, 773, lookahead)) ADVANCE(520);
       END_STATE();
-    case 538:
+    case 519:
       ACCEPT_TOKEN(sym_label);
-      if (lookahead == ':') ADVANCE(93);
-      if (lookahead == '|') ADVANCE(89);
-      if (set_contains(sym_dynamic_variable_character_set_2, 773, lookahead)) ADVANCE(538);
+      if (lookahead == ':') ADVANCE(68);
+      if (lookahead == '|') ADVANCE(64);
+      if (set_contains(sym_dynamic_variable_character_set_2, 773, lookahead)) ADVANCE(519);
       END_STATE();
-    case 539:
+    case 520:
       ACCEPT_TOKEN(sym_label);
-      if (lookahead == '|') ADVANCE(89);
-      if (set_contains(aux_sym_slot_accessor_token1_character_set_3, 774, lookahead)) ADVANCE(539);
+      if (lookahead == '|') ADVANCE(64);
+      if (set_contains(aux_sym_slot_accessor_token1_character_set_3, 774, lookahead)) ADVANCE(520);
       END_STATE();
-    case 540:
+    case 521:
       ACCEPT_TOKEN(sym_number);
-      if (lookahead == '.') ADVANCE(416);
+      if (lookahead == '.') ADVANCE(397);
       if (lookahead == 'R' ||
-          lookahead == 'r') ADVANCE(415);
+          lookahead == 'r') ADVANCE(396);
       if (lookahead == '&' ||
           lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(110);
-      if (('0' <= lookahead && lookahead <= '6')) ADVANCE(542);
-      if (set_contains(sym_number_character_set_5, 147, lookahead)) ADVANCE(544);
+          lookahead == 'e') ADVANCE(85);
+      if (('0' <= lookahead && lookahead <= '6')) ADVANCE(523);
+      if (set_contains(sym_number_character_set_5, 147, lookahead)) ADVANCE(525);
       END_STATE();
-    case 541:
+    case 522:
       ACCEPT_TOKEN(sym_number);
-      if (lookahead == '.') ADVANCE(416);
+      if (lookahead == '.') ADVANCE(397);
       if (lookahead == 'R' ||
-          lookahead == 'r') ADVANCE(415);
+          lookahead == 'r') ADVANCE(396);
       if (lookahead == '&' ||
           lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(110);
-      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(542);
-      if (set_contains(sym_number_character_set_5, 147, lookahead)) ADVANCE(544);
+          lookahead == 'e') ADVANCE(85);
+      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(523);
+      if (set_contains(sym_number_character_set_5, 147, lookahead)) ADVANCE(525);
       END_STATE();
-    case 542:
+    case 523:
       ACCEPT_TOKEN(sym_number);
-      if (lookahead == '.') ADVANCE(416);
+      if (lookahead == '.') ADVANCE(397);
       if (lookahead == 'R' ||
-          lookahead == 'r') ADVANCE(415);
+          lookahead == 'r') ADVANCE(396);
       if (lookahead == '&' ||
           lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(110);
-      if (set_contains(sym_number_character_set_5, 147, lookahead)) ADVANCE(544);
+          lookahead == 'e') ADVANCE(85);
+      if (set_contains(sym_number_character_set_5, 147, lookahead)) ADVANCE(525);
       END_STATE();
-    case 543:
+    case 524:
       ACCEPT_TOKEN(sym_number);
-      if (lookahead == '.') ADVANCE(416);
+      if (lookahead == '.') ADVANCE(397);
       if (lookahead == '&' ||
           lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(110);
-      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(542);
-      if (set_contains(sym_number_character_set_5, 147, lookahead)) ADVANCE(544);
+          lookahead == 'e') ADVANCE(85);
+      if (('0' <= lookahead && lookahead <= '9')) ADVANCE(523);
+      if (set_contains(sym_number_character_set_5, 147, lookahead)) ADVANCE(525);
       END_STATE();
-    case 544:
+    case 525:
       ACCEPT_TOKEN(sym_number);
-      if (lookahead == '.') ADVANCE(416);
+      if (lookahead == '.') ADVANCE(397);
       if (lookahead == '&' ||
           lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(110);
-      if (set_contains(sym_number_character_set_5, 147, lookahead)) ADVANCE(544);
+          lookahead == 'e') ADVANCE(85);
+      if (set_contains(sym_number_character_set_5, 147, lookahead)) ADVANCE(525);
       END_STATE();
-    case 545:
+    case 526:
       ACCEPT_TOKEN(sym_number);
       if (lookahead == '&' ||
           lookahead == 'E' ||
-          lookahead == 'e') ADVANCE(110);
-      if (set_contains(sym_number_character_set_5, 147, lookahead)) ADVANCE(545);
+          lookahead == 'e') ADVANCE(85);
+      if (set_contains(sym_number_character_set_5, 147, lookahead)) ADVANCE(526);
       END_STATE();
-    case 546:
+    case 527:
       ACCEPT_TOKEN(sym_number);
       if (('0' <= lookahead && lookahead <= '9') ||
           ('A' <= lookahead && lookahead <= 'Z') ||
-          ('a' <= lookahead && lookahead <= 'z')) ADVANCE(546);
+          ('a' <= lookahead && lookahead <= 'z')) ADVANCE(527);
       END_STATE();
-    case 547:
+    case 528:
       ACCEPT_TOKEN(sym_number);
-      if (set_contains(sym_number_character_set_1, 144, lookahead)) ADVANCE(547);
+      if (set_contains(sym_number_character_set_1, 144, lookahead)) ADVANCE(528);
       END_STATE();
-    case 548:
+    case 529:
       ACCEPT_TOKEN(sym_dynamic_variable);
       END_STATE();
-    case 549:
+    case 530:
       ACCEPT_TOKEN(sym_dynamic_variable);
-      if (lookahead == '!') ADVANCE(549);
+      if (lookahead == '!') ADVANCE(530);
       if (set_contains(aux_sym_slot_accessor_token1_character_set_2, 773, lookahead)) ADVANCE(10);
       END_STATE();
-    case 550:
+    case 531:
       ACCEPT_TOKEN(sym_dynamic_variable);
-      if (lookahead == '!') ADVANCE(548);
+      if (lookahead == '!') ADVANCE(529);
       if (lookahead == ':') ADVANCE(12);
       END_STATE();
-    case 551:
+    case 532:
       ACCEPT_TOKEN(sym_dynamic_variable);
-      if (lookahead == '!') ADVANCE(548);
+      if (lookahead == '!') ADVANCE(529);
       if (lookahead == ':') ADVANCE(11);
       END_STATE();
-    case 552:
+    case 533:
       ACCEPT_TOKEN(sym_global_variable);
       END_STATE();
-    case 553:
+    case 534:
       ACCEPT_TOKEN(sym_global_variable);
-      if (set_contains(aux_sym_slot_accessor_token1_character_set_2, 773, lookahead)) ADVANCE(553);
+      if (set_contains(aux_sym_slot_accessor_token1_character_set_2, 773, lookahead)) ADVANCE(534);
       END_STATE();
-    case 554:
+    case 535:
       ACCEPT_TOKEN(sym_global_reference);
       END_STATE();
-    case 555:
+    case 536:
       ACCEPT_TOKEN(sym_global_reference);
-      if (lookahead == ':') ADVANCE(93);
+      if (lookahead == ':') ADVANCE(68);
       END_STATE();
-    case 556:
+    case 537:
       ACCEPT_TOKEN(sym_global_reference);
-      if (lookahead == ':') ADVANCE(93);
-      if (set_contains(sym_dynamic_variable_character_set_2, 773, lookahead)) ADVANCE(556);
+      if (lookahead == ':') ADVANCE(68);
+      if (set_contains(sym_dynamic_variable_character_set_2, 773, lookahead)) ADVANCE(537);
       END_STATE();
-    case 557:
+    case 538:
       ACCEPT_TOKEN(sym_global_reference);
-      if (set_contains(aux_sym_slot_accessor_token1_character_set_2, 773, lookahead)) ADVANCE(557);
+      if (set_contains(aux_sym_slot_accessor_token1_character_set_2, 773, lookahead)) ADVANCE(538);
       END_STATE();
-    case 558:
+    case 539:
       ACCEPT_TOKEN(sym__identifier);
       END_STATE();
-    case 559:
+    case 540:
       ACCEPT_TOKEN(sym__identifier);
-      if (lookahead == '!') ADVANCE(548);
+      if (lookahead == '!') ADVANCE(529);
       if (lookahead == ':') ADVANCE(12);
       END_STATE();
-    case 560:
+    case 541:
       ACCEPT_TOKEN(sym__identifier);
-      if (lookahead == '!') ADVANCE(548);
+      if (lookahead == '!') ADVANCE(529);
       if (lookahead == ':') ADVANCE(11);
       END_STATE();
-    case 561:
+    case 542:
       ACCEPT_TOKEN(sym__identifier);
       if (lookahead == ':') ADVANCE(12);
       END_STATE();
-    case 562:
+    case 543:
       ACCEPT_TOKEN(sym__identifier);
       if (lookahead == ':') ADVANCE(12);
-      if (set_contains(sym_dynamic_variable_character_set_2, 773, lookahead)) ADVANCE(562);
+      if (set_contains(sym_dynamic_variable_character_set_2, 773, lookahead)) ADVANCE(543);
       END_STATE();
-    case 563:
+    case 544:
       ACCEPT_TOKEN(sym__identifier);
       if (lookahead == ':') ADVANCE(11);
       END_STATE();
-    case 564:
+    case 545:
       ACCEPT_TOKEN(sym__identifier);
       if (lookahead == ':') ADVANCE(11);
-      if (set_contains(sym_dynamic_variable_character_set_2, 773, lookahead)) ADVANCE(564);
+      if (set_contains(sym_dynamic_variable_character_set_2, 773, lookahead)) ADVANCE(545);
       END_STATE();
-    case 565:
+    case 546:
       ACCEPT_TOKEN(sym__identifier);
-      if (set_contains(aux_sym_slot_accessor_token1_character_set_2, 773, lookahead)) ADVANCE(565);
+      if (set_contains(aux_sym_slot_accessor_token1_character_set_2, 773, lookahead)) ADVANCE(546);
       END_STATE();
-    case 566:
+    case 547:
       ACCEPT_TOKEN(anon_sym_LBRACE);
       END_STATE();
-    case 567:
+    case 548:
       ACCEPT_TOKEN(anon_sym_RBRACE);
       END_STATE();
-    case 568:
+    case 549:
       ACCEPT_TOKEN(aux_sym_relational_operator_token1);
       if (lookahead == 'N' ||
-          lookahead == 'n') ADVANCE(375);
+          lookahead == 'n') ADVANCE(356);
       END_STATE();
-    case 569:
+    case 550:
       ACCEPT_TOKEN(aux_sym_relational_operator_token2);
       END_STATE();
-    case 570:
+    case 551:
       ACCEPT_TOKEN(aux_sym_relational_operator_token3);
       END_STATE();
-    case 571:
+    case 552:
       ACCEPT_TOKEN(anon_sym_EQ);
       END_STATE();
-    case 572:
+    case 553:
       ACCEPT_TOKEN(anon_sym_TILDE_EQ);
       END_STATE();
-    case 573:
+    case 554:
       ACCEPT_TOKEN(anon_sym_LT_GT);
       END_STATE();
-    case 574:
+    case 555:
       ACCEPT_TOKEN(anon_sym_GT_EQ);
       END_STATE();
-    case 575:
+    case 556:
       ACCEPT_TOKEN(anon_sym_LT_EQ);
       END_STATE();
-    case 576:
+    case 557:
       ACCEPT_TOKEN(anon_sym_LT);
-      if (lookahead == '<') ADVANCE(438);
-      if (lookahead == '=') ADVANCE(575);
-      if (lookahead == '>') ADVANCE(573);
+      if (lookahead == '<') ADVANCE(419);
+      if (lookahead == '=') ADVANCE(556);
+      if (lookahead == '>') ADVANCE(554);
       END_STATE();
-    case 577:
+    case 558:
       ACCEPT_TOKEN(anon_sym_GT);
-      if (lookahead == '=') ADVANCE(574);
+      if (lookahead == '=') ADVANCE(555);
       END_STATE();
-    case 578:
+    case 559:
       ACCEPT_TOKEN(anon_sym_GT);
-      if (lookahead == '=') ADVANCE(574);
-      if (lookahead == '>') ADVANCE(534);
+      if (lookahead == '=') ADVANCE(555);
+      if (lookahead == '>') ADVANCE(515);
       END_STATE();
-    case 579:
+    case 560:
       ACCEPT_TOKEN(aux_sym_logical_operator_token1);
       if (lookahead == '<') ADVANCE(45);
-      if (lookahead == 'I') ADVANCE(228);
-      if (lookahead == 'i') ADVANCE(70);
-      END_STATE();
-    case 580:
-      ACCEPT_TOKEN(aux_sym_logical_operator_token1);
       if (lookahead == 'I' ||
-          lookahead == 'i') ADVANCE(228);
+          lookahead == 'i') ADVANCE(209);
       END_STATE();
-    case 581:
+    case 561:
       ACCEPT_TOKEN(aux_sym_logical_operator_token2);
       if (lookahead == '<') ADVANCE(44);
-      if (lookahead == 'I') ADVANCE(225);
-      if (lookahead == 'i') ADVANCE(69);
-      END_STATE();
-    case 582:
-      ACCEPT_TOKEN(aux_sym_logical_operator_token2);
       if (lookahead == 'I' ||
-          lookahead == 'i') ADVANCE(225);
+          lookahead == 'i') ADVANCE(207);
       END_STATE();
-    case 583:
-      ACCEPT_TOKEN(aux_sym_logical_operator_token3);
-      END_STATE();
-    case 584:
+    case 562:
       ACCEPT_TOKEN(aux_sym_logical_operator_token3);
       if (lookahead == '<') ADVANCE(48);
       END_STATE();
-    case 585:
-      ACCEPT_TOKEN(aux_sym_logical_operator_token4);
-      END_STATE();
-    case 586:
+    case 563:
       ACCEPT_TOKEN(aux_sym_logical_operator_token4);
       if (lookahead == '<') ADVANCE(50);
       END_STATE();
-    case 587:
-      ACCEPT_TOKEN(aux_sym_logical_operator_token5);
-      END_STATE();
-    case 588:
+    case 564:
       ACCEPT_TOKEN(aux_sym_logical_operator_token5);
       if (lookahead == '<') ADVANCE(49);
       END_STATE();
-    case 589:
+    case 565:
       ACCEPT_TOKEN(anon_sym_STAR_STAR);
       if (lookahead == '<') ADVANCE(39);
       if (lookahead == '^') ADVANCE(57);
       END_STATE();
-    case 590:
+    case 566:
       ACCEPT_TOKEN(anon_sym_STAR);
-      if (lookahead == '*') ADVANCE(589);
+      if (lookahead == '*') ADVANCE(565);
       if (lookahead == '<') ADVANCE(35);
       if (lookahead == '^') ADVANCE(54);
       END_STATE();
-    case 591:
+    case 567:
       ACCEPT_TOKEN(anon_sym_SLASH);
-      if (lookahead == '/') ADVANCE(514);
+      if (lookahead == '/') ADVANCE(495);
       if (lookahead == '<') ADVANCE(30);
       if (lookahead == '^') ADVANCE(32);
       if (lookahead != 0 &&
           lookahead != '\n') ADVANCE(33);
       END_STATE();
-    case 592:
+    case 568:
       ACCEPT_TOKEN(anon_sym_SLASH);
       if (lookahead == '<') ADVANCE(51);
       if (lookahead == '^') ADVANCE(58);
       END_STATE();
-    case 593:
-      ACCEPT_TOKEN(aux_sym_arithmetic_operator_token1);
-      END_STATE();
-    case 594:
+    case 569:
       ACCEPT_TOKEN(aux_sym_arithmetic_operator_token1);
       if (lookahead == '<') ADVANCE(47);
       END_STATE();
-    case 595:
-      ACCEPT_TOKEN(aux_sym_arithmetic_operator_token2);
-      END_STATE();
-    case 596:
+    case 570:
       ACCEPT_TOKEN(aux_sym_arithmetic_operator_token2);
       if (lookahead == '<') ADVANCE(46);
       END_STATE();
-    case 597:
+    case 571:
       ACCEPT_TOKEN(anon_sym_DASH);
       END_STATE();
-    case 598:
+    case 572:
       ACCEPT_TOKEN(anon_sym_DASH);
       if (lookahead == '<') ADVANCE(37);
       if (lookahead == '^') ADVANCE(56);
       END_STATE();
-    case 599:
+    case 573:
       ACCEPT_TOKEN(anon_sym_PLUS);
       END_STATE();
-    case 600:
+    case 574:
       ACCEPT_TOKEN(anon_sym_PLUS);
       if (lookahead == '<') ADVANCE(36);
       if (lookahead == '^') ADVANCE(55);
       END_STATE();
-    case 601:
+    case 575:
       ACCEPT_TOKEN(aux_sym_unary_operator_token1);
       END_STATE();
-    case 602:
+    case 576:
       ACCEPT_TOKEN(anon_sym_TILDE);
       END_STATE();
-    case 603:
+    case 577:
       ACCEPT_TOKEN(anon_sym_TILDE);
-      if (lookahead == '=') ADVANCE(572);
+      if (lookahead == '=') ADVANCE(553);
       END_STATE();
-    case 604:
+    case 578:
       ACCEPT_TOKEN(sym_symbol);
-      if (lookahead == '\\') ADVANCE(420);
-      if (lookahead == '|') ADVANCE(87);
-      if (set_contains(sym_symbol_character_set_1, 775, lookahead)) ADVANCE(604);
+      if (lookahead == '\\') ADVANCE(401);
+      if (lookahead == '|') ADVANCE(62);
+      if (set_contains(sym_symbol_character_set_1, 775, lookahead)) ADVANCE(578);
       END_STATE();
-    case 605:
+    case 579:
       ACCEPT_TOKEN(aux_sym_documentation_token1);
       if (lookahead != 0 &&
-          lookahead != '\n') ADVANCE(605);
+          lookahead != '\n') ADVANCE(579);
       END_STATE();
-    case 606:
+    case 580:
       ACCEPT_TOKEN(sym_comment);
-      if (lookahead == '#') ADVANCE(605);
+      if (lookahead == '#') ADVANCE(579);
       if (lookahead != 0 &&
-          lookahead != '\n') ADVANCE(607);
+          lookahead != '\n') ADVANCE(581);
       END_STATE();
-    case 607:
+    case 581:
       ACCEPT_TOKEN(sym_comment);
       if (lookahead != 0 &&
-          lookahead != '\n') ADVANCE(607);
+          lookahead != '\n') ADVANCE(581);
       END_STATE();
     default:
       return false;
@@ -8233,21 +8108,21 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
 
 static const TSLexerMode ts_lex_modes[STATE_COUNT] = {
   [0] = {.lex_state = 0},
-  [1] = {.lex_state = 421},
+  [1] = {.lex_state = 402},
   [2] = {.lex_state = 3},
   [3] = {.lex_state = 3},
   [4] = {.lex_state = 3},
   [5] = {.lex_state = 3},
-  [6] = {.lex_state = 421},
-  [7] = {.lex_state = 421},
+  [6] = {.lex_state = 402},
+  [7] = {.lex_state = 402},
   [8] = {.lex_state = 4},
   [9] = {.lex_state = 4},
-  [10] = {.lex_state = 421},
-  [11] = {.lex_state = 421},
+  [10] = {.lex_state = 402},
+  [11] = {.lex_state = 402},
   [12] = {.lex_state = 4},
   [13] = {.lex_state = 4},
-  [14] = {.lex_state = 421},
-  [15] = {.lex_state = 421},
+  [14] = {.lex_state = 402},
+  [15] = {.lex_state = 402},
   [16] = {.lex_state = 16},
   [17] = {.lex_state = 16},
   [18] = {.lex_state = 16},
@@ -8256,13 +8131,13 @@ static const TSLexerMode ts_lex_modes[STATE_COUNT] = {
   [21] = {.lex_state = 16},
   [22] = {.lex_state = 16},
   [23] = {.lex_state = 16},
-  [24] = {.lex_state = 421},
+  [24] = {.lex_state = 402},
   [25] = {.lex_state = 16},
   [26] = {.lex_state = 16},
   [27] = {.lex_state = 16},
   [28] = {.lex_state = 16},
   [29] = {.lex_state = 16},
-  [30] = {.lex_state = 421},
+  [30] = {.lex_state = 402},
   [31] = {.lex_state = 16},
   [32] = {.lex_state = 16},
   [33] = {.lex_state = 16},
@@ -8272,8 +8147,8 @@ static const TSLexerMode ts_lex_modes[STATE_COUNT] = {
   [37] = {.lex_state = 16},
   [38] = {.lex_state = 16},
   [39] = {.lex_state = 16},
-  [40] = {.lex_state = 421},
-  [41] = {.lex_state = 421},
+  [40] = {.lex_state = 402},
+  [41] = {.lex_state = 402},
   [42] = {.lex_state = 16},
   [43] = {.lex_state = 16},
   [44] = {.lex_state = 16},
@@ -8303,18 +8178,18 @@ static const TSLexerMode ts_lex_modes[STATE_COUNT] = {
   [68] = {.lex_state = 16},
   [69] = {.lex_state = 16},
   [70] = {.lex_state = 16},
-  [71] = {.lex_state = 421},
+  [71] = {.lex_state = 402},
   [72] = {.lex_state = 16},
   [73] = {.lex_state = 16},
   [74] = {.lex_state = 16},
   [75] = {.lex_state = 16},
   [76] = {.lex_state = 16},
-  [77] = {.lex_state = 421},
+  [77] = {.lex_state = 402},
   [78] = {.lex_state = 16},
   [79] = {.lex_state = 16},
   [80] = {.lex_state = 16},
   [81] = {.lex_state = 16},
-  [82] = {.lex_state = 421},
+  [82] = {.lex_state = 402},
   [83] = {.lex_state = 16},
   [84] = {.lex_state = 16},
   [85] = {.lex_state = 16},
@@ -8339,14 +8214,14 @@ static const TSLexerMode ts_lex_modes[STATE_COUNT] = {
   [104] = {.lex_state = 16},
   [105] = {.lex_state = 16},
   [106] = {.lex_state = 16},
-  [107] = {.lex_state = 421},
-  [108] = {.lex_state = 421},
+  [107] = {.lex_state = 402},
+  [108] = {.lex_state = 402},
   [109] = {.lex_state = 16},
   [110] = {.lex_state = 16},
   [111] = {.lex_state = 16},
   [112] = {.lex_state = 17},
   [113] = {.lex_state = 16},
-  [114] = {.lex_state = 421},
+  [114] = {.lex_state = 402},
   [115] = {.lex_state = 16},
   [116] = {.lex_state = 17},
   [117] = {.lex_state = 16},
@@ -8362,7 +8237,7 @@ static const TSLexerMode ts_lex_modes[STATE_COUNT] = {
   [127] = {.lex_state = 16},
   [128] = {.lex_state = 16},
   [129] = {.lex_state = 16},
-  [130] = {.lex_state = 421},
+  [130] = {.lex_state = 402},
   [131] = {.lex_state = 16},
   [132] = {.lex_state = 16},
   [133] = {.lex_state = 16},
@@ -8371,378 +8246,378 @@ static const TSLexerMode ts_lex_modes[STATE_COUNT] = {
   [136] = {.lex_state = 16},
   [137] = {.lex_state = 16},
   [138] = {.lex_state = 16},
-  [139] = {.lex_state = 421},
-  [140] = {.lex_state = 421},
-  [141] = {.lex_state = 421},
-  [142] = {.lex_state = 421},
-  [143] = {.lex_state = 421},
-  [144] = {.lex_state = 421},
-  [145] = {.lex_state = 421},
+  [139] = {.lex_state = 402},
+  [140] = {.lex_state = 402},
+  [141] = {.lex_state = 402},
+  [142] = {.lex_state = 402},
+  [143] = {.lex_state = 402},
+  [144] = {.lex_state = 402},
+  [145] = {.lex_state = 402},
   [146] = {.lex_state = 17},
   [147] = {.lex_state = 17},
-  [148] = {.lex_state = 421},
+  [148] = {.lex_state = 402},
   [149] = {.lex_state = 18},
   [150] = {.lex_state = 17},
   [151] = {.lex_state = 17},
   [152] = {.lex_state = 17},
-  [153] = {.lex_state = 421},
+  [153] = {.lex_state = 402},
   [154] = {.lex_state = 17},
   [155] = {.lex_state = 18},
-  [156] = {.lex_state = 421},
-  [157] = {.lex_state = 421},
-  [158] = {.lex_state = 421},
+  [156] = {.lex_state = 402},
+  [157] = {.lex_state = 402},
+  [158] = {.lex_state = 402},
   [159] = {.lex_state = 19},
-  [160] = {.lex_state = 421},
-  [161] = {.lex_state = 421},
-  [162] = {.lex_state = 421},
-  [163] = {.lex_state = 421},
-  [164] = {.lex_state = 421},
-  [165] = {.lex_state = 421},
-  [166] = {.lex_state = 421},
-  [167] = {.lex_state = 421},
-  [168] = {.lex_state = 421},
-  [169] = {.lex_state = 421},
-  [170] = {.lex_state = 421},
-  [171] = {.lex_state = 421},
-  [172] = {.lex_state = 421},
-  [173] = {.lex_state = 421},
-  [174] = {.lex_state = 421},
-  [175] = {.lex_state = 421},
-  [176] = {.lex_state = 421},
-  [177] = {.lex_state = 421},
-  [178] = {.lex_state = 421},
-  [179] = {.lex_state = 421},
-  [180] = {.lex_state = 421},
-  [181] = {.lex_state = 421},
-  [182] = {.lex_state = 421},
-  [183] = {.lex_state = 421},
-  [184] = {.lex_state = 421},
-  [185] = {.lex_state = 421},
-  [186] = {.lex_state = 421},
-  [187] = {.lex_state = 421},
-  [188] = {.lex_state = 421},
-  [189] = {.lex_state = 421},
-  [190] = {.lex_state = 421},
-  [191] = {.lex_state = 421},
-  [192] = {.lex_state = 421},
-  [193] = {.lex_state = 421},
-  [194] = {.lex_state = 421},
-  [195] = {.lex_state = 421},
-  [196] = {.lex_state = 421},
-  [197] = {.lex_state = 421},
-  [198] = {.lex_state = 421},
-  [199] = {.lex_state = 421},
-  [200] = {.lex_state = 421},
-  [201] = {.lex_state = 421},
-  [202] = {.lex_state = 421},
-  [203] = {.lex_state = 421},
-  [204] = {.lex_state = 421},
-  [205] = {.lex_state = 421},
-  [206] = {.lex_state = 421},
-  [207] = {.lex_state = 421},
-  [208] = {.lex_state = 421},
-  [209] = {.lex_state = 421},
-  [210] = {.lex_state = 421},
-  [211] = {.lex_state = 421},
-  [212] = {.lex_state = 421},
-  [213] = {.lex_state = 421},
-  [214] = {.lex_state = 421},
-  [215] = {.lex_state = 421},
-  [216] = {.lex_state = 421},
-  [217] = {.lex_state = 421},
-  [218] = {.lex_state = 421},
-  [219] = {.lex_state = 421},
-  [220] = {.lex_state = 421},
-  [221] = {.lex_state = 421},
-  [222] = {.lex_state = 421},
-  [223] = {.lex_state = 421},
-  [224] = {.lex_state = 421},
-  [225] = {.lex_state = 421},
-  [226] = {.lex_state = 421},
-  [227] = {.lex_state = 421},
-  [228] = {.lex_state = 421},
-  [229] = {.lex_state = 421},
-  [230] = {.lex_state = 421},
-  [231] = {.lex_state = 421},
-  [232] = {.lex_state = 421},
-  [233] = {.lex_state = 421},
-  [234] = {.lex_state = 421},
-  [235] = {.lex_state = 421},
-  [236] = {.lex_state = 421},
-  [237] = {.lex_state = 421},
-  [238] = {.lex_state = 421},
-  [239] = {.lex_state = 421},
-  [240] = {.lex_state = 421},
-  [241] = {.lex_state = 421},
-  [242] = {.lex_state = 421},
-  [243] = {.lex_state = 421},
-  [244] = {.lex_state = 421},
-  [245] = {.lex_state = 421},
-  [246] = {.lex_state = 421},
-  [247] = {.lex_state = 421},
-  [248] = {.lex_state = 421},
-  [249] = {.lex_state = 421},
-  [250] = {.lex_state = 421},
-  [251] = {.lex_state = 421},
-  [252] = {.lex_state = 421},
-  [253] = {.lex_state = 421},
-  [254] = {.lex_state = 421},
-  [255] = {.lex_state = 421},
-  [256] = {.lex_state = 421},
-  [257] = {.lex_state = 421},
-  [258] = {.lex_state = 421},
-  [259] = {.lex_state = 421},
-  [260] = {.lex_state = 421},
-  [261] = {.lex_state = 421},
-  [262] = {.lex_state = 421},
-  [263] = {.lex_state = 421},
-  [264] = {.lex_state = 421},
-  [265] = {.lex_state = 421},
+  [160] = {.lex_state = 402},
+  [161] = {.lex_state = 402},
+  [162] = {.lex_state = 402},
+  [163] = {.lex_state = 402},
+  [164] = {.lex_state = 402},
+  [165] = {.lex_state = 402},
+  [166] = {.lex_state = 402},
+  [167] = {.lex_state = 402},
+  [168] = {.lex_state = 402},
+  [169] = {.lex_state = 402},
+  [170] = {.lex_state = 402},
+  [171] = {.lex_state = 402},
+  [172] = {.lex_state = 402},
+  [173] = {.lex_state = 402},
+  [174] = {.lex_state = 402},
+  [175] = {.lex_state = 402},
+  [176] = {.lex_state = 402},
+  [177] = {.lex_state = 402},
+  [178] = {.lex_state = 402},
+  [179] = {.lex_state = 402},
+  [180] = {.lex_state = 402},
+  [181] = {.lex_state = 402},
+  [182] = {.lex_state = 402},
+  [183] = {.lex_state = 402},
+  [184] = {.lex_state = 402},
+  [185] = {.lex_state = 402},
+  [186] = {.lex_state = 402},
+  [187] = {.lex_state = 402},
+  [188] = {.lex_state = 402},
+  [189] = {.lex_state = 402},
+  [190] = {.lex_state = 402},
+  [191] = {.lex_state = 402},
+  [192] = {.lex_state = 402},
+  [193] = {.lex_state = 402},
+  [194] = {.lex_state = 402},
+  [195] = {.lex_state = 402},
+  [196] = {.lex_state = 402},
+  [197] = {.lex_state = 402},
+  [198] = {.lex_state = 402},
+  [199] = {.lex_state = 402},
+  [200] = {.lex_state = 402},
+  [201] = {.lex_state = 402},
+  [202] = {.lex_state = 402},
+  [203] = {.lex_state = 402},
+  [204] = {.lex_state = 402},
+  [205] = {.lex_state = 402},
+  [206] = {.lex_state = 402},
+  [207] = {.lex_state = 402},
+  [208] = {.lex_state = 402},
+  [209] = {.lex_state = 402},
+  [210] = {.lex_state = 402},
+  [211] = {.lex_state = 402},
+  [212] = {.lex_state = 402},
+  [213] = {.lex_state = 402},
+  [214] = {.lex_state = 402},
+  [215] = {.lex_state = 402},
+  [216] = {.lex_state = 402},
+  [217] = {.lex_state = 402},
+  [218] = {.lex_state = 402},
+  [219] = {.lex_state = 402},
+  [220] = {.lex_state = 402},
+  [221] = {.lex_state = 402},
+  [222] = {.lex_state = 402},
+  [223] = {.lex_state = 402},
+  [224] = {.lex_state = 402},
+  [225] = {.lex_state = 402},
+  [226] = {.lex_state = 402},
+  [227] = {.lex_state = 402},
+  [228] = {.lex_state = 402},
+  [229] = {.lex_state = 402},
+  [230] = {.lex_state = 402},
+  [231] = {.lex_state = 402},
+  [232] = {.lex_state = 402},
+  [233] = {.lex_state = 402},
+  [234] = {.lex_state = 402},
+  [235] = {.lex_state = 402},
+  [236] = {.lex_state = 402},
+  [237] = {.lex_state = 402},
+  [238] = {.lex_state = 402},
+  [239] = {.lex_state = 402},
+  [240] = {.lex_state = 402},
+  [241] = {.lex_state = 402},
+  [242] = {.lex_state = 402},
+  [243] = {.lex_state = 402},
+  [244] = {.lex_state = 402},
+  [245] = {.lex_state = 402},
+  [246] = {.lex_state = 402},
+  [247] = {.lex_state = 402},
+  [248] = {.lex_state = 402},
+  [249] = {.lex_state = 402},
+  [250] = {.lex_state = 402},
+  [251] = {.lex_state = 402},
+  [252] = {.lex_state = 402},
+  [253] = {.lex_state = 402},
+  [254] = {.lex_state = 402},
+  [255] = {.lex_state = 402},
+  [256] = {.lex_state = 402},
+  [257] = {.lex_state = 402},
+  [258] = {.lex_state = 402},
+  [259] = {.lex_state = 402},
+  [260] = {.lex_state = 402},
+  [261] = {.lex_state = 402},
+  [262] = {.lex_state = 402},
+  [263] = {.lex_state = 402},
+  [264] = {.lex_state = 402},
+  [265] = {.lex_state = 402},
   [266] = {.lex_state = 19},
-  [267] = {.lex_state = 421},
-  [268] = {.lex_state = 421},
+  [267] = {.lex_state = 402},
+  [268] = {.lex_state = 402},
   [269] = {.lex_state = 19},
   [270] = {.lex_state = 19},
-  [271] = {.lex_state = 421},
-  [272] = {.lex_state = 421},
+  [271] = {.lex_state = 402},
+  [272] = {.lex_state = 402},
   [273] = {.lex_state = 16},
-  [274] = {.lex_state = 421},
-  [275] = {.lex_state = 421},
-  [276] = {.lex_state = 421},
-  [277] = {.lex_state = 421},
-  [278] = {.lex_state = 421},
-  [279] = {.lex_state = 421},
-  [280] = {.lex_state = 421},
-  [281] = {.lex_state = 421},
-  [282] = {.lex_state = 421},
-  [283] = {.lex_state = 421},
-  [284] = {.lex_state = 421},
-  [285] = {.lex_state = 421},
-  [286] = {.lex_state = 421},
-  [287] = {.lex_state = 421},
-  [288] = {.lex_state = 421},
-  [289] = {.lex_state = 421},
-  [290] = {.lex_state = 421},
-  [291] = {.lex_state = 421},
-  [292] = {.lex_state = 421},
-  [293] = {.lex_state = 421},
-  [294] = {.lex_state = 421},
-  [295] = {.lex_state = 421},
-  [296] = {.lex_state = 421},
-  [297] = {.lex_state = 421},
-  [298] = {.lex_state = 421},
-  [299] = {.lex_state = 421},
-  [300] = {.lex_state = 421},
-  [301] = {.lex_state = 421},
-  [302] = {.lex_state = 421},
-  [303] = {.lex_state = 421},
-  [304] = {.lex_state = 421},
-  [305] = {.lex_state = 421},
-  [306] = {.lex_state = 421},
-  [307] = {.lex_state = 421},
-  [308] = {.lex_state = 421},
-  [309] = {.lex_state = 421},
-  [310] = {.lex_state = 421},
-  [311] = {.lex_state = 421},
-  [312] = {.lex_state = 421},
-  [313] = {.lex_state = 421},
-  [314] = {.lex_state = 421},
-  [315] = {.lex_state = 421},
-  [316] = {.lex_state = 421},
-  [317] = {.lex_state = 421},
-  [318] = {.lex_state = 421},
-  [319] = {.lex_state = 421},
-  [320] = {.lex_state = 421},
-  [321] = {.lex_state = 421},
-  [322] = {.lex_state = 421},
-  [323] = {.lex_state = 421},
-  [324] = {.lex_state = 421},
-  [325] = {.lex_state = 421},
-  [326] = {.lex_state = 421},
-  [327] = {.lex_state = 421},
-  [328] = {.lex_state = 421},
-  [329] = {.lex_state = 421},
-  [330] = {.lex_state = 421},
-  [331] = {.lex_state = 421},
-  [332] = {.lex_state = 421},
-  [333] = {.lex_state = 421},
-  [334] = {.lex_state = 421},
-  [335] = {.lex_state = 421},
-  [336] = {.lex_state = 421},
-  [337] = {.lex_state = 421},
-  [338] = {.lex_state = 421},
-  [339] = {.lex_state = 421},
-  [340] = {.lex_state = 421},
-  [341] = {.lex_state = 421},
-  [342] = {.lex_state = 421},
-  [343] = {.lex_state = 421},
-  [344] = {.lex_state = 421},
-  [345] = {.lex_state = 421},
-  [346] = {.lex_state = 421},
-  [347] = {.lex_state = 421},
-  [348] = {.lex_state = 421},
-  [349] = {.lex_state = 421},
-  [350] = {.lex_state = 421},
-  [351] = {.lex_state = 421},
-  [352] = {.lex_state = 421},
-  [353] = {.lex_state = 421},
-  [354] = {.lex_state = 421},
-  [355] = {.lex_state = 421},
-  [356] = {.lex_state = 421},
-  [357] = {.lex_state = 421},
-  [358] = {.lex_state = 421},
-  [359] = {.lex_state = 421},
-  [360] = {.lex_state = 421},
-  [361] = {.lex_state = 421},
-  [362] = {.lex_state = 421},
-  [363] = {.lex_state = 421},
-  [364] = {.lex_state = 421},
-  [365] = {.lex_state = 421},
-  [366] = {.lex_state = 421},
-  [367] = {.lex_state = 421},
-  [368] = {.lex_state = 421},
-  [369] = {.lex_state = 421},
-  [370] = {.lex_state = 421},
-  [371] = {.lex_state = 421},
-  [372] = {.lex_state = 421},
-  [373] = {.lex_state = 421},
-  [374] = {.lex_state = 421},
-  [375] = {.lex_state = 421},
-  [376] = {.lex_state = 421},
-  [377] = {.lex_state = 421},
-  [378] = {.lex_state = 421},
-  [379] = {.lex_state = 421},
-  [380] = {.lex_state = 421},
-  [381] = {.lex_state = 421},
-  [382] = {.lex_state = 421},
-  [383] = {.lex_state = 421},
-  [384] = {.lex_state = 421},
-  [385] = {.lex_state = 421},
-  [386] = {.lex_state = 421},
-  [387] = {.lex_state = 421},
-  [388] = {.lex_state = 421},
-  [389] = {.lex_state = 421},
-  [390] = {.lex_state = 421},
-  [391] = {.lex_state = 421},
-  [392] = {.lex_state = 421},
-  [393] = {.lex_state = 421},
-  [394] = {.lex_state = 421},
-  [395] = {.lex_state = 421},
-  [396] = {.lex_state = 421},
-  [397] = {.lex_state = 421},
-  [398] = {.lex_state = 421},
-  [399] = {.lex_state = 421},
-  [400] = {.lex_state = 421},
-  [401] = {.lex_state = 421},
-  [402] = {.lex_state = 421},
-  [403] = {.lex_state = 421},
-  [404] = {.lex_state = 421},
-  [405] = {.lex_state = 421},
-  [406] = {.lex_state = 421},
-  [407] = {.lex_state = 421},
-  [408] = {.lex_state = 421},
-  [409] = {.lex_state = 421},
-  [410] = {.lex_state = 421},
-  [411] = {.lex_state = 421},
-  [412] = {.lex_state = 421},
-  [413] = {.lex_state = 421},
-  [414] = {.lex_state = 421},
-  [415] = {.lex_state = 421},
-  [416] = {.lex_state = 421},
-  [417] = {.lex_state = 421},
-  [418] = {.lex_state = 421},
-  [419] = {.lex_state = 421},
-  [420] = {.lex_state = 421},
-  [421] = {.lex_state = 421},
-  [422] = {.lex_state = 421},
-  [423] = {.lex_state = 421},
-  [424] = {.lex_state = 421},
-  [425] = {.lex_state = 421},
-  [426] = {.lex_state = 421},
-  [427] = {.lex_state = 421},
-  [428] = {.lex_state = 421},
-  [429] = {.lex_state = 421},
-  [430] = {.lex_state = 421},
-  [431] = {.lex_state = 421},
-  [432] = {.lex_state = 421},
-  [433] = {.lex_state = 421},
-  [434] = {.lex_state = 421},
-  [435] = {.lex_state = 421},
-  [436] = {.lex_state = 421},
-  [437] = {.lex_state = 421},
-  [438] = {.lex_state = 421},
-  [439] = {.lex_state = 421},
-  [440] = {.lex_state = 421},
-  [441] = {.lex_state = 421},
-  [442] = {.lex_state = 421},
-  [443] = {.lex_state = 421},
-  [444] = {.lex_state = 421},
-  [445] = {.lex_state = 421},
-  [446] = {.lex_state = 421},
-  [447] = {.lex_state = 421},
-  [448] = {.lex_state = 421},
-  [449] = {.lex_state = 421},
-  [450] = {.lex_state = 421},
-  [451] = {.lex_state = 421},
-  [452] = {.lex_state = 421},
-  [453] = {.lex_state = 421},
-  [454] = {.lex_state = 421},
-  [455] = {.lex_state = 421},
-  [456] = {.lex_state = 421},
-  [457] = {.lex_state = 421},
-  [458] = {.lex_state = 421},
-  [459] = {.lex_state = 421},
-  [460] = {.lex_state = 421},
-  [461] = {.lex_state = 421},
-  [462] = {.lex_state = 421},
-  [463] = {.lex_state = 421},
-  [464] = {.lex_state = 421},
-  [465] = {.lex_state = 421},
-  [466] = {.lex_state = 421},
-  [467] = {.lex_state = 421},
-  [468] = {.lex_state = 421},
-  [469] = {.lex_state = 421},
-  [470] = {.lex_state = 421},
-  [471] = {.lex_state = 421},
-  [472] = {.lex_state = 421},
-  [473] = {.lex_state = 421},
-  [474] = {.lex_state = 421},
-  [475] = {.lex_state = 421},
-  [476] = {.lex_state = 421},
-  [477] = {.lex_state = 421},
-  [478] = {.lex_state = 421},
-  [479] = {.lex_state = 421},
-  [480] = {.lex_state = 421},
-  [481] = {.lex_state = 421},
-  [482] = {.lex_state = 421},
-  [483] = {.lex_state = 421},
-  [484] = {.lex_state = 421},
-  [485] = {.lex_state = 421},
-  [486] = {.lex_state = 421},
-  [487] = {.lex_state = 421},
-  [488] = {.lex_state = 421},
-  [489] = {.lex_state = 421},
-  [490] = {.lex_state = 421},
-  [491] = {.lex_state = 421},
-  [492] = {.lex_state = 421},
-  [493] = {.lex_state = 421},
-  [494] = {.lex_state = 421},
-  [495] = {.lex_state = 421},
-  [496] = {.lex_state = 421},
-  [497] = {.lex_state = 421},
-  [498] = {.lex_state = 421},
-  [499] = {.lex_state = 421},
-  [500] = {.lex_state = 421},
-  [501] = {.lex_state = 421},
-  [502] = {.lex_state = 421},
-  [503] = {.lex_state = 421},
-  [504] = {.lex_state = 421},
-  [505] = {.lex_state = 421},
-  [506] = {.lex_state = 421},
-  [507] = {.lex_state = 421},
-  [508] = {.lex_state = 421},
-  [509] = {.lex_state = 421},
-  [510] = {.lex_state = 421},
+  [274] = {.lex_state = 402},
+  [275] = {.lex_state = 402},
+  [276] = {.lex_state = 402},
+  [277] = {.lex_state = 402},
+  [278] = {.lex_state = 402},
+  [279] = {.lex_state = 402},
+  [280] = {.lex_state = 402},
+  [281] = {.lex_state = 402},
+  [282] = {.lex_state = 402},
+  [283] = {.lex_state = 402},
+  [284] = {.lex_state = 402},
+  [285] = {.lex_state = 402},
+  [286] = {.lex_state = 402},
+  [287] = {.lex_state = 402},
+  [288] = {.lex_state = 402},
+  [289] = {.lex_state = 402},
+  [290] = {.lex_state = 402},
+  [291] = {.lex_state = 402},
+  [292] = {.lex_state = 402},
+  [293] = {.lex_state = 402},
+  [294] = {.lex_state = 402},
+  [295] = {.lex_state = 402},
+  [296] = {.lex_state = 402},
+  [297] = {.lex_state = 402},
+  [298] = {.lex_state = 402},
+  [299] = {.lex_state = 402},
+  [300] = {.lex_state = 402},
+  [301] = {.lex_state = 402},
+  [302] = {.lex_state = 402},
+  [303] = {.lex_state = 402},
+  [304] = {.lex_state = 402},
+  [305] = {.lex_state = 402},
+  [306] = {.lex_state = 402},
+  [307] = {.lex_state = 402},
+  [308] = {.lex_state = 402},
+  [309] = {.lex_state = 402},
+  [310] = {.lex_state = 402},
+  [311] = {.lex_state = 402},
+  [312] = {.lex_state = 402},
+  [313] = {.lex_state = 402},
+  [314] = {.lex_state = 402},
+  [315] = {.lex_state = 402},
+  [316] = {.lex_state = 402},
+  [317] = {.lex_state = 402},
+  [318] = {.lex_state = 402},
+  [319] = {.lex_state = 402},
+  [320] = {.lex_state = 402},
+  [321] = {.lex_state = 402},
+  [322] = {.lex_state = 402},
+  [323] = {.lex_state = 402},
+  [324] = {.lex_state = 402},
+  [325] = {.lex_state = 402},
+  [326] = {.lex_state = 402},
+  [327] = {.lex_state = 402},
+  [328] = {.lex_state = 402},
+  [329] = {.lex_state = 402},
+  [330] = {.lex_state = 402},
+  [331] = {.lex_state = 402},
+  [332] = {.lex_state = 402},
+  [333] = {.lex_state = 402},
+  [334] = {.lex_state = 402},
+  [335] = {.lex_state = 402},
+  [336] = {.lex_state = 402},
+  [337] = {.lex_state = 402},
+  [338] = {.lex_state = 402},
+  [339] = {.lex_state = 402},
+  [340] = {.lex_state = 402},
+  [341] = {.lex_state = 402},
+  [342] = {.lex_state = 402},
+  [343] = {.lex_state = 402},
+  [344] = {.lex_state = 402},
+  [345] = {.lex_state = 402},
+  [346] = {.lex_state = 402},
+  [347] = {.lex_state = 402},
+  [348] = {.lex_state = 402},
+  [349] = {.lex_state = 402},
+  [350] = {.lex_state = 402},
+  [351] = {.lex_state = 402},
+  [352] = {.lex_state = 402},
+  [353] = {.lex_state = 402},
+  [354] = {.lex_state = 402},
+  [355] = {.lex_state = 402},
+  [356] = {.lex_state = 402},
+  [357] = {.lex_state = 402},
+  [358] = {.lex_state = 402},
+  [359] = {.lex_state = 402},
+  [360] = {.lex_state = 402},
+  [361] = {.lex_state = 402},
+  [362] = {.lex_state = 402},
+  [363] = {.lex_state = 402},
+  [364] = {.lex_state = 402},
+  [365] = {.lex_state = 402},
+  [366] = {.lex_state = 402},
+  [367] = {.lex_state = 402},
+  [368] = {.lex_state = 402},
+  [369] = {.lex_state = 402},
+  [370] = {.lex_state = 402},
+  [371] = {.lex_state = 402},
+  [372] = {.lex_state = 402},
+  [373] = {.lex_state = 402},
+  [374] = {.lex_state = 402},
+  [375] = {.lex_state = 402},
+  [376] = {.lex_state = 402},
+  [377] = {.lex_state = 402},
+  [378] = {.lex_state = 402},
+  [379] = {.lex_state = 402},
+  [380] = {.lex_state = 402},
+  [381] = {.lex_state = 402},
+  [382] = {.lex_state = 402},
+  [383] = {.lex_state = 402},
+  [384] = {.lex_state = 402},
+  [385] = {.lex_state = 402},
+  [386] = {.lex_state = 402},
+  [387] = {.lex_state = 402},
+  [388] = {.lex_state = 402},
+  [389] = {.lex_state = 402},
+  [390] = {.lex_state = 402},
+  [391] = {.lex_state = 402},
+  [392] = {.lex_state = 402},
+  [393] = {.lex_state = 402},
+  [394] = {.lex_state = 402},
+  [395] = {.lex_state = 402},
+  [396] = {.lex_state = 402},
+  [397] = {.lex_state = 402},
+  [398] = {.lex_state = 402},
+  [399] = {.lex_state = 402},
+  [400] = {.lex_state = 402},
+  [401] = {.lex_state = 402},
+  [402] = {.lex_state = 402},
+  [403] = {.lex_state = 402},
+  [404] = {.lex_state = 402},
+  [405] = {.lex_state = 402},
+  [406] = {.lex_state = 402},
+  [407] = {.lex_state = 402},
+  [408] = {.lex_state = 402},
+  [409] = {.lex_state = 402},
+  [410] = {.lex_state = 402},
+  [411] = {.lex_state = 402},
+  [412] = {.lex_state = 402},
+  [413] = {.lex_state = 402},
+  [414] = {.lex_state = 402},
+  [415] = {.lex_state = 402},
+  [416] = {.lex_state = 402},
+  [417] = {.lex_state = 402},
+  [418] = {.lex_state = 402},
+  [419] = {.lex_state = 402},
+  [420] = {.lex_state = 402},
+  [421] = {.lex_state = 402},
+  [422] = {.lex_state = 402},
+  [423] = {.lex_state = 402},
+  [424] = {.lex_state = 402},
+  [425] = {.lex_state = 402},
+  [426] = {.lex_state = 402},
+  [427] = {.lex_state = 402},
+  [428] = {.lex_state = 402},
+  [429] = {.lex_state = 402},
+  [430] = {.lex_state = 402},
+  [431] = {.lex_state = 402},
+  [432] = {.lex_state = 402},
+  [433] = {.lex_state = 402},
+  [434] = {.lex_state = 402},
+  [435] = {.lex_state = 402},
+  [436] = {.lex_state = 402},
+  [437] = {.lex_state = 402},
+  [438] = {.lex_state = 402},
+  [439] = {.lex_state = 402},
+  [440] = {.lex_state = 402},
+  [441] = {.lex_state = 402},
+  [442] = {.lex_state = 402},
+  [443] = {.lex_state = 402},
+  [444] = {.lex_state = 402},
+  [445] = {.lex_state = 402},
+  [446] = {.lex_state = 402},
+  [447] = {.lex_state = 402},
+  [448] = {.lex_state = 402},
+  [449] = {.lex_state = 402},
+  [450] = {.lex_state = 402},
+  [451] = {.lex_state = 402},
+  [452] = {.lex_state = 402},
+  [453] = {.lex_state = 402},
+  [454] = {.lex_state = 402},
+  [455] = {.lex_state = 402},
+  [456] = {.lex_state = 402},
+  [457] = {.lex_state = 402},
+  [458] = {.lex_state = 402},
+  [459] = {.lex_state = 402},
+  [460] = {.lex_state = 402},
+  [461] = {.lex_state = 402},
+  [462] = {.lex_state = 402},
+  [463] = {.lex_state = 402},
+  [464] = {.lex_state = 402},
+  [465] = {.lex_state = 402},
+  [466] = {.lex_state = 402},
+  [467] = {.lex_state = 402},
+  [468] = {.lex_state = 402},
+  [469] = {.lex_state = 402},
+  [470] = {.lex_state = 402},
+  [471] = {.lex_state = 402},
+  [472] = {.lex_state = 402},
+  [473] = {.lex_state = 402},
+  [474] = {.lex_state = 402},
+  [475] = {.lex_state = 402},
+  [476] = {.lex_state = 402},
+  [477] = {.lex_state = 402},
+  [478] = {.lex_state = 402},
+  [479] = {.lex_state = 402},
+  [480] = {.lex_state = 402},
+  [481] = {.lex_state = 402},
+  [482] = {.lex_state = 402},
+  [483] = {.lex_state = 402},
+  [484] = {.lex_state = 402},
+  [485] = {.lex_state = 402},
+  [486] = {.lex_state = 402},
+  [487] = {.lex_state = 402},
+  [488] = {.lex_state = 402},
+  [489] = {.lex_state = 402},
+  [490] = {.lex_state = 402},
+  [491] = {.lex_state = 402},
+  [492] = {.lex_state = 402},
+  [493] = {.lex_state = 402},
+  [494] = {.lex_state = 402},
+  [495] = {.lex_state = 402},
+  [496] = {.lex_state = 402},
+  [497] = {.lex_state = 402},
+  [498] = {.lex_state = 402},
+  [499] = {.lex_state = 402},
+  [500] = {.lex_state = 402},
+  [501] = {.lex_state = 402},
+  [502] = {.lex_state = 402},
+  [503] = {.lex_state = 402},
+  [504] = {.lex_state = 402},
+  [505] = {.lex_state = 402},
+  [506] = {.lex_state = 402},
+  [507] = {.lex_state = 402},
+  [508] = {.lex_state = 402},
+  [509] = {.lex_state = 402},
+  [510] = {.lex_state = 402},
   [511] = {.lex_state = 5},
   [512] = {.lex_state = 5},
   [513] = {.lex_state = 5},
@@ -8906,7 +8781,7 @@ static const TSLexerMode ts_lex_modes[STATE_COUNT] = {
   [671] = {.lex_state = 5},
   [672] = {.lex_state = 5},
   [673] = {.lex_state = 5},
-  [674] = {.lex_state = 421},
+  [674] = {.lex_state = 402},
   [675] = {.lex_state = 5},
   [676] = {.lex_state = 5},
   [677] = {.lex_state = 5},
@@ -8939,20 +8814,20 @@ static const TSLexerMode ts_lex_modes[STATE_COUNT] = {
   [704] = {.lex_state = 5},
   [705] = {.lex_state = 5},
   [706] = {.lex_state = 5},
-  [707] = {.lex_state = 421},
-  [708] = {.lex_state = 421},
-  [709] = {.lex_state = 421},
+  [707] = {.lex_state = 402},
+  [708] = {.lex_state = 402},
+  [709] = {.lex_state = 402},
   [710] = {.lex_state = 16},
   [711] = {.lex_state = 16},
   [712] = {.lex_state = 16},
-  [713] = {.lex_state = 421},
-  [714] = {.lex_state = 421},
+  [713] = {.lex_state = 402},
+  [714] = {.lex_state = 402},
   [715] = {.lex_state = 16},
   [716] = {.lex_state = 16},
-  [717] = {.lex_state = 421},
-  [718] = {.lex_state = 421},
+  [717] = {.lex_state = 402},
+  [718] = {.lex_state = 402},
   [719] = {.lex_state = 16},
-  [720] = {.lex_state = 421},
+  [720] = {.lex_state = 402},
   [721] = {.lex_state = 16},
   [722] = {.lex_state = 16},
   [723] = {.lex_state = 19},
@@ -9337,39 +9212,39 @@ static const TSLexerMode ts_lex_modes[STATE_COUNT] = {
   [1102] = {.lex_state = 25},
   [1103] = {.lex_state = 4},
   [1104] = {.lex_state = 25},
-  [1105] = {.lex_state = 421},
+  [1105] = {.lex_state = 402},
   [1106] = {.lex_state = 25},
   [1107] = {.lex_state = 25},
   [1108] = {.lex_state = 25},
-  [1109] = {.lex_state = 421},
-  [1110] = {.lex_state = 421},
+  [1109] = {.lex_state = 402},
+  [1110] = {.lex_state = 402},
   [1111] = {.lex_state = 25},
   [1112] = {.lex_state = 25},
   [1113] = {.lex_state = 25},
-  [1114] = {.lex_state = 421},
-  [1115] = {.lex_state = 421},
-  [1116] = {.lex_state = 421},
+  [1114] = {.lex_state = 402},
+  [1115] = {.lex_state = 402},
+  [1116] = {.lex_state = 402},
   [1117] = {.lex_state = 25},
-  [1118] = {.lex_state = 421},
+  [1118] = {.lex_state = 402},
   [1119] = {.lex_state = 3},
-  [1120] = {.lex_state = 421},
-  [1121] = {.lex_state = 421},
+  [1120] = {.lex_state = 402},
+  [1121] = {.lex_state = 402},
   [1122] = {.lex_state = 3},
   [1123] = {.lex_state = 3},
   [1124] = {.lex_state = 3},
   [1125] = {.lex_state = 3},
-  [1126] = {.lex_state = 421},
-  [1127] = {.lex_state = 421},
-  [1128] = {.lex_state = 421},
+  [1126] = {.lex_state = 402},
+  [1127] = {.lex_state = 402},
+  [1128] = {.lex_state = 402},
   [1129] = {.lex_state = 3},
   [1130] = {.lex_state = 25},
   [1131] = {.lex_state = 3},
-  [1132] = {.lex_state = 421},
+  [1132] = {.lex_state = 402},
   [1133] = {.lex_state = 3},
   [1134] = {.lex_state = 3},
-  [1135] = {.lex_state = 421},
-  [1136] = {.lex_state = 421},
-  [1137] = {.lex_state = 421},
+  [1135] = {.lex_state = 402},
+  [1136] = {.lex_state = 402},
+  [1137] = {.lex_state = 402},
   [1138] = {.lex_state = 3},
   [1139] = {.lex_state = 3},
   [1140] = {.lex_state = 3},
@@ -9380,7 +9255,7 @@ static const TSLexerMode ts_lex_modes[STATE_COUNT] = {
   [1145] = {.lex_state = 3},
   [1146] = {.lex_state = 3},
   [1147] = {.lex_state = 3},
-  [1148] = {.lex_state = 421},
+  [1148] = {.lex_state = 402},
   [1149] = {.lex_state = 3},
   [1150] = {.lex_state = 3},
   [1151] = {.lex_state = 3},
@@ -9392,45 +9267,45 @@ static const TSLexerMode ts_lex_modes[STATE_COUNT] = {
   [1157] = {.lex_state = 25},
   [1158] = {.lex_state = 3},
   [1159] = {.lex_state = 3},
-  [1160] = {.lex_state = 421},
-  [1161] = {.lex_state = 421},
+  [1160] = {.lex_state = 402},
+  [1161] = {.lex_state = 402},
   [1162] = {.lex_state = 4},
-  [1163] = {.lex_state = 421},
-  [1164] = {.lex_state = 421},
+  [1163] = {.lex_state = 402},
+  [1164] = {.lex_state = 402},
   [1165] = {.lex_state = 3},
-  [1166] = {.lex_state = 421},
-  [1167] = {.lex_state = 421},
+  [1166] = {.lex_state = 402},
+  [1167] = {.lex_state = 402},
   [1168] = {.lex_state = 4},
-  [1169] = {.lex_state = 421},
+  [1169] = {.lex_state = 402},
   [1170] = {.lex_state = 3},
   [1171] = {.lex_state = 4},
   [1172] = {.lex_state = 4},
   [1173] = {.lex_state = 3},
   [1174] = {.lex_state = 3},
-  [1175] = {.lex_state = 421},
+  [1175] = {.lex_state = 402},
   [1176] = {.lex_state = 3},
   [1177] = {.lex_state = 3},
   [1178] = {.lex_state = 3},
-  [1179] = {.lex_state = 421},
+  [1179] = {.lex_state = 402},
   [1180] = {.lex_state = 3},
   [1181] = {.lex_state = 4},
   [1182] = {.lex_state = 4},
   [1183] = {.lex_state = 3},
-  [1184] = {.lex_state = 421},
+  [1184] = {.lex_state = 402},
   [1185] = {.lex_state = 3},
   [1186] = {.lex_state = 3},
-  [1187] = {.lex_state = 421},
-  [1188] = {.lex_state = 421},
+  [1187] = {.lex_state = 402},
+  [1188] = {.lex_state = 402},
   [1189] = {.lex_state = 4},
   [1190] = {.lex_state = 3},
   [1191] = {.lex_state = 4},
-  [1192] = {.lex_state = 421},
+  [1192] = {.lex_state = 402},
   [1193] = {.lex_state = 3},
   [1194] = {.lex_state = 3},
-  [1195] = {.lex_state = 421},
+  [1195] = {.lex_state = 402},
   [1196] = {.lex_state = 4},
   [1197] = {.lex_state = 3},
-  [1198] = {.lex_state = 421},
+  [1198] = {.lex_state = 402},
   [1199] = {.lex_state = 25},
   [1200] = {.lex_state = 3},
   [1201] = {.lex_state = 6},
@@ -9443,7 +9318,7 @@ static const TSLexerMode ts_lex_modes[STATE_COUNT] = {
   [1208] = {.lex_state = 25},
   [1209] = {.lex_state = 25},
   [1210] = {.lex_state = 25},
-  [1211] = {.lex_state = 421},
+  [1211] = {.lex_state = 402},
   [1212] = {.lex_state = 25},
   [1213] = {.lex_state = 5},
   [1214] = {.lex_state = 3},
@@ -9459,9 +9334,9 @@ static const TSLexerMode ts_lex_modes[STATE_COUNT] = {
   [1224] = {.lex_state = 25},
   [1225] = {.lex_state = 20},
   [1226] = {.lex_state = 25},
-  [1227] = {.lex_state = 421},
+  [1227] = {.lex_state = 402},
   [1228] = {.lex_state = 25},
-  [1229] = {.lex_state = 421},
+  [1229] = {.lex_state = 402},
   [1230] = {.lex_state = 25},
   [1231] = {.lex_state = 25},
   [1232] = {.lex_state = 25},
@@ -9471,7 +9346,7 @@ static const TSLexerMode ts_lex_modes[STATE_COUNT] = {
   [1236] = {.lex_state = 25},
   [1237] = {.lex_state = 25},
   [1238] = {.lex_state = 7},
-  [1239] = {.lex_state = 421},
+  [1239] = {.lex_state = 402},
   [1240] = {.lex_state = 25},
   [1241] = {.lex_state = 25},
   [1242] = {.lex_state = 7},
@@ -9482,17 +9357,17 @@ static const TSLexerMode ts_lex_modes[STATE_COUNT] = {
   [1247] = {.lex_state = 25},
   [1248] = {.lex_state = 20},
   [1249] = {.lex_state = 3},
-  [1250] = {.lex_state = 421},
+  [1250] = {.lex_state = 402},
   [1251] = {.lex_state = 25},
   [1252] = {.lex_state = 3},
   [1253] = {.lex_state = 25},
   [1254] = {.lex_state = 25},
   [1255] = {.lex_state = 20},
-  [1256] = {.lex_state = 421},
+  [1256] = {.lex_state = 402},
   [1257] = {.lex_state = 25},
-  [1258] = {.lex_state = 421},
+  [1258] = {.lex_state = 402},
   [1259] = {.lex_state = 25},
-  [1260] = {.lex_state = 421},
+  [1260] = {.lex_state = 402},
   [1261] = {.lex_state = 25},
   [1262] = {.lex_state = 3},
   [1263] = {.lex_state = 25},
@@ -9501,7 +9376,7 @@ static const TSLexerMode ts_lex_modes[STATE_COUNT] = {
   [1266] = {.lex_state = 25},
   [1267] = {.lex_state = 3},
   [1268] = {.lex_state = 25},
-  [1269] = {.lex_state = 421},
+  [1269] = {.lex_state = 402},
   [1270] = {.lex_state = 25},
   [1271] = {.lex_state = 3},
   [1272] = {.lex_state = 25},
@@ -9511,17 +9386,17 @@ static const TSLexerMode ts_lex_modes[STATE_COUNT] = {
   [1276] = {.lex_state = 8},
   [1277] = {.lex_state = 20},
   [1278] = {.lex_state = 25},
-  [1279] = {.lex_state = 421},
+  [1279] = {.lex_state = 402},
   [1280] = {.lex_state = 25},
   [1281] = {.lex_state = 3},
   [1282] = {.lex_state = 25},
   [1283] = {.lex_state = 25},
-  [1284] = {.lex_state = 421},
-  [1285] = {.lex_state = 421},
+  [1284] = {.lex_state = 402},
+  [1285] = {.lex_state = 402},
   [1286] = {.lex_state = 3},
-  [1287] = {.lex_state = 421},
+  [1287] = {.lex_state = 402},
   [1288] = {.lex_state = 25},
-  [1289] = {.lex_state = 421},
+  [1289] = {.lex_state = 402},
   [1290] = {.lex_state = 3},
   [1291] = {.lex_state = 25},
   [1292] = {.lex_state = 3},
@@ -9530,7 +9405,7 @@ static const TSLexerMode ts_lex_modes[STATE_COUNT] = {
   [1295] = {.lex_state = 25},
   [1296] = {.lex_state = 3},
   [1297] = {.lex_state = 3},
-  [1298] = {.lex_state = 421},
+  [1298] = {.lex_state = 402},
   [1299] = {.lex_state = 25},
   [1300] = {.lex_state = 25},
   [1301] = {.lex_state = 25},
@@ -9538,31 +9413,31 @@ static const TSLexerMode ts_lex_modes[STATE_COUNT] = {
   [1303] = {.lex_state = 3},
   [1304] = {.lex_state = 3},
   [1305] = {.lex_state = 3},
-  [1306] = {.lex_state = 421},
+  [1306] = {.lex_state = 402},
   [1307] = {.lex_state = 25},
   [1308] = {.lex_state = 25},
   [1309] = {.lex_state = 3},
   [1310] = {.lex_state = 25},
-  [1311] = {.lex_state = 421},
+  [1311] = {.lex_state = 402},
   [1312] = {.lex_state = 25},
   [1313] = {.lex_state = 25},
-  [1314] = {.lex_state = 421},
+  [1314] = {.lex_state = 402},
   [1315] = {.lex_state = 25},
   [1316] = {.lex_state = 25},
   [1317] = {.lex_state = 3},
-  [1318] = {.lex_state = 421},
-  [1319] = {.lex_state = 421},
+  [1318] = {.lex_state = 402},
+  [1319] = {.lex_state = 402},
   [1320] = {.lex_state = 25},
   [1321] = {.lex_state = 25},
   [1322] = {.lex_state = 25},
   [1323] = {.lex_state = 25},
   [1324] = {.lex_state = 3},
-  [1325] = {.lex_state = 421},
+  [1325] = {.lex_state = 402},
   [1326] = {.lex_state = 25},
-  [1327] = {.lex_state = 421},
+  [1327] = {.lex_state = 402},
   [1328] = {.lex_state = 3},
   [1329] = {.lex_state = 25},
-  [1330] = {.lex_state = 421},
+  [1330] = {.lex_state = 402},
   [1331] = {.lex_state = 3},
   [1332] = {.lex_state = 25},
   [1333] = {.lex_state = 25},
@@ -9575,113 +9450,113 @@ static const TSLexerMode ts_lex_modes[STATE_COUNT] = {
   [1340] = {.lex_state = 25},
   [1341] = {.lex_state = 8},
   [1342] = {.lex_state = 25},
-  [1343] = {.lex_state = 421},
+  [1343] = {.lex_state = 402},
   [1344] = {.lex_state = 3},
   [1345] = {.lex_state = 25},
   [1346] = {.lex_state = 3},
-  [1347] = {.lex_state = 421},
-  [1348] = {.lex_state = 421},
-  [1349] = {.lex_state = 421},
-  [1350] = {.lex_state = 421},
+  [1347] = {.lex_state = 402},
+  [1348] = {.lex_state = 402},
+  [1349] = {.lex_state = 402},
+  [1350] = {.lex_state = 402},
   [1351] = {.lex_state = 3},
-  [1352] = {.lex_state = 421},
+  [1352] = {.lex_state = 402},
   [1353] = {.lex_state = 25},
   [1354] = {.lex_state = 3},
   [1355] = {.lex_state = 25},
   [1356] = {.lex_state = 3},
-  [1357] = {.lex_state = 421},
-  [1358] = {.lex_state = 421},
+  [1357] = {.lex_state = 402},
+  [1358] = {.lex_state = 402},
   [1359] = {.lex_state = 25},
-  [1360] = {.lex_state = 421},
-  [1361] = {.lex_state = 421},
-  [1362] = {.lex_state = 421},
+  [1360] = {.lex_state = 402},
+  [1361] = {.lex_state = 402},
+  [1362] = {.lex_state = 402},
   [1363] = {.lex_state = 25},
   [1364] = {.lex_state = 25},
   [1365] = {.lex_state = 3},
   [1366] = {.lex_state = 3},
   [1367] = {.lex_state = 25},
-  [1368] = {.lex_state = 421},
-  [1369] = {.lex_state = 421},
-  [1370] = {.lex_state = 421},
-  [1371] = {.lex_state = 421},
+  [1368] = {.lex_state = 402},
+  [1369] = {.lex_state = 402},
+  [1370] = {.lex_state = 402},
+  [1371] = {.lex_state = 402},
   [1372] = {.lex_state = 25},
   [1373] = {.lex_state = 25},
-  [1374] = {.lex_state = 421},
-  [1375] = {.lex_state = 421},
+  [1374] = {.lex_state = 402},
+  [1375] = {.lex_state = 402},
   [1376] = {.lex_state = 3},
   [1377] = {.lex_state = 25},
   [1378] = {.lex_state = 25},
-  [1379] = {.lex_state = 421},
-  [1380] = {.lex_state = 421},
-  [1381] = {.lex_state = 421},
-  [1382] = {.lex_state = 421},
-  [1383] = {.lex_state = 421},
+  [1379] = {.lex_state = 402},
+  [1380] = {.lex_state = 402},
+  [1381] = {.lex_state = 402},
+  [1382] = {.lex_state = 402},
+  [1383] = {.lex_state = 402},
   [1384] = {.lex_state = 3},
   [1385] = {.lex_state = 25},
-  [1386] = {.lex_state = 421},
-  [1387] = {.lex_state = 421},
+  [1386] = {.lex_state = 402},
+  [1387] = {.lex_state = 402},
   [1388] = {.lex_state = 25},
   [1389] = {.lex_state = 25},
   [1390] = {.lex_state = 3},
-  [1391] = {.lex_state = 421},
-  [1392] = {.lex_state = 421},
+  [1391] = {.lex_state = 402},
+  [1392] = {.lex_state = 402},
   [1393] = {.lex_state = 3},
   [1394] = {.lex_state = 25},
   [1395] = {.lex_state = 25},
   [1396] = {.lex_state = 3},
   [1397] = {.lex_state = 25},
   [1398] = {.lex_state = 3},
-  [1399] = {.lex_state = 421},
+  [1399] = {.lex_state = 402},
   [1400] = {.lex_state = 3},
   [1401] = {.lex_state = 25},
   [1402] = {.lex_state = 3},
   [1403] = {.lex_state = 3},
   [1404] = {.lex_state = 25},
-  [1405] = {.lex_state = 421},
+  [1405] = {.lex_state = 402},
   [1406] = {.lex_state = 25},
   [1407] = {.lex_state = 20},
   [1408] = {.lex_state = 25},
-  [1409] = {.lex_state = 421},
+  [1409] = {.lex_state = 402},
   [1410] = {.lex_state = 25},
   [1411] = {.lex_state = 25},
   [1412] = {.lex_state = 25},
-  [1413] = {.lex_state = 421},
-  [1414] = {.lex_state = 421},
+  [1413] = {.lex_state = 402},
+  [1414] = {.lex_state = 402},
   [1415] = {.lex_state = 3},
   [1416] = {.lex_state = 25},
   [1417] = {.lex_state = 25},
-  [1418] = {.lex_state = 421},
-  [1419] = {.lex_state = 421},
+  [1418] = {.lex_state = 402},
+  [1419] = {.lex_state = 402},
   [1420] = {.lex_state = 3},
-  [1421] = {.lex_state = 421},
-  [1422] = {.lex_state = 421},
-  [1423] = {.lex_state = 421},
+  [1421] = {.lex_state = 402},
+  [1422] = {.lex_state = 402},
+  [1423] = {.lex_state = 402},
   [1424] = {.lex_state = 3},
-  [1425] = {.lex_state = 421},
+  [1425] = {.lex_state = 402},
   [1426] = {.lex_state = 25},
   [1427] = {.lex_state = 25},
   [1428] = {.lex_state = 25},
-  [1429] = {.lex_state = 421},
-  [1430] = {.lex_state = 421},
+  [1429] = {.lex_state = 402},
+  [1430] = {.lex_state = 402},
   [1431] = {.lex_state = 25},
   [1432] = {.lex_state = 3},
   [1433] = {.lex_state = 3},
   [1434] = {.lex_state = 25},
-  [1435] = {.lex_state = 421},
+  [1435] = {.lex_state = 402},
   [1436] = {.lex_state = 25},
-  [1437] = {.lex_state = 421},
+  [1437] = {.lex_state = 402},
   [1438] = {.lex_state = 25},
   [1439] = {.lex_state = 25},
-  [1440] = {.lex_state = 421},
+  [1440] = {.lex_state = 402},
   [1441] = {.lex_state = 25},
   [1442] = {.lex_state = 25},
   [1443] = {.lex_state = 25},
-  [1444] = {.lex_state = 421},
-  [1445] = {.lex_state = 421},
+  [1444] = {.lex_state = 402},
+  [1445] = {.lex_state = 402},
   [1446] = {.lex_state = 25},
-  [1447] = {.lex_state = 421},
+  [1447] = {.lex_state = 402},
   [1448] = {.lex_state = 25},
-  [1449] = {.lex_state = 421},
+  [1449] = {.lex_state = 402},
   [1450] = {.lex_state = 25},
   [1451] = {.lex_state = 25},
   [1452] = {.lex_state = 25},
@@ -9690,29 +9565,29 @@ static const TSLexerMode ts_lex_modes[STATE_COUNT] = {
   [1455] = {.lex_state = 25},
   [1456] = {.lex_state = 25},
   [1457] = {.lex_state = 25},
-  [1458] = {.lex_state = 421},
+  [1458] = {.lex_state = 402},
   [1459] = {.lex_state = 25},
   [1460] = {.lex_state = 25},
-  [1461] = {.lex_state = 421},
-  [1462] = {.lex_state = 421},
+  [1461] = {.lex_state = 402},
+  [1462] = {.lex_state = 402},
   [1463] = {.lex_state = 3},
   [1464] = {.lex_state = 25},
-  [1465] = {.lex_state = 421},
+  [1465] = {.lex_state = 402},
   [1466] = {.lex_state = 3},
   [1467] = {.lex_state = 3},
-  [1468] = {.lex_state = 421},
+  [1468] = {.lex_state = 402},
   [1469] = {.lex_state = 25},
-  [1470] = {.lex_state = 421},
+  [1470] = {.lex_state = 402},
   [1471] = {.lex_state = 25},
-  [1472] = {.lex_state = 421},
+  [1472] = {.lex_state = 402},
   [1473] = {.lex_state = 25},
-  [1474] = {.lex_state = 421},
+  [1474] = {.lex_state = 402},
   [1475] = {.lex_state = 25},
-  [1476] = {.lex_state = 421},
+  [1476] = {.lex_state = 402},
   [1477] = {.lex_state = 25},
   [1478] = {.lex_state = 25},
   [1479] = {.lex_state = 25},
-  [1480] = {.lex_state = 421},
+  [1480] = {.lex_state = 402},
   [1481] = {.lex_state = 3},
   [1482] = {.lex_state = 25},
   [1483] = {.lex_state = 25},
@@ -9721,7 +9596,7 @@ static const TSLexerMode ts_lex_modes[STATE_COUNT] = {
   [1486] = {.lex_state = 25},
   [1487] = {.lex_state = 25},
   [1488] = {.lex_state = 25},
-  [1489] = {.lex_state = 421},
+  [1489] = {.lex_state = 402},
   [1490] = {.lex_state = 25},
   [1491] = {.lex_state = 3},
   [1492] = {.lex_state = 3},
@@ -9729,18 +9604,18 @@ static const TSLexerMode ts_lex_modes[STATE_COUNT] = {
   [1494] = {.lex_state = 25},
   [1495] = {.lex_state = 25},
   [1496] = {.lex_state = 25},
-  [1497] = {.lex_state = 421},
+  [1497] = {.lex_state = 402},
   [1498] = {.lex_state = 3},
   [1499] = {.lex_state = 3},
   [1500] = {.lex_state = 3},
   [1501] = {.lex_state = 3},
-  [1502] = {.lex_state = 421},
+  [1502] = {.lex_state = 402},
   [1503] = {.lex_state = 3},
   [1504] = {.lex_state = 25},
   [1505] = {.lex_state = 3},
   [1506] = {.lex_state = 3},
   [1507] = {.lex_state = 25},
-  [1508] = {.lex_state = 421},
+  [1508] = {.lex_state = 402},
   [1509] = {.lex_state = 3},
   [1510] = {.lex_state = 3},
   [1511] = {.lex_state = 3},
@@ -9756,16 +9631,16 @@ static const TSLexerMode ts_lex_modes[STATE_COUNT] = {
   [1521] = {.lex_state = 3},
   [1522] = {.lex_state = 3},
   [1523] = {.lex_state = 3},
-  [1524] = {.lex_state = 421},
-  [1525] = {.lex_state = 421},
+  [1524] = {.lex_state = 402},
+  [1525] = {.lex_state = 402},
   [1526] = {.lex_state = 3},
   [1527] = {.lex_state = 25},
-  [1528] = {.lex_state = 421},
+  [1528] = {.lex_state = 402},
   [1529] = {.lex_state = 3},
   [1530] = {.lex_state = 25},
   [1531] = {.lex_state = 25},
   [1532] = {.lex_state = 25},
-  [1533] = {.lex_state = 421},
+  [1533] = {.lex_state = 402},
   [1534] = {.lex_state = 25},
   [1535] = {.lex_state = 3},
   [1536] = {.lex_state = 25},
@@ -9781,30 +9656,30 @@ static const TSLexerMode ts_lex_modes[STATE_COUNT] = {
   [1546] = {.lex_state = 3},
   [1547] = {.lex_state = 25},
   [1548] = {.lex_state = 25},
-  [1549] = {.lex_state = 421},
+  [1549] = {.lex_state = 402},
   [1550] = {.lex_state = 25},
-  [1551] = {.lex_state = 421},
+  [1551] = {.lex_state = 402},
   [1552] = {.lex_state = 3},
   [1553] = {.lex_state = 25},
-  [1554] = {.lex_state = 421},
+  [1554] = {.lex_state = 402},
   [1555] = {.lex_state = 25},
-  [1556] = {.lex_state = 421},
+  [1556] = {.lex_state = 402},
   [1557] = {.lex_state = 3},
   [1558] = {.lex_state = 3},
   [1559] = {.lex_state = 3},
   [1560] = {.lex_state = 25},
   [1561] = {.lex_state = 3},
   [1562] = {.lex_state = 3},
-  [1563] = {.lex_state = 421},
+  [1563] = {.lex_state = 402},
   [1564] = {.lex_state = 3},
   [1565] = {.lex_state = 3},
   [1566] = {.lex_state = 25},
   [1567] = {.lex_state = 3},
   [1568] = {.lex_state = 25},
   [1569] = {.lex_state = 25},
-  [1570] = {.lex_state = 421},
+  [1570] = {.lex_state = 402},
   [1571] = {.lex_state = 3},
-  [1572] = {.lex_state = 421},
+  [1572] = {.lex_state = 402},
   [1573] = {.lex_state = 3},
   [1574] = {.lex_state = 3},
   [1575] = {.lex_state = 25},
@@ -9833,12 +9708,12 @@ static const TSLexerMode ts_lex_modes[STATE_COUNT] = {
   [1598] = {.lex_state = 25},
   [1599] = {.lex_state = 25},
   [1600] = {.lex_state = 3},
-  [1601] = {.lex_state = 421},
+  [1601] = {.lex_state = 402},
   [1602] = {.lex_state = 3},
-  [1603] = {.lex_state = 421},
+  [1603] = {.lex_state = 402},
   [1604] = {.lex_state = 3},
   [1605] = {.lex_state = 25},
-  [1606] = {.lex_state = 421},
+  [1606] = {.lex_state = 402},
   [1607] = {.lex_state = 3},
   [1608] = {.lex_state = 25},
   [1609] = {.lex_state = 25},
@@ -9849,31 +9724,31 @@ static const TSLexerMode ts_lex_modes[STATE_COUNT] = {
   [1614] = {.lex_state = 3},
   [1615] = {.lex_state = 25},
   [1616] = {.lex_state = 25},
-  [1617] = {.lex_state = 421},
+  [1617] = {.lex_state = 402},
   [1618] = {.lex_state = 25},
   [1619] = {.lex_state = 25},
   [1620] = {.lex_state = 25},
-  [1621] = {.lex_state = 421},
+  [1621] = {.lex_state = 402},
   [1622] = {.lex_state = 3},
   [1623] = {.lex_state = 25},
   [1624] = {.lex_state = 3},
   [1625] = {.lex_state = 3},
   [1626] = {.lex_state = 3},
-  [1627] = {.lex_state = 421},
+  [1627] = {.lex_state = 402},
   [1628] = {.lex_state = 3},
-  [1629] = {.lex_state = 421},
+  [1629] = {.lex_state = 402},
   [1630] = {.lex_state = 3},
   [1631] = {.lex_state = 3},
-  [1632] = {.lex_state = 421},
-  [1633] = {.lex_state = 421},
+  [1632] = {.lex_state = 402},
+  [1633] = {.lex_state = 402},
   [1634] = {.lex_state = 3},
   [1635] = {.lex_state = 25},
   [1636] = {.lex_state = 25},
   [1637] = {.lex_state = 25},
   [1638] = {.lex_state = 25},
-  [1639] = {.lex_state = 421},
-  [1640] = {.lex_state = 421},
-  [1641] = {.lex_state = 421},
+  [1639] = {.lex_state = 402},
+  [1640] = {.lex_state = 402},
+  [1641] = {.lex_state = 402},
   [1642] = {.lex_state = 25},
   [1643] = {.lex_state = 25},
   [1644] = {.lex_state = 3},
@@ -9892,7 +9767,7 @@ static const TSLexerMode ts_lex_modes[STATE_COUNT] = {
   [1657] = {.lex_state = 3},
   [1658] = {.lex_state = 3},
   [1659] = {.lex_state = 25},
-  [1660] = {.lex_state = 421},
+  [1660] = {.lex_state = 402},
   [1661] = {.lex_state = 25},
   [1662] = {.lex_state = 25},
   [1663] = {.lex_state = 25},
@@ -9921,305 +9796,305 @@ static const TSLexerMode ts_lex_modes[STATE_COUNT] = {
   [1686] = {.lex_state = 25},
   [1687] = {.lex_state = 25},
   [1688] = {.lex_state = 3},
-  [1689] = {.lex_state = 421},
-  [1690] = {.lex_state = 421},
+  [1689] = {.lex_state = 402},
+  [1690] = {.lex_state = 402},
   [1691] = {.lex_state = 25},
-  [1692] = {.lex_state = 421},
-  [1693] = {.lex_state = 421},
+  [1692] = {.lex_state = 402},
+  [1693] = {.lex_state = 402},
   [1694] = {.lex_state = 3},
-  [1695] = {.lex_state = 421},
+  [1695] = {.lex_state = 402},
   [1696] = {.lex_state = 25},
   [1697] = {.lex_state = 25},
   [1698] = {.lex_state = 25},
   [1699] = {.lex_state = 25},
   [1700] = {.lex_state = 25},
-  [1701] = {.lex_state = 421},
-  [1702] = {.lex_state = 421},
-  [1703] = {.lex_state = 421},
-  [1704] = {.lex_state = 421},
-  [1705] = {.lex_state = 421},
-  [1706] = {.lex_state = 421},
-  [1707] = {.lex_state = 421},
+  [1701] = {.lex_state = 402},
+  [1702] = {.lex_state = 402},
+  [1703] = {.lex_state = 402},
+  [1704] = {.lex_state = 402},
+  [1705] = {.lex_state = 402},
+  [1706] = {.lex_state = 402},
+  [1707] = {.lex_state = 402},
   [1708] = {.lex_state = 26},
-  [1709] = {.lex_state = 421},
-  [1710] = {.lex_state = 421},
-  [1711] = {.lex_state = 421},
-  [1712] = {.lex_state = 421},
-  [1713] = {.lex_state = 421},
-  [1714] = {.lex_state = 421},
-  [1715] = {.lex_state = 421},
-  [1716] = {.lex_state = 421},
+  [1709] = {.lex_state = 402},
+  [1710] = {.lex_state = 402},
+  [1711] = {.lex_state = 402},
+  [1712] = {.lex_state = 402},
+  [1713] = {.lex_state = 402},
+  [1714] = {.lex_state = 402},
+  [1715] = {.lex_state = 402},
+  [1716] = {.lex_state = 402},
   [1717] = {.lex_state = 27},
-  [1718] = {.lex_state = 421},
-  [1719] = {.lex_state = 421},
-  [1720] = {.lex_state = 421},
-  [1721] = {.lex_state = 421},
-  [1722] = {.lex_state = 421},
-  [1723] = {.lex_state = 421},
-  [1724] = {.lex_state = 421},
-  [1725] = {.lex_state = 421},
-  [1726] = {.lex_state = 421},
-  [1727] = {.lex_state = 421},
-  [1728] = {.lex_state = 421},
+  [1718] = {.lex_state = 402},
+  [1719] = {.lex_state = 402},
+  [1720] = {.lex_state = 402},
+  [1721] = {.lex_state = 402},
+  [1722] = {.lex_state = 402},
+  [1723] = {.lex_state = 402},
+  [1724] = {.lex_state = 402},
+  [1725] = {.lex_state = 402},
+  [1726] = {.lex_state = 402},
+  [1727] = {.lex_state = 402},
+  [1728] = {.lex_state = 402},
   [1729] = {.lex_state = 9},
-  [1730] = {.lex_state = 421},
-  [1731] = {.lex_state = 421},
-  [1732] = {.lex_state = 421},
-  [1733] = {.lex_state = 421},
-  [1734] = {.lex_state = 421},
-  [1735] = {.lex_state = 421},
-  [1736] = {.lex_state = 421},
-  [1737] = {.lex_state = 421},
-  [1738] = {.lex_state = 421},
-  [1739] = {.lex_state = 421},
-  [1740] = {.lex_state = 421},
-  [1741] = {.lex_state = 421},
-  [1742] = {.lex_state = 421},
-  [1743] = {.lex_state = 421},
-  [1744] = {.lex_state = 421},
-  [1745] = {.lex_state = 421},
-  [1746] = {.lex_state = 421},
-  [1747] = {.lex_state = 421},
-  [1748] = {.lex_state = 421},
-  [1749] = {.lex_state = 421},
+  [1730] = {.lex_state = 402},
+  [1731] = {.lex_state = 402},
+  [1732] = {.lex_state = 402},
+  [1733] = {.lex_state = 402},
+  [1734] = {.lex_state = 402},
+  [1735] = {.lex_state = 402},
+  [1736] = {.lex_state = 402},
+  [1737] = {.lex_state = 402},
+  [1738] = {.lex_state = 402},
+  [1739] = {.lex_state = 402},
+  [1740] = {.lex_state = 402},
+  [1741] = {.lex_state = 402},
+  [1742] = {.lex_state = 402},
+  [1743] = {.lex_state = 402},
+  [1744] = {.lex_state = 402},
+  [1745] = {.lex_state = 402},
+  [1746] = {.lex_state = 402},
+  [1747] = {.lex_state = 402},
+  [1748] = {.lex_state = 402},
+  [1749] = {.lex_state = 402},
   [1750] = {.lex_state = 9},
-  [1751] = {.lex_state = 421},
-  [1752] = {.lex_state = 421},
-  [1753] = {.lex_state = 421},
-  [1754] = {.lex_state = 421},
-  [1755] = {.lex_state = 421},
-  [1756] = {.lex_state = 421},
-  [1757] = {.lex_state = 421},
+  [1751] = {.lex_state = 402},
+  [1752] = {.lex_state = 402},
+  [1753] = {.lex_state = 402},
+  [1754] = {.lex_state = 402},
+  [1755] = {.lex_state = 402},
+  [1756] = {.lex_state = 402},
+  [1757] = {.lex_state = 402},
   [1758] = {.lex_state = 18},
-  [1759] = {.lex_state = 421},
-  [1760] = {.lex_state = 421},
-  [1761] = {.lex_state = 421},
-  [1762] = {.lex_state = 421},
-  [1763] = {.lex_state = 421},
-  [1764] = {.lex_state = 421},
-  [1765] = {.lex_state = 421},
-  [1766] = {.lex_state = 421},
-  [1767] = {.lex_state = 421},
-  [1768] = {.lex_state = 421},
-  [1769] = {.lex_state = 421},
-  [1770] = {.lex_state = 421},
-  [1771] = {.lex_state = 421},
-  [1772] = {.lex_state = 421},
-  [1773] = {.lex_state = 421},
-  [1774] = {.lex_state = 421},
-  [1775] = {.lex_state = 421},
+  [1759] = {.lex_state = 402},
+  [1760] = {.lex_state = 402},
+  [1761] = {.lex_state = 402},
+  [1762] = {.lex_state = 402},
+  [1763] = {.lex_state = 402},
+  [1764] = {.lex_state = 402},
+  [1765] = {.lex_state = 402},
+  [1766] = {.lex_state = 402},
+  [1767] = {.lex_state = 402},
+  [1768] = {.lex_state = 402},
+  [1769] = {.lex_state = 402},
+  [1770] = {.lex_state = 402},
+  [1771] = {.lex_state = 402},
+  [1772] = {.lex_state = 402},
+  [1773] = {.lex_state = 402},
+  [1774] = {.lex_state = 402},
+  [1775] = {.lex_state = 402},
   [1776] = {.lex_state = 27},
-  [1777] = {.lex_state = 421},
-  [1778] = {.lex_state = 421},
-  [1779] = {.lex_state = 421},
-  [1780] = {.lex_state = 421},
-  [1781] = {.lex_state = 421},
-  [1782] = {.lex_state = 421},
-  [1783] = {.lex_state = 421},
-  [1784] = {.lex_state = 421},
-  [1785] = {.lex_state = 421},
-  [1786] = {.lex_state = 421},
-  [1787] = {.lex_state = 421},
-  [1788] = {.lex_state = 421},
-  [1789] = {.lex_state = 421},
+  [1777] = {.lex_state = 402},
+  [1778] = {.lex_state = 402},
+  [1779] = {.lex_state = 402},
+  [1780] = {.lex_state = 402},
+  [1781] = {.lex_state = 402},
+  [1782] = {.lex_state = 402},
+  [1783] = {.lex_state = 402},
+  [1784] = {.lex_state = 402},
+  [1785] = {.lex_state = 402},
+  [1786] = {.lex_state = 402},
+  [1787] = {.lex_state = 402},
+  [1788] = {.lex_state = 402},
+  [1789] = {.lex_state = 402},
   [1790] = {.lex_state = 18},
-  [1791] = {.lex_state = 421},
-  [1792] = {.lex_state = 421},
-  [1793] = {.lex_state = 421},
-  [1794] = {.lex_state = 421},
-  [1795] = {.lex_state = 421},
-  [1796] = {.lex_state = 421},
-  [1797] = {.lex_state = 421},
-  [1798] = {.lex_state = 421},
-  [1799] = {.lex_state = 421},
+  [1791] = {.lex_state = 402},
+  [1792] = {.lex_state = 402},
+  [1793] = {.lex_state = 402},
+  [1794] = {.lex_state = 402},
+  [1795] = {.lex_state = 402},
+  [1796] = {.lex_state = 402},
+  [1797] = {.lex_state = 402},
+  [1798] = {.lex_state = 402},
+  [1799] = {.lex_state = 402},
   [1800] = {.lex_state = 25},
-  [1801] = {.lex_state = 421},
-  [1802] = {.lex_state = 421},
-  [1803] = {.lex_state = 421},
-  [1804] = {.lex_state = 421},
-  [1805] = {.lex_state = 421},
-  [1806] = {.lex_state = 421},
-  [1807] = {.lex_state = 421},
-  [1808] = {.lex_state = 421},
-  [1809] = {.lex_state = 421},
-  [1810] = {.lex_state = 421},
-  [1811] = {.lex_state = 421},
-  [1812] = {.lex_state = 421},
-  [1813] = {.lex_state = 421},
-  [1814] = {.lex_state = 421},
-  [1815] = {.lex_state = 421},
-  [1816] = {.lex_state = 421},
-  [1817] = {.lex_state = 421},
-  [1818] = {.lex_state = 421},
-  [1819] = {.lex_state = 421},
-  [1820] = {.lex_state = 421},
-  [1821] = {.lex_state = 421},
-  [1822] = {.lex_state = 421},
-  [1823] = {.lex_state = 421},
-  [1824] = {.lex_state = 421},
-  [1825] = {.lex_state = 421},
-  [1826] = {.lex_state = 421},
-  [1827] = {.lex_state = 421},
-  [1828] = {.lex_state = 421},
-  [1829] = {.lex_state = 421},
-  [1830] = {.lex_state = 421},
+  [1801] = {.lex_state = 402},
+  [1802] = {.lex_state = 402},
+  [1803] = {.lex_state = 402},
+  [1804] = {.lex_state = 402},
+  [1805] = {.lex_state = 402},
+  [1806] = {.lex_state = 402},
+  [1807] = {.lex_state = 402},
+  [1808] = {.lex_state = 402},
+  [1809] = {.lex_state = 402},
+  [1810] = {.lex_state = 402},
+  [1811] = {.lex_state = 402},
+  [1812] = {.lex_state = 402},
+  [1813] = {.lex_state = 402},
+  [1814] = {.lex_state = 402},
+  [1815] = {.lex_state = 402},
+  [1816] = {.lex_state = 402},
+  [1817] = {.lex_state = 402},
+  [1818] = {.lex_state = 402},
+  [1819] = {.lex_state = 402},
+  [1820] = {.lex_state = 402},
+  [1821] = {.lex_state = 402},
+  [1822] = {.lex_state = 402},
+  [1823] = {.lex_state = 402},
+  [1824] = {.lex_state = 402},
+  [1825] = {.lex_state = 402},
+  [1826] = {.lex_state = 402},
+  [1827] = {.lex_state = 402},
+  [1828] = {.lex_state = 402},
+  [1829] = {.lex_state = 402},
+  [1830] = {.lex_state = 402},
   [1831] = {.lex_state = 18},
-  [1832] = {.lex_state = 421},
-  [1833] = {.lex_state = 421},
-  [1834] = {.lex_state = 421},
-  [1835] = {.lex_state = 421},
-  [1836] = {.lex_state = 421},
-  [1837] = {.lex_state = 421},
-  [1838] = {.lex_state = 421},
-  [1839] = {.lex_state = 421},
-  [1840] = {.lex_state = 421},
-  [1841] = {.lex_state = 421},
-  [1842] = {.lex_state = 421},
-  [1843] = {.lex_state = 421},
-  [1844] = {.lex_state = 421},
-  [1845] = {.lex_state = 421},
-  [1846] = {.lex_state = 421},
-  [1847] = {.lex_state = 421},
-  [1848] = {.lex_state = 421},
-  [1849] = {.lex_state = 421},
-  [1850] = {.lex_state = 421},
-  [1851] = {.lex_state = 421},
-  [1852] = {.lex_state = 421},
-  [1853] = {.lex_state = 421},
-  [1854] = {.lex_state = 421},
-  [1855] = {.lex_state = 421},
-  [1856] = {.lex_state = 421},
-  [1857] = {.lex_state = 421},
-  [1858] = {.lex_state = 421},
-  [1859] = {.lex_state = 421},
-  [1860] = {.lex_state = 421},
-  [1861] = {.lex_state = 421},
-  [1862] = {.lex_state = 421},
-  [1863] = {.lex_state = 421},
+  [1832] = {.lex_state = 402},
+  [1833] = {.lex_state = 402},
+  [1834] = {.lex_state = 402},
+  [1835] = {.lex_state = 402},
+  [1836] = {.lex_state = 402},
+  [1837] = {.lex_state = 402},
+  [1838] = {.lex_state = 402},
+  [1839] = {.lex_state = 402},
+  [1840] = {.lex_state = 402},
+  [1841] = {.lex_state = 402},
+  [1842] = {.lex_state = 402},
+  [1843] = {.lex_state = 402},
+  [1844] = {.lex_state = 402},
+  [1845] = {.lex_state = 402},
+  [1846] = {.lex_state = 402},
+  [1847] = {.lex_state = 402},
+  [1848] = {.lex_state = 402},
+  [1849] = {.lex_state = 402},
+  [1850] = {.lex_state = 402},
+  [1851] = {.lex_state = 402},
+  [1852] = {.lex_state = 402},
+  [1853] = {.lex_state = 402},
+  [1854] = {.lex_state = 402},
+  [1855] = {.lex_state = 402},
+  [1856] = {.lex_state = 402},
+  [1857] = {.lex_state = 402},
+  [1858] = {.lex_state = 402},
+  [1859] = {.lex_state = 402},
+  [1860] = {.lex_state = 402},
+  [1861] = {.lex_state = 402},
+  [1862] = {.lex_state = 402},
+  [1863] = {.lex_state = 402},
   [1864] = {.lex_state = 9},
-  [1865] = {.lex_state = 421},
-  [1866] = {.lex_state = 421},
-  [1867] = {.lex_state = 421},
-  [1868] = {.lex_state = 421},
-  [1869] = {.lex_state = 421},
-  [1870] = {.lex_state = 421},
-  [1871] = {.lex_state = 421},
-  [1872] = {.lex_state = 421},
-  [1873] = {.lex_state = 421},
-  [1874] = {.lex_state = 421},
-  [1875] = {.lex_state = 421},
-  [1876] = {.lex_state = 421},
-  [1877] = {.lex_state = 421},
-  [1878] = {.lex_state = 421},
-  [1879] = {.lex_state = 421},
-  [1880] = {.lex_state = 500},
-  [1881] = {.lex_state = 421},
-  [1882] = {.lex_state = 421},
-  [1883] = {.lex_state = 421},
-  [1884] = {.lex_state = 421},
-  [1885] = {.lex_state = 421},
-  [1886] = {.lex_state = 421},
-  [1887] = {.lex_state = 421},
-  [1888] = {.lex_state = 421},
-  [1889] = {.lex_state = 421},
-  [1890] = {.lex_state = 421},
-  [1891] = {.lex_state = 421},
-  [1892] = {.lex_state = 421},
-  [1893] = {.lex_state = 421},
-  [1894] = {.lex_state = 421},
-  [1895] = {.lex_state = 421},
-  [1896] = {.lex_state = 421},
-  [1897] = {.lex_state = 421},
-  [1898] = {.lex_state = 421},
-  [1899] = {.lex_state = 421},
-  [1900] = {.lex_state = 421},
-  [1901] = {.lex_state = 421},
-  [1902] = {.lex_state = 421},
-  [1903] = {.lex_state = 421},
-  [1904] = {.lex_state = 421},
+  [1865] = {.lex_state = 402},
+  [1866] = {.lex_state = 402},
+  [1867] = {.lex_state = 402},
+  [1868] = {.lex_state = 402},
+  [1869] = {.lex_state = 402},
+  [1870] = {.lex_state = 402},
+  [1871] = {.lex_state = 402},
+  [1872] = {.lex_state = 402},
+  [1873] = {.lex_state = 402},
+  [1874] = {.lex_state = 402},
+  [1875] = {.lex_state = 402},
+  [1876] = {.lex_state = 402},
+  [1877] = {.lex_state = 402},
+  [1878] = {.lex_state = 402},
+  [1879] = {.lex_state = 402},
+  [1880] = {.lex_state = 481},
+  [1881] = {.lex_state = 402},
+  [1882] = {.lex_state = 402},
+  [1883] = {.lex_state = 402},
+  [1884] = {.lex_state = 402},
+  [1885] = {.lex_state = 402},
+  [1886] = {.lex_state = 402},
+  [1887] = {.lex_state = 402},
+  [1888] = {.lex_state = 402},
+  [1889] = {.lex_state = 402},
+  [1890] = {.lex_state = 402},
+  [1891] = {.lex_state = 402},
+  [1892] = {.lex_state = 402},
+  [1893] = {.lex_state = 402},
+  [1894] = {.lex_state = 402},
+  [1895] = {.lex_state = 402},
+  [1896] = {.lex_state = 402},
+  [1897] = {.lex_state = 402},
+  [1898] = {.lex_state = 402},
+  [1899] = {.lex_state = 402},
+  [1900] = {.lex_state = 402},
+  [1901] = {.lex_state = 402},
+  [1902] = {.lex_state = 402},
+  [1903] = {.lex_state = 402},
+  [1904] = {.lex_state = 402},
   [1905] = {.lex_state = 9},
-  [1906] = {.lex_state = 421},
-  [1907] = {.lex_state = 421},
-  [1908] = {.lex_state = 421},
+  [1906] = {.lex_state = 402},
+  [1907] = {.lex_state = 402},
+  [1908] = {.lex_state = 402},
   [1909] = {.lex_state = 26},
-  [1910] = {.lex_state = 421},
-  [1911] = {.lex_state = 421},
-  [1912] = {.lex_state = 421},
-  [1913] = {.lex_state = 421},
-  [1914] = {.lex_state = 421},
-  [1915] = {.lex_state = 421},
-  [1916] = {.lex_state = 421},
-  [1917] = {.lex_state = 421},
-  [1918] = {.lex_state = 421},
-  [1919] = {.lex_state = 421},
-  [1920] = {.lex_state = 421},
-  [1921] = {.lex_state = 421},
-  [1922] = {.lex_state = 421},
-  [1923] = {.lex_state = 421},
-  [1924] = {.lex_state = 421},
-  [1925] = {.lex_state = 421},
-  [1926] = {.lex_state = 421},
-  [1927] = {.lex_state = 421},
-  [1928] = {.lex_state = 421},
-  [1929] = {.lex_state = 421},
-  [1930] = {.lex_state = 421},
-  [1931] = {.lex_state = 421},
-  [1932] = {.lex_state = 421},
-  [1933] = {.lex_state = 421},
-  [1934] = {.lex_state = 421},
-  [1935] = {.lex_state = 421},
-  [1936] = {.lex_state = 421},
-  [1937] = {.lex_state = 421},
+  [1910] = {.lex_state = 402},
+  [1911] = {.lex_state = 402},
+  [1912] = {.lex_state = 402},
+  [1913] = {.lex_state = 402},
+  [1914] = {.lex_state = 402},
+  [1915] = {.lex_state = 402},
+  [1916] = {.lex_state = 402},
+  [1917] = {.lex_state = 402},
+  [1918] = {.lex_state = 402},
+  [1919] = {.lex_state = 402},
+  [1920] = {.lex_state = 402},
+  [1921] = {.lex_state = 402},
+  [1922] = {.lex_state = 402},
+  [1923] = {.lex_state = 402},
+  [1924] = {.lex_state = 402},
+  [1925] = {.lex_state = 402},
+  [1926] = {.lex_state = 402},
+  [1927] = {.lex_state = 402},
+  [1928] = {.lex_state = 402},
+  [1929] = {.lex_state = 402},
+  [1930] = {.lex_state = 402},
+  [1931] = {.lex_state = 402},
+  [1932] = {.lex_state = 402},
+  [1933] = {.lex_state = 402},
+  [1934] = {.lex_state = 402},
+  [1935] = {.lex_state = 402},
+  [1936] = {.lex_state = 402},
+  [1937] = {.lex_state = 402},
   [1938] = {.lex_state = 18},
-  [1939] = {.lex_state = 421},
-  [1940] = {.lex_state = 421},
-  [1941] = {.lex_state = 421},
-  [1942] = {.lex_state = 421},
-  [1943] = {.lex_state = 421},
-  [1944] = {.lex_state = 421},
-  [1945] = {.lex_state = 421},
-  [1946] = {.lex_state = 421},
-  [1947] = {.lex_state = 421},
-  [1948] = {.lex_state = 421},
-  [1949] = {.lex_state = 421},
-  [1950] = {.lex_state = 421},
-  [1951] = {.lex_state = 421},
-  [1952] = {.lex_state = 421},
-  [1953] = {.lex_state = 421},
-  [1954] = {.lex_state = 421},
-  [1955] = {.lex_state = 421},
-  [1956] = {.lex_state = 421},
-  [1957] = {.lex_state = 421},
-  [1958] = {.lex_state = 421},
-  [1959] = {.lex_state = 421},
-  [1960] = {.lex_state = 421},
-  [1961] = {.lex_state = 421},
-  [1962] = {.lex_state = 421},
-  [1963] = {.lex_state = 421},
-  [1964] = {.lex_state = 421},
-  [1965] = {.lex_state = 421},
-  [1966] = {.lex_state = 421},
-  [1967] = {.lex_state = 421},
-  [1968] = {.lex_state = 421},
-  [1969] = {.lex_state = 421},
-  [1970] = {.lex_state = 421},
-  [1971] = {.lex_state = 421},
-  [1972] = {.lex_state = 421},
-  [1973] = {.lex_state = 421},
-  [1974] = {.lex_state = 421},
-  [1975] = {.lex_state = 421},
-  [1976] = {.lex_state = 421},
-  [1977] = {.lex_state = 421},
-  [1978] = {.lex_state = 421},
-  [1979] = {.lex_state = 421},
-  [1980] = {.lex_state = 421},
-  [1981] = {.lex_state = 421},
-  [1982] = {.lex_state = 421},
-  [1983] = {.lex_state = 421},
-  [1984] = {.lex_state = 421},
-  [1985] = {.lex_state = 421},
-  [1986] = {.lex_state = 421},
-  [1987] = {.lex_state = 421},
+  [1939] = {.lex_state = 402},
+  [1940] = {.lex_state = 402},
+  [1941] = {.lex_state = 402},
+  [1942] = {.lex_state = 402},
+  [1943] = {.lex_state = 402},
+  [1944] = {.lex_state = 402},
+  [1945] = {.lex_state = 402},
+  [1946] = {.lex_state = 402},
+  [1947] = {.lex_state = 402},
+  [1948] = {.lex_state = 402},
+  [1949] = {.lex_state = 402},
+  [1950] = {.lex_state = 402},
+  [1951] = {.lex_state = 402},
+  [1952] = {.lex_state = 402},
+  [1953] = {.lex_state = 402},
+  [1954] = {.lex_state = 402},
+  [1955] = {.lex_state = 402},
+  [1956] = {.lex_state = 402},
+  [1957] = {.lex_state = 402},
+  [1958] = {.lex_state = 402},
+  [1959] = {.lex_state = 402},
+  [1960] = {.lex_state = 402},
+  [1961] = {.lex_state = 402},
+  [1962] = {.lex_state = 402},
+  [1963] = {.lex_state = 402},
+  [1964] = {.lex_state = 402},
+  [1965] = {.lex_state = 402},
+  [1966] = {.lex_state = 402},
+  [1967] = {.lex_state = 402},
+  [1968] = {.lex_state = 402},
+  [1969] = {.lex_state = 402},
+  [1970] = {.lex_state = 402},
+  [1971] = {.lex_state = 402},
+  [1972] = {.lex_state = 402},
+  [1973] = {.lex_state = 402},
+  [1974] = {.lex_state = 402},
+  [1975] = {.lex_state = 402},
+  [1976] = {.lex_state = 402},
+  [1977] = {.lex_state = 402},
+  [1978] = {.lex_state = 402},
+  [1979] = {.lex_state = 402},
+  [1980] = {.lex_state = 402},
+  [1981] = {.lex_state = 402},
+  [1982] = {.lex_state = 402},
+  [1983] = {.lex_state = 402},
+  [1984] = {.lex_state = 402},
+  [1985] = {.lex_state = 402},
+  [1986] = {.lex_state = 402},
+  [1987] = {.lex_state = 402},
 };
 
 static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
@@ -10246,19 +10121,19 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [aux_sym_procedure_token2] = ACTIONS(1),
     [aux_sym_block_token1] = ACTIONS(1),
     [aux_sym_block_token2] = ACTIONS(1),
-    [anon_sym__and_LT_LT] = ACTIONS(1),
-    [anon_sym__andif_LT_LT] = ACTIONS(1),
-    [anon_sym__or_LT_LT] = ACTIONS(1),
-    [anon_sym__orif_LT_LT] = ACTIONS(1),
-    [anon_sym__xor_LT_LT] = ACTIONS(1),
+    [aux_sym_assignment_token1] = ACTIONS(1),
+    [aux_sym_assignment_token2] = ACTIONS(1),
+    [aux_sym_assignment_token3] = ACTIONS(1),
+    [aux_sym_assignment_token4] = ACTIONS(1),
+    [aux_sym_assignment_token5] = ACTIONS(1),
     [anon_sym_STAR_STAR_LT_LT] = ACTIONS(1),
     [anon_sym_STAR_STAR_CARET_LT_LT] = ACTIONS(1),
     [anon_sym_STAR_LT_LT] = ACTIONS(1),
     [anon_sym_STAR_CARET_LT_LT] = ACTIONS(1),
     [anon_sym_SLASH_LT_LT] = ACTIONS(1),
     [anon_sym_SLASH_CARET_LT_LT] = ACTIONS(1),
-    [anon_sym__mod_LT_LT] = ACTIONS(1),
-    [anon_sym__div_LT_LT] = ACTIONS(1),
+    [aux_sym_assignment_token6] = ACTIONS(1),
+    [aux_sym_assignment_token7] = ACTIONS(1),
     [anon_sym_DASH_LT_LT] = ACTIONS(1),
     [anon_sym_DASH_CARET_LT_LT] = ACTIONS(1),
     [anon_sym_PLUS_LT_LT] = ACTIONS(1),
@@ -10532,19 +10407,19 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [aux_sym_procedure_token2] = ACTIONS(105),
     [aux_sym_block_token1] = ACTIONS(117),
     [aux_sym_block_token2] = ACTIONS(105),
-    [anon_sym__and_LT_LT] = ACTIONS(105),
-    [anon_sym__andif_LT_LT] = ACTIONS(105),
-    [anon_sym__or_LT_LT] = ACTIONS(105),
-    [anon_sym__orif_LT_LT] = ACTIONS(105),
-    [anon_sym__xor_LT_LT] = ACTIONS(105),
+    [aux_sym_assignment_token1] = ACTIONS(105),
+    [aux_sym_assignment_token2] = ACTIONS(105),
+    [aux_sym_assignment_token3] = ACTIONS(105),
+    [aux_sym_assignment_token4] = ACTIONS(105),
+    [aux_sym_assignment_token5] = ACTIONS(105),
     [anon_sym_STAR_STAR_LT_LT] = ACTIONS(105),
     [anon_sym_STAR_STAR_CARET_LT_LT] = ACTIONS(105),
     [anon_sym_STAR_LT_LT] = ACTIONS(105),
     [anon_sym_STAR_CARET_LT_LT] = ACTIONS(105),
     [anon_sym_SLASH_LT_LT] = ACTIONS(105),
     [anon_sym_SLASH_CARET_LT_LT] = ACTIONS(105),
-    [anon_sym__mod_LT_LT] = ACTIONS(105),
-    [anon_sym__div_LT_LT] = ACTIONS(105),
+    [aux_sym_assignment_token6] = ACTIONS(105),
+    [aux_sym_assignment_token7] = ACTIONS(105),
     [anon_sym_DASH_LT_LT] = ACTIONS(105),
     [anon_sym_DASH_CARET_LT_LT] = ACTIONS(105),
     [anon_sym_PLUS_LT_LT] = ACTIONS(105),
@@ -10689,19 +10564,19 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [aux_sym_procedure_token2] = ACTIONS(185),
     [aux_sym_block_token1] = ACTIONS(117),
     [aux_sym_block_token2] = ACTIONS(185),
-    [anon_sym__and_LT_LT] = ACTIONS(185),
-    [anon_sym__andif_LT_LT] = ACTIONS(185),
-    [anon_sym__or_LT_LT] = ACTIONS(185),
-    [anon_sym__orif_LT_LT] = ACTIONS(185),
-    [anon_sym__xor_LT_LT] = ACTIONS(185),
+    [aux_sym_assignment_token1] = ACTIONS(185),
+    [aux_sym_assignment_token2] = ACTIONS(185),
+    [aux_sym_assignment_token3] = ACTIONS(185),
+    [aux_sym_assignment_token4] = ACTIONS(185),
+    [aux_sym_assignment_token5] = ACTIONS(185),
     [anon_sym_STAR_STAR_LT_LT] = ACTIONS(185),
     [anon_sym_STAR_STAR_CARET_LT_LT] = ACTIONS(185),
     [anon_sym_STAR_LT_LT] = ACTIONS(185),
     [anon_sym_STAR_CARET_LT_LT] = ACTIONS(185),
     [anon_sym_SLASH_LT_LT] = ACTIONS(185),
     [anon_sym_SLASH_CARET_LT_LT] = ACTIONS(185),
-    [anon_sym__mod_LT_LT] = ACTIONS(185),
-    [anon_sym__div_LT_LT] = ACTIONS(185),
+    [aux_sym_assignment_token6] = ACTIONS(185),
+    [aux_sym_assignment_token7] = ACTIONS(185),
     [anon_sym_DASH_LT_LT] = ACTIONS(185),
     [anon_sym_DASH_CARET_LT_LT] = ACTIONS(185),
     [anon_sym_PLUS_LT_LT] = ACTIONS(185),
@@ -10846,19 +10721,19 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [aux_sym_procedure_token2] = ACTIONS(105),
     [aux_sym_block_token1] = ACTIONS(117),
     [aux_sym_block_token2] = ACTIONS(105),
-    [anon_sym__and_LT_LT] = ACTIONS(105),
-    [anon_sym__andif_LT_LT] = ACTIONS(105),
-    [anon_sym__or_LT_LT] = ACTIONS(105),
-    [anon_sym__orif_LT_LT] = ACTIONS(105),
-    [anon_sym__xor_LT_LT] = ACTIONS(105),
+    [aux_sym_assignment_token1] = ACTIONS(105),
+    [aux_sym_assignment_token2] = ACTIONS(105),
+    [aux_sym_assignment_token3] = ACTIONS(105),
+    [aux_sym_assignment_token4] = ACTIONS(105),
+    [aux_sym_assignment_token5] = ACTIONS(105),
     [anon_sym_STAR_STAR_LT_LT] = ACTIONS(105),
     [anon_sym_STAR_STAR_CARET_LT_LT] = ACTIONS(105),
     [anon_sym_STAR_LT_LT] = ACTIONS(105),
     [anon_sym_STAR_CARET_LT_LT] = ACTIONS(105),
     [anon_sym_SLASH_LT_LT] = ACTIONS(105),
     [anon_sym_SLASH_CARET_LT_LT] = ACTIONS(105),
-    [anon_sym__mod_LT_LT] = ACTIONS(105),
-    [anon_sym__div_LT_LT] = ACTIONS(105),
+    [aux_sym_assignment_token6] = ACTIONS(105),
+    [aux_sym_assignment_token7] = ACTIONS(105),
     [anon_sym_DASH_LT_LT] = ACTIONS(105),
     [anon_sym_DASH_CARET_LT_LT] = ACTIONS(105),
     [anon_sym_PLUS_LT_LT] = ACTIONS(105),
@@ -11002,19 +10877,19 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [aux_sym_procedure_token2] = ACTIONS(185),
     [aux_sym_block_token1] = ACTIONS(117),
     [aux_sym_block_token2] = ACTIONS(185),
-    [anon_sym__and_LT_LT] = ACTIONS(185),
-    [anon_sym__andif_LT_LT] = ACTIONS(185),
-    [anon_sym__or_LT_LT] = ACTIONS(185),
-    [anon_sym__orif_LT_LT] = ACTIONS(185),
-    [anon_sym__xor_LT_LT] = ACTIONS(185),
+    [aux_sym_assignment_token1] = ACTIONS(185),
+    [aux_sym_assignment_token2] = ACTIONS(185),
+    [aux_sym_assignment_token3] = ACTIONS(185),
+    [aux_sym_assignment_token4] = ACTIONS(185),
+    [aux_sym_assignment_token5] = ACTIONS(185),
     [anon_sym_STAR_STAR_LT_LT] = ACTIONS(185),
     [anon_sym_STAR_STAR_CARET_LT_LT] = ACTIONS(185),
     [anon_sym_STAR_LT_LT] = ACTIONS(185),
     [anon_sym_STAR_CARET_LT_LT] = ACTIONS(185),
     [anon_sym_SLASH_LT_LT] = ACTIONS(185),
     [anon_sym_SLASH_CARET_LT_LT] = ACTIONS(185),
-    [anon_sym__mod_LT_LT] = ACTIONS(185),
-    [anon_sym__div_LT_LT] = ACTIONS(185),
+    [aux_sym_assignment_token6] = ACTIONS(185),
+    [aux_sym_assignment_token7] = ACTIONS(185),
     [anon_sym_DASH_LT_LT] = ACTIONS(185),
     [anon_sym_DASH_CARET_LT_LT] = ACTIONS(185),
     [anon_sym_PLUS_LT_LT] = ACTIONS(185),
@@ -11155,19 +11030,19 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_RBRACK] = ACTIONS(215),
     [aux_sym_procedure_token1] = ACTIONS(219),
     [aux_sym_block_token1] = ACTIONS(221),
-    [anon_sym__and_LT_LT] = ACTIONS(215),
-    [anon_sym__andif_LT_LT] = ACTIONS(215),
-    [anon_sym__or_LT_LT] = ACTIONS(215),
-    [anon_sym__orif_LT_LT] = ACTIONS(215),
-    [anon_sym__xor_LT_LT] = ACTIONS(215),
+    [aux_sym_assignment_token1] = ACTIONS(215),
+    [aux_sym_assignment_token2] = ACTIONS(215),
+    [aux_sym_assignment_token3] = ACTIONS(215),
+    [aux_sym_assignment_token4] = ACTIONS(215),
+    [aux_sym_assignment_token5] = ACTIONS(215),
     [anon_sym_STAR_STAR_LT_LT] = ACTIONS(215),
     [anon_sym_STAR_STAR_CARET_LT_LT] = ACTIONS(215),
     [anon_sym_STAR_LT_LT] = ACTIONS(215),
     [anon_sym_STAR_CARET_LT_LT] = ACTIONS(215),
     [anon_sym_SLASH_LT_LT] = ACTIONS(185),
     [anon_sym_SLASH_CARET_LT_LT] = ACTIONS(185),
-    [anon_sym__mod_LT_LT] = ACTIONS(215),
-    [anon_sym__div_LT_LT] = ACTIONS(215),
+    [aux_sym_assignment_token6] = ACTIONS(215),
+    [aux_sym_assignment_token7] = ACTIONS(215),
     [anon_sym_DASH_LT_LT] = ACTIONS(215),
     [anon_sym_DASH_CARET_LT_LT] = ACTIONS(215),
     [anon_sym_PLUS_LT_LT] = ACTIONS(215),
@@ -11300,19 +11175,19 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_RBRACK] = ACTIONS(295),
     [aux_sym_procedure_token1] = ACTIONS(219),
     [aux_sym_block_token1] = ACTIONS(221),
-    [anon_sym__and_LT_LT] = ACTIONS(295),
-    [anon_sym__andif_LT_LT] = ACTIONS(295),
-    [anon_sym__or_LT_LT] = ACTIONS(295),
-    [anon_sym__orif_LT_LT] = ACTIONS(295),
-    [anon_sym__xor_LT_LT] = ACTIONS(295),
+    [aux_sym_assignment_token1] = ACTIONS(295),
+    [aux_sym_assignment_token2] = ACTIONS(295),
+    [aux_sym_assignment_token3] = ACTIONS(295),
+    [aux_sym_assignment_token4] = ACTIONS(295),
+    [aux_sym_assignment_token5] = ACTIONS(295),
     [anon_sym_STAR_STAR_LT_LT] = ACTIONS(295),
     [anon_sym_STAR_STAR_CARET_LT_LT] = ACTIONS(295),
     [anon_sym_STAR_LT_LT] = ACTIONS(295),
     [anon_sym_STAR_CARET_LT_LT] = ACTIONS(295),
     [anon_sym_SLASH_LT_LT] = ACTIONS(105),
     [anon_sym_SLASH_CARET_LT_LT] = ACTIONS(105),
-    [anon_sym__mod_LT_LT] = ACTIONS(295),
-    [anon_sym__div_LT_LT] = ACTIONS(295),
+    [aux_sym_assignment_token6] = ACTIONS(295),
+    [aux_sym_assignment_token7] = ACTIONS(295),
     [anon_sym_DASH_LT_LT] = ACTIONS(295),
     [anon_sym_DASH_CARET_LT_LT] = ACTIONS(295),
     [anon_sym_PLUS_LT_LT] = ACTIONS(295),
@@ -11445,19 +11320,19 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_LBRACK] = ACTIONS(185),
     [aux_sym_procedure_token1] = ACTIONS(115),
     [aux_sym_block_token1] = ACTIONS(117),
-    [anon_sym__and_LT_LT] = ACTIONS(185),
-    [anon_sym__andif_LT_LT] = ACTIONS(185),
-    [anon_sym__or_LT_LT] = ACTIONS(185),
-    [anon_sym__orif_LT_LT] = ACTIONS(185),
-    [anon_sym__xor_LT_LT] = ACTIONS(185),
+    [aux_sym_assignment_token1] = ACTIONS(185),
+    [aux_sym_assignment_token2] = ACTIONS(185),
+    [aux_sym_assignment_token3] = ACTIONS(185),
+    [aux_sym_assignment_token4] = ACTIONS(185),
+    [aux_sym_assignment_token5] = ACTIONS(185),
     [anon_sym_STAR_STAR_LT_LT] = ACTIONS(185),
     [anon_sym_STAR_STAR_CARET_LT_LT] = ACTIONS(185),
     [anon_sym_STAR_LT_LT] = ACTIONS(185),
     [anon_sym_STAR_CARET_LT_LT] = ACTIONS(185),
     [anon_sym_SLASH_LT_LT] = ACTIONS(185),
     [anon_sym_SLASH_CARET_LT_LT] = ACTIONS(185),
-    [anon_sym__mod_LT_LT] = ACTIONS(185),
-    [anon_sym__div_LT_LT] = ACTIONS(185),
+    [aux_sym_assignment_token6] = ACTIONS(185),
+    [aux_sym_assignment_token7] = ACTIONS(185),
     [anon_sym_DASH_LT_LT] = ACTIONS(185),
     [anon_sym_DASH_CARET_LT_LT] = ACTIONS(185),
     [anon_sym_PLUS_LT_LT] = ACTIONS(185),
@@ -11590,19 +11465,19 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_LBRACK] = ACTIONS(105),
     [aux_sym_procedure_token1] = ACTIONS(115),
     [aux_sym_block_token1] = ACTIONS(117),
-    [anon_sym__and_LT_LT] = ACTIONS(105),
-    [anon_sym__andif_LT_LT] = ACTIONS(105),
-    [anon_sym__or_LT_LT] = ACTIONS(105),
-    [anon_sym__orif_LT_LT] = ACTIONS(105),
-    [anon_sym__xor_LT_LT] = ACTIONS(105),
+    [aux_sym_assignment_token1] = ACTIONS(105),
+    [aux_sym_assignment_token2] = ACTIONS(105),
+    [aux_sym_assignment_token3] = ACTIONS(105),
+    [aux_sym_assignment_token4] = ACTIONS(105),
+    [aux_sym_assignment_token5] = ACTIONS(105),
     [anon_sym_STAR_STAR_LT_LT] = ACTIONS(105),
     [anon_sym_STAR_STAR_CARET_LT_LT] = ACTIONS(105),
     [anon_sym_STAR_LT_LT] = ACTIONS(105),
     [anon_sym_STAR_CARET_LT_LT] = ACTIONS(105),
     [anon_sym_SLASH_LT_LT] = ACTIONS(105),
     [anon_sym_SLASH_CARET_LT_LT] = ACTIONS(105),
-    [anon_sym__mod_LT_LT] = ACTIONS(105),
-    [anon_sym__div_LT_LT] = ACTIONS(105),
+    [aux_sym_assignment_token6] = ACTIONS(105),
+    [aux_sym_assignment_token7] = ACTIONS(105),
     [anon_sym_DASH_LT_LT] = ACTIONS(105),
     [anon_sym_DASH_CARET_LT_LT] = ACTIONS(105),
     [anon_sym_PLUS_LT_LT] = ACTIONS(105),
@@ -11735,19 +11610,19 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_RBRACK] = ACTIONS(215),
     [aux_sym_procedure_token1] = ACTIONS(219),
     [aux_sym_block_token1] = ACTIONS(221),
-    [anon_sym__and_LT_LT] = ACTIONS(215),
-    [anon_sym__andif_LT_LT] = ACTIONS(215),
-    [anon_sym__or_LT_LT] = ACTIONS(215),
-    [anon_sym__orif_LT_LT] = ACTIONS(215),
-    [anon_sym__xor_LT_LT] = ACTIONS(215),
+    [aux_sym_assignment_token1] = ACTIONS(215),
+    [aux_sym_assignment_token2] = ACTIONS(215),
+    [aux_sym_assignment_token3] = ACTIONS(215),
+    [aux_sym_assignment_token4] = ACTIONS(215),
+    [aux_sym_assignment_token5] = ACTIONS(215),
     [anon_sym_STAR_STAR_LT_LT] = ACTIONS(215),
     [anon_sym_STAR_STAR_CARET_LT_LT] = ACTIONS(215),
     [anon_sym_STAR_LT_LT] = ACTIONS(215),
     [anon_sym_STAR_CARET_LT_LT] = ACTIONS(215),
     [anon_sym_SLASH_LT_LT] = ACTIONS(185),
     [anon_sym_SLASH_CARET_LT_LT] = ACTIONS(185),
-    [anon_sym__mod_LT_LT] = ACTIONS(215),
-    [anon_sym__div_LT_LT] = ACTIONS(215),
+    [aux_sym_assignment_token6] = ACTIONS(215),
+    [aux_sym_assignment_token7] = ACTIONS(215),
     [anon_sym_DASH_LT_LT] = ACTIONS(215),
     [anon_sym_DASH_CARET_LT_LT] = ACTIONS(215),
     [anon_sym_PLUS_LT_LT] = ACTIONS(215),
@@ -11879,19 +11754,19 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_RBRACK] = ACTIONS(295),
     [aux_sym_procedure_token1] = ACTIONS(219),
     [aux_sym_block_token1] = ACTIONS(221),
-    [anon_sym__and_LT_LT] = ACTIONS(295),
-    [anon_sym__andif_LT_LT] = ACTIONS(295),
-    [anon_sym__or_LT_LT] = ACTIONS(295),
-    [anon_sym__orif_LT_LT] = ACTIONS(295),
-    [anon_sym__xor_LT_LT] = ACTIONS(295),
+    [aux_sym_assignment_token1] = ACTIONS(295),
+    [aux_sym_assignment_token2] = ACTIONS(295),
+    [aux_sym_assignment_token3] = ACTIONS(295),
+    [aux_sym_assignment_token4] = ACTIONS(295),
+    [aux_sym_assignment_token5] = ACTIONS(295),
     [anon_sym_STAR_STAR_LT_LT] = ACTIONS(295),
     [anon_sym_STAR_STAR_CARET_LT_LT] = ACTIONS(295),
     [anon_sym_STAR_LT_LT] = ACTIONS(295),
     [anon_sym_STAR_CARET_LT_LT] = ACTIONS(295),
     [anon_sym_SLASH_LT_LT] = ACTIONS(105),
     [anon_sym_SLASH_CARET_LT_LT] = ACTIONS(105),
-    [anon_sym__mod_LT_LT] = ACTIONS(295),
-    [anon_sym__div_LT_LT] = ACTIONS(295),
+    [aux_sym_assignment_token6] = ACTIONS(295),
+    [aux_sym_assignment_token7] = ACTIONS(295),
     [anon_sym_DASH_LT_LT] = ACTIONS(295),
     [anon_sym_DASH_CARET_LT_LT] = ACTIONS(295),
     [anon_sym_PLUS_LT_LT] = ACTIONS(295),
@@ -12023,19 +11898,19 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_LBRACK] = ACTIONS(185),
     [aux_sym_procedure_token1] = ACTIONS(115),
     [aux_sym_block_token1] = ACTIONS(117),
-    [anon_sym__and_LT_LT] = ACTIONS(185),
-    [anon_sym__andif_LT_LT] = ACTIONS(185),
-    [anon_sym__or_LT_LT] = ACTIONS(185),
-    [anon_sym__orif_LT_LT] = ACTIONS(185),
-    [anon_sym__xor_LT_LT] = ACTIONS(185),
+    [aux_sym_assignment_token1] = ACTIONS(185),
+    [aux_sym_assignment_token2] = ACTIONS(185),
+    [aux_sym_assignment_token3] = ACTIONS(185),
+    [aux_sym_assignment_token4] = ACTIONS(185),
+    [aux_sym_assignment_token5] = ACTIONS(185),
     [anon_sym_STAR_STAR_LT_LT] = ACTIONS(185),
     [anon_sym_STAR_STAR_CARET_LT_LT] = ACTIONS(185),
     [anon_sym_STAR_LT_LT] = ACTIONS(185),
     [anon_sym_STAR_CARET_LT_LT] = ACTIONS(185),
     [anon_sym_SLASH_LT_LT] = ACTIONS(185),
     [anon_sym_SLASH_CARET_LT_LT] = ACTIONS(185),
-    [anon_sym__mod_LT_LT] = ACTIONS(185),
-    [anon_sym__div_LT_LT] = ACTIONS(185),
+    [aux_sym_assignment_token6] = ACTIONS(185),
+    [aux_sym_assignment_token7] = ACTIONS(185),
     [anon_sym_DASH_LT_LT] = ACTIONS(185),
     [anon_sym_DASH_CARET_LT_LT] = ACTIONS(185),
     [anon_sym_PLUS_LT_LT] = ACTIONS(185),
@@ -12167,19 +12042,19 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_LBRACK] = ACTIONS(105),
     [aux_sym_procedure_token1] = ACTIONS(115),
     [aux_sym_block_token1] = ACTIONS(117),
-    [anon_sym__and_LT_LT] = ACTIONS(105),
-    [anon_sym__andif_LT_LT] = ACTIONS(105),
-    [anon_sym__or_LT_LT] = ACTIONS(105),
-    [anon_sym__orif_LT_LT] = ACTIONS(105),
-    [anon_sym__xor_LT_LT] = ACTIONS(105),
+    [aux_sym_assignment_token1] = ACTIONS(105),
+    [aux_sym_assignment_token2] = ACTIONS(105),
+    [aux_sym_assignment_token3] = ACTIONS(105),
+    [aux_sym_assignment_token4] = ACTIONS(105),
+    [aux_sym_assignment_token5] = ACTIONS(105),
     [anon_sym_STAR_STAR_LT_LT] = ACTIONS(105),
     [anon_sym_STAR_STAR_CARET_LT_LT] = ACTIONS(105),
     [anon_sym_STAR_LT_LT] = ACTIONS(105),
     [anon_sym_STAR_CARET_LT_LT] = ACTIONS(105),
     [anon_sym_SLASH_LT_LT] = ACTIONS(105),
     [anon_sym_SLASH_CARET_LT_LT] = ACTIONS(105),
-    [anon_sym__mod_LT_LT] = ACTIONS(105),
-    [anon_sym__div_LT_LT] = ACTIONS(105),
+    [aux_sym_assignment_token6] = ACTIONS(105),
+    [aux_sym_assignment_token7] = ACTIONS(105),
     [anon_sym_DASH_LT_LT] = ACTIONS(105),
     [anon_sym_DASH_CARET_LT_LT] = ACTIONS(105),
     [anon_sym_PLUS_LT_LT] = ACTIONS(105),
@@ -65102,19 +64977,19 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [aux_sym_method_token7] = ACTIONS(1805),
     [aux_sym_procedure_token2] = ACTIONS(1805),
     [aux_sym_block_token2] = ACTIONS(1805),
-    [anon_sym__and_LT_LT] = ACTIONS(1805),
-    [anon_sym__andif_LT_LT] = ACTIONS(1805),
-    [anon_sym__or_LT_LT] = ACTIONS(1805),
-    [anon_sym__orif_LT_LT] = ACTIONS(1805),
-    [anon_sym__xor_LT_LT] = ACTIONS(1805),
+    [aux_sym_assignment_token1] = ACTIONS(1805),
+    [aux_sym_assignment_token2] = ACTIONS(1805),
+    [aux_sym_assignment_token3] = ACTIONS(1805),
+    [aux_sym_assignment_token4] = ACTIONS(1805),
+    [aux_sym_assignment_token5] = ACTIONS(1805),
     [anon_sym_STAR_STAR_LT_LT] = ACTIONS(1805),
     [anon_sym_STAR_STAR_CARET_LT_LT] = ACTIONS(1805),
     [anon_sym_STAR_LT_LT] = ACTIONS(1805),
     [anon_sym_STAR_CARET_LT_LT] = ACTIONS(1805),
     [anon_sym_SLASH_LT_LT] = ACTIONS(1805),
     [anon_sym_SLASH_CARET_LT_LT] = ACTIONS(1805),
-    [anon_sym__mod_LT_LT] = ACTIONS(1805),
-    [anon_sym__div_LT_LT] = ACTIONS(1805),
+    [aux_sym_assignment_token6] = ACTIONS(1805),
+    [aux_sym_assignment_token7] = ACTIONS(1805),
     [anon_sym_DASH_LT_LT] = ACTIONS(1805),
     [anon_sym_DASH_CARET_LT_LT] = ACTIONS(1805),
     [anon_sym_PLUS_LT_LT] = ACTIONS(1805),
@@ -65169,19 +65044,19 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [aux_sym_method_token7] = ACTIONS(1809),
     [aux_sym_procedure_token2] = ACTIONS(1809),
     [aux_sym_block_token2] = ACTIONS(1809),
-    [anon_sym__and_LT_LT] = ACTIONS(1809),
-    [anon_sym__andif_LT_LT] = ACTIONS(1809),
-    [anon_sym__or_LT_LT] = ACTIONS(1809),
-    [anon_sym__orif_LT_LT] = ACTIONS(1809),
-    [anon_sym__xor_LT_LT] = ACTIONS(1809),
+    [aux_sym_assignment_token1] = ACTIONS(1809),
+    [aux_sym_assignment_token2] = ACTIONS(1809),
+    [aux_sym_assignment_token3] = ACTIONS(1809),
+    [aux_sym_assignment_token4] = ACTIONS(1809),
+    [aux_sym_assignment_token5] = ACTIONS(1809),
     [anon_sym_STAR_STAR_LT_LT] = ACTIONS(1809),
     [anon_sym_STAR_STAR_CARET_LT_LT] = ACTIONS(1809),
     [anon_sym_STAR_LT_LT] = ACTIONS(1809),
     [anon_sym_STAR_CARET_LT_LT] = ACTIONS(1809),
     [anon_sym_SLASH_LT_LT] = ACTIONS(1809),
     [anon_sym_SLASH_CARET_LT_LT] = ACTIONS(1809),
-    [anon_sym__mod_LT_LT] = ACTIONS(1809),
-    [anon_sym__div_LT_LT] = ACTIONS(1809),
+    [aux_sym_assignment_token6] = ACTIONS(1809),
+    [aux_sym_assignment_token7] = ACTIONS(1809),
     [anon_sym_DASH_LT_LT] = ACTIONS(1809),
     [anon_sym_DASH_CARET_LT_LT] = ACTIONS(1809),
     [anon_sym_PLUS_LT_LT] = ACTIONS(1809),
@@ -65242,19 +65117,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -65309,19 +65184,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -65376,19 +65251,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -65443,19 +65318,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -65510,19 +65385,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -65577,19 +65452,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -65644,19 +65519,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -65711,19 +65586,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -65822,19 +65697,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1837), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -65898,19 +65773,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1837), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -65930,19 +65805,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -66041,19 +65916,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1837), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -66117,19 +65992,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1837), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -66149,19 +66024,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -66216,19 +66091,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -66283,19 +66158,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -66350,19 +66225,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -66417,19 +66292,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -66484,19 +66359,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -66551,19 +66426,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -66618,19 +66493,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -66728,19 +66603,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1837), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -66803,19 +66678,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1837), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -66878,19 +66753,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1837), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -66953,19 +66828,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1837), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -66985,19 +66860,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -67052,19 +66927,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -67119,19 +66994,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -67186,19 +67061,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -67253,19 +67128,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -67320,19 +67195,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -67387,19 +67262,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -67454,19 +67329,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -67521,19 +67396,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -67588,19 +67463,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -67655,19 +67530,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -67722,19 +67597,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -67789,19 +67664,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -67856,19 +67731,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -67926,19 +67801,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -67992,19 +67867,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -68062,19 +67937,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -68128,19 +68003,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -68195,19 +68070,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -68265,19 +68140,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -68334,19 +68209,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -68400,19 +68275,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -68467,19 +68342,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -68534,19 +68409,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -68601,19 +68476,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -68668,19 +68543,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -68735,19 +68610,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -68802,19 +68677,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -68869,19 +68744,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -68936,19 +68811,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -69003,19 +68878,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -69070,19 +68945,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -69137,19 +69012,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -69250,19 +69125,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1939), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -69282,19 +69157,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -69349,19 +69224,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -69416,19 +69291,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -69483,19 +69358,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -69550,19 +69425,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -69617,19 +69492,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -69684,19 +69559,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -69751,19 +69626,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -69818,19 +69693,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -69885,19 +69760,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -69954,19 +69829,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -70022,19 +69897,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -70090,19 +69965,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -70158,19 +70033,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -70224,19 +70099,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -70291,19 +70166,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -70358,19 +70233,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -70425,19 +70300,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -70492,19 +70367,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -70559,19 +70434,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -70626,19 +70501,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -70693,19 +70568,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -70764,19 +70639,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -70833,19 +70708,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -70898,19 +70773,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -70965,19 +70840,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -71032,19 +70907,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -71143,19 +71018,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1837), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -71175,19 +71050,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -71242,19 +71117,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -71309,19 +71184,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -71376,19 +71251,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -71443,19 +71318,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -71510,19 +71385,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -71580,19 +71455,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -71646,19 +71521,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -71713,19 +71588,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -71780,19 +71655,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -71850,19 +71725,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -71916,19 +71791,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -71983,19 +71858,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -72050,19 +71925,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -72117,19 +71992,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -72184,19 +72059,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -72251,19 +72126,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -72318,19 +72193,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -72385,19 +72260,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -72452,19 +72327,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -72519,19 +72394,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -72586,19 +72461,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -72653,19 +72528,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -72720,19 +72595,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -72787,19 +72662,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -72854,19 +72729,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -72962,19 +72837,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1837), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -72996,19 +72871,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -73064,19 +72939,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -73170,19 +73045,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1837), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -73224,19 +73099,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -73295,19 +73170,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -73385,19 +73260,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1837), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -73458,19 +73333,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1837), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -73531,19 +73406,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1837), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -73604,19 +73479,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1837), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -73639,19 +73514,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -73747,19 +73622,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2074), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -73807,19 +73682,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -73854,19 +73729,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -73922,19 +73797,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -73989,19 +73864,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -74057,19 +73932,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -74165,19 +74040,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2074), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -74199,19 +74074,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -74268,19 +74143,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -74335,19 +74210,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -74403,19 +74278,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -74511,19 +74386,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2074), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -74585,19 +74460,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1837), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -74619,19 +74494,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -74728,19 +74603,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_SEMI,
     ACTIONS(2074), 18,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -74803,19 +74678,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2074), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -74838,19 +74713,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -74944,19 +74819,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1837), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -75018,19 +74893,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2074), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -75092,19 +74967,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2074), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -75166,19 +75041,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2074), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -75240,19 +75115,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2074), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -75315,19 +75190,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2074), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -75388,19 +75263,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1837), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -75422,19 +75297,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -75489,19 +75364,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -75644,19 +75519,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -75782,19 +75657,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -75832,19 +75707,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -75937,19 +75812,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2074), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -75970,19 +75845,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -76063,19 +75938,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -76146,19 +76021,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2074), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -76218,19 +76093,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2074), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -76290,19 +76165,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2074), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -76416,19 +76291,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -76499,19 +76374,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2074), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -76571,19 +76446,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2074), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -76643,19 +76518,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2074), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -76715,19 +76590,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2074), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -76748,19 +76623,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -76834,19 +76709,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -76921,19 +76796,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1939), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -76992,19 +76867,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1939), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -77063,19 +76938,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1939), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -77134,19 +77009,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1939), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -77205,19 +77080,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1939), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -77276,19 +77151,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1939), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -77347,19 +77222,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1939), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -77418,19 +77293,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1939), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -77489,19 +77364,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1939), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -77560,19 +77435,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1939), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -77631,19 +77506,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1939), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -77702,19 +77577,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1939), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -77761,19 +77636,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -77825,19 +77700,19 @@ static const uint16_t ts_small_parse_table[] = {
       aux_sym_method_token7,
       aux_sym_procedure_token2,
       aux_sym_block_token2,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -77912,19 +77787,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1939), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -77983,19 +77858,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1939), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -78054,19 +77929,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1939), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -78125,19 +78000,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1939), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -78196,19 +78071,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1939), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -78267,19 +78142,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1939), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -78338,19 +78213,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1939), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -78409,19 +78284,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1939), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -78480,19 +78355,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1939), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -78551,19 +78426,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1939), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -78622,19 +78497,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1939), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -79808,19 +79683,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -79867,19 +79742,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -79943,19 +79818,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2242), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -79991,19 +79866,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -80049,19 +79924,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -80109,19 +79984,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -80166,19 +80041,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -80242,19 +80117,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2242), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -80289,19 +80164,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -80349,19 +80224,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -80406,19 +80281,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -80483,19 +80358,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2242), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -80548,19 +80423,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2242), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -80595,19 +80470,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -80671,19 +80546,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2242), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -80735,19 +80610,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2288), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -80780,19 +80655,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -80836,19 +80711,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -80892,19 +80767,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -80948,19 +80823,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -81004,19 +80879,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -81060,19 +80935,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -81116,19 +80991,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -81172,19 +81047,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -81228,19 +81103,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -81284,19 +81159,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -81340,19 +81215,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -81396,19 +81271,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -81452,19 +81327,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -81527,19 +81402,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2242), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -81572,19 +81447,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -81628,19 +81503,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -81686,19 +81561,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -81743,19 +81618,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -81798,19 +81673,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -81854,19 +81729,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -81910,19 +81785,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -81966,19 +81841,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -82022,19 +81897,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -82078,19 +81953,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -82134,19 +82009,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -82190,19 +82065,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -82246,19 +82121,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -82302,19 +82177,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -82377,19 +82252,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2288), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -82422,19 +82297,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -82478,19 +82353,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -82534,19 +82409,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -82590,19 +82465,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -82646,19 +82521,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -82702,19 +82577,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -82758,19 +82633,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -82814,19 +82689,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -82870,19 +82745,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -82926,19 +82801,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -82982,19 +82857,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -83038,19 +82913,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -83094,19 +82969,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -83150,19 +83025,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -83206,19 +83081,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -83262,19 +83137,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -83318,19 +83193,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -83374,19 +83249,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -83432,19 +83307,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -83506,19 +83381,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2288), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -83553,19 +83428,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -83627,19 +83502,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2288), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -83672,19 +83547,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -83728,19 +83603,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -83784,19 +83659,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -83840,19 +83715,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -83896,19 +83771,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -83952,19 +83827,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -84008,19 +83883,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -84064,19 +83939,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -84120,19 +83995,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -84176,19 +84051,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -84232,19 +84107,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -84288,19 +84163,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -84344,19 +84219,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -84402,19 +84277,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -84459,19 +84334,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -84514,19 +84389,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -84570,19 +84445,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -84626,19 +84501,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -84682,19 +84557,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -84738,19 +84613,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -84794,19 +84669,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -84850,19 +84725,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -84906,19 +84781,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -84962,19 +84837,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -85018,19 +84893,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -85074,19 +84949,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -85130,19 +85005,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -85186,19 +85061,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -85242,19 +85117,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -85298,19 +85173,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -85354,19 +85229,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -85410,19 +85285,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -85466,19 +85341,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -85522,19 +85397,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -85578,19 +85453,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -85634,19 +85509,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -85690,19 +85565,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -85746,19 +85621,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -85802,19 +85677,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -85858,19 +85733,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -85914,19 +85789,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -85970,19 +85845,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -86026,19 +85901,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -86082,19 +85957,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -86138,19 +86013,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -86197,19 +86072,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -86252,19 +86127,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -86308,19 +86183,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -86382,19 +86257,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2242), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -86427,19 +86302,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -86483,19 +86358,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -86552,19 +86427,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -86614,19 +86489,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -86676,19 +86551,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -86743,19 +86618,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2242), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -86806,19 +86681,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2242), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -86871,19 +86746,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2288), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -86919,19 +86794,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -86993,19 +86868,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2499), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -87057,19 +86932,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2499), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -87121,19 +86996,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2499), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -87185,19 +87060,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2499), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -87248,19 +87123,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2499), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -87311,19 +87186,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2499), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -87374,19 +87249,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2499), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -87437,19 +87312,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2499), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -87503,19 +87378,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2513), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -87566,19 +87441,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2242), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -87629,19 +87504,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2242), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -87692,19 +87567,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2242), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -87755,19 +87630,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2242), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -87818,19 +87693,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2242), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -87865,19 +87740,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -87908,19 +87783,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -87965,19 +87840,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -88023,19 +87898,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -88080,19 +87955,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -88168,19 +88043,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2499), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -88200,19 +88075,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -88257,19 +88132,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -88314,19 +88189,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -88371,19 +88246,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -88427,19 +88302,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -88483,19 +88358,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -88539,19 +88414,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -88595,19 +88470,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -88665,19 +88540,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -88737,19 +88612,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2499), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -88799,19 +88674,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2288), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -88861,19 +88736,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2548), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -88923,19 +88798,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2548), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -88985,19 +88860,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2548), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -89047,19 +88922,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2548), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -89105,19 +88980,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -89166,19 +89041,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -89231,19 +89106,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2288), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -89293,19 +89168,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2288), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -89325,19 +89200,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -89381,19 +89256,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -89452,19 +89327,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -89524,19 +89399,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2499), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -89586,19 +89461,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2288), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -89618,19 +89493,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -89674,19 +89549,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -89760,19 +89635,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2288), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -89818,19 +89693,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_RBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -89884,19 +89759,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2548), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -89947,19 +89822,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2548), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -90010,19 +89885,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2548), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -90067,19 +89942,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_COMMA,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -90117,19 +89992,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -90189,19 +90064,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2288), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -90236,19 +90111,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -90293,19 +90168,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -90365,19 +90240,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2288), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -90416,19 +90291,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_COMMA,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -90475,19 +90350,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_COMMA,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -90514,19 +90389,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -90569,19 +90444,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -90625,19 +90500,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -90681,19 +90556,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -90737,19 +90612,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -90793,19 +90668,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -90878,19 +90753,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2499), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -90939,19 +90814,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2499), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -90970,19 +90845,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -91025,19 +90900,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -91080,19 +90955,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -91135,19 +91010,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -91220,19 +91095,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2499), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -91281,19 +91156,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2499), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -91342,19 +91217,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2499), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -91403,19 +91278,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2499), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -91434,19 +91309,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_COMMA,
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -91522,19 +91397,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2548), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -91585,19 +91460,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2548), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -91646,19 +91521,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2499), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -91710,19 +91585,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2242), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -91774,19 +91649,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2242), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -91838,19 +91713,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2242), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -91902,19 +91777,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2242), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -91966,19 +91841,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_GT,
     ACTIONS(2548), 18,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -92013,19 +91888,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -92083,19 +91958,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2548), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -92140,19 +92015,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_COMMA,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -92205,19 +92080,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2288), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -92268,19 +92143,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2288), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -92298,19 +92173,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -92352,19 +92227,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -92438,19 +92313,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1939), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -92485,19 +92360,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -92557,19 +92432,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2288), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -92604,19 +92479,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -92676,19 +92551,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2288), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -92723,19 +92598,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -92779,19 +92654,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -92848,19 +92723,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2548), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -92879,19 +92754,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_COMMA,
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -92965,19 +92840,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1939), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -93027,19 +92902,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1939), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -93089,19 +92964,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1939), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -93151,19 +93026,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1939), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -93198,19 +93073,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -93254,19 +93129,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -93320,19 +93195,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_COMMA,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -93373,19 +93248,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_COMMA,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -93431,19 +93306,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_COMMA,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -93498,19 +93373,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2548), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -93558,19 +93433,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2548), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -93618,19 +93493,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2548), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -93678,19 +93553,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2548), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -93738,19 +93613,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2548), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -93800,19 +93675,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1939), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -93860,19 +93735,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2548), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -93919,19 +93794,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2513), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -93978,19 +93853,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2513), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -94028,19 +93903,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LF,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -94085,19 +93960,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LF,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -94151,19 +94026,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2513), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -94210,19 +94085,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2513), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -94269,19 +94144,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2513), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -94328,19 +94203,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2513), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -94387,19 +94262,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2513), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -94446,19 +94321,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2513), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -94505,19 +94380,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2513), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -94564,19 +94439,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2513), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -94623,19 +94498,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2513), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -94682,19 +94557,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2513), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -94741,19 +94616,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2513), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -94800,19 +94675,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2513), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -94859,19 +94734,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2513), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -94918,19 +94793,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2513), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -94977,19 +94852,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2513), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -95036,19 +94911,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2513), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -95095,19 +94970,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2513), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -95140,19 +95015,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -95194,19 +95069,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -95262,19 +95137,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2513), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -95321,19 +95196,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2513), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -95380,19 +95255,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2513), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -95439,19 +95314,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2513), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -95495,19 +95370,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LF,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -95556,19 +95431,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2613), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -95617,19 +95492,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2288), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -95678,19 +95553,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2288), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -95739,19 +95614,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2242), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -95800,19 +95675,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2242), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -95861,19 +95736,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2242), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -95922,19 +95797,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2288), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -95983,19 +95858,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2288), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -96044,19 +95919,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2288), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -96105,19 +95980,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2288), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -96166,19 +96041,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2288), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -96227,19 +96102,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2288), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -96288,19 +96163,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2288), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -96349,19 +96224,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2288), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -96405,19 +96280,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_RPAREN,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -96463,19 +96338,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_RPAREN,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -96521,19 +96396,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_RPAREN,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -96582,19 +96457,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2613), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -96641,19 +96516,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2613), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -96702,19 +96577,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2288), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -96763,19 +96638,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2288), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -96822,19 +96697,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2613), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -96883,19 +96758,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2242), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -96944,19 +96819,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2242), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -97005,19 +96880,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2242), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -97066,19 +96941,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2242), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -97127,19 +97002,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2242), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -97188,19 +97063,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2242), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -97247,19 +97122,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2613), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -97306,19 +97181,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2613), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -97363,19 +97238,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1939), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -97420,19 +97295,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1939), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -97449,19 +97324,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -97529,19 +97404,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2242), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -97586,19 +97461,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1939), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -97615,19 +97490,19 @@ static const uint16_t ts_small_parse_table[] = {
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
       anon_sym_LBRACK,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -97694,19 +97569,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1939), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -97751,19 +97626,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(1939), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -97809,19 +97684,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2288), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -97866,19 +97741,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2613), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -97923,19 +97798,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2613), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -97980,19 +97855,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2613), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -98037,19 +97912,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2613), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -98094,19 +97969,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2613), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -98151,19 +98026,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2613), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -98208,19 +98083,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2613), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -98265,19 +98140,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2613), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -98322,19 +98197,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2613), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -98379,19 +98254,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2613), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -98436,19 +98311,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2613), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -98493,19 +98368,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2613), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -98550,19 +98425,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2613), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -98607,19 +98482,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2613), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -98664,19 +98539,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2613), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -98721,19 +98596,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2613), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -98778,19 +98653,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2613), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -98835,19 +98710,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2613), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -98892,19 +98767,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2613), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
@@ -98947,19 +98822,19 @@ static const uint16_t ts_small_parse_table[] = {
     ACTIONS(2613), 19,
       anon_sym_LT_LT,
       anon_sym_CARET_LT_LT,
-      anon_sym__and_LT_LT,
-      anon_sym__andif_LT_LT,
-      anon_sym__or_LT_LT,
-      anon_sym__orif_LT_LT,
-      anon_sym__xor_LT_LT,
+      aux_sym_assignment_token1,
+      aux_sym_assignment_token2,
+      aux_sym_assignment_token3,
+      aux_sym_assignment_token4,
+      aux_sym_assignment_token5,
       anon_sym_STAR_STAR_LT_LT,
       anon_sym_STAR_STAR_CARET_LT_LT,
       anon_sym_STAR_LT_LT,
       anon_sym_STAR_CARET_LT_LT,
       anon_sym_SLASH_LT_LT,
       anon_sym_SLASH_CARET_LT_LT,
-      anon_sym__mod_LT_LT,
-      anon_sym__div_LT_LT,
+      aux_sym_assignment_token6,
+      aux_sym_assignment_token7,
       anon_sym_DASH_LT_LT,
       anon_sym_DASH_CARET_LT_LT,
       anon_sym_PLUS_LT_LT,
