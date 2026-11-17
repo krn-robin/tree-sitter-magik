@@ -17,6 +17,9 @@ $
 _throw :error _with a, b
 $
 
+_throw :error _with a, b _scatter c
+$
+
 --------------------------------------------------------------------------------
 
 (source_file
@@ -37,4 +40,11 @@ $
     (throw
       (symbol)
       (variable)
-      (variable))))
+      (variable)))
+  (fragment
+    (throw
+      (symbol)
+      (variable)
+      (variable)
+      (scatter
+        (variable)))))
