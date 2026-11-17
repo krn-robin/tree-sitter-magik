@@ -153,12 +153,15 @@ module.exports = grammar({
 
     // _loop [ @ <identifier> ]
     //  <block body>
+    // [ _finally [ _with <lvalue tuple> ]
+    //  <block body> ]
     // _endloop
     loop: $ =>
       seq(
         alias(/_loop/i, '_loop'),
         optional($.label),
         optional($._codeblock),
+        optional($.finally),
         alias(/_endloop/i, '_endloop'),
       ),
 

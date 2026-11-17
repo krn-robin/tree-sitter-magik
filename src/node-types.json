@@ -6885,6 +6885,10 @@
           "named": true
         },
         {
+          "type": "finally",
+          "named": true
+        },
+        {
           "type": "gather",
           "named": true
         },
